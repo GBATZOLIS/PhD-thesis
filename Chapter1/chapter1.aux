@@ -1,0 +1,149 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{GANs}
+\citation{viazovetskyi2020stylegan2}
+\citation{rezende2015variational}
+\citation{neuralODEs}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}CAFLOW: Conditional Autoregressive Flows}{1}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}\protected@file@percent }
+\citation{autoregressive_flows}
+\citation{WAVELET-FLOW}
+\citation{Dual-Glow,SRFLOW,ardizzone2019guided,cGLOW}
+\citation{SRFLOW,HCFLOW}
+\citation{cGLOW}
+\citation{Pumarola2020,Dual-Glow,grover2020alignflow}
+\citation{SRFLOW}
+\citation{HCFLOW}
+\citation{HCFLOW}
+\citation{SRFLOW}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Background}{4}{section.1.2}\protected@file@percent }
+\newlabel{ch1:sec:background}{{1.2}{4}{Background}{section.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Notations}{4}{subsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Normalizing flows}{4}{subsection.1.2.2}\protected@file@percent }
+\newlabel{ch1:subsec:normalizing}{{1.2.2}{4}{Normalizing flows}{subsection.1.2.2}{}}
+\citation{Nice2014}
+\newlabel{ch1:ch1:eq:loglike}{{1.2}{5}{Normalizing flows}{equation.1.2.2}{}}
+\citation{GLOW}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Conditional Normalizing Flows}{8}{subsection.1.2.3}\protected@file@percent }
+\newlabel{ch1:eq:cond}{{1.3}{8}{Conditional Normalizing Flows}{equation.1.2.3}{}}
+\citation{SRFLOW}
+\citation{SRFLOW}
+\citation{Dual-Glow}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Conditioning in the Normalizing Flow latent space}{10}{subsection.1.2.4}\protected@file@percent }
+\citation{Dual-Glow}
+\citation{Dual-Glow}
+\citation{Dual-Glow}
+\newlabel{ch1:eq:Dual-Glowdep}{{1.4}{11}{Conditioning in the Normalizing Flow latent space}{equation.1.2.4}{}}
+\newlabel{ch1:eq:Dual-Glowdep}{{1.5}{11}{Conditioning in the Normalizing Flow latent space}{equation.1.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Method}{11}{section.1.3}\protected@file@percent }
+\newlabel{ch1:sec:Caflow}{{1.3}{11}{Method}{section.1.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Modeling assumptions}{11}{subsection.1.3.1}\protected@file@percent }
+\newlabel{ch1:subsec:modass}{{1.3.1}{11}{Modeling assumptions}{subsection.1.3.1}{}}
+\newlabel{ch1:conditional-distribution-autoregressive-factorization}{{1.6}{11}{Modeling assumptions}{equation.1.3.6}{}}
+\citation{Dual-Glow}
+\citation{Dual-Glow}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite  {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension.}}{12}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{ch1:fig:dependencies}{{1.1}{12}{From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension}{figure.caption.1}{}}
+\newlabel{ch1:eq:factorization}{{1.7}{12}{Modeling assumptions}{equation.1.3.7}{}}
+\citation{SRFLOW}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Modeling the autoregressive components using conditional normalizing flows}{13}{subsection.1.3.2}\protected@file@percent }
+\newlabel{ch1:Autoregressive-conditional-flow-components}{{1.3.2}{13}{Modeling the autoregressive components using conditional normalizing flows}{subsection.1.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity.}}{14}{figure.caption.2}\protected@file@percent }
+\newlabel{ch1:fig:high_level_design_conditional}{{1.2}{14}{Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Maximum log-likelihood estimation and training}{15}{subsection.1.3.3}\protected@file@percent }
+\newlabel{ch1:eq:G}{{1.8}{15}{Maximum log-likelihood estimation and training}{equation.1.3.8}{}}
+\newlabel{ch1:eq:obj}{{1.10}{15}{}{equation.1.3.10}{}}
+\citation{Dual-Glow}
+\newlabel{ch1:eq:equationone}{{1.11}{16}{Maximum log-likelihood estimation and training}{equation.1.3.11}{}}
+\newlabel{ch1:eq:equationtwo}{{1.12}{16}{Maximum log-likelihood estimation and training}{equation.1.3.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Inference}{17}{subsection.1.3.4}\protected@file@percent }
+\citation{behrmann2021understanding}
+\citation{verine2023expressivity}
+\citation{onken2021ot}
+\citation{verine2023expressivity}
+\citation{Dual-Glow}
+\citation{Dual-Glow}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces 10 super-resolved versions of the LR image in decreasing conditional log-likelihood order.}}{19}{figure.caption.3}\protected@file@percent }
+\newlabel{ch1:fig:decreasingloglikelihood}{{1.3}{19}{10 super-resolved versions of the LR image in decreasing conditional log-likelihood order}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Experiments}{19}{section.1.4}\protected@file@percent }
+\newlabel{ch1:sec:numerics}{{1.4}{19}{Experiments}{section.1.4}{}}
+\citation{karras2019style}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Image Super-resolution}{20}{subsection.1.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Ablation of the autoregressive structure}{20}{section*.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Qualitative comparison of Dual-Glow+ and CAFLOW.}}{20}{figure.caption.5}\protected@file@percent }
+\newlabel{ch1:fig:ablation}{{1.4}{20}{Qualitative comparison of Dual-Glow+ and CAFLOW}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Experiment}{20}{section*.6}\protected@file@percent }
+\citation{BRGM}
+\citation{ESRGAN}
+\citation{li2019feedback}
+\citation{BRGM}
+\citation{ardizzone2019guided}
+\citation{colorGAN}
+\citation{scorebased}
+\citation{yu2015lsun}
+\citation{scorebased}
+\citation{ardizzone2019guided}
+\citation{colorGAN}
+\citation{ardizzone2019guided}
+\citation{colorGAN}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better.}}{21}{table.caption.7}\protected@file@percent }
+\newlabel{ch1:comparisonBRGM}{{1.1}{21}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.7}{}}
+\newlabel{ch1:eval-super-resolution}{{1.1}{21}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.7}{}}
+\newlabel{ch1:tab:one}{{1.1}{21}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images.}}{21}{figure.caption.8}\protected@file@percent }
+\newlabel{ch1:SR-visuals-paper}{{1.5}{21}{Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Image Colorization}{21}{subsection.1.4.2}\protected@file@percent }
+\citation{liu2015deep}
+\citation{cGLOW}
+\citation{cGLOW}
+\citation{cGLOW}
+\citation{cGLOW}
+\citation{Dual-Glow}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score.}}{22}{figure.caption.9}\protected@file@percent }
+\newlabel{ch1:fig:colorisation-paper-visuals-results}{{1.6}{22}{Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score}{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better. }}{22}{table.caption.10}\protected@file@percent }
+\newlabel{ch1:colorisation-comparison}{{1.2}{22}{Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Image Inpainting}{22}{subsection.1.4.3}\protected@file@percent }
+\citation{wu2020stochastic}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right.}}{23}{figure.caption.11}\protected@file@percent }
+\newlabel{ch1:qualitative-performance-inpainting}{{1.7}{23}{Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right}{figure.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.3}{\ignorespaces Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method.}}{23}{table.caption.12}\protected@file@percent }
+\newlabel{ch1:quantitative-evaluation-inpainting}{{1.3}{23}{Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion and Limitations}{23}{section.1.5}\protected@file@percent }
+\newlabel{ch1:sec:conclusions}{{1.5}{23}{Conclusion and Limitations}{section.1.5}{}}
+\@setckpt{Chapter1/chapter1}{
+\setcounter{page}{25}
+\setcounter{equation}{14}
+\setcounter{enumi}{4}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{1}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{1}
+\setcounter{section}{5}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{7}
+\setcounter{table}{3}
+\setcounter{@pps}{0}
+\setcounter{@ppsavesec}{0}
+\setcounter{@ppsaveapp}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{parentequation}{0}
+\setcounter{section@level}{1}
+\setcounter{Item}{4}
+\setcounter{Hfootnote}{1}
+\setcounter{bookmark@seq@number}{17}
+\setcounter{theorem}{0}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+}

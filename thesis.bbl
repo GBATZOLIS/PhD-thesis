@@ -1,0 +1,153 @@
+\begin{thebibliography}{}
+
+\bibitem[Anderson, 1982]{anderson1982reverse_time_sde}
+Anderson, B.~D. (1982).
+\newblock Reverse-time diffusion equation models.
+\newblock {\em Stochastic Processes and their Applications}, 12(3):313--326.
+
+\bibitem[Arridge et~al., 2019]{arridge2019ip}
+Arridge, S., Maass, P., Öktem, O., and Schönlieb, C.-B. (2019).
+\newblock Solving inverse problems using data-driven models.
+\newblock {\em Acta Numerica}, 28:1–174.
+
+\bibitem[Bengio et~al., 2003]{bengio2005autoregressive}
+Bengio, Y., Ducharme, R., Vincent, P., and Janvin, C. (2003).
+\newblock A neural probabilistic language model.
+\newblock {\em J. Mach. Learn. Res.}, 3(null):1137–1155.
+
+\bibitem[Dhariwal and Nichol, 2021]{dhariwal2021diffusion_beats_gans}
+Dhariwal, P. and Nichol, A. (2021).
+\newblock Diffusion models beat gans on image synthesis.
+
+\bibitem[Donahue et~al., 2019]{donahue2019adversarial_audio}
+Donahue, C., McAuley, J., and Puckette, M. (2019).
+\newblock Adversarial audio synthesis.
+
+\bibitem[Goodfellow et~al., 2014]{goodfellow2014generative}
+Goodfellow, I.~J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., and Bengio, Y. (2014).
+\newblock Generative adversarial networks.
+
+\bibitem[Heusel et~al., 2018]{heusel2018fid}
+Heusel, M., Ramsauer, H., Unterthiner, T., Nessler, B., and Hochreiter, S. (2018).
+\newblock Gans trained by a two time-scale update rule converge to a local nash equilibrium.
+
+\bibitem[Ho et~al., 2020]{ho2020denoising}
+Ho, J., Jain, A., and Abbeel, P. (2020).
+\newblock Denoising diffusion probabilistic models.
+
+\bibitem[Hyv{{\"a}}rinen, 2005]{hyvarinen2005score_original}
+Hyv{{\"a}}rinen, A. (2005).
+\newblock Estimation of non-normalized statistical models by score matching.
+\newblock {\em Journal of Machine Learning Research}, 6(24):695--709.
+
+\bibitem[Isola et~al., 2018]{isola2018pix2pix}
+Isola, P., Zhu, J.-Y., Zhou, T., and Efros, A.~A. (2018).
+\newblock Image-to-image translation with conditional adversarial networks.
+
+\bibitem[Keys, 1981]{keyes1981bicubic}
+Keys, R. (1981).
+\newblock Cubic convolution interpolation for digital image processing.
+\newblock {\em IEEE Transactions on Acoustics, Speech, and Signal Processing}, 29(6):1153--1160.
+
+\bibitem[Kingma and Welling, 2014]{kingma2014autoencoding}
+Kingma, D.~P. and Welling, M. (2014).
+\newblock Auto-encoding variational bayes.
+
+\bibitem[Liang et~al., 2021]{liang2021hrflow}
+Liang, J., Lugmayr, A., Zhang, K., Danelljan, M., Gool, L.~V., and Timofte, R. (2021).
+\newblock Hierarchical conditional flow: A unified framework for image super-resolution and image rescaling.
+
+\bibitem[Liu et~al., 2023]{liu2023i2sb}
+Liu, G.-H., Vahdat, A., Huang, D.-A., Theodorou, E.~A., Nie, W., and Anandkumar, A. (2023).
+\newblock I$^2$sb: Image-to-image schr\"odinger bridge.
+
+\bibitem[Liu et~al., 2015]{2015celeba}
+Liu, Z., Luo, P., Wang, X., and Tang, X. (2015).
+\newblock Deep learning face attributes in the wild.
+\newblock In {\em Proceedings of International Conference on Computer Vision (ICCV)}.
+
+\bibitem[Lugmayr et~al., 2020]{SRFLOW}
+Lugmayr, A., Danelljan, M., Van~Gool, L., and Timofte, R. (2020).
+\newblock Srflow: Learning the super-resolution space with normalizing flow.
+\newblock In {\em Computer Vision -- ECCV 2020}.
+
+\bibitem[Léonard, 2013]{leonard2013properties}
+Léonard, C. (2013).
+\newblock Some properties of path measures.
+
+\bibitem[Mueller and Siltanen, 2012]{muller2012ip}
+Mueller, J.~L. and Siltanen, S. (2012).
+\newblock Linear and nonlinear inverse problems with practical applications.
+\newblock In {\em Computational science and engineering}.
+
+\bibitem[Newey and McFadden, 1994]{whitney1994estimation}
+Newey, W.~K. and McFadden, D. (1994).
+\newblock Chapter 36 large sample estimation and hypothesis testing.
+\newblock volume~4 of {\em Handbook of Econometrics}, pages 2111--2245. Elsevier.
+
+\bibitem[Oksendal, 2003]{oksendal2003sde}
+Oksendal, B. (2003).
+\newblock {\em Stochastic Differential Equations (5th Ed.): An Introduction with Applications}.
+\newblock Springer-Verlag, Heidelberg.
+
+\bibitem[Papamakarios et~al., 2021]{papamakarios2021normalizing}
+Papamakarios, G., Nalisnick, E., Rezende, D.~J., Mohamed, S., and Lakshminarayanan, B. (2021).
+\newblock Normalizing flows for probabilistic modeling and inference.
+
+\bibitem[Saharia et~al., 2021]{saharia2021sr3}
+Saharia, C., Ho, J., Chan, W., Salimans, T., Fleet, D.~J., and Norouzi, M. (2021).
+\newblock Image super-resolution via iterative refinement.
+
+\bibitem[Sohl-Dickstein et~al., 2015]{sohldickstein2015diffusion_original}
+Sohl-Dickstein, J., Weiss, E.~A., Maheswaranathan, N., and Ganguli, S. (2015).
+\newblock Deep unsupervised learning using nonequilibrium thermodynamics.
+
+\bibitem[Song et~al., 2021a]{song2021maximum}
+Song, Y., Durkan, C., Murray, I., and Ermon, S. (2021a).
+\newblock Maximum likelihood training of score-based diffusion models.
+
+\bibitem[Song and Ermon, 2020]{song2020generative_score}
+Song, Y. and Ermon, S. (2020).
+\newblock Generative modeling by estimating gradients of the data distribution.
+
+\bibitem[Song et~al., 2021b]{song2021sde}
+Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2021b).
+\newblock Score-based generative modeling through stochastic differential equations.
+
+\bibitem[Tang et~al., 2021]{tang2021attentiongan}
+Tang, H., Liu, H., Xu, D., Torr, P. H.~S., and Sebe, N. (2021).
+\newblock Attentiongan: Unpaired image-to-image translation using attention-guided generative adversarial networks.
+
+\bibitem[Tashiro et~al., 2021]{tashiro2021csdi}
+Tashiro, Y., Song, J., Song, Y., and Ermon, S. (2021).
+\newblock Csdi: Conditional score-based diffusion models for probabilistic time series imputation.
+
+\bibitem[Vincent, 2011]{vincent2011connection}
+Vincent, P. (2011).
+\newblock A connection between score matching and denoising autoencoders.
+\newblock {\em Neural Computation}, 23(7):1661--1674.
+
+\bibitem[Wang et~al., 2004]{zhou2004psnr+ssim}
+Wang, Z., Bovik, A., Sheikh, H., and Simoncelli, E. (2004).
+\newblock Image quality assessment: from error visibility to structural similarity.
+\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612.
+
+\bibitem[Xie and Tu, 2015]{xie2015edges}
+Xie, S. and Tu, Z. (2015).
+\newblock Holistically-nested edge detection.
+
+\bibitem[Yu and Grauman, 2014]{yu2014sketch2shoe}
+Yu, A. and Grauman, K. (2014).
+\newblock Fine-grained visual comparisons with local learning.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR)}.
+
+\bibitem[Zhang et~al., 2018]{zhang2018lpips}
+Zhang, R., Isola, P., Efros, A.~A., Shechtman, E., and Wang, O. (2018).
+\newblock The unreasonable effectiveness of deep features as a perceptual metric.
+\newblock In {\em CVPR}.
+
+\bibitem[Zhu et~al., 2020]{zhu2020cycle_gan}
+Zhu, J.-Y., Park, T., Isola, P., and Efros, A.~A. (2020).
+\newblock Unpaired image-to-image translation using cycle-consistent adversarial networks.
+
+\end{thebibliography}

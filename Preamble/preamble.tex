@@ -1,4 +1,75 @@
 % ******************************************************************************
+% ************************* User Defined Commands for CAFLOW Paper *************
+% ******************************************************************************
+
+\usepackage{amsthm}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{main}{Main Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{problem}{Problem}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem*{notation}{Notation}
+
+% These commands are used in the CAFLOW paper for representing vectors and samples
+\newcommand{\x}{\boldsymbol{x}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\z}{\boldsymbol{z}}
+\newcommand{\el}{\boldsymbol{l}}
+\newcommand{\e}{\boldsymbol{e}}
+\newcommand{\h}{\boldsymbol{h}}
+\newcommand{\de}{\boldsymbol{d}}
+\newcommand{\s}{\boldsymbol{s}}
+
+\newcommand{\lpi}{LPIPS}
+\newcommand{\rms}{RMSE}
+
+% ******************************************************************************
+% ************************* User Defined Commands for Conditional Image Generation with Score-Based Models *************
+% ******************************************************************************
+
+\usepackage{mdframed}
+\usepackage{amsmath}
+
+\newenvironment{customthm}[1]
+  {\renewcommand\thetheorem{#1}\theorem}
+  {\endtheorem}
+
+  \newenvironment{customcoll}[1]
+  {\renewcommand\thecorollary{#1}\corollary}
+  {\endcorollary}
+
+\makeatletter
+\DeclareRobustCommand
+  \Compactcdots{\mathinner{\cdotp\mkern-2mu\cdotp\mkern-2mu\cdotp}}
+
+\DeclareRobustCommand
+  \myvdots{\vbox{\baselineskip4\p@ \lineskiplimit\z@
+    \hbox{.}\hbox{.}\hbox{.}}}
+
+\newcommand{\subalign}[1]{%
+  \vcenter{%
+    \Let@ \restore@math@cr \default@tag
+    \baselineskip\fontdimen10 \scriptfont\tw@
+    \advance\baselineskip\fontdimen12 \scriptfont\tw@
+    \lineskip\thr@@\fontdimen8 \scriptfont\thr@@
+    \lineskiplimit\lineskip
+    \ialign{\hfil$\m@th\scriptstyle##$&$\m@th\scriptstyle{}##$\hfil\crcr
+      #1\crcr
+    }%
+  }%
+}
+\makeatother
+
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+% ******************************************************************************
 % ****************************** Custom Margin *********************************
 
 % Add `custommargin' in the document class options to use this section
