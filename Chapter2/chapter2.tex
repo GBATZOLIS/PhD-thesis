@@ -3,7 +3,7 @@
 %****************************** Second Chapter *********************************
 %*******************************************************************************
 
-\chapter{Conditional Image Generation with Score-Based Diffusion Models}
+\chapter{Non-Uniform Diffusion Models}
 
 \ifpdf
     \graphicspath{{Chapter2/Figs/Raster/}{Chapter2/Figs/PDF/}{Chapter2/Figs/}}
@@ -12,7 +12,8 @@
 \fi
 
 
-Score-based diffusion models have emerged as one of the most promising frameworks for deep generative modelling. In this work we conduct a systematic comparison and theoretical analysis of different approaches to learning conditional probability distributions with score-based diffusion models. In particular, we prove results which provide a theoretical justification for one of the most successful estimators of the conditional score. Moreover, we introduce a multi-speed diffusion framework, which leads to a new estimator for the conditional score, performing on par with previous state-of-the-art approaches. Our theoretical and experimental findings are accompanied by an open source library \texttt{MSDiff} which allows for application and further research of multi-speed diffusion models.
+Diffusion models have emerged as one of the most promising frameworks for deep generative modeling. In this work, we explore the potential of non-uniform diffusion models. We show that non-uniform diffusion leads to multi-scale diffusion models which have similar structure to this of multi-scale normalizing flows. We experimentally find that in the same or less training time, the multi-scale diffusion model achieves better FID score than the standard uniform diffusion model. More importantly, it generates samples $4.4$ times faster in $128\times 128$ resolution. The speed-up is expected to be higher in higher resolutions where more scales are used. Moreover, we show that non-uniform diffusion leads to a novel estimator for the conditional score function which achieves on par performance with the state-of-the-art conditional denoising estimator. Our theoretical and experimental findings are accompanied by an open source library \href{https://github.com/GBATZOLIS/MSDiff}{MSDiff}
+which can facilitate further research of non-uniform diffusion models.
 
 \section{Introduction}
 
@@ -35,36 +36,39 @@ Score-based diffusion models have emerged as one of the most promising framework
     \end{tabular}
     \end{center}
     \caption{Results from our conditional multi-speed diffusive estimator.}
-    \label{fig: teaser}
+    \label{ch2:fig:_teaser}
 \end{figure}
 
 The goal of generative modelling is to learn a  probability distribution from a finite set of samples. This classical problem in statistics has been studied for many decades, but until recently efficient learning of high-dimensional distributions remained impossible in practice. For images, the strong inductive biases of convolutional neural networks have recently enabled the modelling of such distributions, giving rise to the field of deep generative modelling.
 
-Deep generative modelling became one of the central areas of deep learning with many successful applications \cite{saharia2021sr3}, \cite{SRFLOW}, \cite{liu2023i2sb}, \cite{donahue2019adversarial_audio}, \cite{zhu2020cycle_gan}, \cite{tang2021attentiongan}.
+Deep generative modelling became one of the central areas of deep learning with many successful applications.
 In recent years much progress has been made in unconditional and conditional image generation.
 The most prominent approaches are auto-regressive models \cite{bengio2005autoregressive}, variational auto-encoders (VAEs) \cite{kingma2014autoencoding},  normalizing flows \cite{papamakarios2021normalizing} and generative adversarial networks (GANs) \cite{goodfellow2014generative}.
 
-Despite their success, each of the above methods suffers from important limitations. Auto-regressive models allow for likelihood estimation and high-fidelity image generation, but require a lot of computational resources and suffer from poor time complexity in high resolutions. VAEs and normalizing flows are less computationally expensive and allow for likelihood estimation, but tend to produce samples of lower visual quality. Moreover, normalizing flows put restrictions on the possible model architectures (requiring invertibility of the network and a Jacobian log-determinant that is computationally tractable), thus limiting their expressivity. While GANs produce state-of-the art quality samples, they don't allow for likelihood estimation and are notoriously hard to train due to training instabilities and mode collapse. 
+Despite their success, each of the above methods suffers from important limitations. Auto-regressive models allow for likelihood estimation and high-fidelity image generation, but suffer from poor time complexity in high resolutions. VAEs and normalizing flows are less computationally expensive and allow for likelihood estimation, but tend to produce samples of lower visual quality. Moreover, normalizing flows put restrictions on the possible model architectures (requiring invertibility of the network and a Jacobian log-determinant that is computationally tractable), thus limiting their expressivity. While GANs produce state-of-the art quality samples, they don't allow for likelihood estimation and are notoriously hard to train due to training instabilities and mode collapse. 
 
 Recently, score-based \cite{hyvarinen2005score_original} and diffusion-based  \cite{sohldickstein2015diffusion_original} generative models have been revived and improved in \cite{song2020generative_score} and \cite{ho2020denoising}.  
 The connection between the two frameworks in discrete-time formulation has been discovered in \cite{vincent2011connection}. 
-Recently in \cite{song2021sde}, both frameworks have been unified into a single continuous-time approach based on stochastic differential equations \cite{song2021sde} and called score-based diffusion models. 
+Recently in \cite{song2021sde}, both frameworks have been unified into a single continuous-time approach based on stochastic differential equations \cite{song2021sde} and are called score-based diffusion models. 
 These approaches have recently received a lot of attention, achieving state-of-the-art performance in likelihood estimation \cite{song2021sde} and unconditional image generation \cite{dhariwal2021diffusion_beats_gans}, surpassing even the celebrated success of GANs.
 
-In addition to achieving state-of-the art performance in both image generation and likelihood estimation, score-based diffusion models don't suffer from training instabilities or mode collapse \cite{dhariwal2021diffusion_beats_gans, song2021sde}. Moreover, their time complexity in high resolutions is much better than that of auto-regressive models \cite{dhariwal2021diffusion_beats_gans}. This makes score-based diffusion  models very attractive for deep generative modelling.
+In addition to achieving state-of-the art performance in both image generation and likelihood estimation, score-based diffusion models don't suffer from training instabilities or mode collapse \cite{dhariwal2021diffusion_beats_gans, song2021sde}. However, although their time complexity in high resolutions is better than that of auto-regressive models \cite{dhariwal2021diffusion_beats_gans}, it is still notably worse to that of GANs, normalizing flows and VAEs. Despite the recent efforts to close the sampling time gap between diffusion models and the faster frameworks, diffusion models still require significantly more time to achieve equal performance.
 
-In this work, we examine how score-based diffusion  models can be applied to conditional image generation. We conduct a review and classification of existing approaches and perform a systematic comparison to find the best way of estimating the conditional score. We provide a proof of validity for the \textit{conditional denoising estimator} (which has been used in \cite{saharia2021sr3,tashiro2021csdi} without justification), and we thereby provide a firm theoretical foundation for using it in future research.
+In this work, we explore non-uniform diffusion models. In non-uniform diffusion models, different parts of the input tensor diffuse with different diffusion speeds or more generally according to different stochastic differential equations. We find that the generalization of the original uniform diffusion framework can lead to multi-scale diffusion models which achieve improved sampling performance at a significantly faster sampling speed.
 
-Moreover, we extend the original framework to support \textit{multi-speed diffusion}, where different parts of the input tensor diffuse according to different speeds. This allows us to introduce a novel estimator of the conditional score and opens an avenue for further research.
-
+Moreover, we find that non-uniform diffusion can be used for conditional generation, because it leads to a novel estimator of the conditional score. We conduct a review and classification of existing approaches and perform a systematic comparison to find the best way of estimating the conditional score. We provide a proof of validity for the \textit{conditional denoising estimator} (which has been used in \cite{saharia2021sr3,tashiro2021csdi} without justification), and we thereby provide a firm theoretical foundation for using it in future research.
 
 \noindent
 \textbf{The contributions of this paper are as follows:}
 \begin{enumerate}
-    \item We review and empirically compare score-based diffusion  approaches to modelling conditional distributions of image data. The models are evaluated on the tasks of super-resolution, inpainting and edge to image translation.
+    \item We introduce a principled objective for training non-uniform diffusion models.
+    \item We show that non-uniform diffusion leads to the multi-scale diffusion models which are more efficient than uniform diffusion models. In less training time, the multi-scale models reach improved FID scores with significantly faster sampling speed. The speed up factor is expected to increase as we increase the number of scales.
+    \item We show that non-uniform diffusion leads to \textit{conditional multi-speed diffusive estimator} (CMDE), a novel estimator of conditional score, which unifies previous methods of conditional score estimation.
     \item We provide a proof of consistency for the \textit{conditional denoising estimator} - one of the most successful approaches to estimating the conditional score. 
-    \item We introduce a multi-speed diffusion framework which leads to \textit{conditional multi-speed diffusive estimator} (CMDE), a novel estimator of conditional score, which unifies previous methods of conditional score estimation.
-    \item We provide an open-source library \texttt{MSDiff}, to facilitate further research on conditional and multi-speed diffusion models. \footnote{The code will be released in the near future.}
+    
+    \item We review and empirically compare score-based diffusion  approaches to modelling conditional distributions of image data. The models are evaluated on the tasks of super-resolution, inpainting and edge to image translation.
+
+    \item We provide an open-source library \href{https://github.com/GBATZOLIS/conditional_score_diffusion}{MSDiff}, to facilitate further research on conditional and non-uniform diffusion models.
 \end{enumerate}
 
 \section{Notation}
@@ -81,7 +85,7 @@ In this work we will use the following notation:
         %v[i,j] &:= (v_i, v_{i+1}, ..., v_j) \in \mathbb{R}^{j - i + 1} \\ \nonumber
         v[:j] &:= (v_1, v_{2}, ..., v_j) \in \mathbb{R}^{j},
     \end{align*}
-    cf. Section \ref{sec:CDiffE}.
+    cf. Section \ref{ch2:sec:CDiffE}.
     \item \textbf{Probability distributions} \\
     We denote the probability distribution of a random variable solely via the name of its density's argument, e.g.
     \begin{gather*}
@@ -96,49 +100,143 @@ In this work we will use the following notation:
         &\mathbb{E}_{\subalign{z_1 &\sim p(z_1) \\ &{\myvdots} \\z_n &\sim p(z_n)}}[f(z_1,\Compactcdots,z_n)] \\
         :=&\mathbb{E}_{z_1 \sim p(z_1)} \Compactcdots \mathbb{E}_{z_n \sim p(z_n)}[f(z_1,\Compactcdots,z_n)]
     \end{align*}
-\end{itemize}
+\end{itemize} 
 
 \section{Methods}
 In the following, we will provide details about the framework and estimators discussed in this paper.
 \subsection{Background: Score matching through Stochastic Differential Equations}
-\subsubsection{Unconditional generation}
+\subsubsection{Score-Based Diffusion}
 
 
-In a recent work \cite{song2021sde} score-based  \cite{hyvarinen2005score_original, song2020generative_score} and diffusion-based \cite{sohldickstein2015diffusion_original, ho2020denoising} generative models have been unified into a single continuous-time score-based framework with diffusion driven by stochastic differential equations.  This continuous-time score-based diffusion technique relies on Anderson's Theorem \cite{anderson1982reverse_time_sde}, which states that (under certain assumptions on $\mu : \mathbb{R}^{n_x} \times \mathbb{R} \xrightarrow{} \mathbb{R}^{n_x}$ and $\sigma : \mathbb{R} \xrightarrow{} \mathbb{R}$) a forward diffusion process
-\begin{gather}
-\label{eq:forward_sde}
- dx = \mu(x,t)dt+\sigma(t)dw   
-\end{gather} 
+In a recent work \cite{song2021sde} score-based  \cite{hyvarinen2005score_original, song2020generative_score} and diffusion-based \cite{sohldickstein2015diffusion_original, ho2020denoising} generative models have been unified into a single continuous-time score-based framework where the diffusion is driven by a stochastic differential equation.  This framework relies on Anderson's Theorem \cite{anderson1982reverse_time_sde}, which states that under certain Lipschitz conditions on $f : \mathbb{R}^{n_x} \times \mathbb{R} \xrightarrow{} \mathbb{R}^{n_x}$ and $G : \mathbb{R}^{n_x} \times \mathbb{R}\xrightarrow{} \mathbb{R}^{n_x} \times \mathbb{R}^{n_x}$ and an integrability condition on the target distribution $p(\textbf{x}_0)$ a forward diffusion process governed by the following SDE:
+\begin{equation}
+    \label{ch2:eq:forward_sde}
+    d\mathbf{x}_t = f(\mathbf{x}_t, t) \, dt + G(\mathbf{x}_t, t) \, d\mathbf{w}_t
+\end{equation}
 has a reverse diffusion process governed by the following SDE:
+\begin{equation}
+    \label{ch2:eq:reverse_sde}
+    d\mathbf{x}_t = \left[f(\mathbf{x}_t, t) - G(\mathbf{x}_t, t) G(\mathbf{x}_t, t)^T \nabla_{\mathbf{x}_t} \ln p_{\mathbf{X}_t}(\mathbf{x}_t) \right] dt + G(\mathbf{x}_t, t) \, d\Bar{\mathbf{w}_t}
+\end{equation}
+
+\noindent where $\Bar{\textbf{w}_t}$ is a standard Wiener process in reverse time. 
+
+The forward diffusion process transforms the \textit{target distribution} $p(\textbf{x}_0)$ to a \textit{diffused distribution} $p(\textbf{x}_T)$ after diffusion time $T$. By appropriately selecting the drift and the diffusion coefficients of the forward SDE, we can make sure that after sufficiently long time $T$, the diffused distribution $p(\textbf{x}_T)$ approximates a simple distribution, such as $\mathcal{N}(\textbf{0},\textbf{I})$. We refer to this simple distribution as the \textit{prior distribution}, denoted by $\pi$. The reverse diffusion process transforms the diffused distribution $p(\textbf{x}_T)$ to the data distribution $p(\textbf{x}_0)$ and the prior distribution $\pi$ to a distribution $p^{SDE}$. $p^{SDE}$ is close to $p(\textbf{x}_0)$ if the diffused distribution $p(\textbf{x}_T)$ is close to the prior distribution $\pi$. We get samples from $p^{SDE}$ by sampling from $\pi$ and simulating the reverse sde from time $T$ to time $0$.
+
+To get samples by simulating the reverse SDE, we need access to the time-dependent score function $\nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t)}}$ for all $\textbf{x}_t$ and $t$. In practice, we approximate the time-dependent score function with a neural network $s_{\theta}(\textbf{x}_t,t) \approx \nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t)}}$ and simulate the reverse SDE in equation \ref{ch2:eq:approximated_reverse_sde} to map the prior distribution $\pi$ to $p^{SDE}_{\theta}$.
+
+\begin{equation}
+    \label{ch2:eq:approximated_reverse_sde}
+    d\mathbf{x}_t = \left[ f(\mathbf{x}_t, t) - G(\mathbf{x}_t, t) G(\mathbf{x}_t, t)^T s_{\theta}(\mathbf{x}_t, t) \right] dt + G(\mathbf{x}_t, t) \, d\Bar{\mathbf{w}_t}
+\end{equation}
+
+If the prior distribution is close to the diffused distribution and the approximated score function is close to the ground truth score function, the modeled distribution  $p^{SDE}_{\theta}$ is provably close to the target distribution $p(\textbf{x}_0)$. This statement is formalised in the language of distributional distances in the next subsection.
+
+\subsubsection{Uniform Diffusion Models}
+Previous works \cite{ho2020denoising, song2020generative_score, dhariwal2021diffusion_beats_gans} used the same forward SDE for the diffusion of all the pixels. For this reason, we classify them as uniform diffusion models. In uniform diffusion models, the sde in equation \ref{ch2:eq:uniform_sde} describes the forward diffusion for all pixels in an image:
+
+\begin{equation}\label{ch2:eq:uniform_sde}
+dx_t=f(x_t,t)dt + g(t)d\Bar{w_t},
+\end{equation}
+
+We used unbold notation for the random variables to show that this equation describes diffusion in one dimension. For uniform diffusion models, the neural network $s_\theta(\textbf{x}_t,t)$ can be trained to approximate the score function $\nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t)}}$ by minimizing the weighted score matching objective
 \begin{gather}
-\label{eq:reverse_sde}
-    dx=[\mu(x,t)-\sigma(t)^{2}\nabla_{x}{\ln{p_{X_t}(x)}}]dt + \sigma(t)d\Bar{w},
-\end{gather}
-where $\Bar{w}$ is a standard Wiener process in reverse time. 
-
-The forward diffusion process transforms the \textit{target distribution} $p(x_0)$ to a \textit{diffused distribution} $p(x_T)$. By appropriately selecting the drift and the diffusion coefficients of the forward SDE, we can make sure that after sufficiently long time $T$, the diffused distribution $p(x_T)$ approximates a simple distribution, such as $\mathcal{N}(0,I)$. We refer to this simple distribution as the \textit{prior distribution}, denoted by $\pi$. 
-
-If we have access to the score of the marginal distribution, $\nabla_{x_t}{\ln{p(x_t)}}$, for all $t$, we can derive the reverse diffusion process and simulate it to map $p_T$ to $p_0$. In practice, we approximate the score of the time-dependent distribution by a neural network $s_{\theta}(x_t,t) \approx \nabla_{x_t}{\ln{p(x_t)}}$ and map the prior distribution $\pi \approx p(x_T)$ to $p_\theta(x) \approx p(x_0)$ by solving the reverse-time SDE from time $T$ to time $0$. One can integrate the reverse SDE using standard numerical SDE solvers such Euler–Maruyama or other discretisation strategies. The authors propose to couple the standard integration step with a fixed number of Langevin MCMC steps to leverage the knowledge of the score of the distribution at each intermediate timestep. The MCMC correction step improves sampling; the combined algorithm is known as a predictor-corrector scheme.  We refer to \cite{song2021sde} for details.
-
-In order to fit a neural network model $s_\theta(x_t,t)$ to approximate the score $\nabla_{x_t}{\ln{p(x_t)}}$, we minimize the weighted Fisher's divergence
-\begin{gather}
-    \mathcal{L}_{SM}(\theta) := \frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_t \sim p(x_t)}} [\lambda(t) \norm{\nabla_{x_t}{\ln{p(x_t)}} - s_\theta(x_t,t)}_2^2]
+    \mathcal{L}_{SM}(\theta, \lambda(\cdot)) := \frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &\textbf{x}_t \sim p(\textbf{x}_t)}} [\lambda(t) \norm{\nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t)}} - s_\theta(\textbf{x}_t,t)}_2^2]
 \end{gather}
 where $\lambda: [0,T] \xrightarrow{} \mathbb{R}_+$ is a positive weighting function.
 
-The above quantity cannot be optimized directly since we don't have access to the ground truth score $\nabla_{x_t}{\ln{p(x_t)}}$. Therefore in practice, a different objective has to be used \cite{hyvarinen2005score_original, song2020generative_score, song2021sde}. In \cite{song2021sde}, the continuous denoising score-matching objective is chosen, which is equal to $\mathcal{L}_{SM}(\theta)$ up to an additive term, which does not depend on $\theta$ and is defined as 
-\begin{gather}
-\begin{aligned}
-    &\mathcal{L}_{DSM}(\theta) := \\ 
-    &\frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_0 \sim p(x_0) \\ &x_t \sim p(x_t | x_0)}} [\lambda(t) \norm{\nabla_{x_t}{\ln{p(x_t | x_0)}} - s_\theta(x_t,t)}_2^2]
-\end{aligned}
-\end{gather}
-The above expression involves only $\nabla_{x_t}{\ln{p(x_t | x_0)}}$ which can be computed analytically from the transition kernel of the forward diffusion process (provided that $\mu$ and $\sigma$ are sufficiently simple). The expectation can be approximated using Monte Carlo estimation in the following way: First, we sample time points $t_i$ from the uniform distribution on $[0,T]$, then we sample points $\tilde{x}_i$ from the target distribution $p_0$ (available via training set). Next, for each $\tilde{x}$, we sample points $x_i$ from the transition kernel $p(x_t | \tilde{x})$. Finally, we average the expression inside the expectation over all samples obtained in this way.
+However, the above quantity cannot be optimized directly since we don't have access to the ground truth score $\nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t)}}$. Therefore in practice, a different objective has to be used \cite{hyvarinen2005score_original, song2020generative_score, song2021sde}. In \cite{song2021sde}, the weighted denoising score-matching objective is used, which is defined as 
 
-\subsection{Conditional generation}
-The continuous score-matching framework can be extended to conditional generation, as shown in  \cite{song2021sde}. Suppose we are interested in $p(x|y)$, where $x$ is a \textit{target image} and $y$ is a \textit{condition image}. Again, we use the forward diffusion process (Equation \ref{eq:forward_sde}) to obtain a family of diffused distributions $p(x_t | y)$ and apply Anderson's Theorem to derive the \textit{conditional reverse-time SDE}
 \begin{equation}
-    \label{eq:conditional_reverse_sde}
+    \label{ch2:DSM for uniform diffusion_models}
+    \mathcal{L}_{DSM}(\theta, \lambda(\cdot)) := \frac{1}{2} \mathbb{E}_{\substack{t \sim U(0,T) \\ \mathbf{x}_0 \sim p(\mathbf{x}_0) \\ \mathbf{x}_t \sim p(\mathbf{x}_t | \mathbf{x}_0)}}
+    \left[\lambda(t) \left\| \nabla_{\mathbf{x}_t} \ln{p(\mathbf{x}_t | \mathbf{x}_0)} - s_\theta(\mathbf{x}_t,t) \right\|_2^2 \right]
+\end{equation}
+    
+
+The difference between DSM and SM is the replacement of the ground truth score which we do not know by the score of the perturbation kernel which we know analytically for many choices of forward SDEs. The choice of the weighted DSM objective is justified because the weighted DSM objective is equal to the SM objective up to a constant that does not depend on the parameters of the model $\theta$. The reader can refer to \cite{vincent2011connection} for the proof. 
+
+The choice of the weighting function is also important, because it determines the quality of score-matching in different diffusion scales. A principled choice for the weighting function is $\lambda(t) = g(t)^2$, where $g(\cdot)$ is the diffusion coefficient of the forward SDE. This weighting function is called the likelihood weighting function \cite{song2021maximum}, because it ensures that we minimize an upper bound on the Kullback–Leibler divergence from the target distribution to the model distribution by minimizing the weighted DSM objective with this weighting. The previous statement is implied by the combination of inequality \ref{ch2:Likelihood Weighting for Uniform Diffusion_Models} which is proven in \cite{song2021maximum} and the relationship between the DSM and SM objectives.
+
+\begin{equation}\label{ch2:Likelihood Weighting for Uniform Diffusion_Models}
+D_{KL}(p(\textbf{x}_0)\parallel p^{SDE}_{\theta})\leq L_{SM}(\theta, g(\cdot)^2)+D_{KL}(p(\textbf{x}_T)\parallel \pi)
+\end{equation}
+
+Other weighting functions have also yielded very good results with particular choices of forward sdes. However, we do not have theoretical guarantees that alternative weightings would yield good results with arbitrary choices of forward sdes.
+
+
+\subsection{Non-Uniform Diffusion Models}\label{ch2:Non-Uniform Diffusion_Models}
+In this section, we describe non-uniform diffusion models. We call them non-uniform to indicate that the forward diffusion of each pixel is potentially governed by a different SDE. Considering a vectorised form $x=\text{vec}(X)=[x^1, x^2,...,x^{mnc}]$ of an image $X\in [0,1]^m\times[0,1]^n\times[0,1]^c$, we assume that the diffusion of the $i^{th}$ pixel is governed by the following SDE:
+
+\begin{equation}\label{ch2:non-uniform pixel_diffusion}
+    dx^{i}_t = f_i(x^i_t,t)dt+g_i(t)dw^i_t
+\end{equation}
+
+Equation \ref{ch2:non-uniform pixel_diffusion} is a special case of the general It\^{o} SDE described in equation \ref{ch2:eq:forward_sde}, but provides more flexibility compared to uniform diffusion where all pixels diffuse independently according to the same SDE. The diffusion of the entire image vector is summarised by the following SDE:
+
+\begin{equation}\label{ch2:non-uniform image_diffusion}
+    d\textbf{x}_t = f(\textbf{x}_t,t)dt+G(t)d\textbf{w}_t,
+\end{equation}
+
+\noindent where \(f(\textbf{x}_t)=[f_1(x^1,t),...,f_{mnc}(x^{mnc}_t,t)]\) and \(G(t)=\text{diag}([g_1(t),...,g_{mnc}(t)])\).
+
+In this more general setup, the DSM objective as described in equation \ref{ch2:DSM for uniform diffusion_models} must also be generalised. The positive weighting function $\lambda(\cdot)$ is replaced by a positive definite matrix $\Lambda(\cdot)$ which gives the form of the DSM objective for non-uniform diffusion models:
+
+\begin{equation}
+    \label{ch2:DSM for non-uniform diffusion_models}
+    \mathcal{L}_{DSM}(\theta, \Lambda(\cdot)) := \frac{1}{2} \mathbb{E}_{\substack{t \sim U(0,T) \\ \mathbf{x}_0 \sim p(\mathbf{x}_0) \\ \mathbf{x}_t \sim p(\mathbf{x}_t | \mathbf{x}_0)}}
+    \left[ \mathbf{v}_{\theta}(\mathbf{x}_0, \mathbf{x}_t, t)^T \Lambda(t) \mathbf{v}_{\theta}(\mathbf{x}_0, \mathbf{x}_t, t) \right]
+\end{equation}
+    
+
+\noindent where \(\textbf{v}_{\theta}(\textbf{x}_0,\textbf{x}_t,t)=\nabla_{\textbf{x}_t}{\ln{p(\textbf{x}_t | \textbf{x}_0)}} - s_\theta(\textbf{x}_t,t)\)
+
+We prove that a principled choice for the positive weighting matrix is $\Lambda_{MLE}(t)=G(t)G(t)^T$. We call it the likelihood weighting matrix for non-uniform diffusion because it ensures minimization of an upper bound to the KL divergence from the target distribution to the model distribution. The previous statement is summarised in Theorem \ref{ch2:Likelihood Weighting for Non-uniform_diffusion} which is proved in section \ref{ch2:appendix:weighting} of the Appendix.
+
+\begin{theorem}\label{ch2:Likelihood Weighting for Non-uniform_diffusion}
+    Let $p(\mathbf{x}_t)$ denote the distribution implied by the forward SDE at time $t$ and $p^{SDE}_\theta(\mathbf{x}_t)$ denote the distribution implied by the parametrized reverse SDE at time $t$. Then under regularity assumptions of \cite[Theorem 1]{song2021maximum}, we have that
+    \[
+    KL(p(\mathbf{x}_0) \| p^{SDE}_\theta(\mathbf{x}_0)) \leq KL(p(\mathbf{x}_T) \| \pi(\mathbf{x}_T)) + \frac{1}{2} \mathbb{E}_{\substack{t \sim U(0,T) \\ \mathbf{x}_t \sim p(\mathbf{x}_t)}} \left[ \mathbf{v}^T G(t) G(t)^T \mathbf{v} \right],
+    \]
+    where $\mathbf{v} = \nabla_{\mathbf{x}_t} \ln{p(\mathbf{x}_t)} - s_\theta(\mathbf{x}_t, t)$.
+\end{theorem}
+
+
+\subsection{Application of Non-Uniform Diffusion in multi-scale diffusion} \label{ch2:sec:multi-scale_diffusion}
+
+We design the forward process so that different groups of pixels diffuse with different speeds which creates a multi-scale diffusion structure. The intuition stems from multi-scale normalising flows. Multi-scale normalising flows invertibly transform the input tensor to latent encodings of different scales by splitting the input tensor into two parts after transformation in each scale. The multi-scale structure in normalising flows is shown to lead to faster training and sampling without compromise in generated image quality. %This is because we do not need to transform the entire tensor in all the invertible layers.
+
+We intend to transfer this idea to score-based modeling by diffusing some parts of the tensor faster. There are many ways to split the image into different parts which diffuse faster. It has been experimentally discovered that cascaded diffusion models \cite{saharia2021sr3} yield improved results  compared to standard diffusion models. This gave us the intuition to use a multi-level haar transform to transform every image to $n$ high frequency scales $d_1,...,d_n$ (detail coefficients) and one low frequency scale $a_n$ (approximation coefficient). The natural generation order of the haar coefficients (in line with cascaded diffusion) is $a_n$, $d_n$, $d_{n-1}$, ..., $d_1$. For this reason, we choose to diffuse lower frequency coefficients slower than high frequency coefficients. More specifically, we design the forward process so that all coefficients reach the same signal-to-noise ratio at the end of their diffusion time. We set the diffusion time for $a_n$ to $T_{a_n}=1$ and for $d_i$ to $T_{d_i}=\frac{i}{n+1}$ for each $i\in [1,...,n]$. We illustrate the multiscale model structure graphically in Figure \ref{ch2:fig:Multiscale_model}.
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Chapter2/samples/multiscale/drawing.png}
+    \caption{Model with three scales. $d_1$ reaches the target SNR at $t=0.25$ and does not diffuse further. The remaining part of tensor continues the diffusion. The diffusion procedure is continued as implied until $a_3$ reaches the target SNR at time $t=1$. We use four neural networks $S_1, S_2, S_3, S_4$ to approximate the score function in the intermediate diffusion intervals, because the dimensionality of the diffusing tensor decreases every time some part of the tensor reaches the target SNR.}
+    \label{ch2:fig:Multiscale_model}
+\end{figure*}
+
+\subsubsection{Training}
+We approximate the score of the distribution of $c_i(t) = [a_n(t), d_n(t),...,d_i(t)]$ in the time range $[(i-1)/(n+1), i/(n+1)]$ with a separate neural network $s_i(c_i(t), t)$. We also use a separate network $s_{n+1}(c_{n+1}(t), t)$ to approximate the score of the distribution of $c_{n+1}(t)=a_n(t)$ in the diffusion time range $[n/(n+1), 1]$. We use different networks in each scale to leverage the fact that we approximate the score of lower dimensional distributions. This enables faster score function evaluation and, therefore, faster training and sampling. We train each network separately using the likelihood weighting matrix for non-uniform diffusion (see section \ref{ch2:Non-Uniform Diffusion_Models}).
+
+\subsubsection{Sampling}
+The sampling process is summarised in the following steps:
+
+\begin{enumerate}
+    \item  Sample $a_n(1)$ from the stationary distribution (e.g. standard normal distribution) and integrate the reverse sde for $a_n$ from time $t=1$ to time $t=n/(n+1)$. 
+    \item Sample $d_n(n/(n+1))$ from the stationary distribution and solve the reverse sde for $[a_n, d_n]$ from time $t=n/(n+1)$ to time $t=(n-1)/(n+1)$.
+    \item The process is continued as implied until we reach the final generation level, where we sample $d_1(1/(n+1))$ from the stationary distribution and solve the reverse sde for $[a_n,d_n,...,d_1]$ from time $t=1/(n+1)$ to time $t=\epsilon$ (e.g., $\epsilon=10^{-5}$). 
+    \item We convert the generated haar coefficients $[a_n(\epsilon),d_n(\epsilon),...,d_1(\epsilon)]$ to the generated image using the multi-level inverse haar transform.
+\end{enumerate}
+
+Our experimental results presented in section \ref{ch2:Multiscale diffusion_experiments} show that multiscale diffusion is more efficient and effective than uniform diffusion.
+
+%We present the results on ImageNet and CelebA which show that for the same number of parameters and the same training time, the multi-scale model achieves better performance with faster sampling speed.
+
+\subsection{Application of Non-Uniform Diffusion in Conditional generation} \label{ch2:sec:conditional_generation}
+
+The continuous score-matching framework can be extended to conditional generation, as shown in  \cite{song2021sde}. Suppose we are interested in $p(x|y)$, where $x$ is a \textit{target image} and $y$ is a \textit{condition image}. Again, we use the forward diffusion process (Equation \ref{ch2:eq:forward_sde}) to obtain a family of diffused distributions $p(x_t | y)$ and apply Anderson's Theorem to derive the \textit{conditional reverse-time SDE}
+\begin{equation}
+    \label{ch2:eq:conditional_reverse_sde}
     dx = [\mu(x,t) - \sigma(t)^2 \nabla_{x} \ln p_{X_t}(x | y)]dt + \sigma(t)d\tilde{w}.
 \end{equation}
 Now we need to learn the score $\nabla_{x_t} \ln p(x_t|y)$ in order to be able to sample from $p(x | y)$ using reverse-time diffusion.\\
@@ -162,19 +260,19 @@ to obtain $\nabla_{x_t} \ln p(x_t | y)$. Unlike other approaches, this requires 
 The conditional denoising estimator (CDE) is a way of estimating $p(x_t|y)$ using the denoising score matching approach \cite{vincent2011connection, song2020generative_score}. In order to approximate $p(x_t|y)$, the conditional denoising estimator minimizes
 \begin{gather}
 \begin{aligned}
-        \label{CDN}
+        \label{ch2:CDN}
         &\frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_0, y \sim p(x_0, y) \\ &x_t \sim p(x_t | x_0)}} 
         [\lambda(t) \norm{\nabla_{x_t} \ln{p(x_t | x_0)} - s_\theta(x_t, y, t)}_2^2]
 \end{aligned}
 \end{gather}
-This estimator has been shown to be successful in previous works \cite{saharia2021sr3,tashiro2021csdi}, also confirmed in our experimental findings (cf. Section \ref{sec:experiments}). 
+This estimator has been shown to be successful in previous works \cite{saharia2021sr3,tashiro2021csdi}, also confirmed in our experimental findings (cf. Section \ref{ch2:sec:experiments}). 
 
 Despite the practical success, this estimator has previously been used without a theoretical justification of why training the above objective yields the desired conditional distribution. Since $p(x_t|y)$ does not appear in the training objective, it is not obvious that the minimizer approximates the correct quantity. 
 
 By extending the arguments of \cite{vincent2011connection}, we provide a formal proof that the minimizer of the above loss does indeed approximate the correct conditional score $p(x_t|y)$. This is expressed in the following theorem.
 
 \begin{theorem}
-    \label{thm:CDE_consistency}
+    \label{ch2:thm:CDE_consistency}
     The minimizer (in $\theta$) of
     \begin{gather*}
     \begin{aligned}
@@ -189,20 +287,20 @@ By extending the arguments of \cite{vincent2011connection}, we provide a formal 
     \end{gather*}
 \end{theorem}
 \noindent
-The proof for this statement can be found in Appendix \ref{appendix:minimizers}. 
+The proof for this statement can be found in Appendix \ref{ch2:appendix:minimizers}. 
 Using the above theorem, the consistency of the estimator can be established.
 \begin{corollary}
-    Let $\theta^\ast$ be a minimizer of a Monte Carlo approximation of (\ref{CDN}), then (under technical assumptions, cf. Appendix \ref{appendix:consistency}) the conditional denoising estimator $s_{\theta^\ast}(x,y,t)$ is a consistent estimator of the conditional score $\nabla_{x_t} \ln p(x_t | y)$, i.e.
+    Let $\theta^\ast$ be a minimizer of a Monte Carlo approximation of (\ref{ch2:CDN}), then (under technical assumptions, cf. Appendix \ref{ch2:appendix:consistency}) the conditional denoising estimator $s_{\theta^\ast}(x,y,t)$ is a consistent estimator of the conditional score $\nabla_{x_t} \ln p(x_t | y)$, i.e.
     \begin{gather*}
         s_{\theta^\ast}(x,y,t) \overset{P}{\to} \nabla_{x_t} \ln p(x_t | y)   
     \end{gather*}
     as the number of Monte Carlo samples approaches infinity.
 \end{corollary}
 \noindent
-This follows from the previous theorem and the uniform law of large numbers. Proof in the Appendix \ref{appendix:consistency}.
+This follows from the previous theorem and the uniform law of large numbers. Proof in the Appendix \ref{ch2:appendix:consistency}.
 
 \subsubsection{Conditional diffusive estimator (CDiffE)}
-\label{sec:CDiffE}
+\label{ch2:sec:CDiffE}
 Conditional diffusive estimators (CDiffE) have first been suggested in \cite{song2021sde}. The core idea is that instead of learning $p(x_t | y)$ directly, we diffuse both $x$ and $y$ and approximate $p(x_t | y_t)$, using the denoising score matching. Just like learning diffused distribution $\nabla_{x_t} \ln p(x_t)$ improves upon direct estimation of $\nabla_{x} \ln p(x)$ \cite{song2020generative_score, song2021sde}, diffusing both the input $x$ and condition $y$, and then learning $\nabla_{x_t} \ln p(x_t | y_t)$ could make optimization easier and give better results than learning  $\nabla_{x_t} \ln p(x_t | y)$ directly.
     
 In order to learn $p(x_t | y_t)$, observe that
@@ -211,7 +309,7 @@ In order to learn $p(x_t | y_t)$, observe that
 \end{gather*}
 where $z_t := (x_t, y_t)$ and $n_x$ is the dimensionality of $x$. Therefore we can learn the (unconditional) score of the joint distribution $p(x_t, y_t)$ using the denoising score matching objective just like as in the unconditional case, i.e
 \begin{gather}
-    \label{CDF}
+    \label{ch2:CDF}
 \begin{aligned}
     &\frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &z_0 \sim p_0(z_0) \\ &z_t \sim p(z_t | z_0)}} [\lambda(t) \norm{\nabla_{z_t} \ln{p(z_t |z_0)} - s_\theta(z_t,t)}_2^2].
 \end{aligned}
@@ -226,8 +324,20 @@ Now in order to obtain samples from the conditional distribution, we sample a po
 \end{gather*}
 from $T$ to $0$, sampling $\hat{y}_t \sim p(y_t | y)$ at each time step.
 
+% For completeness, we state formally the consistency of the conditional diffusive estimator.
+
+% \begin{theorem}
+%     Let $\theta^\ast$ be a minimizer of a Monte Carlo approximation of \ref{ch2:CDF}. Then assuming a sufficient model capacity, the conditional denoising estimator $s_{\theta^\ast}(x,y,t)[:n_x]$ is a consistent estimator of the diffused conditional score $\nabla_{x_t} \ln p(x_t | y_t)$ i.e.
+%     \begin{gather*}
+%         s_{\theta^\ast}(x,y,t)[:n_x] \overset{P}{\to} \nabla_{x_t} \ln p(x_t | y_t)   
+%     \end{gather*}
+%     as the number of Monte Carlo samples approaches infinity.
+% \end{theorem}
+% The above follows form the fact that $\argmin_\theta \mathcal{L}_\text{SM}(\theta) = \argmin_\theta \mathcal{L}_\text{DSM}(\theta)$ \cite{vincent2011connection} and the uniform law of large numbers. See Appendix \ref{ch2:appendix:proofs} for technical details.
+
+
 \subsubsection{Conditional multi-speed diffusive estimator (CMDE)}
-\label{sec:CMDE}
+\label{ch2:sec:CMDE}
 \begin{figure}
 \begin{mdframed}
     \begin{center}
@@ -250,11 +360,11 @@ from $T$ to $0$, sampling $\hat{y}_t \sim p(y_t | y)$ at each time step.
     CDiffE aims to achieve smaller optimization error at a cost of higher approximation error. By controlling the diffusion speed of $y$, CMDE tries to find an optimal balance between optimization error and approximation error.
 \end{mdframed}
 \caption{Sources of error for different estimators}
-\label{fig:box}
+\label{ch2:fig:box}
 \end{figure}
 In this section we present a novel estimator for the conditional score $\nabla_{x_t} \ln p(x_t | y)$ which we call the \textit{conditional multi-speed diffusive estimator} (CMDE). 
 
-Our approach is based on two insights. Firstly, there is no reason why $x_t$ and $y_t$ in conditional diffusive estimation need to diffuse at the same rate. Secondly, by decreasing the diffusion rate of $y_t$ while keeping the diffusion speed of $x_t$ the same, we can bring $p(x_t |y_t)$ closer to $p(x_t |y)$, at the possible cost of making the optimization more difficult. This way we can \emph{interpolate} between the conditional denoising estimator and the conditional diffusive estimator and find an optimal balance between optimization error and approximation error (cf. Figure \ref{fig:box}). This can lead to a better performance, as indicated by our experimental findings (cf. Section \ref{sec:experiments}).
+Our approach is based on two insights. Firstly, there is no reason why $x_t$ and $y_t$ in conditional diffusive estimation need to diffuse at the same rate. Secondly, by decreasing the diffusion rate of $y_t$ while keeping the diffusion speed of $x_t$ the same, we can bring $p(x_t |y_t)$ closer to $p(x_t |y)$, at the possible cost of making the optimization more difficult. This way we can \emph{interpolate} between the conditional denoising estimator and the conditional diffusive estimator and find an optimal balance between optimization error and approximation error (cf. Figure \ref{ch2:fig:box}). This can lead to a better performance, as indicated by our experimental findings (cf. Section \ref{ch2:sec:experiments}).
 
 In our conditional multi-speed diffusive estimator, $x_t$ and $y_t$ diffuse according to SDEs with the same drift but different diffusion rates,
 \begin{gather*}
@@ -265,7 +375,7 @@ In our conditional multi-speed diffusive estimator, $x_t$ and $y_t$ diffuse acco
 
 Then, just like in the case of conditional diffusive estimator, we try to approximate the joint score $\nabla_{x_t, y_t} \ln p(x_t, y_t)$ with a neural network. Since $x_t$ and $y_t$ now diffuse according to different SDEs, we need to take this into account and replace the weighting function $\lambda(t):\mathbb{R} \xrightarrow{} \mathbb{R}_+ $ with a positive definite weighting matrix $\Lambda(t): \mathbb{R} \xrightarrow{} \mathbb{R}^{(n_x + n_y) \times (n_x + n_y)}$. Hence, the new training objective becomes
 \begin{gather}
-    \label{eq:CMDE}
+    \label{ch2:eq:CMDE}
     \begin{aligned}
         \frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &z_0 \sim p_0(z_0) \\ &z_t \sim p(z_t | z_0)}} 
         [
@@ -278,8 +388,8 @@ where $v=\nabla_{z_t} \ln{p(z_t |z_0)} - s_\theta(z_t,t)$, $z_t=(x_t,y_t)$.
 In \cite{song2021maximum} authors derive a likelihood weighting function $\lambda^{\text{MLE}}(t)$, which ensures that the objective of the score-based model upper-bounds the negative log-likelihood of the data, thus enabling approximate maximum likelihood training of score-based diffusion models. We generalize this result to the multi-speed diffusion case by providing a likelihood weighting matrix $\Lambda^{\text{MLE}}(t)$ with the same properties.
 
 \begin{theorem}
-    \label{thm:weightning}
-    Let $\mathcal{L}(\theta)$ be the CMDE training objective (Equation \ref{eq:CMDE}) with the following weighting:
+    \label{ch2:thm:weightning}
+    Let $\mathcal{L}(\theta)$ be the CMDE training objective (Equation \ref{ch2:eq:CMDE}) with the following weighting:
     \begin{gather*}
         \Lambda^{\text{MLE}}_{i,j}(t) =  
         \begin{cases} 
@@ -296,11 +406,11 @@ In \cite{song2021maximum} authors derive a likelihood weighting function $\lambd
 \end{theorem}
 
 \noindent
-The proof can be found in Appendix \ref{appendix:weighting}. 
+The proof can be found in Appendix \ref{ch2:appendix:weighting}. 
 
 Moreover we show that the mean squared approximation error of a multi-speed diffusion model is upper bounded and the upper bound goes to zero as the diffusion speed of the condition $\sigma^y(t)$ approaches zero.
 \begin{theorem}
-    Fix $t$, $x_t$ and $y$. Under mild technical assumptions (cf. Appendix \ref{appendix:mse}) there exists a function  $E: \mathbb{R} \xrightarrow{} \mathbb{R}$ monotonically decreasing to $0$, such that
+    Fix $t$, $x_t$ and $y$. Under mild technical assumptions (cf. Appendix \ref{ch2:appendix:mse}) there exists a function  $E: \mathbb{R} \xrightarrow{} \mathbb{R}$ monotonically decreasing to $0$, such that
     \begin{gather*}
         \mathbb{E}_{y_t \sim p(y_t|y)}[
             \norm{ \nabla_{x_t} \ln p(x_t|y_t) - \nabla_{x_t} \ln p(x_t|y)}_2^2
@@ -309,25 +419,54 @@ Moreover we show that the mean squared approximation error of a multi-speed diff
     \end{gather*}
 \end{theorem}
 \noindent
-The proof can be found in Appendix \ref{appendix:mse}.
+The proof can be found in Appendix \ref{ch2:appendix:mse}.
 
-Thus we see that the objective of CMDE approaches that of CDE as  $\sigma^y(t) \to 0$, and  CMDE coincides with CDiffE when $ \sigma^y(t) = \sigma^x(t)$ (cf. Figure \ref{fig:box}).
+Thus we see that the objective of CMDE approaches that of CDE as  $\sigma^y(t) \to 0$, and  CMDE coincides with CDiffE when $ \sigma^y(t) = \sigma^x(t)$ (cf. Figure \ref{ch2:fig:box}).
 
-We experimented with different configurations of $\sigma^x(t)$ and $\sigma^y(t)$ and found configurations that lead to  improvements upon CDiffE and  CDE in certain tasks. The experimental results are discussed in detail in Section \ref{sec:experiments}.
-
-\subsubsection{\texttt{MSDiff}: Beyond multi-speed diffusion}
-\label{sec:multi-sde}
-
-Based on this work, we provide our open source library \texttt{MSDiff}, which generalizes the original framework of \cite{song2021sde} and allows to diffuse $x_t$ and $y_t$ not only at different diffusion rates, but with two entirely different forward SDEs (i.e. with different diffusion coefficients \emph{and} different drifts):
-\begin{gather*}
-    dx = \mu^x(x,t)dt+\sigma^x(t)dw  \\
-    dy = \mu^y(y,t)dt+\sigma^y(t)dw  
-\end{gather*}
-Moreover, the likelihood weighting of Theorem \ref{thm:weightning} holds in this more general case, allowing for principled training of multi-sde diffusion models (cf. Appendix \ref{appendix:weighting}).
-This flexibility opens room for further research into multi-speed diffusion based training of score-based models, which we intend to examine in a future study. 
+We experimented with different configurations of $\sigma^x(t)$ and $\sigma^y(t)$ and found configurations that lead to  improvements upon CDiffE and  CDE in certain tasks. The experimental results are discussed in detail in Section \ref{ch2:Conditional Generation_experiments}.
 
 \section{Experiments}
-\label{sec:experiments}
+\label{ch2:sec:experiments}
+
+\subsection{Multiscale diffusion}\label{ch2:Multiscale diffusion_experiments}
+
+
+In this part of the experimental section, we compare the performance of the multiscale model that depends on non-uniform pixel diffusion to the performance of the standard model that depends on uniform diffusion. We train and evaluate both models on CelebA-HQ $128\times 128$.
+
+For the standard diffusion model, we use the beta-linear VP SDE \cite{ho2020denoising} and train the score model using the simple objective \cite{dhariwal2021diffusion_beats_gans} because it is experimentally shown to favor generation quality. The architecture of the score model follows the architecture of \cite{dhariwal2021diffusion_beats_gans}.
+
+For the multiscale model, we use 3-level haar transform to transform the original images, which means that we create a multiscale model with four scales. For this reason, we use four score models $s_{\theta_1},s_{\theta_2},s_{\theta_3},s_{\theta_4}$ which approximate the score function in following diffusion ranges respectively $[\epsilon, 0.25], [0.25, 0.50], [0.50, 0.75], [0.75, 1]$. The reason we do not use $s_{\theta_1}$ to approximate the score function for the entire diffusion is that we stop the diffusion of the highest frequency detail coefficients $d_1$ at time $0.25$, as they reach the target minimum SNR (by design of the forward SDE). The remaining diffusing tensor has a quarter of the dimensionality of the original tensor. Therefore, we need a less expressive neural network to approximate the score function in the next diffusion time range. The architecture of all models follows the architecture of \cite{dhariwal2021diffusion_beats_gans}. We choose the number of base channels and the depth of the multiscale score models so that the total number of parameters of the multiscale model is approximately equal to the number of parameters of the standard diffusion model to ensure fair comparison. For the diffusion of each haar coefficient, we use a variance preserving process with log-linear SNR profile as in \cite{kingmaVDM}. We choose the maximum SNR (at $t=\epsilon$) and the minimum SNR (achieved at the terminal diffusion time for each coefficient) to match the maximum SNR and minimum SNR of the standard model respectively.
+
+We evaluate both models using the FID score on 50K samples. We generate each sample by numerically integrating the reverse SDE with 256 total euler-maruyama steps and provide qualitative results at the Appendix \ref{ch2:Extended visual_results}. Our results (see Tables  \ref{ch2:tbl:CelebA}) show that for the same training time, the multiscale model achieves better FID score with significantly faster sampling speed ($4.4$ times faster). In fact, our results show that the multiscale model achieves improved FID score with faster sampling speed and less training time. We verified that by integrating the corresponding probability flow ODEs using the euler method. In that case, we got lower FID scores for both methods but the relative performance remained the same. Moreover, we used lighter neural networks than prior works to approximate the score function which led to generally worse performance. We opted for lighter models in this study because we wanted to conduct a fair comparison of the multiscale diffusion model and the standard uniform diffusion model. Improved techniques that led to state-of-the-art performance of the uniform diffusion model such as class conditioning and learning of the variance schedule \cite{dhariwal2021diffusion_beats_gans} can also be readily employed in the multiscale model. Given the superiority of the multiscale model, we expect the employment of improved techniques to further improve the performance of the multiscale model and potentially redefine the state-of-the-art. We intend to explore this direction in the future.
+
+The training and sampling speed-up is attributed to the fact that we approximate the score of lower dimensional distributions for the majority of the diffusion. Therefore, we expect higher relative speed-ups in higher resolutions. We believe that the effectiveness of the multiscale model is attributed to the effectiveness of cascaded diffusion observed in previous works \cite{saharia2021sr3, dhariwal2021diffusion_beats_gans}. The difference between our multiscale model and the previous works is that it does not suffer from the effect of the compounding error. Ho et al. \cite{saharia2021sr3} improve the performance of cascading models by using an expensive post-training tuning step which they call conditioning augmentation. Our multiscale model essentially employs a cascading modeling structure that does not require any post-training tuning for improved sample generation.
+
+
+
+\begin{table*}[h!]
+    \begin{center}
+    \caption{Multiscale and Vanilla model comparison on CelebA-HQ 128x128}
+    \label{ch2:tbl:CelebA}
+    \begin{tabular}{ccccccc}
+    \toprule
+    & Iterations & Parameters & Training (hours) $\downarrow$  & Sampling (secs) $\downarrow$ & FID $\downarrow$ \\
+    \midrule
+    \multirow{1}{*}{Vanilla} 
+    &0.67M & 100M & 128  & 53.5 & 54.3    \\
+    \midrule
+    \multirow{1}{*}{Multiscale}
+    &2.54M & 100M & 128  & 12.1 & 31.8 \\
+
+    \midrule
+    \multirow{1}{*}{Multiscale +}
+    &1.76M & 200M & 128  & 18.7 & 33.5  \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+\end{table*}
+
+\subsection{Conditional Generation}
+\label{ch2:Conditional Generation_experiments}
 
 \begin{figure*}
     \captionsetup[subfigure]{labelformat=empty}
@@ -337,7 +476,7 @@ This flexibility opens room for further research into multi-speed diffusion base
     \end{subfigure}
     \begin{subfigure}{.135\textwidth}
         \includegraphics[width=\textwidth]{Chapter2/samples/diversity/y.png}
-        \caption{\scriptsize Observation $y := Ax$}
+        \caption{\scriptsize Observation $y$}
     \end{subfigure}
     \begin{subfigure}{.135\textwidth}
         \includegraphics[width=\textwidth]{Chapter2/samples/diversity/1.png}
@@ -362,7 +501,7 @@ This flexibility opens room for further research into multi-speed diffusion base
     \caption{Diversity of five different CMDE reconstructions for a given masked image.}
 \end{figure*}
 
-In this section we conduct a systematic comparison of different score-based diffusion approaches to modelling conditional distributions of image data. We evaluate these approaches on the tasks of super-resolution, inpainting and edge to image translation.  Moreover, we compare the most successful score-based diffusion approaches for super-resolution with HCFlow  \cite{liang2021hrflow} -- a state-of-the-art method in super-resolution.
+In this section we conduct a systematic comparison of different score-based diffusion approaches to modelling conditional distributions of image data. We evaluate these approaches on the tasks of super-resolution, inpainting and edge to image translation.
 
 \noindent
 \textbf{Datasets} In our experiments, we use the CelebA \cite{2015celeba} and Edges2shoes \cite{yu2014sketch2shoe,isola2018pix2pix} datasets. We pre-processed the CelebA dataset as in \cite{liang2021hrflow}.
@@ -373,7 +512,7 @@ We used the variance-exploding SDE \cite{song2021sde} given by:
 $$dx = \sqrt{\frac{d}{dt}\sigma^2(t)}dw, \hspace{1cm}
 \sigma(t) = \sigma_{min} \left(\frac{\sigma_{max}}{\sigma_{min}}\right)^t$$
 Likelihood weighting was employed for all experiments. For CMDE, the diffusion speed of $y$ was controlled by picking an appropriate $\sigma^y_{\max}$, which we found by trial-and-error. The performance of CMDE could be potentially improved by performing a systematic hyperparameter search for optimal $\sigma^y_{\max}$.
-Details on hyperparameters and architectures used in our experiments can be found in Appendix \ref{appendix:hyperparams}.
+Details on hyperparameters and architectures used in our experiments can be found in Appendix \ref{ch2:appendix:hyperparams}.
 
 \noindent 
 \textbf{Inverse problems} The tasks of inpainting, super-resolution and edge to image translation are special cases of inverse problems \cite{arridge2019ip, muller2012ip}. In each case, we are given a (possibly random) forward operator $A$ which maps our data $x$ (full image) to an observation $y$ (masked image, compressed image, sketch). The task is to come up with a high-quality reconstruction $\hat{x}$ of the image $x$ based on an observation $y$. The problem of reconstructing $x$ from $y$ is typically ill-posed, since $y$ does not contain all information about $x$. Therefore, an ideal algorithm would produce a reconstruction $\hat{x}$, which looks like a realistic image (i.e. is a likely sample from $p(x)$) and is consistent with the observation $y$ (i.e. $A\hat{x} \approx y$). Notice that if a conditional score model learns the conditional distribution correctly, then our reconstruction $\hat{x}$ is a sample from the posterior distribution $p(x | y)$, which satisfies bespoke requirements. This strategy for solving inverse problems is generally referred to as \emph{posterior sampling}.
@@ -394,151 +533,145 @@ We evaluate diversity of each approach by generating five reconstructions $(\hat
 If our algorithm generates realistic reconstructions while preserving diversity, then the distribution of reconstructions $p(\hat{x})$ should be similar to the distribution of original images $p(x)$. Therefore, we measure the Fr\'{e}chet Inception Distance (FID) \cite{heusel2018fid} between unconditional distributions $p(x)$ and $p(\hat{x})$ based on 5000 samples. Moreover, we calculate the FID score between the joint distributions $p(\hat{x}, y)$ and $p(x,y)$, which allows us to simultaneously check the realism of the reconstructions and the consistency with the observation. 
 We use abbreviation UFID to refer to FID between between unconditional distributions and JFID to refer to FID between joints.  In our judgement, FID and especially the JFID is the most principled of the used metrics, since it measures how far $p_\theta(x | y)$ is from $p(x|y)$.
 
-\begin{table*}
-  \begin{center}
-  \caption{Results of conditional generation tasks.}
-  \label{tbl:results}
-  \begin{tabular}{cccccccc}
-  \toprule
-  &Estimator & PSNR/SSIM $\uparrow$  & LPIPS $\downarrow$ & UFID/JFID $\downarrow$ & Consistency $\uparrow$ & Diversity $\uparrow$ \\
-  \midrule
-  \multirow{3}{*}{Inpainting} 
-  &CDE & \textbf{25.12}/\textbf{0.870}  & \textbf{0.042} & 13.07/18.06 & \textbf{28.54} & 4.79  \\
-  &CDiffE & 23.07/0.844   & 0.057 & 13.28/19.25 &  26.61 & \textbf{6.52}   \\
-  &CMDE ($\sigma^y_{max} = 1$) & 24.92/0.864  & 0.044 & \textbf{12.07/17.07} & 28.32 & 4.98  \\
-  \midrule
-  \multirow{4}{*}{Super-resolution} 
-  &CDE & 23.80/0.650  & 0.114 & 10.36/15.77 & 54.18 & \textbf{8.51}  \\
-  &CDiffE & 23.83/0.656  & 0.139 & 14.29/20.20 & 51.90 & 7.41  \\
-  &CMDE ($\sigma^y_{max} = 0.5$) & 23.91/0.654  & 0.109 & \textbf{10.28/15.68} & 53.03 & 8.33  \\
-  &HCFLOW & \textbf{24.95/0.702} & \textbf{0.107} & 14.13/19.55 & \textbf{55.31} & 6.26 \\
-  \midrule
-  \multirow{3}{*}{Edge to image} 
-  &CDE & \textbf{18.35/0.699}  & \textbf{0.156} & \textbf{11.87/21.31} & \textbf{10.45} & 14.40 \\
-  &CDiffE & 10.00/0.365   & 0.350 & 33.41/55.22  & 7.78 & \textbf{43.45} \\
-  &CMDE ($\sigma^y_{max} = 1$) & 18.16/0.692  & 0.158 & 12.62/22.09 & 10.38 & 15.20  \\
-  \bottomrule
-  \end{tabular}
-  \end{center}
-\end{table*}
+\begin{table*}[ht]
+    \centering
+    \caption{Results of conditional generation tasks.}
+    \label{ch2:tbl:results}
+    \resizebox{\textwidth}{!}{ % This line resizes the table to fit within text width
+    \begin{tabular}{@{}c|c|c|c|c|c|c@{}}
+      \toprule
+      Task & Estimator & PSNR/SSIM $\uparrow$ & LPIPS $\downarrow$ & UFID/JFID $\downarrow$ & Consistency $\uparrow$ & Diversity $\uparrow$ \\
+      \midrule
+      \multirow{3}{*}{Inpainting} 
+      & CDE & \textbf{25.12}/\textbf{0.870} & \textbf{0.042} & 13.07/18.06 & \textbf{28.54} & 4.79 \\
+      & CDiffE & 23.07/0.844 & 0.057 & 13.28/19.25 & 26.61 & \textbf{6.52} \\
+      & CMDE ($\sigma^y_{max} = 1$) & 24.92/0.864 & 0.044 & \textbf{12.07/17.07} & 28.32 & 4.98 \\
+      \midrule
+      \multirow{4}{*}{Super-resolution} 
+      & CDE & 23.80/0.650 & 0.114 & 10.36/15.77 & 54.18 & \textbf{8.51} \\
+      & CDiffE & 23.83/0.656 & 0.139 & 14.29/20.20 & 51.90 & 7.41 \\
+      & CMDE ($\sigma^y_{max} = 0.5$) & 23.91/0.654 & 0.109 & \textbf{10.28/15.68} & 53.03 & 8.33 \\
+      & HCFLOW & \textbf{24.95}/\textbf{0.702} & \textbf{0.107} & 14.13/19.55 & \textbf{55.31} & 6.26 \\
+      \midrule
+      \multirow{3}{*}{Edge to image} 
+      & CDE & \textbf{18.35}/\textbf{0.699} & \textbf{0.156} & \textbf{11.87/21.31} & \textbf{10.45} & 14.40 \\
+      & CDiffE & 10.00/0.365 & 0.350 & 33.41/55.22 & 7.78 & \textbf{43.45} \\
+      & CMDE ($\sigma^y_{max} = 1$) & 18.16/0.692 & 0.158 & 12.62/22.09 & 10.38 & 15.20 \\
+      \bottomrule
+    \end{tabular}
+    }
+  \end{table*}
 
-\subsection{Inpainting}
+  \subsubsection{Inpainting}
 
-We perform the inpainting experiment using CelebA dataset. In inpainting, the forward operator $A$ is an application of a given binary mask to an image $x$.  In our case, we made the task more difficult by using randomly placed (square) masks. Then the conditional score model is used to obtain a reconstruction $\hat{x}$ from the masked image $y$. We select the position of the mask uniformly at random and cover $25\%$ of the image. The quantitative results are summarised in Table \ref{tbl:results} and samples are presented in Figure \ref{fig:inpainting}. We observe that CDE and CMDE significantly outperform CDiffE in all metrics, with CDE having a small advantage over CMDE in terms of reconstruction error and consistency. On the other hand, CMDE achieves the best FID scores.
+  We perform the inpainting experiment using CelebA dataset. In inpainting, the forward operator $A$ is an application of a given binary mask to an image $x$.  In our case, we made the task more difficult by using randomly placed (square) masks. Then the conditional score model is used to obtain a reconstruction $\hat{x}$ from the masked image $y$. We select the position of the mask uniformly at random and cover $25\%$ of the image. The quantitative results are summarised in Table \ref{ch2:tbl:results} and samples are presented in Figure \ref{ch2:fig:inpainting}. We observe that CDE and CMDE significantly outperform CDiffE in all metrics, with CDE having a small advantage over CMDE in terms of reconstruction error and consistency. On the other hand, CMDE achieves the best FID scores.
 
-\begin{figure*}
-  \begin{center}
+  
+    
+
+  \begin{figure*}[ht]
+    \begin{center}
       \begingroup
-      \setlength{\tabcolsep}{2pt}
-  \begin{tabular}{ccccc}
-      Original image $x$ & Observation $y$ & CDE & CDiffE & CMDE (Ours) \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/sr3.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/Song.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/DV.png} \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/sr3.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/Song.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/DV.png} \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/sr3.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/Song.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/DV.png} \\
-  \end{tabular}
-  \endgroup
-  \end{center}
-  \caption{Inpainting results.}
-  \label{fig:inpainting}
-\end{figure*}
-
-
-\subsection{Super-resolution}
-We perform 8x super-resolution using the CelebA dataset. A high resolution 160x160 pixel image $x$ is compressed to a low resolution 20x20 pixels image $y$. Here we use bicubic downscaling \cite{keyes1981bicubic} as the forward operator  $A$. Then using a score model we obtain a 160x160 pixel reconstruction image $\hat{x}$. The quantitative results are summarised in Table \ref{tbl:results} and samples are presented in Figure \ref{fig:super-resolution}. We find that CMDE and CDE perform similarly, while significantly outperforming CDiffE. CMDE achieves the smallest reconstruction error and captures the distribution most accurately according to FID scores. 
-
-
-
-\begin{figure*}
-  \begin{center}
-  \begingroup
-  \setlength{\tabcolsep}{2pt}
-  %\renewcommand{\arraystretch}{1.5}
-
-  \begin{tabular}{cccccc}
-      Original image $x$ & Observation $ y$ & HCFlow & CDE & CDiffE & CMDE (Ours) \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/hcflow.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/sr3.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/Song.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/DV.png} \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/hcflow.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/sr3.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/Song.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/DV.png} \\
-
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/x.png} &   
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/y.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/hcflow.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/sr3.png} & 
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/Song.png} &
-      \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/DV.png} \\
-  \end{tabular}
-  \endgroup
-  \end{center}
-  \caption{Super-resolution results.}
-  \label{fig:super-resolution}
-\end{figure*}
-
-
-
-\subsection{Edge to image translation}
-We perform an edge to image translation task on the Edges2shoes dataset. The forward operator $A$ is given by a neural network edge detector \cite{xie2015edges}, which takes an original photo of a shoe $x$ and transforms it into a sketch $y$. Then a conditional score model is used to create an artificial photo of a shoe $\hat{x}$ matching the sketch. The quantitative results are summarised in Table \ref{tbl:results} and samples are presented in Figure \ref{fig:edges-to-shoes}. Unlike in inpainting and super-resolution where CDiffE achieved reasonable performance, in edge to image translation, it fails to create samples consistent with the condition (which leads to inflated diversity scores). CDE and CMDE are comparable, but CDE performed slightly better across all metrics. However, the performance of CMDE could be potentially improved by  tuning the diffusion speed $\sigma^y(t)$.
-
-\begin{figure}
-\renewcommand{\arraystretch}{1.25}
-  \begin{tabular}{lccc}
-      \begin{tabular}{@{}l@{}}
-          Original image $x$
-          \\[25pt]
+      \setlength{\tabcolsep}{4pt} % Adjusts the spacing between columns slightly
+      \begin{tabular}{ccccc}
+        \small Original image $x$ & \small Observation $y$ & \small CDE & \small CDiffE & \small CMDE (Ours) \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/Song.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/1/DV.png} \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/Song.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/2/DV.png} \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/Song.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/inpainting/table/3/DV.png} \\
       \end{tabular}
-       & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/1/x.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/2/x.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/3/x.png} \\
-      
-      \begin{tabular}{@{}l@{}}
-          Observation \\ $ y := Ax$
-          \\[25pt]
+      \endgroup
+    \end{center}
+    \caption{Inpainting results.}
+    \label{ch2:fig:inpainting}
+  \end{figure*}
+  
+
+\subsubsection{Super-resolution}
+We perform 8x super-resolution using the CelebA dataset. A high resolution 160x160 pixel image $x$ is compressed to a low resolution 20x20 pixels image $y$. Here we use bicubic downscaling \cite{keyes1981bicubic} as the forward operator  $A$. Then using a score model we obtain a 160x160 pixel reconstruction image $\hat{x}$. The quantitative results are summarised in Table \ref{ch2:tbl:results} and samples are presented in Figure \ref{ch2:fig:super-resolution}. We find that CMDE and CDE perform similarly, while significantly outperforming CDiffE. CMDE achieves the smallest reconstruction error and captures the distribution most accurately according to FID scores. 
+
+\begin{figure*}[ht]
+    \begin{center}
+      \begingroup
+      \setlength{\tabcolsep}{4pt} % Adjusts the spacing between columns slightly
+      \begin{tabular}{cccccc}
+        \small Original image $x$ & \small Observation $y$ & \small HCFlow & \small CDE & \small CDiffE & \small CMDE (Ours) \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/hcflow.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/Song.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/1/DV.png} \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/hcflow.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/Song.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/2/DV.png} \\
+        
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/x.png} &   
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/y.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/hcflow.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/sr3.png} & 
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/Song.png} &
+        \includegraphics[width=.15\textwidth]{Chapter2/samples/super-resolution/table/3/DV.png} \\
       \end{tabular}
-       & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/1/y.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/2/y.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/3/y.png} \\
-      
-       \begin{tabular}{@{}c@{}}
-          CDE
-          \\[25pt]
-      \end{tabular} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/1/sr3.png}  & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/2/sr3.png}  & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/3/sr3.png} \\
+      \endgroup
+    \end{center}
+    \caption{Super-resolution results.}
+    \label{ch2:fig:super-resolution}
+  \end{figure*}
+  
 
-      \begin{tabular}{@{}c@{}}
-          CDiffE
-          \\[25pt]
-      \end{tabular} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/1/Song.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/2/Song.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/3/Song.png}\\
+  \subsubsection{Edge to image translation}
+  \begin{figure}[ht]
+    \begin{center}
+      \renewcommand{\arraystretch}{1.25}
+      \begin{tabular}{ccccc}
+        Original image $x$ & Observation $y := Ax$ & CDE & CDiffE & CMDE (Ours) \\
+        
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/1/x.png} &   
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/1/y.png} &
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/1/sr3.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/1/Song.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/1/DV.png} \\
+        
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/2/x.png} &   
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/2/y.png} &
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/2/sr3.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/2/Song.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/2/DV.png} \\
+        
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/3/x.png} &   
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/3/y.png} &
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/3/sr3.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/3/Song.png} & 
+        \includegraphics[width=.12\textwidth]{Chapter2/samples/edges-to-shoes/table/3/DV.png} \\
+      \end{tabular}
+    \end{center}
+    \caption{Edge to image translation results.}
+    \label{ch2:fig:edges-to-shoes}
+  \end{figure}
+  We perform an edge to image translation task on the Edges2shoes dataset. The forward operator $A$ is given by a neural network edge detector \cite{xie2015edges}, which takes an original photo of a shoe $x$ and transforms it into a sketch $y$. Then a conditional score model is used to create an artificial photo of a shoe $\hat{x}$ matching the sketch. The quantitative results are summarised in Table \ref{ch2:tbl:results} and samples are presented in Figure \ref{ch2:fig:edges-to-shoes}. Unlike in inpainting and super-resolution where CDiffE achieved reasonable performance, in edge to image translation, it fails to create samples consistent with the condition (which leads to inflated diversity scores). CDE and CMDE are comparable, but CDE performed slightly better across all metrics. However, the performance of CMDE could be potentially improved by  tuning the diffusion speed $\sigma^y(t)$.
+  
 
-      \begin{tabular}{@{}c@{}}
-          CMDE (Ours)
-          \\[25pt]
-      \end{tabular}  &  \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/1/DV.png} &  \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/2/DV.png} &  \includegraphics[width=.08\textwidth]{Chapter2/samples/edges-to-shoes/table/3/DV.png} 
-  \end{tabular}
-  \caption{Edge to image translation results.}
-  \label{fig:edges-to-shoes}
-\end{figure}
-
-
+    
 
 \section{Comparison with state-of-the-art}
 We compare score-based diffusion approaches with HCFlow \cite{liang2021hrflow} -- a state-of-the-art method in super-resolution. To ensure a fair comparison, we used the data pre-processing and hyperparameters for HCFlow exactly as in the original paper \cite{liang2021hrflow}. We find that although HCFlow performs marginally better in terms of the reconstruction error, CDE and CMDE obtain a significantly better FID and diversity scores indicating better distribution coverage. 
@@ -551,13 +684,11 @@ The FID scores suggest that CMDE was the most successful approach to approximati
 
 \section{Conclusions and future work}
 
-In this article, we conducted a systematic comparison of score-based diffusion models in conditional image generation tasks and provided an in-depth theoretical analysis of the estimators of conditional score. In particular, we proved the consistency of the conditional denoising estimator, thus providing a firm theoretical justification for using it in future research. 
+In this article, we explored non-uniform diffusion models which rely on the idea of diffusing different parts of the tensor with different speeds or more generally according to different SDEs. We show that non-uniform diffusion leads to multiscale diffusion models which are more efficient and effective than standard uniform diffusion models for unconditional generation. More specifically, multiscale diffusion models achieve improved FID score with significantly faster sampling speed and for less training time.
 
-Moreover, we introduced a multi-speed diffusion framework, which led to CMDE, a novel estimator for conditional score which interpolates between conditional denoising estimator (CDE) and conditional diffusive estimator (CDiffE) by controlling the diffusion speed of the condition.
+We further discovered that non-uniform diffusion leads to CMDE, a novel estimator of the conditional score which can interpolate between conditional denoising estimator (CDE) and conditional diffusive estimator (CDiffE). We conducted a systematic comparison of different estimators of the conditional score and concluded that CMDE and CDE perform on par, while significantly outperforming CDiffE. This is particularly apparent in edge to image translation, where CDiffE fails to produce samples consistent with the condition image. Furthermore, CMDE outperformed CDE in terms of FID scores in inpainting and super-resolution tasks, which indicates that diffusing the condition at the appropriate speed can have beneficial effect on the optimization landscape, and yield better approximation of the posterior distribution. Furthermore, we provided theoretical analysis of the estimators of conditional score. More importantly, we proved the consistency of the conditional denoising estimator, thus providing a firm theoretical justification for using it in future research. 
 
-Our study showed that CMDE and CDE perform on par, while significantly outperforming CDiffE. This is particularly apparent in edge to image translation, where CDiffE fails to produce samples consistent with the condition image. Furthermore, CMDE outperformed CDE in terms of  FID scores in inpainting and super-resolution tasks, which indicates that diffusing the condition at the appropriate speed can have beneficial effect on the optimization landscape, and yield better approximation of the posterior distribution.
 
-We found that score-based diffusion models perform on par with prior state-of-the-art methods in super-resolution task and achieve better posterior approximation according to FID score.
 
 \section{Acknowledgements} 
 GB acknowledges the support from GSK and the Cantab Capital Institute for the Mathematics of Information. 

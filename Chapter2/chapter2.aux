@@ -1,20 +1,14 @@
 \relax 
 \providecommand\zref@newlabel[2]{}
 \providecommand\hyper@newdestlabel[2]{}
-\citation{saharia2021sr3}
-\citation{SRFLOW}
-\citation{liu2023i2sb}
-\citation{donahue2019adversarial_audio}
-\citation{zhu2020cycle_gan}
-\citation{tang2021attentiongan}
 \citation{bengio2005autoregressive}
 \citation{kingma2014autoencoding}
 \citation{papamakarios2021normalizing}
 \citation{goodfellow2014generative}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Conditional Image Generation with Score-Based Diffusion Models}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Non-Uniform Diffusion Models}{25}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{25}{section.2.1}\protected@file@percent }
 \citation{hyvarinen2005score_original}
 \citation{sohldickstein2015diffusion_original}
 \citation{song2020generative_score}
@@ -26,108 +20,140 @@
 \citation{dhariwal2021diffusion_beats_gans}
 \citation{dhariwal2021diffusion_beats_gans,song2021sde}
 \citation{dhariwal2021diffusion_beats_gans}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Results from our conditional multi-speed diffusive estimator.}}{2}{figure.caption.7}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig: teaser}{{1.1}{2}{Results from our conditional multi-speed diffusive estimator}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Results from our conditional multi-speed diffusive estimator.}}{26}{figure.caption.20}\protected@file@percent }
+\newlabel{ch2:fig:_teaser}{{2.1}{26}{Results from our conditional multi-speed diffusive estimator}{figure.caption.20}{}}
 \citation{saharia2021sr3,tashiro2021csdi}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Notation}{3}{section.1.2}\protected@file@percent }
 \citation{song2021sde}
 \citation{hyvarinen2005score_original,song2020generative_score}
 \citation{sohldickstein2015diffusion_original,ho2020denoising}
 \citation{anderson1982reverse_time_sde}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Methods}{4}{section.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Background: Score matching through Stochastic Differential Equations}{4}{subsection.1.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Unconditional generation}{4}{section*.8}\protected@file@percent }
-\newlabel{eq:forward_sde}{{1.1}{4}{Unconditional generation}{equation.1.3.1}{}}
-\citation{song2021sde}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Notation}{28}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Methods}{28}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Background: Score matching through Stochastic Differential Equations}{29}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Score-Based Diffusion}{29}{section*.21}\protected@file@percent }
+\newlabel{ch2:eq:forward_sde}{{2.1}{29}{Score-Based Diffusion}{equation.2.3.1}{}}
+\newlabel{ch2:eq:reverse_sde}{{2.2}{29}{Score-Based Diffusion}{equation.2.3.2}{}}
+\newlabel{ch2:eq:approximated_reverse_sde}{{2.3}{29}{Score-Based Diffusion}{equation.2.3.3}{}}
+\citation{ho2020denoising,song2020generative_score,dhariwal2021diffusion_beats_gans}
 \citation{hyvarinen2005score_original,song2020generative_score,song2021sde}
 \citation{song2021sde}
-\newlabel{eq:reverse_sde}{{1.2}{5}{Unconditional generation}{equation.1.3.2}{}}
+\citation{vincent2011connection}
+\citation{song2021maximum}
+\citation{song2021maximum}
+\@writefile{toc}{\contentsline {subsubsection}{Uniform Diffusion Models}{30}{section*.22}\protected@file@percent }
+\newlabel{ch2:eq:uniform_sde}{{2.4}{30}{Uniform Diffusion Models}{equation.2.3.4}{}}
+\newlabel{ch2:DSM for uniform diffusion_models}{{2.6}{30}{Uniform Diffusion Models}{equation.2.3.6}{}}
+\newlabel{ch2:Likelihood Weighting for Uniform Diffusion_Models}{{2.7}{31}{Uniform Diffusion Models}{equation.2.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Non-Uniform Diffusion Models}{31}{subsection.2.3.2}\protected@file@percent }
+\newlabel{ch2:Non-Uniform Diffusion_Models}{{2.3.2}{31}{Non-Uniform Diffusion Models}{subsection.2.3.2}{}}
+\newlabel{ch2:non-uniform pixel_diffusion}{{2.8}{31}{Non-Uniform Diffusion Models}{equation.2.3.8}{}}
+\newlabel{ch2:non-uniform image_diffusion}{{2.9}{31}{Non-Uniform Diffusion Models}{equation.2.3.9}{}}
+\newlabel{ch2:DSM for non-uniform diffusion_models}{{2.10}{31}{Non-Uniform Diffusion Models}{equation.2.3.10}{}}
+\citation{song2021maximum}
+\citation{saharia2021sr3}
+\newlabel{ch2:Likelihood Weighting for Non-uniform_diffusion}{{2.3.1}{32}{}{theorem.2.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Application of Non-Uniform Diffusion in multi-scale diffusion}{32}{subsection.2.3.3}\protected@file@percent }
+\newlabel{ch2:sec:multi-scale_diffusion}{{2.3.3}{32}{Application of Non-Uniform Diffusion in multi-scale diffusion}{subsection.2.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Training}{32}{section*.24}\protected@file@percent }
 \citation{song2021sde}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Model with three scales. $d_1$ reaches the target SNR at $t=0.25$ and does not diffuse further. The remaining part of tensor continues the diffusion. The diffusion procedure is continued as implied until $a_3$ reaches the target SNR at time $t=1$. We use four neural networks $S_1, S_2, S_3, S_4$ to approximate the score function in the intermediate diffusion intervals, because the dimensionality of the diffusing tensor decreases every time some part of the tensor reaches the target SNR.}}{33}{figure.caption.23}\protected@file@percent }
+\newlabel{ch2:fig:Multiscale_model}{{2.2}{33}{Model with three scales. $d_1$ reaches the target SNR at $t=0.25$ and does not diffuse further. The remaining part of tensor continues the diffusion. The diffusion procedure is continued as implied until $a_3$ reaches the target SNR at time $t=1$. We use four neural networks $S_1, S_2, S_3, S_4$ to approximate the score function in the intermediate diffusion intervals, because the dimensionality of the diffusing tensor decreases every time some part of the tensor reaches the target SNR}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Sampling}{33}{section*.25}\protected@file@percent }
 \citation{song2021sde}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Conditional generation}{6}{subsection.1.3.2}\protected@file@percent }
-\newlabel{eq:conditional_reverse_sde}{{1.5}{6}{Conditional generation}{equation.1.3.5}{}}
 \citation{vincent2011connection,song2020generative_score}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Application of Non-Uniform Diffusion in Conditional generation}{34}{subsection.2.3.4}\protected@file@percent }
+\newlabel{ch2:sec:conditional_generation}{{2.3.4}{34}{Application of Non-Uniform Diffusion in Conditional generation}{subsection.2.3.4}{}}
+\newlabel{ch2:eq:conditional_reverse_sde}{{2.11}{34}{Application of Non-Uniform Diffusion in Conditional generation}{equation.2.3.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conditional denoising estimator (CDE)}{34}{section*.26}\protected@file@percent }
 \citation{saharia2021sr3,tashiro2021csdi}
 \citation{vincent2011connection}
-\@writefile{toc}{\contentsline {subsubsection}{Conditional denoising estimator (CDE)}{7}{section*.9}\protected@file@percent }
-\newlabel{CDN}{{1.6}{7}{Conditional denoising estimator (CDE)}{equation.1.3.6}{}}
-\newlabel{thm:CDE_consistency}{{1.3.1}{7}{}{theorem.1.3.1}{}}
 \citation{song2021sde}
 \citation{song2020generative_score,song2021sde}
-\@writefile{toc}{\contentsline {subsubsection}{Conditional diffusive estimator (CDiffE)}{8}{section*.10}\protected@file@percent }
-\newlabel{sec:CDiffE}{{1.3.2}{8}{Conditional diffusive estimator (CDiffE)}{section*.10}{}}
-\newlabel{CDF}{{1.7}{8}{Conditional diffusive estimator (CDiffE)}{equation.1.3.7}{}}
-\zref@newlabel{mdf@pagelabel-1}{\default{\caption@xref {??}{ on input line 251}}\page{9}\abspage{25}\mdf@pagevalue{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Sources of error for different estimators}}{9}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:box}{{1.2}{9}{Sources of error for different estimators}{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Conditional multi-speed diffusive estimator (CMDE)}{9}{section*.11}\protected@file@percent }
-\newlabel{sec:CMDE}{{1.3.2}{9}{Conditional multi-speed diffusive estimator (CMDE)}{section*.11}{}}
+\newlabel{ch2:CDN}{{2.12}{35}{Conditional denoising estimator (CDE)}{equation.2.3.12}{}}
+\newlabel{ch2:thm:CDE_consistency}{{2.3.2}{35}{}{theorem.2.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conditional diffusive estimator (CDiffE)}{36}{section*.27}\protected@file@percent }
+\newlabel{ch2:sec:CDiffE}{{2.3.4}{36}{Conditional diffusive estimator (CDiffE)}{section*.27}{}}
+\newlabel{ch2:CDF}{{2.13}{36}{Conditional diffusive estimator (CDiffE)}{equation.2.3.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conditional multi-speed diffusive estimator (CMDE)}{36}{section*.28}\protected@file@percent }
+\newlabel{ch2:sec:CMDE}{{2.3.4}{36}{Conditional multi-speed diffusive estimator (CMDE)}{section*.28}{}}
+\zref@newlabel{mdf@pagelabel-1}{\default{\caption@xref {??}{ on input line 361}}\page{37}\abspage{55}\mdf@pagevalue{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Sources of error for different estimators}}{37}{figure.caption.29}\protected@file@percent }
+\newlabel{ch2:fig:box}{{2.3}{37}{Sources of error for different estimators}{figure.caption.29}{}}
 \citation{song2021maximum}
-\newlabel{eq:CMDE}{{1.8}{10}{Conditional multi-speed diffusive estimator (CMDE)}{equation.1.3.8}{}}
-\newlabel{thm:weightning}{{1.3.3}{10}{}{theorem.1.3.3}{}}
-\citation{song2021sde}
-\citation{liang2021hrflow}
+\newlabel{ch2:eq:CMDE}{{2.14}{38}{Conditional multi-speed diffusive estimator (CMDE)}{equation.2.3.14}{}}
+\newlabel{ch2:thm:weightning}{{2.3.4}{38}{}{theorem.2.3.4}{}}
+\citation{ho2020denoising}
+\citation{dhariwal2021diffusion_beats_gans}
+\citation{dhariwal2021diffusion_beats_gans}
+\citation{dhariwal2021diffusion_beats_gans}
+\citation{kingmaVDM}
+\citation{dhariwal2021diffusion_beats_gans}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Experiments}{39}{section.2.4}\protected@file@percent }
+\newlabel{ch2:sec:experiments}{{2.4}{39}{Experiments}{section.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Multiscale diffusion}{39}{subsection.2.4.1}\protected@file@percent }
+\newlabel{ch2:Multiscale diffusion_experiments}{{2.4.1}{39}{Multiscale diffusion}{subsection.2.4.1}{}}
+\citation{saharia2021sr3,dhariwal2021diffusion_beats_gans}
+\citation{saharia2021sr3}
 \citation{2015celeba}
 \citation{yu2014sketch2shoe,isola2018pix2pix}
 \citation{liang2021hrflow}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Multiscale and Vanilla model comparison on CelebA-HQ 128x128}}{40}{table.caption.30}\protected@file@percent }
+\newlabel{ch2:tbl:CelebA}{{2.1}{40}{Multiscale and Vanilla model comparison on CelebA-HQ 128x128}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Conditional Generation}{40}{subsection.2.4.2}\protected@file@percent }
+\newlabel{ch2:Conditional Generation_experiments}{{2.4.2}{40}{Conditional Generation}{subsection.2.4.2}{}}
 \citation{ho2020denoising,song2021sde}
 \citation{song2021sde}
-\@writefile{toc}{\contentsline {subsubsection}{\texttt  {MSDiff}: Beyond multi-speed diffusion}{11}{section*.13}\protected@file@percent }
-\newlabel{sec:multi-sde}{{1.3.2}{11}{\texttt {MSDiff}: Beyond multi-speed diffusion}{section*.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Experiments}{11}{section.1.4}\protected@file@percent }
-\newlabel{sec:experiments}{{1.4}{11}{Experiments}{section.1.4}{}}
 \citation{arridge2019ip,muller2012ip}
 \citation{zhou2004psnr+ssim}
 \citation{zhou2004psnr+ssim}
 \citation{zhang2018lpips}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Diversity of five different CMDE reconstructions for a given masked image.}}{12}{figure.caption.14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Diversity of five different CMDE reconstructions for a given masked image.}}{41}{figure.caption.31}\protected@file@percent }
 \citation{heusel2018fid}
-\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Results of conditional generation tasks.}}{13}{table.caption.15}\protected@file@percent }
-\newlabel{tbl:results}{{1.1}{13}{Results of conditional generation tasks}{table.caption.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Inpainting}{13}{subsection.1.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Results of conditional generation tasks.}}{42}{table.caption.32}\protected@file@percent }
+\newlabel{ch2:tbl:results}{{2.2}{42}{Results of conditional generation tasks}{table.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Inpainting}{42}{section*.33}\protected@file@percent }
 \citation{keyes1981bicubic}
 \citation{xie2015edges}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Inpainting results.}}{14}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:inpainting}{{1.4}{14}{Inpainting results}{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Super-resolution}{14}{subsection.1.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Inpainting results.}}{43}{figure.caption.34}\protected@file@percent }
+\newlabel{ch2:fig:inpainting}{{2.5}{43}{Inpainting results}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Super-resolution}{43}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Edge to image translation}{43}{section*.37}\protected@file@percent }
 \citation{liang2021hrflow}
 \citation{liang2021hrflow}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Super-resolution results.}}{15}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:super-resolution}{{1.5}{15}{Super-resolution results}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Edge to image translation}{15}{subsection.1.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.5}Comparison with state-of-the-art}{15}{section.1.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Edge to image translation results.}}{16}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:edges-to-shoes}{{1.6}{16}{Edge to image translation results}{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.6}Conclusions and future work}{16}{section.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.7}Acknowledgements}{17}{section.1.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Super-resolution results.}}{44}{figure.caption.36}\protected@file@percent }
+\newlabel{ch2:fig:super-resolution}{{2.6}{44}{Super-resolution results}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Comparison with state-of-the-art}{44}{section.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Edge to image translation results.}}{45}{figure.caption.38}\protected@file@percent }
+\newlabel{ch2:fig:edges-to-shoes}{{2.7}{45}{Edge to image translation results}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Conclusions and future work}{45}{section.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Acknowledgements}{46}{section.2.7}\protected@file@percent }
 \@setckpt{Chapter2/chapter2}{
-\setcounter{page}{18}
-\setcounter{equation}{8}
+\setcounter{page}{47}
+\setcounter{equation}{14}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{1}
+\setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{1}
+\setcounter{chapter}{2}
 \setcounter{section}{7}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{6}
-\setcounter{table}{1}
+\setcounter{figure}{7}
+\setcounter{table}{2}
 \setcounter{@pps}{0}
 \setcounter{@ppsavesec}{0}
 \setcounter{@ppsaveapp}{0}
 \setcounter{NAT@ctr}{0}
 \setcounter{parentequation}{0}
 \setcounter{section@level}{1}
-\setcounter{Item}{7}
+\setcounter{Item}{17}
 \setcounter{Hfootnote}{1}
-\setcounter{bookmark@seq@number}{16}
+\setcounter{bookmark@seq@number}{34}
 \setcounter{theorem}{0}
 \setcounter{mdf@globalstyle@cnt}{0}
 \setcounter{mdfcountframes}{0}
