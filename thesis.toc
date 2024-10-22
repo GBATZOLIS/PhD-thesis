@@ -1,30 +1,31 @@
 \thispagestyle {empty}
 \contentsline {chapter}{List of figures}{xiii}{chapter*.5}%
 \contentsline {chapter}{List of tables}{xv}{chapter*.6}%
-\contentsline {chapter}{\numberline {1}Conditional Image Generation with Score-Based Diffusion Models}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Diffusion models encode the intrinsic dimension of data manifolds}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Notation}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Methods}{4}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Background: Score matching through Stochastic Differential Equations}{4}{subsection.1.3.1}%
-\contentsline {subsubsection}{Unconditional generation}{4}{section*.8}%
-\contentsline {subsection}{\numberline {1.3.2}Conditional generation}{6}{subsection.1.3.2}%
-\contentsline {subsubsection}{Conditional denoising estimator (CDE)}{7}{section*.9}%
-\contentsline {subsubsection}{Conditional diffusive estimator (CDiffE)}{8}{section*.10}%
-\contentsline {subsubsection}{Conditional multi-speed diffusive estimator (CMDE)}{9}{section*.11}%
-\contentsline {subsubsection}{\texttt {MSDiff}: Beyond multi-speed diffusion}{11}{section*.13}%
-\contentsline {section}{\numberline {1.4}Experiments}{11}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Inpainting}{13}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Super-resolution}{14}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Edge to image translation}{15}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Comparison with state-of-the-art}{15}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Conclusions and future work}{16}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Acknowledgements}{17}{section.1.7}%
-\contentsline {chapter}{References}{19}{chapter*.19}%
-\contentsline {chapter}{Appendix \numberline {A}Conditional Image Generation with Score-Based Diffusion Models}{21}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Proofs}{21}{section.a.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Equality of minimizers for CDE}{21}{subsection.a.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Consistency of CDE}{23}{subsection.a.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Likelihood weighting for multi-speed and multi-sde models}{25}{subsection.a.A.1.3}%
-\contentsline {subsubsection}{Multi-sde and multi-speed diffusion}{27}{section*.20}%
-\contentsline {subsection}{\numberline {A.1.4}Mean square approximation error}{28}{subsection.a.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Architectures and hyperparameters}{34}{subsection.a.A.1.5}%
+\contentsline {section}{\numberline {1.2}Related Work}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Proposed Method for Estimation of Intrinsic Dimension}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Theoretical Analysis}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Limitations}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Experiments}{10}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Experiments on Euclidean datasets}{10}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Experiments on image datasets}{12}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Conclusions and further directions}{14}{section.1.7}%
+\contentsline {chapter}{References}{17}{chapter*.15}%
+\contentsline {chapter}{Appendix \numberline {A}Diffusion Models Encode the Intrinsic Dimension of Data Manifolds}{21}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Extended background on diffusion models}{21}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}Training details}{23}{section.a.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Euclidean data}{23}{subsection.a.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2} Image data}{23}{subsection.a.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Auto-encoder}{23}{subsection.a.A.2.3}%
+\contentsline {section}{\numberline {A.3}Benchmarking}{24}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Proofs}{24}{section.a.A.4}%
+\contentsline {section}{\numberline {A.5}Details on the design of synthetic image manifolds}{34}{section.a.A.5}%
+\contentsline {section}{\numberline {A.6}Additional Experimental Results}{36}{section.a.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Euclidean Data}{36}{subsection.a.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Synthetic Image Data}{37}{subsection.a.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}MNIST}{37}{subsection.a.A.6.3}%
+\contentsline {section}{\numberline {A.7}Robustness analysis}{39}{section.a.A.7}%
+\contentsline {subsection}{\numberline {A.7.1}Robustness to score approximation error}{39}{subsection.a.A.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}Robustness to non-uniform distribution on the manifold}{39}{subsection.a.A.7.2}%
+\contentsline {subsection}{\numberline {A.7.3}Relaxing the strict manifold assumption}{41}{subsection.a.A.7.3}%

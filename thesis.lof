@@ -1,8 +1,20 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Results from our conditional multi-speed diffusive estimator.}}{2}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Sources of error for different estimators}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Diversity of five different CMDE reconstructions for a given masked image.}}{12}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Inpainting results.}}{14}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Super-resolution results.}}{15}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Edge to image translation results.}}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The data manifold (in blue) and the neural approximation of the score field $\nabla _\textbf {x} \ln p_{t_0}(\textbf {x})$ obtained from a diffusion model. Near the manifold the score field is perpendicular to the manifold surface.}}{3}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces To estimate the manifold's dimension at point \(\mathbf {x}_0\) (red dot), we sample \(K\) nearby points \(\mathbf {x}_{\epsilon }^{(i)}\) (blue dots) and use the trained diffusion model to evaluate the score function \(s_\theta (\mathbf {x}_\epsilon ^{(i)}, \epsilon )\) at these perturbed points. We assemble these vectors into a matrix and perform Singular Value Decomposition (SVD). The number of (almost) zero singular values reveals the manifold's dimension.}}{3}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Singular values for the scores of $k$-sphere for $k=10, 50$. In both cases around $k$ singular values almost vanish, clearly indicating the dimensionality of the manifold. Each line shows a score spectrum at different $\textbf {x}_0^{(j)}$.}}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Auto-encoder reconstruction error on MNIST for different latent space dimensions. Vertical lines mark different estimations of intrinsic dimension.}}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces MNIST score spectra that yielded the highest estimated dimension for each digit}}{13}{figure.caption.10}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Caption without FN}}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Nine samples from Squares image manifolds of dimensions 10, 20 and 100 (from left to right).}}{35}{figure.caption.25}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Nine samples from Gaussian blob image manifolds of dimensions 10, 20 and 100 (from left to right).}}{35}{figure.caption.25}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Projection of the spaghetti line on the first three dimensions.}}{36}{figure.caption.26}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Score spectrum of the spaghetti line. The last singular value clearly vanishes indicating that the intrinsic dimensionality of the manifold is equal to one.}}{36}{figure.caption.26}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Score spectrum for the union of $k$-spheres ($k_1=10, k_2=30$). The separated drops in the spectra clearly show that the data comes form the union of two manifolds of different dimensions.}}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces The histogram of estimated dimensions for the union of $k$-spheres ($k_1=10, k_2=30$). The counts are taken over estimates $\hat {k}(\textbf {x}_0^{(i)})$ at different points $\textbf {x}_0^{(i)}$.}}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Score spectra and histogram of estimated dimension based on the score spectrum of the Squares image manifold of dimensions 10, 20 and 100.}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Score spectra and histogram of estimated dimension based on the score spectrum of the Gaussian blobs image manifold of dimensions 10, 20 and 100.}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces MNIST score spectra for all digits}}{38}{figure.caption.29}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Score spectra for noise corrupted score model on 25-sphere.}}{40}{figure.caption.30}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Dimensionality estimates for uniform and non-uniform distributions on a 10-sphere. On the right, we present histograms showing how many points $\textbf {x}_0^{(j)}$ result in a given $\hat {k}(\textbf {x}_0^{(j)})$. Taking $\hat {k} = \max _j \hat {k}(\textbf {x}_0^{(j)})$ allows for robust estimation for moderate values of the concentration parameter $\alpha $.}}{42}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Score spectra for score models on 25-sphere trained on noisy manifold data.}}{43}{figure.caption.33}%

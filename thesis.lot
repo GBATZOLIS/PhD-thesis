@@ -1,3 +1,6 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Results of conditional generation tasks.}}{13}{table.caption.15}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Estimated intrinsic dimension for each MNIST digit}}{14}{table.caption.11}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Comparison of dimensionality detection methods on various data manifolds.}}{14}{table.caption.12}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces DDPM Model Parameters}}{24}{table.caption.16}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Dimensionality detection for non-uniform distribution. For our method the maximum over pointwise estimates $\hat {k}(\textbf {x}_0)$ is considered.}}{39}{table.caption.31}%

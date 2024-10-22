@@ -5,149 +5,205 @@ Anderson, B.~D. (1982).
 \newblock Reverse-time diffusion equation models.
 \newblock {\em Stochastic Processes and their Applications}, 12(3):313--326.
 
-\bibitem[Arridge et~al., 2019]{arridge2019ip}
-Arridge, S., Maass, P., Öktem, O., and Schönlieb, C.-B. (2019).
-\newblock Solving inverse problems using data-driven models.
-\newblock {\em Acta Numerica}, 28:1–174.
+\bibitem[Behrmann et~al., 2021]{behrmann2021understandin}
+Behrmann, J., Vicol, P., Wang, K.-C., Grosse, R., and Jacobsen, J.-H. (2021).
+\newblock Understanding and mitigating exploding inverses in invertible neural networks.
+\newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 1792--1800. PMLR.
 
-\bibitem[Bengio et~al., 2003]{bengio2005autoregressive}
-Bengio, Y., Ducharme, R., Vincent, P., and Janvin, C. (2003).
-\newblock A neural probabilistic language model.
-\newblock {\em J. Mach. Learn. Res.}, 3(null):1137–1155.
+\bibitem[Bishop and Tipping, 2001]{ppca}
+Bishop, C.~M. and Tipping, M.~E. (2001).
+\newblock Probabilistic principal component analysis.
+\newblock PPCA.
 
-\bibitem[Dhariwal and Nichol, 2021]{dhariwal2021diffusion_beats_gans}
-Dhariwal, P. and Nichol, A. (2021).
-\newblock Diffusion models beat gans on image synthesis.
+\bibitem[Brehmer and Cranmer, 2020]{brehmer2020flows}
+Brehmer, J. and Cranmer, K. (2020).
+\newblock Flows for simultaneous manifold learning and density estimation.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:442--453.
 
-\bibitem[Donahue et~al., 2019]{donahue2019adversarial_audio}
-Donahue, C., McAuley, J., and Puckette, M. (2019).
-\newblock Adversarial audio synthesis.
+\bibitem[Camastra and Vinciarelli, 2002]{fractal_dim}
+Camastra, F. and Vinciarelli, A. (2002).
+\newblock Estimating the intrinsic dimension of data with a fractal-based method.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 24(10):1404--1407.
 
-\bibitem[Goodfellow et~al., 2014]{goodfellow2014generative}
+\bibitem[Campadelli et~al., 2015]{campadelli2015intrinsic}
+Campadelli, P., Casiraghi, E., Ceruti, C., and Rozza, A. (2015).
+\newblock Intrinsic dimension estimation: Relevant techniques and a benchmark framework.
+\newblock {\em Mathematical Problems in Engineering}, 2015:1--21.
+
+\bibitem[Chen et~al., 2023]{chen2023manifold_linear}
+Chen, M., Huang, K., Zhao, T., and Wang, M. (2023).
+\newblock Score approximation, estimation and distribution recovery of diffusion models on low-dimensional data.
+
+\bibitem[Cornish et~al., 2020]{cornish2020relaxing}
+Cornish, R., Caterini, A., Deligiannidis, G., and Doucet, A. (2020).
+\newblock Relaxing bijectivity constraints with continuously indexed normalising flows.
+\newblock In {\em International conference on machine learning}, pages 2133--2143. PMLR.
+
+\bibitem[Deng et~al., 2009]{imagenet}
+Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., and Fei-Fei, L. (2009).
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In {\em 2009 IEEE Conference on Computer Vision and Pattern Recognition}, pages 248--255.
+
+\bibitem[Fan et~al., 2010]{fan_local_pca}
+Fan, M., Gu, N., Qiao, H., and Zhang, B. (2010).
+\newblock Intrinsic dimension estimation of data by principal component analysis.
+
+\bibitem[Fefferman et~al., 2013]{manifold_hypothesis}
+Fefferman, C., Mitter, S., and Narayanan, H. (2013).
+\newblock Testing the manifold hypothesis.
+
+\bibitem[Fukunaga and Olsen, 1971]{Karhunen-Loeve}
+Fukunaga, K. and Olsen, D. (1971).
+\newblock An algorithm for finding intrinsic dimensionality of data.
+\newblock {\em IEEE Transactions on Computers}, C-20(2):176--183.
+
+\bibitem[Goodfellow et~al., 2014]{gan}
 Goodfellow, I.~J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., and Bengio, Y. (2014).
 \newblock Generative adversarial networks.
 
-\bibitem[Heusel et~al., 2018]{heusel2018fid}
-Heusel, M., Ramsauer, H., Unterthiner, T., Nessler, B., and Hochreiter, S. (2018).
-\newblock Gans trained by a two time-scale update rule converge to a local nash equilibrium.
+\bibitem[Goyal and Bengio, 2022]{goyal2022inductive}
+Goyal, A. and Bengio, Y. (2022).
+\newblock Inductive biases for deep learning of higher-level cognition.
+\newblock {\em Proceedings of the Royal Society A}, 478(2266):20210068.
 
-\bibitem[Ho et~al., 2020]{ho2020denoising}
-Ho, J., Jain, A., and Abbeel, P. (2020).
+\bibitem[Haro et~al., 2008]{haro_mle}
+Haro, G., Randall, G., and Sapiro, G. (2008).
+\newblock Translated poisson mixture model for stratification learning.
+\newblock {\em Int. J. Comput. Vis.}, 80(3):358--374.
+
+\bibitem[Ho et~al., 2020a]{ddpm}
+Ho, J., Jain, A., and Abbeel, P. (2020a).
 \newblock Denoising diffusion probabilistic models.
 
-\bibitem[Hyv{{\"a}}rinen, 2005]{hyvarinen2005score_original}
+\bibitem[Ho et~al., 2020b]{ho2020denoising}
+Ho, J., Jain, A., and Abbeel, P. (2020b).
+\newblock Denoising diffusion probabilistic models.
+
+\bibitem[Horvat and Pfister, 2022]{horvat2022nfid}
+Horvat, C. and Pfister, J.-P. (2022).
+\newblock Intrinsic dimensionality estimation using normalizing flows.
+\newblock In Koyejo, S., Mohamed, S., Agarwal, A., Belgrave, D., Cho, K., and Oh, A., editors, {\em Advances in Neural Information Processing Systems}, volume~35, pages 12225--12236. Curran Associates, Inc.
+
+\bibitem[Hyv{{\"a}}rinen, 2005]{score_matching}
 Hyv{{\"a}}rinen, A. (2005).
 \newblock Estimation of non-normalized statistical models by score matching.
 \newblock {\em Journal of Machine Learning Research}, 6(24):695--709.
 
-\bibitem[Isola et~al., 2018]{isola2018pix2pix}
-Isola, P., Zhu, J.-Y., Zhou, T., and Efros, A.~A. (2018).
-\newblock Image-to-image translation with conditional adversarial networks.
+\bibitem[Jaini et~al., 2020]{jaini2020tails}
+Jaini, P., Kobyzev, I., Yu, Y., and Brubaker, M. (2020).
+\newblock Tails of lipschitz triangular flows.
+\newblock In {\em International Conference on Machine Learning}, pages 4673--4681. PMLR.
 
-\bibitem[Keys, 1981]{keyes1981bicubic}
-Keys, R. (1981).
-\newblock Cubic convolution interpolation for digital image processing.
-\newblock {\em IEEE Transactions on Acoustics, Speech, and Signal Processing}, 29(6):1153--1160.
+\bibitem[Johnsson, 2016]{R_intrinsic_dim}
+Johnsson, K. (2016).
+\newblock intrinsicdimension: Intrinsic dimension estimation.
 
-\bibitem[Kingma and Welling, 2014]{kingma2014autoencoding}
+\bibitem[K\'{e}gl, 2002]{packing_number}
+K\'{e}gl, B. (2002).
+\newblock Intrinsic dimension estimation using packing numbers.
+\newblock In Becker, S., Thrun, S., and Obermayer, K., editors, {\em Advances in Neural Information Processing Systems}, volume~15. MIT Press.
+
+\bibitem[Kim et~al., 2019]{kim2019kde}
+Kim, J., Shin, J., Rinaldo, A., and Wasserman, L. (2019).
+\newblock Uniform convergence rate of the kernel density estimator adaptive to intrinsic volume dimension.
+\newblock In {\em International Conference on Machine Learning}, pages 3398--3407. PMLR.
+
+\bibitem[Kingma and Welling, 2014]{vae}
 Kingma, D.~P. and Welling, M. (2014).
 \newblock Auto-encoding variational bayes.
+\newblock In Bengio, Y. and LeCun, Y., editors, {\em 2nd International Conference on Learning Representations, {ICLR} 2014}.
 
-\bibitem[Liang et~al., 2021]{liang2021hrflow}
-Liang, J., Lugmayr, A., Zhang, K., Danelljan, M., Gool, L.~V., and Timofte, R. (2021).
-\newblock Hierarchical conditional flow: A unified framework for image super-resolution and image rescaling.
+\bibitem[Kpotufe, 2011]{kpotufe2011knn}
+Kpotufe, S. (2011).
+\newblock k-nn regression adapts to local intrinsic dimension.
+\newblock {\em Advances in neural information processing systems}, 24.
 
-\bibitem[Liu et~al., 2023]{liu2023i2sb}
-Liu, G.-H., Vahdat, A., Huang, D.-A., Theodorou, E.~A., Nie, W., and Anandkumar, A. (2023).
-\newblock I$^2$sb: Image-to-image schr\"odinger bridge.
+\bibitem[Krizhevsky, 2012]{cifar}
+Krizhevsky, A. (2012).
+\newblock Learning multiple layers of features from tiny images.
+\newblock {\em University of Toronto}.
 
-\bibitem[Liu et~al., 2015]{2015celeba}
-Liu, Z., Luo, P., Wang, X., and Tang, X. (2015).
-\newblock Deep learning face attributes in the wild.
-\newblock In {\em Proceedings of International Conference on Computer Vision (ICCV)}.
+\bibitem[Laszkiewicz et~al., 2021]{laszkiewicz2021copula}
+Laszkiewicz, M., Lederer, J., and Fischer, A. (2021).
+\newblock Copula-based normalizing flows.
+\newblock {\em arXiv preprint arXiv:2107.07352}.
 
-\bibitem[Lugmayr et~al., 2020]{SRFLOW}
-Lugmayr, A., Danelljan, M., Van~Gool, L., and Timofte, R. (2020).
-\newblock Srflow: Learning the super-resolution space with normalizing flow.
-\newblock In {\em Computer Vision -- ECCV 2020}.
+\bibitem[LeCun and Cortes, 2010]{mnist}
+LeCun, Y. and Cortes, C. (2010).
+\newblock {MNIST} handwritten digit database.
 
-\bibitem[Léonard, 2013]{leonard2013properties}
-Léonard, C. (2013).
-\newblock Some properties of path measures.
+\bibitem[Lee, 2019]{lee2019_riemman}
+Lee, J. (2019).
+\newblock {\em Introduction to Riemannian Manifolds}.
+\newblock Graduate Texts in Mathematics. Springer International Publishing.
 
-\bibitem[Mueller and Siltanen, 2012]{muller2012ip}
-Mueller, J.~L. and Siltanen, S. (2012).
-\newblock Linear and nonlinear inverse problems with practical applications.
-\newblock In {\em Computational science and engineering}.
+\bibitem[Levina and Bickel, 2004]{dim_MLE}
+Levina, E. and Bickel, P. (2004).
+\newblock Maximum likelihood estimation of intrinsic dimension.
+\newblock In Saul, L., Weiss, Y., and Bottou, L., editors, {\em Advances in Neural Information Processing Systems}, volume~17. MIT Press.
 
-\bibitem[Newey and McFadden, 1994]{whitney1994estimation}
-Newey, W.~K. and McFadden, D. (1994).
-\newblock Chapter 36 large sample estimation and hypothesis testing.
-\newblock volume~4 of {\em Handbook of Econometrics}, pages 2111--2245. Elsevier.
+\bibitem[Minka, 2000]{auto_ppca}
+Minka, T. (2000).
+\newblock Automatic choice of dimensionality for pca.
+\newblock In Leen, T., Dietterich, T., and Tresp, V., editors, {\em Advances in Neural Information Processing Systems}, volume~13. MIT Press.
 
-\bibitem[Oksendal, 2003]{oksendal2003sde}
-Oksendal, B. (2003).
-\newblock {\em Stochastic Differential Equations (5th Ed.): An Introduction with Applications}.
-\newblock Springer-Verlag, Heidelberg.
+\bibitem[Nicolaescu, 2011]{nicolaescu2011morse_theory}
+Nicolaescu, L. (2011).
+\newblock {\em An Invitation to Morse Theory}.
+\newblock Universitext. Springer New York.
 
-\bibitem[Papamakarios et~al., 2021]{papamakarios2021normalizing}
-Papamakarios, G., Nalisnick, E., Rezende, D.~J., Mohamed, S., and Lakshminarayanan, B. (2021).
-\newblock Normalizing flows for probabilistic modeling and inference.
+\bibitem[Oko et~al., 2023]{oko2023diffusion_mini_max}
+Oko, K., Akiyama, S., and Suzuki, T. (2023).
+\newblock Diffusion models are minimax optimal distribution estimators.
 
-\bibitem[Saharia et~al., 2021]{saharia2021sr3}
-Saharia, C., Ho, J., Chan, W., Salimans, T., Fleet, D.~J., and Norouzi, M. (2021).
-\newblock Image super-resolution via iterative refinement.
+\bibitem[Palais and Terng, 1988]{palais1988critical}
+Palais, R.~S. and Terng, C. (1988).
+\newblock {\em Critical Point Theory and Submanifold Geometry}.
+\newblock Critical Point Theory and Submanifold Geometry. Springer.
 
-\bibitem[Sohl-Dickstein et~al., 2015]{sohldickstein2015diffusion_original}
+\bibitem[Pedregosa et~al., 2011]{sklearn}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., et~al. (2011).
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em Journal of machine learning research}, 12(Oct):2825--2830.
+
+\bibitem[Pettis et~al., 1979]{pettis_nn_dim_estimator}
+Pettis, K.~W., Bailey, T.~A., Jain, A.~K., and Dubes, R.~C. (1979).
+\newblock An intrinsic dimensionality estimator from near-neighbor information.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, PAMI-1(1):25--37.
+
+\bibitem[Pidstrigach, 2022]{pidstrigach2022manifold_jakiw}
+Pidstrigach, J. (2022).
+\newblock Score-based generative models detect manifolds.
+
+\bibitem[Pope et~al., 2021]{pope2021intrinsic}
+Pope, P., Zhu, C., Abdelkader, A., Goldblum, M., and Goldstein, T. (2021).
+\newblock The intrinsic dimension of images and its impact on learning.
+\newblock {\em arXiv preprint arXiv:2104.08894}.
+
+\bibitem[Sohl-Dickstein et~al., 2015]{diffusion_models}
 Sohl-Dickstein, J., Weiss, E.~A., Maheswaranathan, N., and Ganguli, S. (2015).
 \newblock Deep unsupervised learning using nonequilibrium thermodynamics.
 
-\bibitem[Song et~al., 2021a]{song2021maximum}
-Song, Y., Durkan, C., Murray, I., and Ermon, S. (2021a).
+\bibitem[Song et~al., 2021]{song2021maximum}
+Song, Y., Durkan, C., Murray, I., and Ermon, S. (2021).
 \newblock Maximum likelihood training of score-based diffusion models.
 
-\bibitem[Song and Ermon, 2020]{song2020generative_score}
-Song, Y. and Ermon, S. (2020).
-\newblock Generative modeling by estimating gradients of the data distribution.
-
-\bibitem[Song et~al., 2021b]{song2021sde}
-Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2021b).
+\bibitem[Song et~al., 2020]{song2020score}
+Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2020).
 \newblock Score-based generative modeling through stochastic differential equations.
+\newblock {\em arXiv preprint arXiv:2011.13456}.
 
-\bibitem[Tang et~al., 2021]{tang2021attentiongan}
-Tang, H., Liu, H., Xu, D., Torr, P. H.~S., and Sebe, N. (2021).
-\newblock Attentiongan: Unpaired image-to-image translation using attention-guided generative adversarial networks.
-
-\bibitem[Tashiro et~al., 2021]{tashiro2021csdi}
-Tashiro, Y., Song, J., Song, Y., and Ermon, S. (2021).
-\newblock Csdi: Conditional score-based diffusion models for probabilistic time series imputation.
+\bibitem[Tempczyk et~al., 2022]{tempczyk2022lidl}
+Tempczyk, P., Michaluk, R., Łukasz Garncarek, Spurek, P., Tabor, J., and Goliński, A. (2022).
+\newblock Lidl: Local intrinsic dimension estimation using approximate likelihood.
 
 \bibitem[Vincent, 2011]{vincent2011connection}
 Vincent, P. (2011).
 \newblock A connection between score matching and denoising autoencoders.
 \newblock {\em Neural Computation}, 23(7):1661--1674.
 
-\bibitem[Wang et~al., 2004]{zhou2004psnr+ssim}
-Wang, Z., Bovik, A., Sheikh, H., and Simoncelli, E. (2004).
-\newblock Image quality assessment: from error visibility to structural similarity.
-\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612.
-
-\bibitem[Xie and Tu, 2015]{xie2015edges}
-Xie, S. and Tu, Z. (2015).
-\newblock Holistically-nested edge detection.
-
-\bibitem[Yu and Grauman, 2014]{yu2014sketch2shoe}
-Yu, A. and Grauman, K. (2014).
-\newblock Fine-grained visual comparisons with local learning.
-\newblock In {\em Computer Vision and Pattern Recognition (CVPR)}.
-
-\bibitem[Zhang et~al., 2018]{zhang2018lpips}
-Zhang, R., Isola, P., Efros, A.~A., Shechtman, E., and Wang, O. (2018).
-\newblock The unreasonable effectiveness of deep features as a perceptual metric.
-\newblock In {\em CVPR}.
-
-\bibitem[Zhu et~al., 2020]{zhu2020cycle_gan}
-Zhu, J.-Y., Park, T., Isola, P., and Efros, A.~A. (2020).
-\newblock Unpaired image-to-image translation using cycle-consistent adversarial networks.
+\bibitem[Weed and Bach, 2019]{weed2019sharp}
+Weed, J. and Bach, F. (2019).
+\newblock Sharp asymptotic and finite-sample rates of convergence of empirical measures in wasserstein distance.
 
 \end{thebibliography}

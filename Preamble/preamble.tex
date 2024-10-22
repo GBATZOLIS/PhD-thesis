@@ -31,11 +31,19 @@
 \newcommand{\rms}{RMSE}
 
 % ******************************************************************************
-% ************************* User Defined Commands for Conditional Image Generation with Score-Based Models *************
+% ************************* User Defined Commands for Non-Uniform Diffusion Models *************
 % ******************************************************************************
 
 \usepackage{mdframed}
 \usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{comment}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue      % Color of external links (e.g., \href)
+}
+
 
 \newenvironment{customthm}[1]
   {\renewcommand\thetheorem{#1}\theorem}
@@ -68,6 +76,18 @@
 \makeatother
 
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+% ******************************************************************************
+% ************************* User Defined Commands for Diffusion models encode the intrinsic dimension of data manifolds *************
+% ******************************************************************************
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\usepackage{wrapfig}
+
 
 % ******************************************************************************
 % ****************************** Custom Margin *********************************
