@@ -5,19 +5,25 @@
 
 \chapter{Introduction}
 
-Over the past decade, we’ve witnessed an extraordinary leap in generative modeling, driven by innovations in Generative Adversarial Networks (GANs) and diffusion models. These breakthroughs have set new standards in sample quality, enabling hyper-realistic image synthesis, lifelike video creation, and compelling audio generation (e.g., voice synthesis, music composition). The impact of these models extends far beyond media, reaching scientific applications like molecular design, where they are invaluable in accelerating drug discovery.
+Over the past decade, artificial intelligence (AI) has undergone a transformative evolution, driven by groundbreaking advancements in generative modeling and self-supervised learning (SSL). These two fields have redefined our ability to model complex data distributions and leverage vast amounts of unlabeled data, leading to significant breakthroughs in areas such as media synthesis, multimodal learning, and scientific discovery.
 
-Beyond generating realistic content, these models excel in solving diverse tasks, including inverse problems like super-resolution and inpainting, text-guided generation seen in text-to-image systems, and unpaired image-to-image translation. This versatility has enabled a range of practical applications, from converting black-and-white photos to color and transforming artistic styles (e.g., Monet’s paintings into realistic scenes), to enhancing low-light photos and translating medical scans across modalities (e.g., converting MRI scans to CT-like images) for improved diagnostics.
+Generative modeling focuses on learning the underlying probability distributions of data to create realistic and diverse samples. Innovations such as Generative Adversarial Networks (GANs), diffusion models, and normalizing flows have set new benchmarks in quality and applicability, enabling realistic image generation, lifelike video creation, and natural-sounding audio synthesis. Beyond creative media, these models play a critical role in scientific applications, such as molecular modeling, protein structure prediction, and AI-assisted drug discovery. By generating novel molecules and exploring chemical spaces, generative models are accelerating research in fields like biotechnology and materials science. Furthermore, they address challenges in inverse problems, including image super-resolution and inpainting, and excel in multimodal tasks like text-to-image generation.
 
-In this thesis, we explore the intersection of generative modeling and unsupervised representation learning. We start by formally defining the problem of generative modeling and introducing the key frameworks, including GANs, normalizing flows, and diffusion models. We then delve into unsupervised representation learning, presenting methods that extract meaningful latent representations without labeled data. Finally, we discuss how our work bridges these two areas, deepening the connection between generative modeling and unsupervised representation learning, and revealing new insights into the underlying structure of data.
+Self-supervised learning, on the other hand, has emerged as a powerful approach to harness the vast reservoirs of unlabeled data by uncovering its inherent structure. SSL enables models to learn meaningful representations that are crucial for downstream tasks, often serving as the backbone of state-of-the-art systems across diverse domains. These representations can be extracted using generative methods, which model the data distribution, or discriminative methods, such as contrastive learning, which focus on distinguishing between similar and dissimilar data samples. 
 
-\section{The Problem of Generative Modeling}
+Self-supervised learning has had a profound impact on foundational technologies. In natural language processing, it powers groundbreaking models like BERT and GPT, which underpin conversational AI and advanced language understanding systems. In computer vision, SSL reduces dependence on labeled data while delivering robust, scalable visual representations, driving improvements in tasks like object recognition and image segmentation. These advancements underscore SSL’s versatility and its pivotal role in advancing AI across domains and modalities. Additionally, SSL has been transformative in multimodal learning, enabling seamless alignment and integration across modalities such as text, images, and audio. This capability has unlocked advanced tasks like generating descriptive image captions, synchronizing audio with video, retrieving relevant content across formats, and enhancing representation learning for multimodal datasets.
+
+In this thesis, we focus on the theoretical and computational aspects of generative modeling and generative self-supervised learning. To provide the necessary background, the remainder of this introduction is divided into two sections: an overview of generative modeling (\ref{intro:generative_modeling}) and an overview of self-supervised learning (\ref{intro:ssl}).
+
+
+\section{Generative Modeling}\label{intro:generative_modeling}
+\subsection{The Problem of Generative Modeling}
 
 Generative modeling sits at the forefront of machine learning, enabling us to capture the underlying structure of complex data and generate new, realistic samples. Whether it's creating lifelike images, composing music, or designing novel molecules, generative models aim to understand and replicate the distribution of data they're trained on.
 
 Formally, let's consider a dataset \( \mathcal{D} = \{ \mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_N \} \subset \mathbb{R}^d \), comprising \( N \) independent samples drawn from an unknown data-generating distribution \( P \), which we refer to as the \textit{target distribution}. The central goal of generative modeling is to create a model that approximates \( P \) as closely as possible based solely on these samples.
 
-To learn the distribution \( P \), we seek a computationally tractable approximation \( \hat{P} \) based on the dataset \( \mathcal{D} \) and our assumptions about \( P \). We measure how close \( \hat{P} \) is to \( P \) using a divergence \( D(\hat{P}, P) \), such as the Kullback-Leibler divergence, Wasserstein distance, or \( L_p \) norms. Our goal is to minimize this divergence:
+To learn the distribution \( P \), we seek a computationally tractable approximation \( \hat{P} \) based on the dataset \( \mathcal{D} \) and our assumptions about \( P \). We measure how close \( \hat{P} \) is to \( P \) using a divergence \( D(\hat{P}, P) \), such as the Kullback-Leibler divergence or the Wasserstein distance. Our goal is to minimize this divergence:
 
 \[
 \hat{P} = \arg \min_{\hat{P}} D(\hat{P}, P).
@@ -33,35 +39,29 @@ For practicality, \( \hat{P}_\theta \) must be computationally tractable; we sho
 
 By tackling this problem, we aim not only to reproduce the data we observe but also to uncover the underlying mechanisms that generate it. This deep understanding empowers us to create models that can generate new, unseen data that is indistinguishable from real-world samples, thereby expanding the horizons of what machines can learn and create.
 
-\section{Why Deep Learning for Generative Modelling?}
+\subsection{Why Deep Learning for Generative Modeling?}
 
-Non-parametric methods such as Kernel Density Estimation (KDE) have been widely used for modelling probability distributions in low-dimensional settings due to their flexibility in estimating the underlying density without assuming a specific parametric form \cite{silverman1986density}.
-
-However, scaling KDE to high-dimensional data is problematic. The sample complexity of KDE scales exponentially with the number of feature dimensions \( d \), making it impractical for high-dimensional tasks \cite{wasserman2006all}. Specifically, to achieve a target estimation error \( \varepsilon \), the number of samples \( n \) must satisfy:
+Non-parametric methods such as Kernel Density Estimation (KDE) have been widely used for modeling probability distributions in low-dimensional settings due to their flexibility in estimating the underlying density without assuming a specific parametric form \cite{silverman1986density}. However, scaling KDE to high-dimensional data is problematic. The sample complexity of KDE scales exponentially with the number of feature dimensions \( d \), making it impractical for high-dimensional tasks \cite{wasserman2006all}. Specifically, to achieve a target estimation error \( \varepsilon \), the number of samples \( n \) must satisfy:
 
 \[
 n \geq \mathcal{O}\left(\varepsilon^{-\frac{4 + d}{4}}\right).
 \]
 \cite{scott2015multivariate}
-This exponential dependence on \( d \) implies that even for moderate dimensions, the required sample size becomes infeasibly large, rendering KDE and similar methods ineffective for generative modelling in high dimensions.
+This exponential dependence on \( d \) implies that even for moderate dimensions, the required sample size becomes infeasibly large, rendering KDE and similar methods ineffective for generative modeling in high dimensions.
 
-In practice, however, real-world data often does not occupy the entire ambient space but is concentrated around a lower-dimensional manifold, as posited by the \emph{manifold hypothesis} \cite{fefferman2016testing}. This suggests that the data lies on or near a manifold of intrinsic dimension \( K \ll d \), reflecting dependent relationships among features. For instance, in image data, pixels exhibit strong correlations due to spatial continuity, reducing the effective dimensionality \cite{roweis2000nonlinear}.
+In many real-world applications, however, data does not uniformly occupy the high-dimensional ambient space but is concentrated near a lower-dimensional manifold—a concept known as the \emph{manifold hypothesis} \cite{fefferman2016testing}. For example, natural images, although high-dimensional when represented by pixel values, often lie on manifolds of much lower intrinsic dimensionality due to dependencies and correlations among pixels \cite{roweis2000nonlinear}. This implies that the effective complexity of the data is determined by the manifold's dimension \( K \), where \( K \ll d \).
 
-When the data lies on a \( K \)-dimensional manifold, the sample complexity improves to:
+While the manifold hypothesis suggests a reduction in effective dimensionality, leveraging this property requires models that can explicitly capture the underlying manifold structure. Non-parametric methods like KDE do not inherently account for the manifold and treat each dimension independently, failing to exploit the dependencies among features \cite{tenenbaum2000global}. As a result, they still suffer from high sample complexity despite the data's lower intrinsic dimensionality.
 
-\[
-n \geq \mathcal{O}\left(\varepsilon^{-\frac{4 + K}{4}}\right).
-\]
-\cite{bickel2007local}
-Although this reduction from \( d \) to \( K \) offers a substantial improvement, the exponential dependence on \( K \) can still be problematic, especially if \( K \) is not very small \cite{cayton2005algorithms}.
+Parametric models with appropriate inductive biases can overcome this limitation by incorporating assumptions about the data's structure into the learning process. Deep learning architectures are particularly well-suited for this task due to their ability to integrate domain-specific inductive biases through their design \cite{lecun2015deep}. For instance, Convolutional Neural Networks (CNNs) employ local connectivity and weight sharing to capture spatial hierarchies and local patterns in image data \cite{lecun1998gradient}. Similarly, Recurrent Neural Networks (RNNs) are designed to model temporal dependencies in sequential data \cite{hochreiter1997long}.
 
-To further improve the sample complexity, we need parametrized models that embed assumptions about the structure of the data manifold. Deep learning architectures, such as Convolutional Neural Networks (CNNs), incorporate inductive biases by utilizing shared weights and local receptive fields, specifically designed to capture spatial hierarchies and local dependencies in the data \cite{lecun1998gradient}. These inductive biases effectively constrain the space of functions the model can represent, reducing the sample complexity and enabling efficient generative modelling even in high-dimensional scenarios \cite{poggio2017theory}. This structural approach explains why deep learning based methods have become indispensable for generative modelling in high dimensions \cite{goodfellow2016deep, kingma2013auto}.
-
-\section{Deep Learning for Generative Modeling}
+By aligning model architecture with the intrinsic properties of the data manifold, deep learning models effectively reduce the hypothesis space to functions consistent with the data's structure, enhancing learning efficiency and reducing the required number of samples \cite{poggio2017theory}. This structural approach explains why deep learning–based methods have become indispensable for generative modeling in high dimensions \cite{goodfellow2016deep,kingma2013auto}.
+\subsection{Deep Learning for Generative Modeling}
 In the past decade, deep learning has introduced flexible architectures that can effectively learn complex data distributions. This chapter reviews five main types of generative models: Generative Adversarial Networks (GANs), Normalizing Flows, Auto-Regressive Models, Energy-Based Models, and Diffusion Models, each with unique strengths and limitations.
 
-\subsection{Generative Adversarial Networks (GANs)}
-Introduced by Goodfellow et al. \cite{goodfellow2014generative}, Generative Adversarial Networks (GANs) consist of two neural networks: a \textit{generator} \( G \) and a \textit{discriminator} \( D \), which are trained simultaneously in a minimax game. The generator \( G \) maps samples \( \mathbf{z} \) from a simple prior distribution \( P_{\mathbf{z}} \) (e.g., a standard normal distribution) to the data space \( \mathbb{R}^d \), producing synthetic data \( G(\mathbf{z}) \). The discriminator \( D \) outputs a probability \( D(\mathbf{x}) \in [0,1] \) indicating whether a sample \( \mathbf{x} \) is real (from the training data) or generated (from \( G \)).
+\subsubsection{Generative Adversarial Networks (GANs)}
+
+Introduced by Goodfellow et al. \cite{goodfellow2014generative}, Generative Adversarial Networks (GANs) consist of two neural networks: a \textit{generator} \( G \) and a \textit{discriminator} \( D \), trained simultaneously in a minimax game. The generator maps samples \( \mathbf{z} \) from a simple prior distribution \( P_{\mathbf{z}} \) (e.g., a standard normal distribution) to the data space \( \mathbb{R}^d \), producing synthetic data \( G(\mathbf{z}) \). The discriminator outputs a probability \( D(\mathbf{x}) \in [0,1] \) indicating whether a sample \( \mathbf{x} \) is real (from the training data) or generated (from \( G \)).
 
 The training objective is formulated as a two-player minimax game with the value function \( V(D, G) \):
 \[
@@ -70,135 +70,165 @@ The training objective is formulated as a two-player minimax game with the value
 where \( P_{\text{data}} \) is the data distribution represented by the training set \( \mathcal{D} \).
 
 \paragraph{Training Process}
-\begin{itemize}
-    \item \textbf{Discriminator Update:} For fixed \( G \), \( D \) is trained to maximize the probability of assigning the correct label to both training examples and samples from \( G \).
-    \item \textbf{Generator Update:} For fixed \( D \), \( G \) is trained to minimize \( \log (1 - D(G(\mathbf{z}))) \), which is equivalent to maximizing \( \log D(G(\mathbf{z})) \) in practice for better gradient properties.
-    \item \textbf{Optimization:} The generator and discriminator are updated iteratively using stochastic gradient descent or its variants.
-\end{itemize}
 
-At equilibrium, the generator produces samples that are indistinguishable from real data, meaning \( P_{G} = P_{\text{data}} \), and the discriminator outputs \( D(\mathbf{x}) = \frac{1}{2} \) for all \( \mathbf{x} \).
+GANs are trained through an adversarial process where the generator and discriminator are updated iteratively to improve against each other. The discriminator \( D \) learns to better distinguish real data from generated data, while the generator \( G \) aims to produce data that can fool \( D \). This training continues until the generator produces samples indistinguishable from real data (\( P_{G} = P_{\text{data}} \)).
+
+There are various formulations of the value function designed to enhance training stability and performance. For instance, the Wasserstein GAN (WGAN) \cite{arjovsky2017wasserstein} modifies the original objective using the Earth Mover's distance to address issues like mode collapse and improve convergence.
 
 \paragraph{Strengths}
-\begin{itemize}
-    \item \textbf{High-quality samples:} GANs are known for producing visually realistic images and sharp outputs.
-    \item \textbf{Efficient sampling:} Once trained, the generator can produce samples quickly by a single forward pass.
-\end{itemize}
+
+GANs have several notable strengths. One of their primary advantages is their ability to produce \textbf{high-quality samples} that are visually realistic and sharp, especially in image generation tasks. Additionally, GANs offer \textbf{efficient sampling}; once the generator is trained, it can rapidly produce new samples through a single forward pass, without the need for iterative sampling procedures common in other generative models.
 
 \paragraph{Weaknesses}
-\begin{itemize}
-    \item \textbf{Training instability:} The adversarial setup can lead to issues like mode collapse, vanishing gradients, and oscillatory behavior.
-    \item \textbf{No explicit density:} GANs do not provide a likelihood estimate or a probability density function for the generated data.
-\end{itemize}
 
-\subsection{Normalizing Flows}\label{sec:normalizing_flows}
+Despite their strengths, GANs also present significant weaknesses. A major challenge is the \textbf{training instability} inherent in their adversarial setup, which can lead to issues such as mode collapse—where the generator produces limited varieties of samples—vanishing gradients, and oscillatory behavior during training. Moreover, GANs \textbf{do not provide an explicit density} function or likelihood estimate for the generated data, limiting their applicability in tasks that require probabilistic interpretations or quantitative assessments of sample likelihood.
 
-Normalizing flows, introduced by Rezende and Mohamed \cite{rezende2015variational}, are generative models that transform a simple base distribution into a complex target distribution through a sequence of invertible and differentiable mappings. Given a latent variable $Z \sim p_Z$ in space $\mathcal{Z}$ and an invertible function $G^\theta: \mathcal{Z} \rightarrow \mathcal{X}$, the model defines $X = G^\theta(Z)$ to approximate the data distribution $p_X$.
+\subsubsection{Normalizing Flows}\label{sec:normalizing_flows}
+
+Normalizing flows, introduced by Rezende and Mohamed \cite{rezende2015variational}, are a class of generative models that model complex probability distributions by transforming a simple base distribution through a sequence of invertible and differentiable mappings. The core idea is to start with a tractable distribution, such as a standard Gaussian, and apply a series of transformations to model the target data distribution accurately.
+
+Given a latent variable $Z \sim p_Z$ in latent space $\mathcal{Z}$ and an invertible function $G^\theta: \mathcal{Z} \rightarrow \mathcal{X}$ parameterized by $\theta$, the model defines the random variable $X = G^\theta(Z)$ in data space $\mathcal{X}$ to approximate the data distribution $p_X$. The transformation $G^\theta$ maps samples from the base distribution to samples resembling the observed data.
 
 \paragraph{Change of Variables}
 
-The probability density function (pdf) of $X$ is computed using the change of variables formula:
+To compute the probability density function (pdf) of $X$, the change of variables formula is employed. For an invertible and differentiable transformation $G^\theta$, with inverse $F^\theta = (G^\theta)^{-1}$, the pdf of $X$ is given by:
 
 \[
 p^\theta_X(\mathbf{x}) = p_Z\left(F^\theta(\mathbf{x})\right) \left| \det \left( \frac{\partial F^\theta(\mathbf{x})}{\partial \mathbf{x}} \right) \right|,
 \]
 
-\noindent where $F^\theta = (G^\theta)^{-1}$ is the inverse transformation. Taking logarithms:
+\noindent where $\frac{\partial F^\theta(\mathbf{x})}{\partial \mathbf{x}}$ is the Jacobian matrix of $F^\theta$ at point $\mathbf{x}$, and $\det$ denotes the determinant. Taking the logarithm yields:
 
 \[
 \log p^\theta_X(\mathbf{x}) = \log p_Z\left(F^\theta(\mathbf{x})\right) + \log \left| \det \left( \frac{\partial F^\theta(\mathbf{x})}{\partial \mathbf{x}} \right) \right|.
 \]
 
+This formulation enables exact computation of the log-likelihood, which is crucial for effective training.
+
 \paragraph{Composing Transformations}
 
-$G^\theta$ is often composed of $K$ invertible transformations:
+In practice, the transformation $G^\theta$ is constructed by composing a sequence of $K$ invertible and differentiable transformations:
 
 \[
 G^\theta = G_K \circ G_{K-1} \circ \dots \circ G_1,
 \]
 
-\noindent with inverses $F_k = G_k^{-1}$. For data point $\mathbf{x}$, intermediate variables are defined as $\mathbf{h}_0 = \mathbf{x}$ and $\mathbf{h}_k = F_k(\mathbf{h}_{k-1})$ for $k = 1, \dots, K$. The log-density becomes:
+\noindent where each $G_k$ is an invertible function, and the composition is defined as $G^\theta = G_K(G_{K-1}(\dots G_1(z)))$. The inverses of these transformations are denoted as $F_k = G_k^{-1}$.
+
+For a data point $\mathbf{x}$, intermediate variables are defined by recursively applying the inverses:
+
+\[
+\mathbf{h}_0 = \mathbf{x}, \quad \mathbf{h}_k = F_k(\mathbf{h}_{k-1}), \quad \text{for } k = 1, \dots, K.
+\]
+
+The log-density of $\mathbf{x}$ can then be expressed as:
 
 \[
 \log p^\theta_X(\mathbf{x}) = \log p_Z(\mathbf{h}_K) + \sum_{k=1}^{K} \log \left| \det \left( \frac{\partial F_k(\mathbf{h}_{k-1})}{\partial \mathbf{h}_{k-1}} \right) \right|.
 \]
 
+\paragraph{Efficient Computation}
+
+A crucial aspect of designing normalizing flows is ensuring that the composing functions \( G_k \) are, typically, analytically invertible to allow for fast sampling. Additionally, the calculation of the determinant of the Jacobian must be tractable to enable efficient training via the change of variables formula. This is often achieved by designing the transformations so that the resulting Jacobian matrices have a lower triangular form or another structure that simplifies the computation of the determinant. By constructing \( G_k \) in this manner, normalizing flows facilitate efficient evaluation of both the forward and inverse transformations, as well as the log-determinant of the Jacobian, thereby enabling effective training and fast sampling from the model.
 \paragraph{Training Objective}
 
-Parameters $\theta$ are optimized by maximizing the likelihood over data $\{\mathbf{x}_i\}_{i=1}^N$, minimizing:
+The parameters $\theta$ of the normalizing flow are optimized by maximizing the likelihood of the observed data $\{\mathbf{x}_i\}_{i=1}^N$, which is equivalent to minimizing the negative log-likelihood:
 
 \[
 \theta^* = \arg \min_{\theta} \sum_{i=1}^N -\log p^\theta_X(\mathbf{x}_i).
 \]
 
+By leveraging the exact computation of the log-likelihood, normalizing flows can be trained using standard gradient-based optimization methods, ensuring stable and efficient convergence.
+
 \paragraph{Strengths}
 
-\begin{itemize}
-    \item \textbf{Exact Density Computation}: Enables exact and tractable computation of likelihoods, facilitating stable training via maximum likelihood estimation \cite{papamakarios2019normalizing}.
-    \item \textbf{Efficient Sampling}: Fast sampling by transforming latent samples through $G^\theta$.
-\end{itemize}
+Normalizing flows offer several advantages. A primary strength is their ability to perform \textbf{exact density computation}, allowing for tractable and exact likelihood evaluations. This facilitates stable training via maximum likelihood estimation \cite{papamakarios2019normalizing}. Furthermore, they provide \textbf{efficient sampling}; once trained, new samples can be generated rapidly by transforming latent samples through \( G^\theta \). The analytical invertibility of \( G^\theta \) and efficient computation of Jacobian determinants make both training and sampling computationally efficient.
 
 \paragraph{Weaknesses}
 
-\begin{itemize}
-    \item \textbf{Limited expressivity}: Requirements for invertibility and tractable Jacobians limit transformation choices, potentially reducing expressiveness \cite{papamakarios2019normalizing}.
-    \item \textbf{Topological limitations and numerical stability issues}: Normalising flows become pathological when used to model targets whose supports have complicated topologies. In such cases, the normalizing flow must become arbitrarily numerically noninvertible in order to approximate the target closely \cite{behrmann2021understanding, cornish2020relaxing}.
-\end{itemize}
+Despite their strengths, normalizing flows have limitations. The requirement for invertibility and tractable Jacobians imposes constraints on the choice of transformations, potentially leading to \textbf{limited expressivity} \cite{papamakarios2019normalizing}. This can hinder the model's ability to capture complex data distributions, especially those with intricate structures. Additionally, normalizing flows can encounter \textbf{topological limitations and numerical stability issues} when modeling targets with complicated topologies. In such cases, the model may become numerically non-invertible to approximate the target distribution closely, leading to stability problems and reducing the effectiveness of the flow \cite{behrmann2021understanding, cornish2020relaxing}.
 
-\subsection{Auto-Regressive Models}
-Auto-regressive models, such as PixelCNN and PixelRNN \cite{oord2016pixel}, model the joint distribution \( P(\mathbf{x}) \) as a product of conditional distributions using the chain rule of probability:
+\subsubsection{Auto-Regressive Models}\label{sec:auto_regressive_models}
+
+Auto-regressive models are a class of generative models that factorize the joint probability distribution of high-dimensional data into a product of conditional distributions, leveraging the chain rule of probability. Notable examples include PixelCNN and PixelRNN \cite{oord2016pixel}, WaveNet \cite{vanwavenet2016}, and more recently, Transformer-based models \cite{vaswani2017attention} applied across various domains such as natural language processing, image generation, and audio synthesis.
+
+\paragraph{Model Formulation}
+
+Given a data vector \( \mathbf{x} = [x_1, x_2, \dots, x_d] \) in \( \mathbb{R}^d \), the joint distribution \( P(\mathbf{x}) \) is decomposed into a product of conditional distributions:
+
 \[
 P(\mathbf{x}) = \prod_{i=1}^{d} P(x_i | x_{1:i-1})
 \]
-where \( x_{1:i-1} \) denotes all previous variables in a predefined ordering.
+
+where \( x_{1:i-1} \) denotes all preceding variables in a predefined ordering, which could be temporal (e.g., in time series data) or spatial (e.g., pixels in an image). This factorization allows the model to capture complex dependencies between variables by modeling each variable conditioned on all previous ones.
+
+\paragraph{Modeling Conditional Distributions}
+
+Each conditional distribution \( P(x_i | x_{1:i-1}) \) is modeled using a neural network that takes \( x_{1:i-1} \) as input and outputs the parameters of the distribution for \( x_i \). For instance, in PixelCNN, convolutional neural networks with masked filters are employed to ensure that the prediction of a pixel \( x_i \) depends only on pixels \( x_{1:i-1} \) that come before it in the chosen ordering.
+
+The masking technique is critical; it zeroes out connections in the network to prevent information from "future" variables influencing the prediction of the current variable, thus maintaining the auto-regressive property.
 
 \paragraph{Training Objective}
-The model is trained to maximize the likelihood of the data:
+
+The parameters \( \theta \) of the auto-regressive model are optimized by maximizing the likelihood of the observed data \( \{ \mathbf{x}_i \}_{i=1}^N \), which is equivalent to minimizing the negative log-likelihood:
+
 \[
-\theta^* = \arg \max_{\theta} \sum_{i=1}^{N} \sum_{j=1}^{d} \log P_{\theta}(x_{i,j} | x_{i,1:j-1})
+\theta^* = \arg \min_{\theta} \sum_{i=1}^{N} -\log P_{\theta}(\mathbf{x}_i) = \arg \min_{\theta} \sum_{i=1}^{N} \sum_{j=1}^{d} -\log P_{\theta}(x_{i,j} | x_{i,1:j-1})
 \]
-where \( x_{i,j} \) is the \( j \)-th variable of the \( i \)-th sample.
+
+This objective function allows for exact computation of the log-likelihood, facilitating stable training using gradient-based optimization methods.
+
+\paragraph{Sampling Process}
+
+Sampling from auto-regressive models is inherently sequential. To generate a new data point \( \mathbf{x} \), the model starts by sampling \( x_1 \) from \( P(x_1) \). Then, for \( i = 2 \) to \( d \), each \( x_i \) is sampled from \( P(x_i | x_{1:i-1}) \), using the previously sampled values. This process continues until all variables have been generated.
 
 \paragraph{Strengths}
-\begin{itemize}
-    \item \textbf{Exact likelihood calculation:} The likelihood is computed directly without approximation.
-    \item \textbf{Modeling sequential dependencies:} Effective at capturing complex dependencies in data sequences.
-\end{itemize}
+
+Auto-regressive models have several notable strengths. One of their primary advantages is their ability to perform \textbf{exact likelihood computation}, providing an exact calculation of the data likelihood without any approximation. This facilitates stable training via maximum likelihood estimation, ensuring that the model accurately captures the underlying data distribution. Additionally, by conditioning each variable on all previous ones, auto-regressive models are highly effective at \textbf{modeling complex dependencies} in sequential or structured data. This makes them particularly well-suited for tasks such as language modeling, image generation, and audio synthesis, where capturing intricate patterns and dependencies is crucial. Furthermore, auto-regressive models offer \textbf{flexibility in handling different data types}; they can model both discrete and continuous data by appropriately choosing the form of the conditional distributions, such as using categorical distributions for discrete variables or Gaussian distributions for continuous ones.
 
 \paragraph{Weaknesses}
-\begin{itemize}
-    \item \textbf{Slow sampling:} Generating a sample requires sequentially sampling each variable, which is time-consuming for high-dimensional data.
-    \item \textbf{Limited parallelization:} The sequential nature hinders parallel computation during sampling.
-\end{itemize}
 
-\subsection{Energy-Based Models (EBMs)}
-Energy-Based Models (EBMs) \cite{lecun2006tutorial} define an unnormalized probability distribution over data using an energy function \( E_{\theta}(\mathbf{x}) \):
+Despite these strengths, auto-regressive models also present significant weaknesses. A major limitation is the \textbf{slow sampling process} inherent in their sequential nature. Generating a single data sample requires sampling each variable one at a time, conditioned on the previously generated variables. This makes the sampling process computationally intensive and time-consuming, especially for high-dimensional data like high-resolution images or long sequences, where the number of variables \( d \) is large. Moreover, the sequential dependency of variables \textbf{limits parallelization during sampling}, as each variable depends on the outcome of the previous ones, preventing the use of parallel computation techniques to speed up sample generation. This can be particularly problematic when rapid generation of many samples is required.
+
+
+\subsubsection{Energy-Based Models (EBMs)}\label{sec:energy_based_models}
+
+Energy-Based Models (EBMs) \cite{lecun2006tutorial} define an unnormalized probability distribution over data using an energy function \( E_{\theta}(\mathbf{x}) \). The probability of a data point \( \mathbf{x} \) is given as:
 \[
 P_{\theta}(\mathbf{x}) = \frac{\exp(-E_{\theta}(\mathbf{x}))}{Z_{\theta}}
 \]
-where \( Z_{\theta} = \int \exp(-E_{\theta}(\mathbf{x})) d\mathbf{x} \) is the partition function, typically intractable to compute.
+where \( Z_{\theta} = \int \exp(-E_{\theta}(\mathbf{x})) d\mathbf{x} \) is the partition function, a normalizing constant that ensures \( P_{\theta}(\mathbf{x}) \) integrates to 1. However, computing \( Z_{\theta} \) is typically intractable for high-dimensional data, posing challenges for direct optimization and sampling.
 
 \paragraph{Training Objective}
-The model is trained to minimize the expected energy of data samples and increase the energy of negative samples. The loss function can be formulated using contrastive divergence \cite{hinton2002training}:
+
+EBMs are trained to assign low energy values to data samples (positive samples) and high energy values to non-data samples (negative samples). A commonly used training objective is based on contrastive divergence \cite{hinton2002training}, which minimizes the expected energy of positive samples while maximizing the expected energy of negative samples:
 \[
 \mathcal{L}(\theta) = \mathbb{E}_{\mathbf{x}^+ \sim P_{\text{data}}} [E_{\theta}(\mathbf{x}^+)] - \mathbb{E}_{\mathbf{x}^- \sim P_{\theta}} [E_{\theta}(\mathbf{x}^-)]
 \]
-where \( \mathbf{x}^+ \) are positive samples from the data and \( \mathbf{x}^- \) are negative samples generated from the model.
+Here, \( \mathbf{x}^+ \) are positive samples drawn from the data distribution \( P_{\text{data}} \), while \( \mathbf{x}^- \) are negative samples generated from the model distribution \( P_{\theta} \).
 
-\paragraph{Training Challenges}
-Estimating \( \mathbb{E}_{\mathbf{x}^- \sim P_{\theta}} [E_{\theta}(\mathbf{x}^-)] \) requires sampling from \( P_{\theta} \), often done via Markov Chain Monte Carlo (MCMC) methods like Langevin Dynamics.
+To obtain the negative samples \( \mathbf{x}^- \), we employ \textit{Markov Chain Monte Carlo (MCMC)} methods, such as Langevin Dynamics. Langevin Dynamics iteratively updates a sample \( \mathbf{x}_t \) to move toward regions of high probability under \( P_{\theta}(\mathbf{x}) \):
+\[
+\mathbf{x}_{t+1} = \mathbf{x}_t - \eta \nabla_{\mathbf{x}} E_{\theta}(\mathbf{x}_t) + \sqrt{2\eta} \mathbf{\epsilon}_t
+\]
+where \( \eta \) is the step size, and \( \mathbf{\epsilon}_t \sim \mathcal{N}(0, I) \) adds Gaussian noise for stochasticity. The process ensures that the negative samples explore the energy landscape effectively, although the iterative updates make it computationally expensive.
+
+\paragraph{Sampling Process}
+
+Sampling from EBMs follows a similar procedure as obtaining negative samples. Since direct sampling is infeasible due to the intractability of \( Z_{\theta} \), MCMC methods like Langevin Dynamics are used to approximate samples from the target distribution. This iterative process converges to high-density regions of \( P_{\theta}(\mathbf{x}) \), making it suitable for generation tasks. However, the need for multiple iterations results in a slow sampling process, particularly for high-dimensional data.
 
 \paragraph{Strengths}
-\begin{itemize}
-    \item \textbf{Flexibility:} EBMs can represent complex distributions without the need for normalization.
-    \item \textbf{Compositionality:} Easy to combine with other models and incorporate domain knowledge.
-\end{itemize}
+
+EBMs offer several notable strengths. One of their primary advantages is their \textbf{flexibility} in representing complex distributions without requiring explicit normalization, as they define an unnormalized probability distribution directly using an energy function \cite{lecun2006tutorial}. This flexibility allows EBMs to focus on modeling the energy landscape of the data, making them highly adaptable to diverse data types and problem settings. Unlike other generative models, such as GANs or normalizing flows, which often require specific assumptions about the form of the probability distribution or rely on explicit normalization, EBMs can represent distributions of arbitrary complexity by appropriately designing the energy function.
+
+Furthermore, EBMs exhibit strong \textbf{compositionality}, allowing seamless integration with other models and the incorporation of domain-specific knowledge such as constraints or priors \cite{du2019implicit, grathwohl2020your}. This property enables EBMs to handle applications requiring hybrid generative processes or strict adherence to domain rules. By encoding physical laws or chemical properties directly into the energy function, EBMs can generate outcomes that comply with these constraints, making them particularly effective in scientific modeling tasks like physical simulations and molecular design \cite{du2019implicit}. In structured prediction tasks, EBMs can impose priors to ensure outputs follow specific patterns or relationships, such as spatial coherence in semantic segmentation or hierarchical structures in knowledge graph synthesis \cite{grathwohl2020your, lecun2006tutorial}. This compositional and flexible nature allows EBMs to excel in applications requiring constrained generative modeling or the integration of domain knowledge, where conventional generative models may struggle.
 
 \paragraph{Weaknesses}
-\begin{itemize}
-    \item \textbf{Training difficulty:} MCMC sampling is computationally intensive and can be slow to converge.
-\end{itemize}
 
-\subsection{Diffusion and Score-Based Models}
+Despite their strengths, EBMs also face significant weaknesses. A major challenge is their \textbf{training difficulty}, primarily due to the reliance on MCMC methods for generating negative samples. MCMC sampling is computationally intensive, can suffer from slow convergence, and often requires careful tuning to ensure effective exploration of the energy landscape. Additionally, EBMs exhibit \textbf{slow sampling speed}, as generating a single sample requires running iterative Langevin Dynamics or similar methods, which involve multiple gradient evaluations. This can hinder the scalability of EBMs for tasks requiring large-scale generation.
+
+
+\subsubsection{Diffusion and Score-Based Models}
 
 Diffusion models \cite{ho2020denoising} and score-based generative models (SGMs) \cite{song2021sde} are powerful generative frameworks that treat data generation as the process of reversing noise corruption. These models consist of two complementary components: a forward process that gradually perturbs data into a noise-like prior distribution and a reverse process that reconstructs the data by inverting this transformation. The forward process maps a complex data distribution into a simpler, analytically tractable distribution, typically the standard normal distribution \( \mathcal{N}(0, \mathbf{I}) \), while the reverse process transforms noise back into samples from the original data distribution.
 
@@ -394,7 +424,7 @@ Techniques such as \textbf{Denoising Diffusion Implicit Models (DDIM)} \cite{son
 
 Collectively, these advancements have significantly reduced sampling times and made diffusion models practical for real-time and interactive applications across various domains.
 
-\section{Self-Supervised Representation Learning}
+\section{Self-Supervised Learning}\label{intro:ssl}
 
 \subsection{Motivation}
 

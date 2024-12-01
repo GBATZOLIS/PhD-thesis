@@ -5,6 +5,11 @@ Anderson, B.~D. (1982).
 \newblock Reverse-time diffusion equation models.
 \newblock {\em Stochastic Processes and their Applications}, 12(3):313--326.
 
+\bibitem[Arjovsky et~al., 2017]{arjovsky2017wasserstein}
+Arjovsky, M., Chintala, S., and Bottou, L. (2017).
+\newblock Wasserstein {GAN}.
+\newblock In {\em Proceedings of the 34th International Conference on Machine Learning (ICML)}, volume~70, pages 214--223. PMLR.
+
 \bibitem[Baevski et~al., 2020]{baevski2020wav2vec}
 Baevski, A., Zhou, Y., Mohamed, A., and Auli, M. (2020).
 \newblock wav2vec 2.0: A framework for self-supervised learning of speech representations.
@@ -25,11 +30,6 @@ Behrmann, J., Vicol, P., Wang, K.-C., Grosse, R., and Jacobsen, J.-H. (2021).
 \newblock Understanding and mitigating exploding inverses in invertible neural networks.
 \newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 1792--1800. PMLR.
 
-\bibitem[Bickel and Li, 2007]{bickel2007local}
-Bickel, P.~J. and Li, B. (2007).
-\newblock Local polynomial regression on unknown manifolds.
-\newblock In {\em Complex Datasets and Inverse Problems}, pages 177--186. Institute of Mathematical Statistics.
-
 \bibitem[Caron et~al., 2018]{caron2018deep}
 Caron, M., Bojanowski, P., Joulin, A., and Douze, M. (2018).
 \newblock Deep clustering for unsupervised learning of visual features.
@@ -39,11 +39,6 @@ Caron, M., Bojanowski, P., Joulin, A., and Douze, M. (2018).
 Caron, M., Misra, I., Mairal, J., et~al. (2020).
 \newblock Unsupervised learning of visual features by contrasting cluster assignments.
 \newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 9912--9924.
-
-\bibitem[Cayton, 2005]{cayton2005algorithms}
-Cayton, L. (2005).
-\newblock Algorithms for manifold learning.
-\newblock Technical Report CS2005-0923, University of California at San Diego.
 
 \bibitem[Chen et~al., 2020]{chen2020simple}
 Chen, T., Kornblith, S., Norouzi, M., and Hinton, G. (2020).
@@ -69,6 +64,11 @@ Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019).
 Ding, Y., Hu, H., Ge, Z., Wu, J., Zhang, H., and Ding, C. (2021).
 \newblock Vq-vae for multimodal image synthesis.
 \newblock {\em arXiv preprint arXiv:2103.02398}.
+
+\bibitem[Du and Mordatch, 2019]{du2019implicit}
+Du, Y. and Mordatch, I. (2019).
+\newblock Implicit generation and modeling with energy-based models.
+\newblock In {\em Advances in Neural Information Processing Systems}, volume~32.
 
 \bibitem[Esser et~al., 2021]{esser2021taming}
 Esser, P., Rombach, R., and Ommer, B. (2021).
@@ -99,6 +99,11 @@ Goyal, P., Mahajan, D., Gupta, A., and Misra, I. (2021).
 \newblock Self-supervised pretraining of visual features in the wild.
 \newblock {\em arXiv preprint arXiv:2103.01988}.
 
+\bibitem[Grathwohl et~al., 2020]{grathwohl2020your}
+Grathwohl, W., Wang, K.~C., Jacobsen, J.-H., Duvenaud, D., Swersky, K., and Norouzi, M. (2020).
+\newblock Your classifier is secretly an energy-based model and you should treat it like one.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
 \bibitem[Grill et~al., 2020]{grill2020bootstrap}
 Grill, J.-B., Strub, F., Altch{\'e}, F., et~al. (2020).
 \newblock Bootstrap your own latent: A new approach to self-supervised learning.
@@ -122,6 +127,11 @@ Hinton, G.~E. (2002).
 \bibitem[Ho et~al., 2020]{ho2020denoising}
 Ho, J., Jain, A., and Abbeel, P. (2020).
 \newblock Denoising diffusion probabilistic models.
+
+\bibitem[Hochreiter and Schmidhuber, 1997]{hochreiter1997long}
+Hochreiter, S. and Schmidhuber, J. (1997).
+\newblock Long short-term memory.
+\newblock {\em Neural Computation}, 9(8):1735--1780.
 
 \bibitem[Izmailov et~al., 2021]{izmailov2021flowgmm}
 Izmailov, P., Kirichenko, P., Finzi, M., and Wilson, A.~G. (2021).
@@ -147,6 +157,11 @@ Kingma, D.~P. and Welling, M. (2013).
 LeCun, Y. (2021).
 \newblock Self-supervised learning: The dark matter of intelligence.
 \newblock {\em Facebook Research}.
+
+\bibitem[LeCun et~al., 2015]{lecun2015deep}
+LeCun, Y., Bengio, Y., and Hinton, G. (2015).
+\newblock Deep learning.
+\newblock {\em Nature}, 521(7553):436--444.
 
 \bibitem[LeCun et~al., 1998]{lecun1998gradient}
 LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998).
@@ -178,8 +193,13 @@ Noroozi, M. and Favaro, P. (2016).
 \newblock Unsupervised learning of visual representations by solving jigsaw puzzles.
 \newblock In {\em European Conference on Computer Vision (ECCV)}, pages 69--84. Springer.
 
-\bibitem[Oord et~al., 2016]{oord2016pixel}
-Oord, A. v.~d., Kalchbrenner, N., and Kavukcuoglu, K. (2016).
+\bibitem[Oord et~al., 2016a]{vanwavenet2016}
+Oord, A. v.~d., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., Kalchbrenner, N., Senior, A., and Kavukcuoglu, K. (2016a).
+\newblock Wavenet: A generative model for raw audio.
+\newblock {\em arXiv preprint arXiv:1609.03499}.
+
+\bibitem[Oord et~al., 2016b]{oord2016pixel}
+Oord, A. v.~d., Kalchbrenner, N., and Kavukcuoglu, K. (2016b).
 \newblock Pixel recurrent neural networks.
 \newblock In {\em International Conference on Machine Learning (ICML)}, pages 1747--1756.
 
@@ -281,10 +301,20 @@ Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B.
 Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2021b).
 \newblock Score-based generative modeling through stochastic differential equations.
 
+\bibitem[Tenenbaum et~al., 2000]{tenenbaum2000global}
+Tenenbaum, J.~B., Silva, V.~d., and Langford, J.~C. (2000).
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock {\em science}, 290(5500):2319--2323.
+
 \bibitem[Tian et~al., 2022]{tian2022}
 Tian, Y. et~al. (2022).
 \newblock Understanding self-supervised contrastive learning with generalized contrastive losses.
 \newblock {\em arXiv preprint arXiv:2202.09671}.
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N., Kaiser, L., and Polosukhin, I. (2017).
+\newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages 5998--6008.
 
 \bibitem[Wasserman, 2006]{wasserman2006all}
 Wasserman, L. (2006).

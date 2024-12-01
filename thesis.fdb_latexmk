@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex thesis"] 1732890120.15249 "thesis.aux" "thesis.bbl" "thesis" 1732890122.89458 0
-  "./References/references.bib" 1732890116.93024 173432 1f4dbe94b4a9fb8c6c0b6ad867986642 ""
+["bibtex thesis"] 1733077228.81043 "thesis.aux" "thesis.bbl" "thesis" 1733077288.85624 0
+  "./References/references.bib" 1733077040.96805 175489 6f5171976a6c8880cd820cdbd3a820b4 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "Abstract/abstract.aux" 1732729364.45121 1219 1ab07c2078fc8ccb00b167c4164b89e7 ""
   "Acknowledgement/acknowledgement.aux" 1732729364.4403 1232 d8841de01e02a5aeb6ed8e1173921e5a ""
   "Declaration/declaration.aux" 1732729364.42834 1224 3352d9e09af9e003b90cc2b06b207fe6 ""
   "Dedication/dedication.aux" 1732729364.41652 1222 77cc68b63b9118bfff0f6d06832bbec1 ""
-  "introduction/introductionA.aux" 1732890122.22969 9727 409403dea426e96490274857b876691b "pdflatex"
-  "thesis.aux" 1732890122.27448 4271 f446b4043bad5ae890dfb43c038b1287 "pdflatex"
+  "introduction/introductionA.aux" 1733077288.23047 10785 0df31c4f3b3a82987d364d4ef2f73ee8 "pdflatex"
+  "thesis.aux" 1733077288.29174 4668 d6de2b6cb1a0a538b15f14d2251b1989 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1732890120.41063 "/Users/gbatz97/Desktop/thesis/thesis.tex" "thesis.pdf" "thesis" 1732890122.89496 0
+["pdflatex"] 1733077286.32049 "/Users/gbatz97/Desktop/thesis/thesis.tex" "thesis.pdf" "thesis" 1733077288.85672 0
   "/Users/gbatz97/Desktop/thesis/thesis.tex" 1732729429.64273 7062 321a1f0e290e140fd43c885dbda8a99e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -199,13 +199,13 @@
   "Dedication/dedication.aux" 1732729364.41652 1222 77cc68b63b9118bfff0f6d06832bbec1 ""
   "Dedication/dedication.tex" 1728383920.28582 189 4eed2920b3fcaaa839697bf566234fd4 ""
   "Preamble/preamble.tex" 1729770323.90356 9913 090ba41f9958509ba73138ac6006871b ""
-  "introduction/introductionA.aux" 1732890122.22969 9727 409403dea426e96490274857b876691b "pdflatex"
-  "introduction/introductionA.tex" 1732890076.54954 65441 c74d3795c338401d8571e8e8355216d0 ""
+  "introduction/introductionA.aux" 1733077288.23047 10785 0df31c4f3b3a82987d364d4ef2f73ee8 "pdflatex"
+  "introduction/introductionA.tex" 1733077286.00712 77568 547adb9adb8ad47b91ec8d78af1b0b0f ""
   "thesis-info.tex" 1728383920.34104 2404 e4748cd08b82290d58eee16dedc11f26 ""
-  "thesis.aux" 1732890122.27448 4271 f446b4043bad5ae890dfb43c038b1287 "pdflatex"
-  "thesis.bbl" 1732890120.40439 14848 a95ed1b856cd3f5747d4a18fad9b48b7 "bibtex thesis"
+  "thesis.aux" 1733077288.29174 4668 d6de2b6cb1a0a538b15f14d2251b1989 "pdflatex"
+  "thesis.bbl" 1733077229.08322 16406 08fe8a2ed06dbba08d099ee116c146e9 "bibtex thesis"
   "thesis.nls" 0 -1 0 ""
-  "thesis.out" 1732890122.28029 4206 87e5e469792074c789b0cef04adccd0e "pdflatex"
+  "thesis.out" 1733077288.29879 3162 ca62c60ff6a08756301e4452e88ceb1b "pdflatex"
   "thesis.tex" 1732729429.64273 7062 321a1f0e290e140fd43c885dbda8a99e ""
   (generated)
   "introduction/introductionA.aux"
