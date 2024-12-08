@@ -260,6 +260,54 @@ year="2020"
   year={2021}
 }
 
+@article{batzolis2022non,
+  title={Non-uniform diffusion models},
+  author={Batzolis, Georgios and Stanczuk, Jan and Sch{\"o}nlieb, Carola-Bibiane and Etmann, Christian},
+  journal={arXiv preprint arXiv:2207.09786},
+  year={2022}
+}
+
+@article{batzolis2024caflow,
+  title={CAFLOW: Conditional Autoregressive Flows},
+  author={Batzolis, Georgios and Carioni, Marcello and Etmann, Christian and Afyouni, Soroosh and Kourtzi, Zoe and Sch{\"o}nlieb, Carola-Bibiane},
+  journal={Foundations of Data Science},
+  volume={6},
+  number={4},
+  pages={553--583},
+  year={2024},
+  month={December},
+  doi={10.3934/fods.2024028},
+  abstract={We introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of autoregressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multiscale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the autoregressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive autoregressive structure.},
+  keywords={Generative modeling, conditional normalizing flows, autoregressive modeling, conditional likelihood estimation, image-to-image translation},
+  MSC={68T07, 68U10},
+  note={The first author is supported by GSK. Early access: June 2024.},
+  publisher={AIMS Press}
+}
+
+
+@article{batzolis2023variational,
+  title={Variational Diffusion Auto-encoder: Latent Space Extraction from Pre-trained Diffusion Models},
+  author={Batzolis, Georgios and Stanczuk, Jan and Sch{\"o}nlieb, Carola-Bibiane},
+  journal={arXiv preprint arXiv:2304.12141},
+  year={2023}
+}
+
+@InProceedings{pmlr-v235-stanczuk24a,
+  title = 	 {Diffusion Models Encode the Intrinsic Dimension of Data Manifolds},
+  author =       {Stanczuk, Jan Pawel and Batzolis, Georgios and Deveney, Teo and Sch\"{o}nlieb, Carola-Bibiane},
+  booktitle = 	 {Proceedings of the 41st International Conference on Machine Learning},
+  pages = 	 {46412--46440},
+  year = 	 {2024},
+  editor = 	 {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},
+  volume = 	 {235},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {21--27 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v235/main/assets/stanczuk24a/stanczuk24a.pdf},
+  url = 	 {https://proceedings.mlr.press/v235/stanczuk24a.html},
+  abstract = 	 {In this work, we provide a mathematical proof that diffusion models encode data manifolds by approximating their normal bundles. Based on this observation we propose a novel method for extracting the intrinsic dimension of the data manifold from a trained diffusion model. Our insights are based on the fact that a diffusion model approximates the score function i.e. the gradient of the log density of a noise-corrupted version of the target distribution for varying levels of corruption. We prove that as the level of corruption decreases, the score function points towards the manifold, as this direction becomes the direction of maximal likelihood increase. Therefore, at low noise levels, the diffusion model provides us with an approximation of the manifold’s normal bundle, allowing for an estimation of the manifold’s intrinsic dimension. To the best of our knowledge our method is the first estimator of intrinsic dimension based on diffusion models and it outperforms well established estimators in controlled experiments on both Euclidean and image data.}
+}
+
 
 @inproceedings{larochelle2011neural,
   title={The neural autoregressive distribution estimator},

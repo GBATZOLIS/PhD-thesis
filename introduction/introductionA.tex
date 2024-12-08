@@ -146,7 +146,10 @@ Normalizing flows offer several advantages. A primary strength is their ability 
 
 \paragraph{Weaknesses}
 
-Despite their strengths, normalizing flows have limitations. The requirement for invertibility and tractable Jacobians imposes constraints on the choice of transformations, potentially leading to \textbf{limited expressivity} \cite{papamakarios2019normalizing}. This can hinder the model's ability to capture complex data distributions, especially those with intricate structures. Additionally, normalizing flows can encounter \textbf{topological limitations and numerical stability issues} when modeling targets with complicated topologies. In such cases, the model may become numerically non-invertible to approximate the target distribution closely, leading to stability problems and reducing the effectiveness of the flow \cite{behrmann2021understanding, cornish2020relaxing}.
+Despite their strengths, normalizing flows have limitations. The requirement for invertibility and tractable Jacobians imposes constraints on the choice of transformations, potentially leading to \textbf{limited expressivity} \cite{papamakarios2019normalizing}. This can hinder the model's ability to capture complex data distributions, especially those with intricate structures. Additionally, normalizing flows can encounter \textbf{topological limitations and numerical stability issues} when modeling targets with complicated topologies. In such cases, the model may become numerically non-invertible to approximate the target distribution closely, leading to stability problems and reducing the effectiveness of the flow \cite{behrmann2021understanding, cornish2020relaxing}. 
+
+Normalizing flows, while powerful, \textbf{lack a semantically meaningful lower-dimensional latent space}, unlike GANs and Variational Auto-Encoders (VAEs). GANs and VAEs are designed with a lower-dimensional latent space, explicitly chosen a priori, enabling their effective use in downstream tasks such as compression, image-text alignment, and editing. In contrast, the latent space of normalizing flows is inherently tied to the ambient space's dimensionality, limiting its direct interpretability. In Chapter 5, we address this limitation by adapting normalizing flows to acquire an interpretable latent space. Our approach combines an anisotropic base distribution with isometry regularization, drawing on principles from pullback Riemannian geometry. This training paradigm constructs a latent space where semantic significance is encoded by the variances learned in the base distribution. Latent dimensions capturing meaningful semantic information are characterized by high variances, while those encoding noise exhibit very low variance, enabling a clear distinction between essential and extraneous information.
+
 
 \subsubsection{Auto-Regressive Models}\label{sec:auto_regressive_models}
 
@@ -351,7 +354,7 @@ Training involves learning to approximate the reverse process by minimizing spec
     This formulation ensures that the reverse diffusion process effectively removes noise at each step, gradually transforming pure noise into high-quality data samples during generation.
 
 
-    \item \textbf{SGM:} In the Score-Based Generative Modeling (SGM) framework, the neural network \( s_{\theta} \) is trained to approximate the score function of the perturbed data distribution \( p_t(\mathbf{x}) \). This is achieved by minimizing the \textbf{Weighted Denoising Score Matching Objective}:
+    \item \textbf{SGM:} In the Score-Based Generative Modeling (SGM) framework, the neural network \( s_{\theta} \) is trained to approximate the score function of the perturbed data distribution \( p_t(\mathbf{x}) \). This is achieved by minimizing the weighted \textbf{Denoising Score Matching} objective:
         \[
         \mathcal{L}_{\text{DSM}}(\theta) = \frac{1}{2} \int_0^T \lambda(t) \, \mathbb{E}_{\mathbf{x}_0,\, \mathbf{x}_t} \left[ \left\| s_\theta(\mathbf{x}_t, t) - \nabla_{\mathbf{x}_t} \log p_{0t}(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] dt,
         \]
@@ -412,6 +415,22 @@ where \( \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \) is the drift term of t
 
 where \( \nabla_{\mathbf{x}} \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \) is the Jacobian of \( \mathbf{f}_\theta^{\text{ODE}} \). The term inside the expectation can be efficiently computed using Jacobian-vector product calculations, making this approach both practical and scalable for accurate likelihood computation.
 
+
+\subsubsection{Conditional Generation}
+
+Diffusion models can be naturally extended to conditional generation tasks, where the objective is to model the conditional distribution \( p(\mathbf{x} \mid \mathbf{c}) \), with \( \mathbf{c} \) representing the conditioning variable (e.g., class labels, textual descriptions, or other modalities). This extension enables generating data conditioned on specific information, with applications such as super-resolution, inpainting, and text-guided generation.
+
+A widely-used approach for conditional generation in diffusion models is the weighted \textbf{Conditional Denoising Score-Matching} (CDSM) objective. The core idea is to train a neural network \( s_\theta(\mathbf{x}_t, \mathbf{c}, t) \) that takes as input the noisy data \( \mathbf{x}_t \), the condition \( \mathbf{c} \), and the time \( t \), and outputs an estimate of the conditional score \( \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{c}) \). The training objective is defined as:
+
+\begin{align}
+    \mathcal{L}_{\text{CDSM}}(\theta) = 
+    \frac{1}{2} \int_0^T \mathbb{E}_{\mathbf{x}_0, \mathbf{c} \sim p(\mathbf{x}_0, \mathbf{c}), \, \mathbf{x}_t \sim p(\mathbf{x}_t \mid \mathbf{x}_0)} 
+    \left[ \lambda(t) \left\| s_\theta(\mathbf{x}_t, \mathbf{c}, t) - \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] \, dt.
+\end{align}
+
+The only difference between the DSM objective used for unconditional generation and the CDSM objective used for conditional generation lies in the incorporation of the conditioning variable \( \mathbf{c} \) into the score model. Note that the regression target—the score function of the perturbation kernel—remains the same. While early empirical results were promising, it was unclear why the minimizer of the CDSM objective approximates the true conditional score function. 
+
+In Chapter 2, we provide the first formal proof of consistency for the CDSM estimator, establishing its theoretical validity and confirming its utility in modeling conditional distributions. 
 
 
 \paragraph{Strengths and Weaknesses of the Unified Framework}
@@ -697,34 +716,31 @@ Similar logic can be applied to other downstream tasks such as object detection,
 
 In all these tasks, the pretrained encoder \( f_{\theta} \) acts as a feature extractor, and the task-specific prediction heads are trained to perform the desired task using the representations as input. Similar to classification, the encoder \( f_{\theta} \) can be kept fixed or fine-tuned along with the prediction heads. This flexibility allows the model to either leverage the general representations learned during self-supervised pretraining or adapt them to the specific nuances of the downstream task. This approach leverages the strengths of self-supervised learning to enhance performance across various domains and applications.
 
-\subsection{Challenges and Weaknesses in Current Methodologies}
+\subsection{Challenges and Limitations in Current Methodologies}
 
-Despite significant advancements, current unsupervised representation learning methods face several challenges:
+Despite significant advancements, current self-supervised learning (SSL) methods face several challenges that hinder their ability to fully capture the underlying structure and complexity of data. In this section, we discuss key weaknesses—particularly those we aim to address in this work—including intrinsic dimension estimation, limited model expressiveness in variational autoencoders (VAEs), and the lack of geometric understanding and interpretability in the latent space.
 
-\begin{itemize}
-    \item \textbf{Limited Model Expressiveness}: Generative models like standard VAEs struggle to capture complex data distributions due to limited decoder capacity and restrictive assumptions (e.g., Gaussianity). This limits their applicability to high-dimensional and complex data.
+\subsubsection{Intrinsic Dimension Estimation}
 
-    \item \textbf{Intrinsic Dimension Estimation}: Many methods lack mechanisms to estimate the intrinsic dimensionality of the data manifold, which is crucial for understanding the true complexity and structure of the data.
+While SSL methods strive to extract meaningful representations from data, they often do not make an informed choice about the latent dimensionality of these representations. Standard practice involves selecting a latent dimension based on convention or precedent in the literature—commonly using values like 512—regardless of the dataset's inherent complexity. This arbitrary selection can lead to suboptimal performance.
 
-    \item \textbf{Geometric Understanding}: Existing methods often fail to exploit the geometry of the data manifold effectively. Without leveraging geometric insights, models may learn suboptimal representations that do not reflect the true relationships in the data.
+If the optimal latent dimension is \( k \) and a significantly larger dimension is chosen, the model may incorporate redundant information in downstream tasks. This redundancy might adversely affect generalization. Conversely, selecting a latent dimension smaller than \( k \) risks losing essential information, leading to reduced performance due to insufficient representation capacity.
 
-\end{itemize}
+Developing methods that can estimate or inform the choice of the intrinsic dimensionality of the data manifold is crucial. Such methods enable models to learn representations that are both efficient and effective, capturing the essential structure of the data without unnecessary complexity.
 
-\subsection{Addressing Weaknesses Through Our Work}
+In Chapter 3, we present a novel method for estimating the latent dimension using diffusion models trained on the data distribution. We theoretically and experimentally demonstrate that diffusion (or score-based) models inherently encode information about the intrinsic dimensionality. Specifically, we prove that the Jacobian of the score function—modeled by a diffusion or score-based model—captures the low-dimensional intrinsic structure of the data. When data concentrates around a lower-dimensional manifold of dimension \( k \) embedded in a higher-dimensional ambient space of dimension \( d \), the singular value decomposition (SVD) of the Jacobian of the score function yields \( k \) vanishing singular values. This finding provides a principled approach to estimating the intrinsic dimension \( k \) of the data manifold.
 
-In this thesis, we propose novel approaches to address these challenges in self-supervised representation learning:
+\subsubsection{Limited Model Expressiveness in Variational Autoencoders}
 
-\paragraph{ScoreVAE}
+Variational autoencoders are widely used in unsupervised representation learning due to their ability to model complex data distributions. However, standard VAEs suffer from limited model expressiveness, primarily attributed to two key assumptions: the encoding distribution (often assumed to be a unimodal Gaussian) and the decoding distribution (also assumed to be a unimodal Gaussian).
 
-We introduce \emph{ScoreVAE}, a model that integrates variational inference with pre-trained diffusion models to overcome the limitations of traditional VAEs. By relaxing the Gaussian assumption in the reconstruction distribution and incorporating more expressive score-based models, ScoreVAE achieves higher model expressiveness, enabling it to capture complex data distributions and produce clearer reconstructions.
+The assumption of a Gaussian decoding distribution can lead to blurry reconstructions, especially when modeling complex distributions such as natural images. This limitation arises because a unimodal Gaussian cannot capture the multimodal and intricate structures present in such data. As a result, the learned representations may lack the fine-grained details necessary for high-quality reconstructions and downstream tasks that require precise information.
 
-\paragraph{Intrinsic Dimension Estimation Using Diffusion Models}
+In Chapter 4, we introduce a novel adaptation of the VAE framework called \textit{ScoreVAE}, which addresses this issue by combining a diffusion-time-dependent encoder with an unconditional diffusion model. By employing Bayes' rule for score functions, we analytically derive a robust and flexible model for the reconstruction distribution. Our approach bypasses the unrealistic Gaussian assumption, resulting in a more expressive VAE capable of capturing the complex structures inherent in high-dimensional data like images.
 
-We propose a novel framework that leverages diffusion models to estimate the intrinsic dimensionality of data. By analyzing the diffusion process and its interaction with the data manifold, our method captures the latent structure and dimensionality, offering a principled way to understand complex datasets.
+\subsubsection{Geometric Understanding and Interpretability of the Latent Space}
 
-\paragraph{Score-Based Pullback Riemannian Geometry}
+Another significant limitation of current methodologies is the lack of geometric understanding and interpretability in the latent space. Existing methods often fail to effectively exploit the geometry of the data manifold, leading to representations that may not reflect the true relationships and structures within the data. This lack of interpretability hinders our ability to understand and manipulate the latent representations meaningfully.
 
-Our work introduces a method to learn the geometry of data manifolds by adapting a score-based Riemannian metric. This approach enables dimensionality reduction and geometric understanding while preserving local manifold properties. By leveraging the pullback metric induced by the score function, we address intrinsic dimension estimation and effectively exploit the underlying geometry in representation learning.
 
-These contributions aim to enhance the expressiveness of generative models, provide tools for intrinsic dimension estimation, and integrate geometric insights into self-supervised learning, thereby advancing the field toward more robust and intelligent systems.
-
+In Chapter 5, we introduce a pullback Riemannian metric induced by the score function, capturing the intrinsic dimensionality and geometry of the data manifold. This enables closed-form geodesics, interpretable autoencoding, and a deeper understanding of the manifold's structure. By adapting the normalizing flow framework with isometry regularization and base distribution anisotropy, our method preserves local manifold properties, facilitates dimensionality reduction, and enhances the interpretability of latent space representations.
