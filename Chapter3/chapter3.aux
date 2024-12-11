@@ -2,11 +2,11 @@
 \providecommand\zref@newlabel[2]{}
 \providecommand\hyper@newdestlabel[2]{}
 \citation{manifold_hypothesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Diffusion models encode the intrinsic dimension of data manifolds}{65}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Diffusion models encode the intrinsic dimension of data manifolds}{89}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{65}{section.4.1}\protected@file@percent }
-\newlabel{ch3:sec:introduction}{{4.1}{65}{Introduction}{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{89}{section.5.1}\protected@file@percent }
+\newlabel{ch3:sec:introduction}{{5.1}{89}{Introduction}{section.5.1}{}}
 \citation{vae}
 \citation{gan}
 \citation{brehmer2020flows}
@@ -23,12 +23,12 @@
 \citation{pidstrigach2022manifold_jakiw}
 \citation{oko2023diffusion_mini_max}
 \citation{chen2023manifold_linear}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces The data manifold (in blue) and the neural approximation of the score field $\nabla _\textbf  {x} \ln p_{t_0}(\textbf  {x})$ obtained from a diffusion model. Near the manifold the score field is perpendicular to the manifold surface.}}{67}{figure.caption.76}\protected@file@percent }
-\newlabel{ch3:fig:score_field}{{4.1}{67}{The data manifold (in blue) and the neural approximation of the score field $\nabla _\textbf {x} \ln p_{t_0}(\textbf {x})$ obtained from a diffusion model. Near the manifold the score field is perpendicular to the manifold surface}{figure.caption.76}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces To estimate the manifold's dimension at point \(\mathbf  {x}_0\) (red dot), we sample \(K\) nearby points \(\mathbf  {x}_{\epsilon }^{(i)}\) (blue dots) and use the trained diffusion model to evaluate the score function \(s_\theta (\mathbf  {x}_\epsilon ^{(i)}, \epsilon )\) at these perturbed points. We assemble these vectors into a matrix and perform Singular Value Decomposition (SVD). The number of (almost) zero singular values reveals the manifold's dimension.}}{67}{figure.caption.76}\protected@file@percent }
-\newlabel{ch3:fig:zoom}{{4.2}{67}{To estimate the manifold's dimension at point \(\mathbf {x}_0\) (red dot), we sample \(K\) nearby points \(\mathbf {x}_{\epsilon }^{(i)}\) (blue dots) and use the trained diffusion model to evaluate the score function \(s_\theta (\mathbf {x}_\epsilon ^{(i)}, \epsilon )\) at these perturbed points. We assemble these vectors into a matrix and perform Singular Value Decomposition (SVD). The number of (almost) zero singular values reveals the manifold's dimension}{figure.caption.76}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Related Work}{67}{section.4.2}\protected@file@percent }
-\newlabel{ch3:sec:related_work}{{4.2}{67}{Related Work}{section.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces The data manifold (in blue) and the neural approximation of the score field $\nabla _\textbf  {x} \ln p_{t_0}(\textbf  {x})$ obtained from a diffusion model. Near the manifold the score field is perpendicular to the manifold surface.}}{91}{figure.caption.95}\protected@file@percent }
+\newlabel{ch3:fig:score_field}{{5.1}{91}{The data manifold (in blue) and the neural approximation of the score field $\nabla _\textbf {x} \ln p_{t_0}(\textbf {x})$ obtained from a diffusion model. Near the manifold the score field is perpendicular to the manifold surface}{figure.caption.95}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces To estimate the manifold's dimension at point \(\mathbf  {x}_0\) (red dot), we sample \(K\) nearby points \(\mathbf  {x}_{\epsilon }^{(i)}\) (blue dots) and use the trained diffusion model to evaluate the score function \(s_\theta (\mathbf  {x}_\epsilon ^{(i)}, \epsilon )\) at these perturbed points. We assemble these vectors into a matrix and perform Singular Value Decomposition (SVD). The number of (almost) zero singular values reveals the manifold's dimension.}}{91}{figure.caption.95}\protected@file@percent }
+\newlabel{ch3:fig:zoom}{{5.2}{91}{To estimate the manifold's dimension at point \(\mathbf {x}_0\) (red dot), we sample \(K\) nearby points \(\mathbf {x}_{\epsilon }^{(i)}\) (blue dots) and use the trained diffusion model to evaluate the score function \(s_\theta (\mathbf {x}_\epsilon ^{(i)}, \epsilon )\) at these perturbed points. We assemble these vectors into a matrix and perform Singular Value Decomposition (SVD). The number of (almost) zero singular values reveals the manifold's dimension}{figure.caption.95}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Related Work}{91}{section.5.2}\protected@file@percent }
+\newlabel{ch3:sec:related_work}{{5.2}{91}{Related Work}{section.5.2}{}}
 \citation{Karhunen-Loeve}
 \citation{auto_ppca}
 \citation{ppca}
@@ -56,47 +56,47 @@
 \citation{diffusion_models,ddpm}
 \citation{song2020score}
 \citation{song2021maximum}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Proposed Method for Estimation of Intrinsic Dimension}{69}{section.4.3}\protected@file@percent }
-\newlabel{ch3:sec:method}{{4.3}{69}{Proposed Method for Estimation of Intrinsic Dimension}{section.4.3}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Estimate the Intrinsic Dimension at $\mathbf  {x}_0$}}{69}{algorithm.1}\protected@file@percent }
-\newlabel{ch3:alg:intrinsic_dimension}{{1}{69}{Estimate the Intrinsic Dimension at $\mathbf {x}_0$}{algorithm.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Theoretical Analysis}{71}{section.4.4}\protected@file@percent }
-\newlabel{ch3:sec:theory}{{4.4}{71}{Theoretical Analysis}{section.4.4}{}}
-\newlabel{ch3:thm:score_orthogonal}{{4.4.1}{71}{}{theorem.4.4.1}{}}
-\newlabel{ch3:cor:score_ratio}{{4.4.2}{71}{}{theorem.4.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Limitations}{73}{section.4.5}\protected@file@percent }
-\newlabel{ch3:sec:limitations}{{4.5}{73}{Limitations}{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Proposed Method for Estimation of Intrinsic Dimension}{93}{section.5.3}\protected@file@percent }
+\newlabel{ch3:sec:method}{{5.3}{93}{Proposed Method for Estimation of Intrinsic Dimension}{section.5.3}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Estimate the Intrinsic Dimension at $\mathbf  {x}_0$}}{93}{algorithm.1}\protected@file@percent }
+\newlabel{ch3:alg:intrinsic_dimension}{{1}{93}{Estimate the Intrinsic Dimension at $\mathbf {x}_0$}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Theoretical Analysis}{95}{section.5.4}\protected@file@percent }
+\newlabel{ch3:sec:theory}{{5.4}{95}{Theoretical Analysis}{section.5.4}{}}
+\newlabel{ch3:thm:score_orthogonal}{{5.4.1}{95}{}{theorem.5.4.1}{}}
+\newlabel{ch3:cor:score_ratio}{{5.4.2}{95}{}{theorem.5.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Limitations}{97}{section.5.5}\protected@file@percent }
+\newlabel{ch3:sec:limitations}{{5.5}{97}{Limitations}{section.5.5}{}}
 \citation{dim_MLE}
 \citation{haro_mle}
 \citation{fan_local_pca}
 \citation{auto_ppca}
 \citation{ppca}
 \citation{horvat2022nfid}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Experiments}{74}{section.4.6}\protected@file@percent }
-\newlabel{ch3:sec:experiments}{{4.6}{74}{Experiments}{section.4.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Experiments on Euclidean datasets}{74}{subsection.4.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Experiments}{98}{section.5.6}\protected@file@percent }
+\newlabel{ch3:sec:experiments}{{5.6}{98}{Experiments}{section.5.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Experiments on Euclidean datasets}{98}{subsection.5.6.1}\protected@file@percent }
 \citation{auto_ppca}
 \citation{auto_ppca}
-\newlabel{ch3:fig:ksphere10}{{4.3a}{75}{$k=10$}{figure.caption.77}{}}
-\newlabel{sub@ch3:fig:ksphere10}{{a}{75}{$k=10$}{figure.caption.77}{}}
-\newlabel{ch3:fig:ksphere50}{{4.3b}{75}{$k=50$}{figure.caption.77}{}}
-\newlabel{sub@ch3:fig:ksphere50}{{b}{75}{$k=50$}{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Singular values for the scores of $k$-sphere for $k=10, 50$. In both cases around $k$ singular values almost vanish, clearly indicating the dimensionality of the manifold. Each line shows a score spectrum at different $\textbf  {x}_0^{(j)}$.}}{75}{figure.caption.77}\protected@file@percent }
-\newlabel{ch3:fig:ksphere}{{4.3}{75}{Singular values for the scores of $k$-sphere for $k=10, 50$. In both cases around $k$ singular values almost vanish, clearly indicating the dimensionality of the manifold. Each line shows a score spectrum at different $\textbf {x}_0^{(j)}$}{figure.caption.77}{}}
+\newlabel{ch3:fig:ksphere10}{{5.3a}{99}{$k=10$}{figure.caption.96}{}}
+\newlabel{sub@ch3:fig:ksphere10}{{a}{99}{$k=10$}{figure.caption.96}{}}
+\newlabel{ch3:fig:ksphere50}{{5.3b}{99}{$k=50$}{figure.caption.96}{}}
+\newlabel{sub@ch3:fig:ksphere50}{{b}{99}{$k=50$}{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Singular values for the scores of $k$-sphere for $k=10, 50$. In both cases around $k$ singular values almost vanish, clearly indicating the dimensionality of the manifold. Each line shows a score spectrum at different $\textbf  {x}_0^{(j)}$.}}{99}{figure.caption.96}\protected@file@percent }
+\newlabel{ch3:fig:ksphere}{{5.3}{99}{Singular values for the scores of $k$-sphere for $k=10, 50$. In both cases around $k$ singular values almost vanish, clearly indicating the dimensionality of the manifold. Each line shows a score spectrum at different $\textbf {x}_0^{(j)}$}{figure.caption.96}{}}
 \citation{pope2021intrinsic}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Experiments on image datasets}{76}{subsection.4.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Auto-encoder reconstruction error on MNIST for different latent space dimensions. Vertical lines mark different estimations of intrinsic dimension.}}{77}{figure.caption.78}\protected@file@percent }
-\newlabel{ch3:fig:mnist_autoencoder}{{4.4}{77}{Auto-encoder reconstruction error on MNIST for different latent space dimensions. Vertical lines mark different estimations of intrinsic dimension}{figure.caption.78}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces MNIST score spectra that yielded the highest estimated dimension for each digit}}{77}{figure.caption.79}\protected@file@percent }
-\newlabel{ch3:fig:score_spectra_mnist}{{4.5}{77}{MNIST score spectra that yielded the highest estimated dimension for each digit}{figure.caption.79}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Estimated intrinsic dimension for each MNIST digit}}{78}{table.caption.80}\protected@file@percent }
-\newlabel{ch3:tab:estimated_mnist_dimensions}{{4.1}{78}{Estimated intrinsic dimension for each MNIST digit}{table.caption.80}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Comparison of dimensionality detection methods on various data manifolds.}}{78}{table.caption.81}\protected@file@percent }
-\newlabel{ch3:tbl:results}{{4.2}{78}{Comparison of dimensionality detection methods on various data manifolds}{table.caption.81}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Conclusions and further directions}{78}{section.4.7}\protected@file@percent }
-\newlabel{ch3:sec:conclusions}{{4.7}{78}{Conclusions and further directions}{section.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}Experiments on image datasets}{100}{subsection.5.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Auto-encoder reconstruction error on MNIST for different latent space dimensions. Vertical lines mark different estimations of intrinsic dimension.}}{101}{figure.caption.97}\protected@file@percent }
+\newlabel{ch3:fig:mnist_autoencoder}{{5.4}{101}{Auto-encoder reconstruction error on MNIST for different latent space dimensions. Vertical lines mark different estimations of intrinsic dimension}{figure.caption.97}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces MNIST score spectra that yielded the highest estimated dimension for each digit}}{101}{figure.caption.98}\protected@file@percent }
+\newlabel{ch3:fig:score_spectra_mnist}{{5.5}{101}{MNIST score spectra that yielded the highest estimated dimension for each digit}{figure.caption.98}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Estimated intrinsic dimension for each MNIST digit}}{102}{table.caption.99}\protected@file@percent }
+\newlabel{ch3:tab:estimated_mnist_dimensions}{{5.1}{102}{Estimated intrinsic dimension for each MNIST digit}{table.caption.99}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison of dimensionality detection methods on various data manifolds.}}{102}{table.caption.100}\protected@file@percent }
+\newlabel{ch3:tbl:results}{{5.2}{102}{Comparison of dimensionality detection methods on various data manifolds}{table.caption.100}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Conclusions and further directions}{102}{section.5.7}\protected@file@percent }
+\newlabel{ch3:sec:conclusions}{{5.7}{102}{Conclusions and further directions}{section.5.7}{}}
 \@setckpt{Chapter3/chapter3}{
-\setcounter{page}{80}
+\setcounter{page}{104}
 \setcounter{equation}{0}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -105,7 +105,7 @@
 \setcounter{footnote}{5}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{4}
+\setcounter{chapter}{5}
 \setcounter{section}{7}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
@@ -119,7 +119,7 @@
 \setcounter{NAT@ctr}{0}
 \setcounter{parentequation}{0}
 \setcounter{section@level}{1}
-\setcounter{Item}{24}
+\setcounter{Item}{22}
 \setcounter{Hfootnote}{6}
 \setcounter{bookmark@seq@number}{61}
 \setcounter{theorem}{0}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  8 DEC 2024 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  11 DEC 2024 14:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -14,9 +14,6 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna Kumar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
-
-Class PhDThesisPSnPDF Warning: You have chosen an option that generates only selected chapters with references, if this was intentional, ignore this warning. If not, please remove the option `chapter' from the document class and recompile. Good luck with your writing! on input line 238.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/bk12.clo
@@ -852,76 +849,146 @@ Package caption Info: End \AtBeginDocument code.
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 111.
-
-No file thesis.nls.
-[10
-
-
-
-
-
-
-
-]
-\openout2 = `Outline/Outline.aux'.
-
- (./Outline/Outline.tex
-Chapter 1.
-<Outline/figures/caflow/fulldependencies.png, id=37, 542.025pt x 238.8925pt>
-File: Outline/figures/caflow/fulldependencies.png Graphic file (type png)
-<use Outline/figures/caflow/fulldependencies.png>
-Package pdftex.def Info: Outline/figures/caflow/fulldependencies.png  used on input line 13.
-(pdftex.def)             Requested size: 135.61188pt x 59.77036pt.
-<Outline/figures/caflow/Dual-Glowdependencies.png, id=39, 542.025pt x 239.89626pt>
-File: Outline/figures/caflow/Dual-Glowdependencies.png Graphic file (type png)
-<use Outline/figures/caflow/Dual-Glowdependencies.png>
-Package pdftex.def Info: Outline/figures/caflow/Dual-Glowdependencies.png  used on input line 17.
-(pdftex.def)             Requested size: 135.61188pt x 60.0215pt.
-<Outline/figures/caflow/oursdependencies.png, id=40, 541.02126pt x 237.88875pt>
-File: Outline/figures/caflow/oursdependencies.png Graphic file (type png)
-<use Outline/figures/caflow/oursdependencies.png>
-Package pdftex.def Info: Outline/figures/caflow/oursdependencies.png  used on input line 21.
-(pdftex.def)             Requested size: 135.61188pt x 59.62811pt.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 23.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+\PHD@Title=\box76
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 115.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 23.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 23.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 23.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 23.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 23.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 115.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<Outline/figures/caflow/dual_glow.pdf, id=43, 341.35529pt x 204.765pt>
+\PHD@crest=\box77
+<Figs/University_Crest.pdf, id=44, 59.22125pt x 69.25874pt>
+File: Figs/University_Crest.pdf Graphic file (type pdf)
+<use Figs/University_Crest.pdf>
+Package pdftex.def Info: Figs/University_Crest.pdf  used on input line 115.
+(pdftex.def)             Requested size: 87.49088pt x 102.32376pt.
+\PHD@collegecrest=\box78
+\PHD@author=\box79
+\PHD@supervisor=\box80
+\PHD@advisor=\box81
+\PHD@dept=\box82
+\PHD@submission=\box83
+\PHD@collegedate=\box84
+\PHD@titlepagespacing=\skip148
+ [1
+
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Figs/University_Crest.pdf>]
+\openout2 = `Dedication/dedication.aux'.
+
+ (./Dedication/dedication.tex [2
+
+
+]) [3]
+\openout2 = `Declaration/declaration.aux'.
+
+ (./Declaration/declaration.tex [4
+
+
+
+
+]) [5
+
+]
+\openout2 = `Acknowledgement/acknowledgement.aux'.
+
+ (./Acknowledgement/acknowledgement.tex [6
+
+
+
+
+]) [7
+
+]
+\openout2 = `Abstract/abstract.aux'.
+
+ (./Abstract/abstract.tex [8
+
+
+
+
+]) [9
+
+] [10
+
+
+
+] (./thesis.toc)
+\tf@toc=\write6
+\openout6 = `thesis.toc'.
+
+ [11
+
+] [12
+
+] (./thesis.lof [13])
+\tf@lof=\write7
+\openout7 = `thesis.lof'.
+
+ [14] (./thesis.lot)
+\tf@lot=\write8
+\openout8 = `thesis.lot'.
+
+
+No file thesis.nls.
+[15
+
+] [16
+
+]
+\openout2 = `Outline/Outline.aux'.
+
+ (./Outline/Outline.tex
+Chapter 1.
+<Outline/figures/caflow/fulldependencies.png, id=150, 542.025pt x 238.8925pt>
+File: Outline/figures/caflow/fulldependencies.png Graphic file (type png)
+<use Outline/figures/caflow/fulldependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/fulldependencies.png  used on input line 13.
+(pdftex.def)             Requested size: 135.61188pt x 59.77036pt.
+<Outline/figures/caflow/Dual-Glowdependencies.png, id=152, 542.025pt x 239.89626pt>
+File: Outline/figures/caflow/Dual-Glowdependencies.png Graphic file (type png)
+<use Outline/figures/caflow/Dual-Glowdependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/Dual-Glowdependencies.png  used on input line 17.
+(pdftex.def)             Requested size: 135.61188pt x 60.0215pt.
+<Outline/figures/caflow/oursdependencies.png, id=153, 541.02126pt x 237.88875pt>
+File: Outline/figures/caflow/oursdependencies.png Graphic file (type png)
+<use Outline/figures/caflow/oursdependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/oursdependencies.png  used on input line 21.
+(pdftex.def)             Requested size: 135.61188pt x 59.62811pt.
+<Outline/figures/caflow/dual_glow.pdf, id=156, 341.35529pt x 204.765pt>
 File: Outline/figures/caflow/dual_glow.pdf Graphic file (type pdf)
 <use Outline/figures/caflow/dual_glow.pdf>
 Package pdftex.def Info: Outline/figures/caflow/dual_glow.pdf  used on input line 29.
@@ -929,7 +996,7 @@ Package pdftex.def Info: Outline/figures/caflow/dual_glow.pdf  used on input lin
 
 
 pdfTeX warning: pdflatex (file ./Outline/figures/caflow/high_level_design_conditional_modified.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Outline/figures/caflow/high_level_design_conditional_modified.pdf, id=44, 442.53331pt x 319.1925pt>
+<Outline/figures/caflow/high_level_design_conditional_modified.pdf, id=157, 442.53331pt x 319.1925pt>
 File: Outline/figures/caflow/high_level_design_conditional_modified.pdf Graphic file (type pdf)
 <use Outline/figures/caflow/high_level_design_conditional_modified.pdf>
 Package pdftex.def Info: Outline/figures/caflow/high_level_design_conditional_modified.pdf  used on input line 33.
@@ -940,12 +1007,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1
 
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Outline/figures/caflow/fulldependencies.png> <./Outline/figures/caflow/Dual-Glowdependencies.png> <./Outline/figures/caflow/oursdependencies.png>]
+ <./Outline/figures/caflow/fulldependencies.png> <./Outline/figures/caflow/Dual-Glowdependencies.png> <./Outline/figures/caflow/oursdependencies.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 47.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<Outline/figures/non-uniform-diffusion-models/drawing.png, id=58, 3514.12875pt x 1078.0275pt>
+<Outline/figures/non-uniform-diffusion-models/drawing.png, id=167, 3514.12875pt x 1078.0275pt>
 File: Outline/figures/non-uniform-diffusion-models/drawing.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/drawing.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/drawing.png  used on input line 60.
@@ -957,47 +1024,47 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-<Outline/figures/non-uniform-diffusion-models/797_x.png, id=90, 128.48pt x 128.48pt>
+<Outline/figures/non-uniform-diffusion-models/797_x.png, id=195, 128.48pt x 128.48pt>
 File: Outline/figures/non-uniform-diffusion-models/797_x.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/797_x.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_x.png  used on input line 70.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/797_y.png, id=91, 128.48pt x 128.48pt>
+<Outline/figures/non-uniform-diffusion-models/797_y.png, id=196, 128.48pt x 128.48pt>
 File: Outline/figures/non-uniform-diffusion-models/797_y.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/797_y.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_y.png  used on input line 71.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/797_1.png, id=92, 128.48pt x 128.48pt>
+<Outline/figures/non-uniform-diffusion-models/797_1.png, id=197, 128.48pt x 128.48pt>
 File: Outline/figures/non-uniform-diffusion-models/797_1.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/797_1.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_1.png  used on input line 72.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/x.png, id=93, 160.6pt x 160.6pt>
+<Outline/figures/non-uniform-diffusion-models/x.png, id=198, 160.6pt x 160.6pt>
 File: Outline/figures/non-uniform-diffusion-models/x.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/x.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/x.png  used on input line 74.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/y.png, id=94, 160.6pt x 160.6pt>
+<Outline/figures/non-uniform-diffusion-models/y.png, id=199, 160.6pt x 160.6pt>
 File: Outline/figures/non-uniform-diffusion-models/y.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/y.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/y.png  used on input line 75.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/DV.png, id=95, 160.6pt x 160.6pt>
+<Outline/figures/non-uniform-diffusion-models/DV.png, id=200, 160.6pt x 160.6pt>
 File: Outline/figures/non-uniform-diffusion-models/DV.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/DV.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/DV.png  used on input line 76.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/189_x.png, id=96, 64.24pt x 64.24pt>
+<Outline/figures/non-uniform-diffusion-models/189_x.png, id=201, 64.24pt x 64.24pt>
 File: Outline/figures/non-uniform-diffusion-models/189_x.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/189_x.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_x.png  used on input line 78.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/189_y.png, id=97, 64.24pt x 64.24pt>
+<Outline/figures/non-uniform-diffusion-models/189_y.png, id=202, 64.24pt x 64.24pt>
 File: Outline/figures/non-uniform-diffusion-models/189_y.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/189_y.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_y.png  used on input line 79.
 (pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
-<Outline/figures/non-uniform-diffusion-models/189_2.png, id=98, 64.24pt x 64.24pt>
+<Outline/figures/non-uniform-diffusion-models/189_2.png, id=203, 64.24pt x 64.24pt>
 File: Outline/figures/non-uniform-diffusion-models/189_2.png Graphic file (type png)
 <use Outline/figures/non-uniform-diffusion-models/189_2.png>
 Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_2.png  used on input line 80.
@@ -1007,20 +1074,20 @@ Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_2.png 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./Outline/figures/non-uniform-diffusion-models/drawing.png>] [4 <./Outline/figures/non-uniform-diffusion-models/797_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_1.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/DV.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_2.png (PNG copy)>]
-<Outline/figures/id-diff/score_field.png, id=114, 529.2573pt x 515.0442pt>
+<Outline/figures/id-diff/score_field.png, id=217, 529.2573pt x 515.0442pt>
 File: Outline/figures/id-diff/score_field.png Graphic file (type png)
 <use Outline/figures/id-diff/score_field.png>
 Package pdftex.def Info: Outline/figures/id-diff/score_field.png  used on input line 116.
 (pdftex.def)             Requested size: 196.85616pt x 191.56932pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
-<Outline/figures/id-diff/drawing.png, id=115, 764.8575pt x 487.8225pt>
+<Outline/figures/id-diff/drawing.png, id=218, 764.8575pt x 487.8225pt>
 File: Outline/figures/id-diff/drawing.png Graphic file (type png)
 <use Outline/figures/id-diff/drawing.png>
 Package pdftex.def Info: Outline/figures/id-diff/drawing.png  used on input line 125.
 (pdftex.def)             Requested size: 196.85616pt x 125.55055pt.
  [5 <./Outline/figures/id-diff/score_field.png> <./Outline/figures/id-diff/drawing.png>]
-<Outline/figures/scoreVAE/ffhq.png, id=125, 3675.7325pt x 2054.67625pt>
+<Outline/figures/scoreVAE/ffhq.png, id=227, 3675.7325pt x 2054.67625pt>
 File: Outline/figures/scoreVAE/ffhq.png Graphic file (type png)
 <use Outline/figures/scoreVAE/ffhq.png>
 Package pdftex.def Info: Outline/figures/scoreVAE/ffhq.png  used on input line 173.
@@ -1033,11 +1100,30 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-12.48592pt}.
 
-[7 <./Outline/figures/scoreVAE/ffhq.png>] [8]) [9] [10
+[7 <./Outline/figures/scoreVAE/ffhq.png>]
+<Outline/figures/score-based-riemannian-geometry/hemisphere.jpg, id=241, 3677.74pt x 3328.435pt>
+File: Outline/figures/score-based-riemannian-geometry/hemisphere.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/hemisphere.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/hemisphere.jpg  used on input line 205.
+(pdftex.def)             Requested size: 97.99309pt x 88.67543pt.
+<Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg, id=242, 3093.5575pt x 3261.18375pt>
+File: Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg  used on input line 211.
+(pdftex.def)             Requested size: 97.99309pt x 103.2553pt.
+<Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg, id=243, 3387.65625pt x 3658.66875pt>
+File: Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg  used on input line 217.
+(pdftex.def)             Requested size: 97.99309pt x 105.79163pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <./Outline/figures/score-based-riemannian-geometry/hemisphere.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg>]) [10] (./thesis.bbl) [11
 
 
 
-] (./thesis.bbl) [11
 
 ] (./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux) (./Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux) (./Outline/Outline.aux))
  ***********
@@ -1045,21 +1131,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B922AB2EC33CFD205A915953D67E4233;2103.
+(rerunfilecheck)             Checksum: 5B4507A107BC7EA4BAA1D56881277D0B;2481.
  ) 
 Here is how much of TeX's memory you used:
- 23498 strings out of 474116
- 447453 string characters out of 5743682
- 1935187 words of memory out of 5000000
- 45079 multiletter control sequences out of 15000+600000
- 644057 words of font info for 332 fonts, out of 8000000 for 9000
+ 23642 strings out of 474116
+ 451667 string characters out of 5743682
+ 1937187 words of memory out of 5000000
+ 45163 multiletter control sequences out of 15000+600000
+ 648828 words of font info for 345 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,1350b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1351b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (12 pages, 15734954 bytes).
+Output written on thesis.pdf (27 pages, 17898751 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 85651 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 91839 words of extra memory for PDF output out of 106986 (max. 10000000)
 

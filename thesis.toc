@@ -1,0 +1,10 @@
+\thispagestyle {empty}
+\contentsline {chapter}{List of figures}{xiii}{chapter*.5}%
+\contentsline {chapter}{List of tables}{xv}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Thesis Outline and Contributions}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}CAFLOW: Conditional Autoregressive Flows}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Non-Uniform Diffusion Models}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Diffusion Models Encode the Intrinsic Dimension of Data Manifolds}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Variational Diffusion Auto-encoder: Latent Space Extraction from Pre-Trained Diffusion Models}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Score-Based Pullback Riemannian Geometry}{8}{section.1.5}%
+\contentsline {chapter}{References}{11}{chapter*.19}%
