@@ -1,7 +1,7 @@
 % ******************************* PhD Thesis Template **************************
 % Please have a look at the README.md file for info on how to use the template
 
-\documentclass[a4paper,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,numbered,print,chapter]{Classes/PhDThesisPSnPDF}
 
 % ******************************************************************************
 % ******************************* Class Options ********************************
@@ -105,6 +105,7 @@
 \ifdefineChapter
 \includeonly{introduction/introductionA}
 \includeonly{Outline/Outline}
+\includeonly{Conclusions/conclusions}
 \fi
 
 % ******************************** Front Matter ********************************
@@ -136,7 +137,8 @@
 \mainmatter
 
 %\include{introduction/introductionA}
-\include{Outline/Outline}
+%\include{Outline/Outline}
+\include{Conclusions/conclusions}
 
 %\include{Chapter1/chapter1}
 %\include{Chapter2/chapter2}

@@ -1,32 +1,39 @@
 \begin{thebibliography}{}
 
-\bibitem[Batzolis et~al., 2024]{batzolis2024caflow}
-Batzolis, G., Carioni, M., Etmann, C., Afyouni, S., Kourtzi, Z., and Sch{\"o}nlieb, C.-B. (2024).
-\newblock Caflow: Conditional autoregressive flows.
-\newblock {\em Foundations of Data Science}, 6(4):553--583.
-\newblock The first author is supported by GSK. Early access: June 2024.
+\bibitem[Achilli et~al., 2024]{achilli2024losing}
+Achilli, B., Ventura, E., Silvestri, G., Pham, B., Raya, G., Krotov, D., Lucibello, C., and Ambrogioni, L. (2024).
+\newblock Losing dimensions: Geometric memorization in generative diffusion.
+\newblock {\em arXiv preprint arXiv:2410.08727}.
 
-\bibitem[Batzolis et~al., 2023]{batzolis2023variational}
-Batzolis, G., Stanczuk, J., and Sch{\"o}nlieb, C.-B. (2023).
-\newblock Variational diffusion auto-encoder: Latent space extraction from pre-trained diffusion models.
-\newblock {\em arXiv preprint arXiv:2304.12141}.
+\bibitem[Draxler et~al., 2024]{draxler2024free}
+Draxler, F., Sorrenson, P., Zimmermann, L., Rousselot, A., and K{\"o}the, U. (2024).
+\newblock Free-form flows: Make any architecture a normalizing flow.
+\newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 2197--2205. PMLR.
 
-\bibitem[Batzolis et~al., 2022]{batzolis2022non_uniform}
-Batzolis, G., Stanczuk, J., Schönlieb, C.-B., and Etmann, C. (2022).
-\newblock Non-uniform diffusion models.
+\bibitem[Durkan et~al., 2019]{durkan2019neural}
+Durkan, C., Bekasov, A., Murray, I., and Papamakarios, G. (2019).
+\newblock Neural spline flows.
+\newblock {\em Advances in neural information processing systems}, 32.
 
-\bibitem[Song et~al., 2021]{song2021maximum}
-Song, Y., Durkan, C., Murray, I., and Ermon, S. (2021).
-\newblock Maximum likelihood training of score-based diffusion models.
+\bibitem[Kamkari et~al., 2024]{kamkari2024geometric}
+Kamkari, H., Ross, B.~L., Cresswell, J.~C., Caterini, A.~L., Krishnan, R.~G., and Loaiza-Ganem, G. (2024).
+\newblock A geometric explanation of the likelihood ood detection paradox.
+\newblock In {\em Proceedings of the 41st International Conference on Machine Learning}, volume 235 of {\em Proceedings of Machine Learning Research}, Vienna, Austria. PMLR.
+\newblock Copyright 2024 by the author(s).
 
-\bibitem[Stanczuk et~al., 2024]{pmlr-v235-stanczuk24a}
-Stanczuk, J.~P., Batzolis, G., Deveney, T., and Sch\"{o}nlieb, C.-B. (2024).
-\newblock Diffusion models encode the intrinsic dimension of data manifolds.
-\newblock In Salakhutdinov, R., Kolter, Z., Heller, K., Weller, A., Oliver, N., Scarlett, J., and Berkenkamp, F., editors, {\em Proceedings of the 41st International Conference on Machine Learning}, volume 235 of {\em Proceedings of Machine Learning Research}, pages 46412--46440. PMLR.
+\bibitem[Kiani et~al., 2024]{kiani2024hardness}
+Kiani, B.~T., Wang, J., and Weber, M. (2024).
+\newblock Hardness of learning neural networks under the manifold hypothesis.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}.
+\newblock Spotlight Presentation.
 
-\bibitem[Sun et~al., 2019]{Dual-Glow}
-Sun, H., Mehta, R., Zhou, H.~H., Huang, Z., Johnson, S.~C., Prabhakaran, V., and Singh, V. (2019).
-\newblock Dual-glow: Conditional flow-based generative model for modality transfer.
-\newblock In {\em Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}.
+\bibitem[Preechakul et~al., 2022]{preechakul2022diffusion_decoder}
+Preechakul, K., Chatthee, N., Wizadwongsa, S., and Suwajanakorn, S. (2022).
+\newblock Diffusion autoencoders: Toward a meaningful and decodable representation.
+
+\bibitem[Tian et~al., 2024]{tian2024visual}
+Tian, K., Jiang, Y., Yuan, Z., Peng, B., and Wang, L. (2024).
+\newblock Visual autoregressive modeling: Scalable image generation via next-scale prediction.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}.
 
 \end{thebibliography}
