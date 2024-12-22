@@ -1,1 +1,30 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better.}}{63}{table.caption.74}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better. }}{64}{table.caption.77}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method.}}{65}{table.caption.79}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Multiscale and Vanilla model comparison on CelebA-HQ 128x128}}{82}{table.caption.91}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Results of conditional generation tasks.}}{84}{table.caption.93}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Estimated intrinsic dimension for each MNIST digit}}{102}{table.caption.104}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison of dimensionality detection methods on various data manifolds.}}{102}{table.caption.105}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Cifar10}}{115}{table.caption.109}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces CelebA $64\times 64$}}{115}{table.caption.109}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Cifar10}}{116}{table.caption.110}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces CelebA $64\times 64$}}{116}{table.caption.111}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Comparison of evaluation metrics for different methods across three datasets. Best-performing results for each metric are highlighted in bold. Values are reported as mean (std). The proposed method performs best in all metrics on each data set.}}{129}{table.caption.114}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces DDPM Model Parameters}}{194}{table.caption.138}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Dimensionality detection for non-uniform distribution. For our method the maximum over pointwise estimates $\hat {k}(\textbf {x}_0)$ is considered.}}{209}{table.caption.153}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {D.1}{\ignorespaces Cifar10}}{219}{table.caption.157}%
+\contentsline {table}{\numberline {D.2}{\ignorespaces CelebA}}{220}{table.caption.158}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {E.1}{\ignorespaces Training configurations for each experiment.}}{233}{table.caption.175}%

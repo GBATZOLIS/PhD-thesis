@@ -5,47 +5,65 @@ A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Declaration/declaration.aux
 A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: Abstract/abstract.aux
+A level-1 auxiliary file: notation/notation.aux
+A level-1 auxiliary file: introduction/introductionA.aux
+A level-1 auxiliary file: Outline/Outline.aux
+A level-1 auxiliary file: Chapter1/chapter1.aux
+A level-1 auxiliary file: Chapter2/chapter2.aux
+A level-1 auxiliary file: Chapter3/chapter3.aux
+A level-1 auxiliary file: Chapter4/chapter4.aux
+A level-1 auxiliary file: Chapter5/chapter5.aux
 A level-1 auxiliary file: Conclusions/conclusions.aux
 The style file: apalike.bst
+A level-1 auxiliary file: Chapter1/appendix.aux
+A level-1 auxiliary file: Chapter2/appendix.aux
+A level-1 auxiliary file: Chapter3/appendix.aux
+A level-1 auxiliary file: Chapter4/appendix.aux
+A level-1 auxiliary file: Chapter5/appendix.aux
 Database file #1: References/references.bib
-You've used 7 entries,
+Warning--empty journal in ppca
+Warning--empty journal in mnist
+Warning--empty booktitle in whitney1994estimation
+Warning--empty journal in weed2019sharp
+You've used 225 entries,
             1935 wiz_defined-function locations,
-            513 strings with 5472 characters,
-and the built_in function-call counts, 3182 in all, are:
-= -- 293
-> -- 196
-< -- 2
-+ -- 72
-- -- 70
-* -- 271
-:= -- 568
-add.period$ -- 24
-call.type$ -- 7
-change.case$ -- 70
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 120
-empty$ -- 189
-format.name$ -- 77
-if$ -- 613
-int.to.chr$ -- 1
+            1515 strings with 43052 characters,
+and the built_in function-call counts, 102370 in all, are:
+= -- 9843
+> -- 5276
+< -- 142
++ -- 1898
+- -- 1838
+* -- 8491
+:= -- 17442
+add.period$ -- 666
+call.type$ -- 225
+change.case$ -- 2007
+chr.to.int$ -- 207
+cite$ -- 229
+duplicate$ -- 3959
+empty$ -- 6562
+format.name$ -- 2136
+if$ -- 20321
+int.to.chr$ -- 19
 int.to.str$ -- 0
-missing$ -- 6
-newline$ -- 39
-num.names$ -- 21
-pop$ -- 80
+missing$ -- 198
+newline$ -- 1091
+num.names$ -- 693
+pop$ -- 2182
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 2018
 quote$ -- 0
-skip$ -- 78
+skip$ -- 3001
 stack$ -- 0
-substring$ -- 126
-swap$ -- 19
-text.length$ -- 2
+substring$ -- 6174
+swap$ -- 845
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
-warning$ -- 0
-while$ -- 17
+type$ -- 1328
+warning$ -- 4
+while$ -- 709
 width$ -- 0
-write$ -- 94
+write$ -- 2788
+(There were 4 warnings)

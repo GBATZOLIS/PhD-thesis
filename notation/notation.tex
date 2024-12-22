@@ -1,0 +1,36 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%****************************** Notation ***************************************
+%*******************************************************************************
+
+\section*{Notation}
+\label{sec:notation}
+
+This section introduces the notations used throughout the thesis, combining statistical concepts with elements from differential and Riemannian geometry. For details on Riemannian geometry, see \cite{boothby2003introduction,carmo1992riemannian,lee2013smooth,sakai1996riemannian}.
+
+\subsection*{Statistical Notation}
+Random variables are denoted by capital letters (\(X, Y\)), with their associated probabilities written as \(P(X), P(Y)\), and their densities as \(p_X, p_Y\). Calligraphic letters (\(\mathcal{X}, \mathcal{Y}\)) represent sample spaces, while specific samples are denoted by lowercase bold letters (\(\mathbf{x}, \mathbf{y}\)). Given two random variables \(X\) and \(Y\), the conditional probability of \(Y\) given \(X\) is denoted by \(P(Y \mid X)\), and its density by \(p_{Y \mid X}\). Unless otherwise specified, all probabilities are assumed to admit a density.
+
+\paragraph{Simplified Statistical Notation.}  
+In certain chapters, as noted at their outset, we adopt a streamlined statistical notation to improve clarity and simplify the presentation of formulas. For instance, probability distributions are denoted using only the argument of their density. For a random variable \(X_t\) with a realization \(x_t\), we write:  
+\[
+p(x_t) := p_{X_t}(x_t).
+\]
+
+\subsection*{Riemannian Geometry Notation}
+Let \(\manifold\) denote a smooth manifold. The space of smooth functions on \(\manifold\) is denoted by \(C^\infty(\manifold)\). The \emph{tangent space} at \(\mPoint \in \manifold\), defined as the space of all \emph{derivations} at \(\mPoint\), is written as \(\tangent_\mPoint \manifold\). Elements of \(\tangent_\mPoint \manifold\), called \emph{tangent vectors}, are denoted by \(\tangentVector_\mPoint \in \tangent_\mPoint \manifold\). The \emph{tangent bundle} of \(\manifold\) is \(\tangent \manifold\), and smooth vector fields—smooth sections of the tangent bundle—are written as \(\vectorfield(\manifold) \subset \tangent \manifold\).
+
+A smooth manifold \(\manifold\) becomes a \emph{Riemannian manifold} if equipped with a smoothly varying \emph{metric tensor field}, \((\cdot, \cdot): \vectorfield(\manifold) \times \vectorfield(\manifold) \to C^\infty(\manifold)\). This induces a \emph{(Riemannian) metric}, \(\distance_\manifold: \manifold \times \manifold \to \mathbb{R}\). The metric tensor also defines a unique affine connection, the \emph{Levi-Civita connection}, denoted by \(\nabla_{(\cdot)} (\cdot): \vectorfield(\manifold) \times \vectorfield(\manifold) \to \vectorfield(\manifold)\).
+
+The Levi-Civita connection allows the definition of \emph{geodesics}. A geodesic between two points \(\mPoint, \mPointB \in \manifold\) is a curve \(\geodesic_{\mPoint, \mPointB}: [0,1] \to \manifold\) of minimal length connecting \(\mPoint\) to \(\mPointB\). For a tangent vector \(\tangentVector_\mPoint \in \tangent_\mPoint \manifold\), the geodesic with initial velocity \(\dot{\geodesic}_{\mPoint, \tangentVector_\mPoint}(0) = \tangentVector_\mPoint\) defines the \emph{exponential map}, \(\exp_\mPoint: \mathcal{D}_\mPoint \to \manifold\), as:
+\[
+\exp_\mPoint(\tangentVector_\mPoint) := \geodesic_{\mPoint, \tangentVector_\mPoint}(1),
+\]
+where \(\mathcal{D}_\mPoint \subset \tangent_\mPoint \manifold\) is the domain on which \(\geodesic_{\mPoint, \tangentVector_\mPoint}(1)\) is well-defined. The \emph{logarithmic map}, \(\log_\mPoint: \exp(\mathcal{D}'_\mPoint) \to \mathcal{D}'_\mPoint\), is the inverse of \(\exp_\mPoint\), valid on the domain where \(\exp_\mPoint\) is a diffeomorphism.
+
+Finally, let \((\manifold, (\cdot, \cdot))\) be a \(\dimInd\)-dimensional Riemannian manifold, and \(\manifoldB\) a \(\dimInd\)-dimensional smooth manifold. If \(\diffeoB: \manifoldB \to \manifold\) is a diffeomorphism, the \emph{pullback metric} on \(\manifoldB\) is defined as:
+\begin{equation}
+(\tangentVector, \tangentVectorB)^\diffeoB := (D_{(\cdot)} \diffeoB[\tangentVector_{(\cdot)}], D_{(\cdot)} \diffeoB[\tangentVectorB_{(\cdot)}])_{\diffeoB(\cdot)},
+\label{notation:pull-back-metric}
+\end{equation}
+where \(D_\mPoint \diffeoB: \tangent_\mPoint \manifoldB \to \tangent_{\diffeoB(\mPoint)} \manifold\) is the differential of \(\diffeoB\). This pullback metric equips \(\manifoldB\) with a Riemannian structure, \((\manifoldB, (\cdot, \cdot)^\diffeoB)\), preserving geometric properties from \((\manifold, (\cdot, \cdot))\). In this thesis, pullback mappings follow \ref{notation:pull-back-metric}, denoted with \(\diffeoB\) as a superscript, e.g., \(\distance^\diffeoB_{\manifoldB}(\mPoint, \mPointB)\), \(\geodesic^\diffeoB_{\mPoint, \mPointB}\), \(\exp^\diffeoB_\mPoint (\tangentVector_\mPoint)\), and \(\log^\diffeoB_\mPoint \mPointB\).

@@ -45,14 +45,14 @@
 \newlabel{ch1:conditional-distribution-autoregressive-factorization}{{3.6}{53}{Modeling assumptions}{equation.3.3.6}{}}
 \citation{Dual-Glow}
 \citation{Dual-Glow}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite  {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension.}}{54}{figure.caption.63}\protected@file@percent }
-\newlabel{ch1:fig:dependencies}{{3.1}{54}{From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension}{figure.caption.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite  {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension.}}{54}{figure.caption.68}\protected@file@percent }
+\newlabel{ch1:fig:dependencies}{{3.1}{54}{From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite {Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension}{figure.caption.68}{}}
 \newlabel{ch1:eq:factorization}{{3.7}{54}{Modeling assumptions}{equation.3.3.7}{}}
 \citation{SRFLOW}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Modeling the autoregressive components using conditional normalizing flows}{55}{subsection.3.3.2}\protected@file@percent }
 \newlabel{ch1:Autoregressive-conditional-flow-components}{{3.3.2}{55}{Modeling the autoregressive components using conditional normalizing flows}{subsection.3.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity.}}{56}{figure.caption.64}\protected@file@percent }
-\newlabel{ch1:fig:high_level_design_conditional}{{3.2}{56}{Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity}{figure.caption.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity.}}{56}{figure.caption.69}\protected@file@percent }
+\newlabel{ch1:fig:high_level_design_conditional}{{3.2}{56}{Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta $ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime }$ for simplicity}{figure.caption.69}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Maximum log-likelihood estimation and training}{57}{subsection.3.3.3}\protected@file@percent }
 \newlabel{ch1:eq:G}{{3.8}{57}{Maximum log-likelihood estimation and training}{equation.3.3.8}{}}
 \newlabel{ch1:eq:obj}{{3.10}{57}{}{equation.3.3.10}{}}
@@ -66,16 +66,16 @@
 \citation{verine2023expressivity}
 \citation{Dual-Glow}
 \citation{Dual-Glow}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 10 super-resolved versions of the LR image in decreasing conditional log-likelihood order.}}{61}{figure.caption.65}\protected@file@percent }
-\newlabel{ch1:fig:decreasingloglikelihood}{{3.3}{61}{10 super-resolved versions of the LR image in decreasing conditional log-likelihood order}{figure.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 10 super-resolved versions of the LR image in decreasing conditional log-likelihood order.}}{61}{figure.caption.70}\protected@file@percent }
+\newlabel{ch1:fig:decreasingloglikelihood}{{3.3}{61}{10 super-resolved versions of the LR image in decreasing conditional log-likelihood order}{figure.caption.70}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Experiments}{61}{section.3.4}\protected@file@percent }
 \newlabel{ch1:sec:numerics}{{3.4}{61}{Experiments}{section.3.4}{}}
 \citation{karras2019style}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Image Super-resolution}{62}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Ablation of the autoregressive structure}{62}{section*.66}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Qualitative comparison of Dual-Glow+ and CAFLOW.}}{62}{figure.caption.67}\protected@file@percent }
-\newlabel{ch1:fig:ablation}{{3.4}{62}{Qualitative comparison of Dual-Glow+ and CAFLOW}{figure.caption.67}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Experiment}{62}{section*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Ablation of the autoregressive structure}{62}{section*.71}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Qualitative comparison of Dual-Glow+ and CAFLOW.}}{62}{figure.caption.72}\protected@file@percent }
+\newlabel{ch1:fig:ablation}{{3.4}{62}{Qualitative comparison of Dual-Glow+ and CAFLOW}{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Experiment}{62}{section*.73}\protected@file@percent }
 \citation{BRGM}
 \citation{ESRGAN}
 \citation{li2019feedback}
@@ -89,12 +89,12 @@
 \citation{colorGAN}
 \citation{ardizzone2019guided}
 \citation{colorGAN}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better.}}{63}{table.caption.69}\protected@file@percent }
-\newlabel{ch1:comparisonBRGM}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.69}{}}
-\newlabel{ch1:eval-super-resolution}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.69}{}}
-\newlabel{ch1:tab:one}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images.}}{63}{figure.caption.70}\protected@file@percent }
-\newlabel{ch1:SR-visuals-paper}{{3.5}{63}{Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images}{figure.caption.70}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better.}}{63}{table.caption.74}\protected@file@percent }
+\newlabel{ch1:comparisonBRGM}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.74}{}}
+\newlabel{ch1:eval-super-resolution}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.74}{}}
+\newlabel{ch1:tab:one}{{3.1}{63}{Quantitative evaluation of (x4) super-resolution on FFHQ $16^2$. We report LPIPS/RMSE scores for each method. Lower scores are better}{table.caption.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images.}}{63}{figure.caption.75}\protected@file@percent }
+\newlabel{ch1:SR-visuals-paper}{{3.5}{63}{Qualitative evaluation on FFHQ 4x super-resolution of 16x16 resolution images}{figure.caption.75}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Image Colorization}{63}{subsection.3.4.2}\protected@file@percent }
 \citation{liu2015deep}
 \citation{cGLOW}
@@ -102,16 +102,16 @@
 \citation{cGLOW}
 \citation{cGLOW}
 \citation{Dual-Glow}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score.}}{64}{figure.caption.71}\protected@file@percent }
-\newlabel{ch1:fig:colorisation-paper-visuals-results}{{3.6}{64}{Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score}{figure.caption.71}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better. }}{64}{table.caption.72}\protected@file@percent }
-\newlabel{ch1:colorisation-comparison}{{3.2}{64}{Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better}{table.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score.}}{64}{figure.caption.76}\protected@file@percent }
+\newlabel{ch1:fig:colorisation-paper-visuals-results}{{3.6}{64}{Qualitative evaluation: Four colorizations proposed by CAFLOW, CINN and ColorGAN for three test images. ColorGAN generates unrealistically diverse colorizations with significant color artifacts (for example a yellow region on a white wall). CINN generates more realistic, less diverse colorizations with fewer pronounced color artifacts compared to ColorGAN, which is reflected in the improved FID score. Finally, CAFLOW generates even more realistic and less diverse colorizations than CINN with even rarer color artifacts, which is more representative of the data distribution according to the FID score}{figure.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better. }}{64}{table.caption.77}\protected@file@percent }
+\newlabel{ch1:colorisation-comparison}{{3.2}{64}{Quantitative evaluation of colorization on LSUN BEDROOM $64\times 64$ dataset. We report FID score for each method. Lower scores are better}{table.caption.77}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Image Inpainting}{64}{subsection.3.4.3}\protected@file@percent }
 \citation{wu2020stochastic}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right.}}{65}{figure.caption.73}\protected@file@percent }
-\newlabel{ch1:qualitative-performance-inpainting}{{3.7}{65}{Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right}{figure.caption.73}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method.}}{65}{table.caption.74}\protected@file@percent }
-\newlabel{ch1:quantitative-evaluation-inpainting}{{3.3}{65}{Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method}{table.caption.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right.}}{65}{figure.caption.78}\protected@file@percent }
+\newlabel{ch1:qualitative-performance-inpainting}{{3.7}{65}{Different inpaintings proposed by CAFLOW with $\tau =0.5$. Ground truth on the right}{figure.caption.78}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method.}}{65}{table.caption.79}\protected@file@percent }
+\newlabel{ch1:quantitative-evaluation-inpainting}{{3.3}{65}{Quantitative evaluation of inpainting on the CelebA dataset. We report PSNR and LPIPS scores for each method}{table.caption.79}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}Conclusion and Limitations}{65}{section.3.5}\protected@file@percent }
 \newlabel{ch1:sec:conclusions}{{3.5}{65}{Conclusion and Limitations}{section.3.5}{}}
 \@setckpt{Chapter1/chapter1}{

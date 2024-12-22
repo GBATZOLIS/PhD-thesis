@@ -1,5 +1,222 @@
 \thispagestyle {empty}
-\contentsline {chapter}{List of figures}{xiii}{chapter*.5}%
-\contentsline {chapter}{List of tables}{xv}{chapter*.6}%
-\contentsline {chapter}{\numberline {1}Conclusions and Outlook}{1}{chapter.1}%
-\contentsline {chapter}{References}{7}{chapter*.7}%
+\contentsline {paragraph}{Simplified Statistical Notation.}{xi}{section*.6}%
+\contentsline {chapter}{List of figures}{xix}{chapter*.9}%
+\contentsline {chapter}{List of tables}{xxvii}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Generative Modeling}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}The Problem of Generative Modeling}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Why Deep Learning for Generative Modeling?}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Deep Learning for Generative Modeling}{4}{subsection.1.1.3}%
+\contentsline {subsubsection}{Generative Adversarial Networks (GANs)}{4}{section*.11}%
+\contentsline {paragraph}{Training Process}{5}{section*.12}%
+\contentsline {paragraph}{Strengths}{5}{section*.13}%
+\contentsline {paragraph}{Weaknesses}{5}{section*.14}%
+\contentsline {subsubsection}{Normalizing Flows}{5}{section*.15}%
+\contentsline {paragraph}{Change of Variables}{6}{section*.16}%
+\contentsline {paragraph}{Composing Transformations}{6}{section*.17}%
+\contentsline {paragraph}{Efficient Computation}{6}{section*.18}%
+\contentsline {paragraph}{Training Objective}{7}{section*.19}%
+\contentsline {paragraph}{Strengths}{7}{section*.20}%
+\contentsline {paragraph}{Weaknesses}{7}{section*.21}%
+\contentsline {subsubsection}{Auto-Regressive Models}{8}{section*.22}%
+\contentsline {paragraph}{Model Formulation}{8}{section*.23}%
+\contentsline {paragraph}{Modeling Conditional Densities}{8}{section*.24}%
+\contentsline {paragraph}{Training Objective}{9}{section*.25}%
+\contentsline {paragraph}{Sampling Process}{9}{section*.26}%
+\contentsline {paragraph}{Strengths}{9}{section*.27}%
+\contentsline {paragraph}{Weaknesses}{9}{section*.28}%
+\contentsline {subsubsection}{Energy-Based Models (EBMs)}{10}{section*.29}%
+\contentsline {paragraph}{Training Objective}{10}{section*.30}%
+\contentsline {paragraph}{Sampling Process}{11}{section*.31}%
+\contentsline {paragraph}{Strengths}{11}{section*.32}%
+\contentsline {paragraph}{Weaknesses}{11}{section*.33}%
+\contentsline {subsubsection}{Diffusion and Score-Based Models}{12}{section*.34}%
+\contentsline {paragraph}{Forward Process}{12}{section*.35}%
+\contentsline {paragraph}{Reverse Process}{14}{section*.36}%
+\contentsline {paragraph}{Training Objective}{15}{section*.37}%
+\contentsline {paragraph}{Equivalence Between DDPM and SGM}{16}{section*.38}%
+\contentsline {subsubsection}{Probability Flow ODE}{16}{section*.39}%
+\contentsline {subsubsection}{Conditional Generation}{17}{section*.40}%
+\contentsline {paragraph}{Strengths and Weaknesses of the Unified Framework}{18}{section*.41}%
+\contentsline {paragraph}{Advancements in Sampling Speed}{18}{section*.42}%
+\contentsline {section}{\numberline {1.2}Self-Supervised Learning}{19}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Motivation}{19}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Mathematical Formulation of SSL}{21}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Generative vs. Discriminative SSL}{21}{subsection.1.2.3}%
+\contentsline {subsubsection}{Generative Approaches}{21}{section*.43}%
+\contentsline {paragraph}{Learning Latent Representations by Modeling the Full Distribution $p(\textbf {x})$}{21}{section*.44}%
+\contentsline {paragraph}{Learning Latent Representations by Modeling the Masked Distribution $p(\mathbf {x}_{\text {masked}}|\textbf {x}_{\text {context}})$}{23}{section*.45}%
+\contentsline {subsubsection}{Discriminative Approaches}{24}{section*.46}%
+\contentsline {subsubsection}{Choosing Between Generative and Discriminative SSL}{28}{section*.47}%
+\contentsline {paragraph}{Generative SSL is more useful when:}{28}{section*.48}%
+\contentsline {paragraph}{Discriminative SSL is more useful when:}{28}{section*.49}%
+\contentsline {subsubsection}{Blurring the Lines: Hybrid Approaches}{28}{section*.50}%
+\contentsline {subsection}{\numberline {1.2.4}Utilizing Learned Representations in Downstream Tasks}{29}{subsection.1.2.4}%
+\contentsline {subsubsection}{Classification}{29}{section*.51}%
+\contentsline {subsubsection}{Other Downstream Tasks}{30}{section*.52}%
+\contentsline {subsection}{\numberline {1.2.5}Challenges and Limitations in Current Methodologies}{30}{subsection.1.2.5}%
+\contentsline {subsubsection}{Intrinsic Dimension Estimation}{30}{section*.53}%
+\contentsline {subsubsection}{Limited Model Expressiveness in Variational Autoencoders}{31}{section*.54}%
+\contentsline {subsubsection}{Geometric Understanding and Interpretability of the Latent Space}{32}{section*.55}%
+\contentsline {chapter}{\numberline {2}Thesis Outline and Contributions}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}CAFLOW: Conditional Autoregressive Flows}{33}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Non-Uniform Diffusion Models}{35}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Diffusion Models Encode the Intrinsic Dimension of Data Manifolds}{37}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Variational Diffusion Auto-encoder: Latent Space Extraction from Pre-Trained Diffusion Models}{39}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Score-Based Pullback Riemannian Geometry}{40}{section.2.5}%
+\contentsline {chapter}{\numberline {3}CAFLOW: Conditional Autoregressive Flows}{43}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{43}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Background}{46}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Notations}{46}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Normalizing flows}{46}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Conditional Normalizing Flows}{50}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Conditioning in the Normalizing Flow latent space}{52}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Method}{53}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Modeling assumptions}{53}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Modeling the autoregressive components using conditional normalizing flows}{55}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Maximum log-likelihood estimation and training}{57}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Inference}{59}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Experiments}{61}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Image Super-resolution}{62}{subsection.3.4.1}%
+\contentsline {subsubsection}{Ablation of the autoregressive structure}{62}{section*.71}%
+\contentsline {subsubsection}{Experiment}{62}{section*.73}%
+\contentsline {subsection}{\numberline {3.4.2}Image Colorization}{63}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Image Inpainting}{64}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Conclusion and Limitations}{65}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Non-Uniform Diffusion Models}{67}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{67}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Notation}{70}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Methods}{70}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Background: Score matching through Stochastic Differential Equations}{71}{subsection.4.3.1}%
+\contentsline {subsubsection}{Score-Based Diffusion}{71}{section*.82}%
+\contentsline {subsubsection}{Uniform Diffusion Models}{72}{section*.83}%
+\contentsline {subsection}{\numberline {4.3.2}Non-Uniform Diffusion Models}{73}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Application of Non-Uniform Diffusion in multi-scale diffusion}{74}{subsection.4.3.3}%
+\contentsline {subsubsection}{Training}{74}{section*.85}%
+\contentsline {subsubsection}{Sampling}{75}{section*.86}%
+\contentsline {subsection}{\numberline {4.3.4}Application of Non-Uniform Diffusion in Conditional generation}{76}{subsection.4.3.4}%
+\contentsline {subsubsection}{Conditional denoising estimator (CDE)}{76}{section*.87}%
+\contentsline {subsubsection}{Conditional diffusive estimator (CDiffE)}{78}{section*.88}%
+\contentsline {subsubsection}{Conditional multi-speed diffusive estimator (CMDE)}{78}{section*.89}%
+\contentsline {section}{\numberline {4.4}Experiments}{81}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Multiscale diffusion}{81}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Conditional Generation}{82}{subsection.4.4.2}%
+\contentsline {subsubsection}{Inpainting}{84}{section*.94}%
+\contentsline {subsubsection}{Super-resolution}{85}{section*.96}%
+\contentsline {subsubsection}{Edge to image translation}{85}{section*.98}%
+\contentsline {section}{\numberline {4.5}Comparison with state-of-the-art}{86}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Conclusions and future work}{87}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Acknowledgements}{88}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Diffusion models encode the intrinsic dimension of data manifolds}{89}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{89}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Related Work}{91}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Proposed Method for Estimation of Intrinsic Dimension}{93}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Theoretical Analysis}{95}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations}{97}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Experiments}{98}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Experiments on Euclidean datasets}{98}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Experiments on image datasets}{100}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Conclusions and further directions}{102}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Variational Diffusion Auto-encoder}{105}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{105}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Background}{107}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Variational Autoencoders}{107}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Score-based diffusion models}{108}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Method}{111}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Problems with conventional VAEs}{111}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Conditional Diffusion Models as decoders}{112}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Score VAE: Encoder with unconditional diffusion model as prior}{112}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Modeling the latent posterior score $\nabla _{\textbf {x}_t} \ln {p(\textbf {z} | \textbf {x}_t )}$}{113}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Encoder Training Objective}{114}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Correction of the variational error}{114}{subsection.6.3.6}%
+\contentsline {section}{\numberline {6.4}Experiments}{115}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Conclusions}{115}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Score-based pullback Riemannian geometry}{117}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{117}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Contributions}{119}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Outline}{120}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Notation}{120}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Riemannian geometry from unimodal probability densities}{121}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Riemannian autoencoder from unimodal probability densities}{124}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Learning unimodal probability densities }{126}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Experiments}{127}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Manifold mappings}{127}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Riemannian autoencoder}{129}{subsection.7.6.2}%
+\contentsline {subsubsection}{1D and 2D manifolds}{129}{section*.116}%
+\contentsline {subsubsection}{Higher-dimensional manifolds}{130}{section*.118}%
+\contentsline {section}{\numberline {7.7}Conclusions}{131}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{133}{chapter.8}%
+\contentsline {chapter}{References}{139}{chapter*.120}%
+\contentsline {chapter}{Appendix \numberline {A}CAFLOW: Conditional Autoregressive Flows}{155}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Architecture}{155}{section.a.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Unconditional multi-scale flows}{155}{subsection.a.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Conditional multi-scale flows}{157}{subsection.a.A.1.2}%
+\contentsline {section}{\numberline {A.2}Hierarchical Representation in Multi-Scale Normalizing Flows}{158}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}Details of experiments}{158}{section.a.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Image super-resolution}{159}{subsection.a.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Image colorization}{159}{subsection.a.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}Image inpainting}{160}{subsection.a.A.3.3}%
+\contentsline {section}{\numberline {A.4}Visual results}{161}{section.a.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Image super-resolution}{161}{subsection.a.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Image inpainting}{163}{subsection.a.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Image colorization}{165}{subsection.a.A.4.3}%
+\contentsline {subsection}{\numberline {A.4.4}Sketch to image synthesis}{169}{subsection.a.A.4.4}%
+\contentsline {chapter}{Appendix \numberline {B}Non-Uniform Diffusion Models}{171}{appendix.a.B}%
+\contentsline {section}{\numberline {B.1}Proofs}{171}{section.a.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Equality of minimizers for CDE}{171}{subsection.a.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2}Consistency of CDE}{173}{subsection.a.B.1.2}%
+\contentsline {subsection}{\numberline {B.1.3}Likelihood weighting for multi-speed and multi-sde models}{175}{subsection.a.B.1.3}%
+\contentsline {subsubsection}{Multi-sde and multi-speed diffusion}{177}{section*.130}%
+\contentsline {subsection}{\numberline {B.1.4}Mean square approximation error}{178}{subsection.a.B.1.4}%
+\contentsline {section}{\numberline {B.2}Architectures and hyperparameters}{183}{section.a.B.2}%
+\contentsline {section}{\numberline {B.3}Extended visual results}{184}{section.a.B.3}%
+\contentsline {section}{\numberline {B.4}Potential negative impact}{184}{section.a.B.4}%
+\contentsline {chapter}{Appendix \numberline {C}Diffusion Models Encode the Intrinsic Dimension of Data Manifolds}{191}{appendix.a.C}%
+\contentsline {section}{\numberline {C.1}Extended background on diffusion models}{191}{section.a.C.1}%
+\contentsline {section}{\numberline {C.2}Training details}{193}{section.a.C.2}%
+\contentsline {subsection}{\numberline {C.2.1}Euclidean data}{193}{subsection.a.C.2.1}%
+\contentsline {subsection}{\numberline {C.2.2} Image data}{193}{subsection.a.C.2.2}%
+\contentsline {subsection}{\numberline {C.2.3}Auto-encoder}{193}{subsection.a.C.2.3}%
+\contentsline {section}{\numberline {C.3}Benchmarking}{194}{section.a.C.3}%
+\contentsline {section}{\numberline {C.4}Proofs}{194}{section.a.C.4}%
+\contentsline {section}{\numberline {C.5}Details on the design of synthetic image manifolds}{204}{section.a.C.5}%
+\contentsline {section}{\numberline {C.6}Additional Experimental Results}{206}{section.a.C.6}%
+\contentsline {subsection}{\numberline {C.6.1}Euclidean Data}{206}{subsection.a.C.6.1}%
+\contentsline {subsection}{\numberline {C.6.2}Synthetic Image Data}{207}{subsection.a.C.6.2}%
+\contentsline {subsection}{\numberline {C.6.3}MNIST}{207}{subsection.a.C.6.3}%
+\contentsline {section}{\numberline {C.7}Robustness analysis}{209}{section.a.C.7}%
+\contentsline {subsection}{\numberline {C.7.1}Robustness to score approximation error}{209}{subsection.a.C.7.1}%
+\contentsline {subsection}{\numberline {C.7.2}Robustness to non-uniform distribution on the manifold}{209}{subsection.a.C.7.2}%
+\contentsline {subsection}{\numberline {C.7.3}Relaxing the strict manifold assumption}{211}{subsection.a.C.7.3}%
+\contentsline {chapter}{Appendix \numberline {D}Variational Diffusion Auto-encoder}{215}{appendix.a.D}%
+\contentsline {subsection}{\numberline {D.0.1}Full derivation of the training objective}{215}{subsection.a.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Pixel-wise $L_2$ is not a perceptual metric}{216}{subsection.a.D.0.2}%
+\contentsline {section}{\numberline {D.1}Experimental details}{218}{section.a.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}ScoreVAE}{218}{subsection.a.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}VAE}{218}{subsection.a.D.1.2}%
+\contentsline {section}{\numberline {D.2}Extended qualitative evaluation}{219}{section.a.D.2}%
+\contentsline {chapter}{Appendix \numberline {E}Score-based pullback Riemannian geometry}{221}{appendix.a.E}%
+\contentsline {section}{\numberline {E.1}Proof of \ref {thm:rae-error}}{221}{section.a.E.1}%
+\contentsline {paragraph}{Auxiliary lemma}{221}{section*.159}%
+\contentsline {paragraph}{Proof of the theorem}{224}{section*.160}%
+\contentsline {section}{\numberline {E.2}Dataset Construction Details}{225}{section.a.E.2}%
+\contentsline {subsection}{\numberline {E.2.1}Datasets for Manifold Mapping Experiments}{225}{subsection.a.E.2.1}%
+\contentsline {subsubsection}{Diffeomorphisms and Convex Quadratic Functions}{226}{section*.162}%
+\contentsline {paragraph}{1. Single Banana Dataset}{226}{section*.163}%
+\contentsline {paragraph}{2. Squeezed Single Banana Dataset}{226}{section*.164}%
+\contentsline {paragraph}{3. River Dataset}{226}{section*.165}%
+\contentsline {subsubsection}{Dataset Generation Algorithm}{226}{section*.166}%
+\contentsline {subsection}{\numberline {E.2.2}Datasets for Riemannian Autoencoder Experiments}{227}{subsection.a.E.2.2}%
+\contentsline {subsection}{\numberline {E.2.3}Hemisphere($d'$, $d$) Dataset}{228}{subsection.a.E.2.3}%
+\contentsline {paragraph}{1. Sampling from the Upper Hemisphere}{228}{section*.167}%
+\contentsline {paragraph}{2. Conversion to Cartesian Coordinates}{228}{section*.168}%
+\contentsline {paragraph}{3. Random Isometric Embedding into $\mathbb {R}^d$}{228}{section*.169}%
+\contentsline {subsection}{\numberline {E.2.4}Sinusoid($d'$, $d$) Dataset}{229}{subsection.a.E.2.4}%
+\contentsline {paragraph}{1. Sampling Latent Variables}{229}{section*.170}%
+\contentsline {paragraph}{2. Defining Ambient Coordinates with Sinusoidal Transformations}{229}{section*.171}%
+\contentsline {paragraph}{3. Constructing the Dataset Samples}{231}{section*.172}%
+\contentsline {section}{\numberline {E.3}Error Metrics for Evaluation of Pullback Geometries}{231}{section.a.E.3}%
+\contentsline {paragraph}{Geodesic Error.}{231}{section*.173}%
+\contentsline {paragraph}{Variation Error.}{231}{section*.174}%
+\contentsline {section}{\numberline {E.4}Training Details}{233}{section.a.E.4}%
+\contentsline {section}{\numberline {E.5}Data Manifold Approximation}{234}{section.a.E.5}%

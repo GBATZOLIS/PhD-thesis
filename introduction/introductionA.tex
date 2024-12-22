@@ -5,13 +5,13 @@
 
 \chapter{Introduction}
 
-Over the past decade, artificial intelligence (AI) has undergone a transformative evolution, driven by groundbreaking advancements in generative modeling and self-supervised learning (SSL). These two fields have redefined our ability to model complex data distributions and leverage vast amounts of unlabeled data, leading to significant breakthroughs in areas such as media synthesis, multimodal learning, and scientific discovery.
+Over the past decade, artificial intelligence (AI) has undergone a transformative evolution, driven by groundbreaking advancements in generative modeling and self-supervised learning (SSL). These two fields have redefined our ability to model complex data distributions and leverage vast amounts of unlabeled data, leading to significant breakthroughs in areas such as media synthesis \cite{karras2019style, ramesh2021zero, esser2021taming, kong2020diffwave}, multimodal learning \cite{radford2021learning, xu2021videoclip, wang2022image}, and scientific discovery \cite{jumper2021highly, stokes2020deep, rives2021biological, zhang2021unified}.
 
-Generative modeling focuses on learning the underlying probability distributions of data to create realistic and diverse samples. Innovations such as Generative Adversarial Networks (GANs), diffusion models, and normalizing flows have set new benchmarks in quality and applicability, enabling realistic image generation, lifelike video creation, and natural-sounding audio synthesis. Beyond creative media, these models play a critical role in scientific applications, such as molecular modeling, protein structure prediction, and AI-assisted drug discovery. By generating novel molecules and exploring chemical spaces, generative models are accelerating research in fields like biotechnology and materials science. Furthermore, they address challenges in inverse problems, including image super-resolution and inpainting, and excel in multimodal tasks like text-to-image generation.
+Generative modeling focuses on learning the underlying probability distributions of data to create realistic and diverse samples. Innovations such as Generative Adversarial Networks (GANs) \cite{goodfellow2014generative}, diffusion models \cite{ho2020denoising, song2021score}, and normalizing flows \cite{rezende2015variational, papamakarios2019normalizing} have set new benchmarks in quality and applicability, enabling realistic image generation \cite{karras2019style}, lifelike video creation \cite{esser2021taming}, natural-sounding audio synthesis \cite{kong2020diffwave}, and text-to-image generation \cite{ramesh2021zero}. Beyond creative media, these models play a critical role in scientific applications, such as protein structure prediction \cite{jumper2021highly, baek2021accurate}, AI-assisted drug discovery \cite{stokes2020deep, gentile2020deep}, and materials science \cite{butler2018machine}, where they accelerate research by generating novel molecules and exploring chemical spaces. Furthermore, they address challenges in inverse problems, including super-resolution \cite{saharia2022image, wang2024sinsr} and inpainting \cite{suvorov2022resolution, lugmayr2022repaint}.
 
-Self-supervised learning, on the other hand, has emerged as a powerful approach to harness the vast reservoirs of unlabeled data by uncovering its inherent structure. SSL enables models to learn meaningful representations that are crucial for downstream tasks, often serving as the backbone of state-of-the-art systems across diverse domains. These representations can be extracted using generative methods, which model the data distribution, or discriminative methods, such as contrastive learning, which focus on distinguishing between similar and dissimilar data samples. 
+Self-supervised learning, on the other hand, has emerged as a powerful approach to harness the vast reservoirs of unlabeled data by uncovering its inherent structure. SSL enables models to learn meaningful representations that are crucial for downstream tasks, often serving as the backbone of state-of-the-art systems across diverse domains. These representations can be extracted using generative methods, which model the data distribution, or discriminative methods, such as contrastive learning \cite{chen2020simple}, which focus on distinguishing between similar and dissimilar data samples.
 
-Self-supervised learning has had a profound impact on foundational technologies. In natural language processing, it powers groundbreaking models like BERT and GPT, which underpin conversational AI and advanced language understanding systems. In computer vision, SSL reduces dependence on labeled data while delivering robust, scalable visual representations, driving improvements in tasks like object recognition and image segmentation. These advancements underscore SSL’s versatility and its pivotal role in advancing AI across domains and modalities. Additionally, SSL has been transformative in multimodal learning, enabling seamless alignment and integration across modalities such as text, images, and audio. This capability has unlocked advanced tasks like generating descriptive image captions, synchronizing audio with video, retrieving relevant content across formats, and enhancing representation learning for multimodal datasets.
+Self-supervised learning has had a profound impact on foundational technologies. In natural language processing, it powers groundbreaking models like BERT \cite{devlin2018bert} and GPT \cite{brown2020language}, which underpin conversational AI and advanced language understanding systems. In computer vision, SSL reduces dependence on labeled data while delivering robust, scalable visual representations, driving improvements in tasks like object recognition and image segmentation. These advancements underscore SSL’s versatility and its pivotal role in advancing AI across domains and modalities. Additionally, SSL has been transformative in multimodal learning, enabling seamless alignment and integration across modalities such as text, images, and audio. This capability has unlocked advanced tasks like generating descriptive image captions \cite{hossain2019comprehensive}, synchronizing audio with video \cite{arandjelovic2017look}, retrieving relevant content across formats \cite{sun2019videobert}, and enhancing representation learning for multimodal datasets \cite{radford2021learning}.
 
 In this thesis, we focus on the theoretical and computational aspects of generative modeling and generative self-supervised learning. To provide the necessary background, the remainder of this introduction is divided into two sections: an overview of generative modeling (\ref{intro:generative_modeling}) and an overview of self-supervised learning (\ref{intro:ssl}).
 
@@ -21,21 +21,21 @@ In this thesis, we focus on the theoretical and computational aspects of generat
 
 Generative modeling sits at the forefront of machine learning, enabling us to capture the underlying structure of complex data and generate new, realistic samples. Whether it's creating lifelike images, composing music, or designing novel molecules, generative models aim to understand and replicate the distribution of data they're trained on.
 
-Formally, let's consider a dataset \( \mathcal{D} = \{ \mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_N \} \subset \mathbb{R}^d \), comprising \( N \) independent samples drawn from an unknown data-generating distribution \( P \), which we refer to as the \textit{target distribution}. The central goal of generative modeling is to create a model that approximates \( P \) as closely as possible based solely on these samples.
+Formally, let's consider a dataset \( \mathcal{D} = \{ \mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_N \} \subset \mathbb{R}^d \), comprising \( N \) independent samples drawn from an unknown data-generating distribution \( P(X) \), which we refer to as the \textit{target distribution}. The central goal of generative modeling is to create a model that approximates \( P(X) \) as closely as possible based solely on these samples.
 
-To learn the distribution \( P \), we seek a computationally tractable approximation \( \hat{P} \) based on the dataset \( \mathcal{D} \) and our assumptions about \( P \). We measure how close \( \hat{P} \) is to \( P \) using a divergence \( D(\hat{P}, P) \), such as the Kullback-Leibler divergence or the Wasserstein distance. Our goal is to minimize this divergence:
-
-\[
-\hat{P} = \arg \min_{\hat{P}} D(\hat{P}, P).
-\]
-
-Typically, we parameterize \( \hat{P} \) with a finite-dimensional vector \( \theta \in \mathbb{R}^p \), forming a family of models \( \hat{P}_\theta \) and transforming the problem into optimizing over parameters:
+To learn the distribution \( P(X) \), we seek a computationally tractable approximation \( \hat{P}(X) \) based on the dataset \( \mathcal{D} \) and our assumptions about \( P(X) \). We measure how close \( \hat{P}(X) \) is to \( P(X) \) using a divergence \( D(\hat{P}(X), P(X)) \), such as the Kullback-Leibler divergence or the Wasserstein distance. Our goal is to minimize this divergence:
 
 \[
-\theta^* = \arg \min_\theta D(\hat{P}_\theta, P).
+P^{\ast}(X) = \arg \min_{\hat{P}(X)} D(\hat{P}(X), P(X)).
 \]
 
-For practicality, \( \hat{P}_\theta \) must be computationally tractable; we should be able to efficiently sample from it or evaluate its probability density function. Different generative modeling approaches balance tractability and fidelity to \( P \), leading to various methods suitable for different applications.
+Typically, we parameterize \( \hat{P}(X) \) with a finite-dimensional vector \( \theta \in \mathbb{R}^p \), forming a family of models \( P_{\theta}(X) \) and transforming the problem into optimizing over parameters:
+
+\[
+\theta^* = \arg \min_\theta D(P_{\theta}(X), P(X)).
+\]
+
+For practicality, \( P_{\theta}(X) \) must be computationally tractable; we should be able to efficiently sample from it or evaluate its probability density function. Different generative modeling approaches balance tractability and fidelity to \( P(X) \), leading to various methods suitable for different applications.
 
 By tackling this problem, we aim not only to reproduce the data we observe but also to uncover the underlying mechanisms that generate it. This deep understanding empowers us to create models that can generate new, unseen data that is indistinguishable from real-world samples, thereby expanding the horizons of what machines can learn and create.
 
@@ -49,7 +49,7 @@ n \geq \mathcal{O}\left(\varepsilon^{-\frac{4 + d}{4}}\right).
 \cite{scott2015multivariate}
 This exponential dependence on \( d \) implies that even for moderate dimensions, the required sample size becomes infeasibly large, rendering KDE and similar methods ineffective for generative modeling in high dimensions.
 
-In many real-world applications, however, data does not uniformly occupy the high-dimensional ambient space but is concentrated near a lower-dimensional manifold—a concept known as the \emph{manifold hypothesis} \cite{fefferman2016testing}. For example, natural images, although high-dimensional when represented by pixel values, often lie on manifolds of much lower intrinsic dimensionality due to dependencies and correlations among pixels \cite{roweis2000nonlinear}. This implies that the effective complexity of the data is determined by the manifold's dimension \( K \), where \( K \ll d \).
+In many real-world applications, however, data does not uniformly occupy the high-dimensional ambient space but is concentrated near a lower-dimensional manifold—a concept known as the \emph{manifold hypothesis} \cite{fefferman2016testing}. For example, natural images, although high-dimensional when represented by pixel values, often lie on manifolds of much lower intrinsic dimensionality due to dependencies and correlations among pixels \cite{roweis2000nonlinear}. This implies that the effective complexity of the data is determined by the manifold's dimension \( k \), where \( k \ll d \).
 
 While the manifold hypothesis suggests a reduction in effective dimensionality, leveraging this property requires models that can explicitly capture the underlying manifold structure. Non-parametric methods like KDE do not inherently account for the manifold and treat each dimension independently, failing to exploit the dependencies among features \cite{tenenbaum2000global}. As a result, they still suffer from high sample complexity despite the data's lower intrinsic dimensionality.
 
@@ -61,33 +61,33 @@ In the past decade, deep learning has introduced flexible architectures that can
 
 \subsubsection{Generative Adversarial Networks (GANs)}
 
-Introduced by Goodfellow et al. \cite{goodfellow2014generative}, Generative Adversarial Networks (GANs) consist of two neural networks: a \textit{generator} \( G \) and a \textit{discriminator} \( D \), trained simultaneously in a minimax game. The generator maps samples \( \mathbf{z} \) from a simple prior distribution \( P_{\mathbf{z}} \) (e.g., a standard normal distribution) to the data space \( \mathbb{R}^d \), producing synthetic data \( G(\mathbf{z}) \). The discriminator outputs a probability \( D(\mathbf{x}) \in [0,1] \) indicating whether a sample \( \mathbf{x} \) is real (from the training data) or generated (from \( G \)).
+Introduced by Goodfellow et al. \cite{goodfellow2014generative}, Generative Adversarial Networks (GANs) consist of two neural networks: a \textit{generator} \( G \) and a \textit{discriminator} \( D \), trained simultaneously in a minimax game. The generator maps samples \( \mathbf{z} \) from a simple prior distribution \( P(Z) \) (e.g., a standard normal distribution) to the data space \( \mathbb{R}^d \), producing synthetic data \( G(\mathbf{z}) \). The discriminator outputs a probability \( D(X) \in [0,1] \) indicating whether a sample \( X \) is real (from the training data) or generated (from \( G \)).
 
 The training objective is formulated as a two-player minimax game with the value function \( V(D, G) \):
 \[
-\min_{G} \max_{D} V(D, G) = \mathbb{E}_{\mathbf{x} \sim P_{\text{data}}} [\log D(\mathbf{x})] + \mathbb{E}_{\mathbf{z} \sim P_{\mathbf{z}}} [\log (1 - D(G(\mathbf{z})))]
+\min_{G} \max_{D} V(D, G) = \mathbb{E}_{X \sim P(X)} [\log D(X)] + \mathbb{E}_{Z \sim P(Z)} [\log (1 - D(G(Z)))]
 \]
-where \( P_{\text{data}} \) is the data distribution represented by the training set \( \mathcal{D} \).
+where \( P(X) \) is the target distribution represented by the training set \( \mathcal{D} \).
 
-\paragraph{Training Process}
+\paragraph{Training Process} 
 
-GANs are trained through an adversarial process where the generator and discriminator are updated iteratively to improve against each other. The discriminator \( D \) learns to better distinguish real data from generated data, while the generator \( G \) aims to produce data that can fool \( D \). This training continues until the generator produces samples indistinguishable from real data (\( P_{G} = P_{\text{data}} \)).
+GANs are trained through an adversarial process where the generator and discriminator are updated iteratively to improve against each other. The discriminator \( D \) learns to better distinguish real data from generated data, while the generator \( G \) aims to produce data that can fool \( D \). This training continues until the generator produces samples indistinguishable from real data (\( P_G(X) = P(X) \)).
 
 There are various formulations of the value function designed to enhance training stability and performance. For instance, the Wasserstein GAN (WGAN) \cite{arjovsky2017wasserstein} modifies the original objective using the Earth Mover's distance to address issues like mode collapse and improve convergence.
 
-\paragraph{Strengths}
+\paragraph{Strengths} 
 
 GANs have several notable strengths. One of their primary advantages is their ability to produce \textbf{high-quality samples} that are visually realistic and sharp, especially in image generation tasks. Additionally, GANs offer \textbf{efficient sampling}; once the generator is trained, it can rapidly produce new samples through a single forward pass, without the need for iterative sampling procedures common in other generative models.
 
-\paragraph{Weaknesses}
+\paragraph{Weaknesses} 
 
 Despite their strengths, GANs also present significant weaknesses. A major challenge is the \textbf{training instability} inherent in their adversarial setup, which can lead to issues such as mode collapse—where the generator produces limited varieties of samples—vanishing gradients, and oscillatory behavior during training. Moreover, GANs \textbf{do not provide an explicit density} function or likelihood estimate for the generated data, limiting their applicability in tasks that require probabilistic interpretations or quantitative assessments of sample likelihood.
 
 \subsubsection{Normalizing Flows}\label{sec:normalizing_flows}
 
-Normalizing flows, introduced by Rezende and Mohamed \cite{rezende2015variational}, are a class of generative models that model complex probability distributions by transforming a simple base distribution through a sequence of invertible and differentiable mappings. The core idea is to start with a tractable distribution, such as a standard Gaussian, and apply a series of transformations to model the target data distribution accurately.
+Normalizing flows, introduced by Rezende and Mohamed \cite{rezende2015variational}, are a versatile class of generative models that provide a unified framework for both data generation and explicit likelihood estimation. These models transform a simple base distribution into a complex target distribution using a sequence of invertible and differentiable mappings, enabling exact computation of likelihoods. Normalizing flows are trained by directly maximizing the log-likelihood of the observed data, leveraging the change of variables formula to compute densities in closed form. This combination of flexibility, tractability, and theoretical soundness makes normalizing flows a powerful tool for modeling complex probability distributions.
 
-Given a latent variable $Z \sim p_Z$ in latent space $\mathcal{Z}$ and an invertible function $G^\theta: \mathcal{Z} \rightarrow \mathcal{X}$ parameterized by $\theta$, the model defines the random variable $X = G^\theta(Z)$ in data space $\mathcal{X}$ to approximate the data distribution $p_X$. The transformation $G^\theta$ maps samples from the base distribution to samples resembling the observed data.
+Given a latent variable $Z \sim P(Z)$ in latent space $\mathcal{Z}$ and an invertible function $G^\theta: \mathcal{Z} \rightarrow \mathcal{X}$ parameterized by $\theta$, the model defines the random variable $X = G^\theta(Z)$ in data space $\mathcal{X}$ to approximate the data distribution $P(X)$. The transformation $G^\theta$ maps samples from the base distribution to samples resembling the observed data.
 
 \paragraph{Change of Variables}
 
@@ -150,44 +150,43 @@ Despite their strengths, normalizing flows have limitations. The requirement for
 
 Normalizing flows, while powerful, \textbf{lack a semantically meaningful lower-dimensional latent space}, unlike GANs and Variational Auto-Encoders (VAEs). GANs and VAEs are designed with a lower-dimensional latent space, explicitly chosen a priori, enabling their effective use in downstream tasks such as compression, image-text alignment, and editing. In contrast, the latent space of normalizing flows is inherently tied to the ambient space's dimensionality, limiting its direct interpretability. In Chapter 5, we address this limitation by adapting normalizing flows to acquire an interpretable latent space. Our approach combines an anisotropic base distribution with isometry regularization, drawing on principles from pullback Riemannian geometry. This training paradigm constructs a latent space where semantic significance is encoded by the variances learned in the base distribution. Latent dimensions capturing meaningful semantic information are characterized by high variances, while those encoding noise exhibit very low variance, enabling a clear distinction between essential and extraneous information.
 
-
 \subsubsection{Auto-Regressive Models}\label{sec:auto_regressive_models}
 
-Auto-regressive models are a class of generative models that factorize the joint probability distribution of high-dimensional data into a product of conditional distributions, leveraging the chain rule of probability. Notable examples include PixelCNN and PixelRNN \cite{oord2016pixel}, WaveNet \cite{vanwavenet2016}, and more recently, Transformer-based models \cite{vaswani2017attention} applied across various domains such as natural language processing, image generation, and audio synthesis.
+Auto-regressive models are a class of generative models that factorize the joint probability density of high-dimensional data into a product of conditional densities, leveraging the chain rule of probability. Notable examples include PixelCNN and PixelRNN \cite{oord2016pixel}, WaveNet \cite{vanwavenet2016}, and more recently, Transformer-based models \cite{vaswani2017attention}, which have been applied across various domains such as natural language processing, image generation, and audio synthesis.
 
 \paragraph{Model Formulation}
 
-Given a data vector \( \mathbf{x} = [x_1, x_2, \dots, x_d] \) in \( \mathbb{R}^d \), the joint distribution \( P(\mathbf{x}) \) is decomposed into a product of conditional distributions:
+Given a data vector \( \mathbf{x} = [x_1, x_2, \dots, x_d] \) in \( \mathbb{R}^d \), the joint density \( p_X(\mathbf{x}) \) is decomposed into a product of conditional densities:
 
 \[
-P(\mathbf{x}) = \prod_{i=1}^{d} P(x_i | x_{1:i-1})
+p_X(\mathbf{x}) = \prod_{i=1}^{d} p_{X_i \mid X_{1:i-1}}(x_i \mid x_{1:i-1}),
 \]
 
-where \( x_{1:i-1} \) denotes all preceding variables in a predefined ordering, which could be temporal (e.g., in time series data) or spatial (e.g., pixels in an image). This factorization allows the model to capture complex dependencies between variables by modeling each variable conditioned on all previous ones.
+\noindent where \( X_{1:i-1} \) denotes all preceding random variables in a predefined ordering, and \( x_{1:i-1} \) represents their corresponding realizations. This factorization enables the model to capture complex dependencies between variables by modeling each variable conditioned on all previous ones.
 
-\paragraph{Modeling Conditional Distributions}
+\paragraph{Modeling Conditional Densities}
 
-Each conditional distribution \( P(x_i | x_{1:i-1}) \) is modeled using a neural network that takes \( x_{1:i-1} \) as input and outputs the parameters of the distribution for \( x_i \). For instance, in PixelCNN, convolutional neural networks with masked filters are employed to ensure that the prediction of a pixel \( x_i \) depends only on pixels \( x_{1:i-1} \) that come before it in the chosen ordering.
+Each conditional density \( p_{X_i \mid X_{1:i-1}}(x_i \mid x_{1:i-1}) \) is modeled using a neural network that takes \( x_{1:i-1} \) as input and outputs the parameters of the density for \( x_i \). For instance, in PixelCNN, convolutional neural networks with masked filters are employed to ensure that the prediction of a pixel \( x_i \) depends only on pixels \( x_{1:i-1} \) that come before it in the chosen ordering.
 
 The masking technique is critical; it zeroes out connections in the network to prevent information from "future" variables influencing the prediction of the current variable, thus maintaining the auto-regressive property.
 
 \paragraph{Training Objective}
 
-The parameters \( \theta \) of the auto-regressive model are optimized by maximizing the likelihood of the observed data \( \{ \mathbf{x}_i \}_{i=1}^N \), which is equivalent to minimizing the negative log-likelihood:
+The parameters \( \theta \) of the auto-regressive model are optimized by maximizing the likelihood of the observed data \( \{\mathbf{x}_n\}_{n=1}^N \), which is equivalent to minimizing the negative log-likelihood:
 
 \[
-\theta^* = \arg \min_{\theta} \sum_{i=1}^{N} -\log P_{\theta}(\mathbf{x}_i) = \arg \min_{\theta} \sum_{i=1}^{N} \sum_{j=1}^{d} -\log P_{\theta}(x_{i,j} | x_{i,1:j-1})
+\theta^* = \arg \min_{\theta} \sum_{n=1}^{N} -\log p_{X,\theta}(\mathbf{x}_n) = \arg \min_{\theta} \sum_{n=1}^{N} \sum_{i=1}^{d} -\log p_{X_i \mid X_{1:i-1}, \theta}(x_{n,i} \mid x_{n,1:i-1}),
 \]
 
-This objective function allows for exact computation of the log-likelihood, facilitating stable training using gradient-based optimization methods.
+\noindent where \( x_{n,i} \) represents the \( i \)-th variable in the \( n \)-th observed data sample, and \( x_{n,1:i-1} \) denotes its preceding realizations.
 
 \paragraph{Sampling Process}
 
-Sampling from auto-regressive models is inherently sequential. To generate a new data point \( \mathbf{x} \), the model starts by sampling \( x_1 \) from \( P(x_1) \). Then, for \( i = 2 \) to \( d \), each \( x_i \) is sampled from \( P(x_i | x_{1:i-1}) \), using the previously sampled values. This process continues until all variables have been generated.
+Sampling from auto-regressive models is inherently sequential. To generate a new data sample \( \mathbf{x} \), the model starts by sampling \( x_1 \) from \( p_{X_1}(x_1) \). Then, for \( i = 2 \) to \( d \), each \( x_i \) is sampled from \( p_{X_i \mid X_{1:i-1}}(x_i \mid x_{1:i-1}) \), using the previously sampled values. This process continues until all variables have been generated.
 
 \paragraph{Strengths}
 
-Auto-regressive models have several notable strengths. One of their primary advantages is their ability to perform \textbf{exact likelihood computation}, providing an exact calculation of the data likelihood without any approximation. This facilitates stable training via maximum likelihood estimation, ensuring that the model accurately captures the underlying data distribution. Additionally, by conditioning each variable on all previous ones, auto-regressive models are highly effective at \textbf{modeling complex dependencies} in sequential or structured data. This makes them particularly well-suited for tasks such as language modeling, image generation, and audio synthesis, where capturing intricate patterns and dependencies is crucial. Furthermore, auto-regressive models offer \textbf{flexibility in handling different data types}; they can model both discrete and continuous data by appropriately choosing the form of the conditional distributions, such as using categorical distributions for discrete variables or Gaussian distributions for continuous ones.
+Auto-regressive models have several notable strengths. A primary advantage is their ability to perform \textbf{exact likelihood computation}, providing an exact calculation of the data likelihood without any approximation. This facilitates stable training via maximum likelihood estimation, ensuring that the model accurately captures the underlying data density. Additionally, by conditioning each variable on all previous ones, auto-regressive models are highly effective at \textbf{modeling complex dependencies} in sequential or structured data. This makes them particularly well-suited for tasks such as language modeling, image generation, and audio synthesis, where capturing intricate patterns and dependencies is crucial. Furthermore, auto-regressive models offer \textbf{flexibility in handling different data types}; they can model both discrete and continuous data by appropriately choosing the form of the conditional densities, such as using categorical densities for discrete variables or Gaussian densities for continuous ones.
 
 \paragraph{Weaknesses}
 
@@ -196,29 +195,32 @@ Despite these strengths, auto-regressive models also present significant weaknes
 
 \subsubsection{Energy-Based Models (EBMs)}\label{sec:energy_based_models}
 
-Energy-Based Models (EBMs) \cite{lecun2006tutorial} define an unnormalized probability distribution over data using an energy function \( E_{\theta}(\mathbf{x}) \). The probability of a data point \( \mathbf{x} \) is given as:
+Energy-Based Models (EBMs) \cite{lecun2006tutorial} define an unnormalized probability density over data using an energy function \( E_\theta(\mathbf{x}) \). The density of a data point \( \mathbf{x} \in \mathcal{X} \) is given as:
 \[
-P_{\theta}(\mathbf{x}) = \frac{\exp(-E_{\theta}(\mathbf{x}))}{Z_{\theta}}
+p_\theta(\mathbf{x}) = \frac{\exp(-E_\theta(\mathbf{x}))}{Z_\theta},
 \]
-where \( Z_{\theta} = \int \exp(-E_{\theta}(\mathbf{x})) d\mathbf{x} \) is the partition function, a normalizing constant that ensures \( P_{\theta}(\mathbf{x}) \) integrates to 1. However, computing \( Z_{\theta} \) is typically intractable for high-dimensional data, posing challenges for direct optimization and sampling.
+where \( Z_\theta = \int_{\mathcal{X}} \exp(-E_\theta(\mathbf{x})) \, d\mathbf{x} \) is the partition function, a normalizing constant that ensures \( p_\theta(\mathbf{x}) \) integrates to 1 over \( \mathcal{X} \). However, computing \( Z_\theta \) is typically intractable for high-dimensional data, posing challenges for direct optimization and sampling.
 
 \paragraph{Training Objective}
 
-EBMs are trained to assign low energy values to data samples (positive samples) and high energy values to non-data samples (negative samples). A commonly used training objective is based on contrastive divergence \cite{hinton2002training}, which minimizes the expected energy of positive samples while maximizing the expected energy of negative samples:
+EBMs are trained to assign low energy values to samples drawn from the data distribution (positive samples) and high energy values to samples from the model distribution (negative samples). A commonly used training objective is based on contrastive divergence \cite{hinton2002training}, which minimizes the expected energy of positive samples while maximizing the expected energy of negative samples:
 \[
-\mathcal{L}(\theta) = \mathbb{E}_{\mathbf{x}^+ \sim P_{\text{data}}} [E_{\theta}(\mathbf{x}^+)] - \mathbb{E}_{\mathbf{x}^- \sim P_{\theta}} [E_{\theta}(\mathbf{x}^-)]
+\mathcal{L}(\theta) = \mathbb{E}_{\mathbf{x}^+ \sim P(X)} [E_\theta(\mathbf{x}^+)] - \mathbb{E}_{\mathbf{x}^- \sim P_\theta(X)} [E_\theta(\mathbf{x}^-)],
 \]
-Here, \( \mathbf{x}^+ \) are positive samples drawn from the data distribution \( P_{\text{data}} \), while \( \mathbf{x}^- \) are negative samples generated from the model distribution \( P_{\theta} \).
+where \( \mathbf{x}^+ \) are realizations from the data distribution \( P(X) \), and \( \mathbf{x}^- \) are realizations from the model distribution \( P_\theta(X) \).
 
-To obtain the negative samples \( \mathbf{x}^- \), we employ \textit{Markov Chain Monte Carlo (MCMC)} methods, such as Langevin Dynamics. Langevin Dynamics iteratively updates a sample \( \mathbf{x}_t \) to move toward regions of high probability under \( P_{\theta}(\mathbf{x}) \):
+In order to obtain negative samples \(\mathbf{x}^-\), a standard approach is to use \textit{Markov Chain Monte Carlo (MCMC)} methods, with Langevin Dynamics \cite{langevin1908theorie, neal2011mcmc} being a widely adopted technique. Langevin Dynamics is a stochastic gradient-based method that iteratively updates a sample \( \mathbf{x}_t \) to move toward regions of higher probability density under the unnormalized model density \( p_\theta(\mathbf{x}) \). The iterative update rule is given by:
+
 \[
-\mathbf{x}_{t+1} = \mathbf{x}_t - \eta \nabla_{\mathbf{x}} E_{\theta}(\mathbf{x}_t) + \sqrt{2\eta} \mathbf{\epsilon}_t
+\mathbf{x}_{t+1} = \mathbf{x}_t - \eta \nabla_{\mathbf{x}} E_\theta(\mathbf{x}_t) + \sqrt{2\eta} \mathbf{\epsilon}_t,
 \]
-where \( \eta \) is the step size, and \( \mathbf{\epsilon}_t \sim \mathcal{N}(0, I) \) adds Gaussian noise for stochasticity. The process ensures that the negative samples explore the energy landscape effectively, although the iterative updates make it computationally expensive.
 
+\noindent where \( \eta > 0 \) denotes the step size, and \( \mathbf{\epsilon}_t \sim \mathcal{N}(\mathbf{0}, I) \) represents Gaussian noise added to incorporate stochasticity into the updates. The term \( -\nabla_{\mathbf{x}} E_\theta(\mathbf{x}_t) \) drives the sample \( \mathbf{x}_t \) toward regions of lower energy, effectively encouraging exploration of the high-density regions of \( p_\theta(\mathbf{x}) \), while the stochastic noise \( \mathbf{\epsilon}_t \) prevents the chain from getting trapped in local minima.
+
+This approach ensures that the generated negative samples \( \mathbf{x}^- \) align with the model's current energy landscape. The addition of noise also maintains ergodicity, which is crucial for exploring the sample space comprehensively. In the limit of small step sizes \( \eta \) and sufficient iterations, the chain converges to the target distribution \( P_\theta(X) \).
 \paragraph{Sampling Process}
 
-Sampling from EBMs follows a similar procedure as obtaining negative samples. Since direct sampling is infeasible due to the intractability of \( Z_{\theta} \), MCMC methods like Langevin Dynamics are used to approximate samples from the target distribution. This iterative process converges to high-density regions of \( P_{\theta}(\mathbf{x}) \), making it suitable for generation tasks. However, the need for multiple iterations results in a slow sampling process, particularly for high-dimensional data.
+Sampling from EBMs follows the same procedure as obtaining negative samples. Since direct sampling is infeasible due to the intractability of \( Z_\theta \), MCMC methods like Langevin Dynamics are used to approximate samples from the target distribution \( P_\theta(X) \). This iterative process converges to high-density regions of \( P_\theta(X) \), making it suitable for generation tasks. However, the need for multiple iterations results in a slow sampling process, particularly for high-dimensional data.
 
 \paragraph{Strengths}
 
@@ -246,7 +248,7 @@ The forward process in diffusion and score-based generative models progressively
     
     In the Denoising Diffusion Probabilistic Model (DDPM), the forward process is a Markov chain that adds Gaussian noise to the data at discrete time steps \( t = 1, 2, \dots, N \). The transition kernel is given by:
     \[
-    q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) = \mathcal{N}\left(\mathbf{x}_t;\, \sqrt{\alpha_t} \, \mathbf{x}_{t-1},\, \beta_t \mathbf{I}\right),
+    q_{X_t \mid X_{t-1}}(\mathbf{x}_t \mid \mathbf{x}_{t-1}) = \mathcal{N}\bigl(\mathbf{x}_t;\, \sqrt{\alpha_t} \, \mathbf{x}_{t-1},\, \beta_t \mathbf{I}\bigr),
     \]
     where:
     \begin{itemize}
@@ -255,40 +257,41 @@ The forward process in diffusion and score-based generative models progressively
     \end{itemize}
     This formulation allows the process to be expressed in terms of the initial data \( \mathbf{x}_0 \):
     \[
-    q(\mathbf{x}_t \mid \mathbf{x}_0) = \mathcal{N}\left(\mathbf{x}_t;\, \sqrt{\bar{\alpha}_t} \, \mathbf{x}_0,\, (1 - \bar{\alpha}_t) \mathbf{I}\right),
+    q_{X_t|X_0}(\mathbf{x}_t \mid \mathbf{x}_0) = \mathcal{N}\left(\mathbf{x}_t;\, \sqrt{\bar{\alpha}_t} \, \mathbf{x}_0,\, (1 - \bar{\alpha}_t) \mathbf{I}\right),
     \]
     where \( \bar{\alpha}_t = \prod_{s=1}^t \alpha_s \) is the cumulative product of \( \alpha_s \). This closed-form expression simplifies training and allows direct sampling from any step \( t \).
 
     \item \textbf{SGM (Continuous Time):} The forward process in Score-Based Generative Models (SGM) is described by a continuous-time Stochastic Differential Equation (SDE) that progressively perturbs the data distribution with infinitesimal noise:
 
+\[
+dX_t = f(X_t, t) \, dt + g(t) \, dW_t,
+\]
+
+where:
+\begin{itemize}
+    \item \( W_t \) is a standard Wiener process (Brownian motion),
+    \item \( f(X_t, t) \) is the drift coefficient, defining the deterministic evolution of the data distribution,
+    \item \( g(t) \) is the diffusion coefficient, controlling the scale of the stochastic noise.
+\end{itemize}
+
+The drift and diffusion coefficients \( f(X_t, t) \) and \( g(t) \) are carefully chosen so that, after a sufficiently large diffusion time \( T \), the data distribution evolves into a distribution that is very close to a simple, analytically tractable distribution, typically the standard normal distribution \( \mathcal{N}(\mathbf{0}, \mathbf{I}) \).
+
+Popular choices for the forward SDE include: 
+
+    
+\begin{itemize}
+    \item \textbf{Variance Preserving (VP) SDE:}
     \[
-    d\mathbf{x} = f(\mathbf{x}, t) \, dt + g(t) \, d\mathbf{w},
+    f(X_t, t) = -\frac{1}{2} \beta(t) X_t, \quad g(t) = \sqrt{\beta(t)},
     \]
+    where \( \beta(t) \) is a predefined noise schedule that controls the rate of diffusion. This choice preserves the variance of the data distribution throughout the process. The limiting distribution as \( t \to \infty \) is the standard normal distribution. In practice, after sufficient diffusion time \( T \), the perturbed distribution \( p_T \approx \mathcal{N}(\mathbf{0}, \mathbf{I}) \).
     
-    where:
-    \begin{itemize}
-        \item \( \mathbf{w}(t) \) is a standard Wiener process (Brownian motion),
-        \item \( f(\mathbf{x}, t) \) is the drift coefficient, defining the deterministic evolution of the data distribution,
-        \item \( g(t) \) is the diffusion coefficient, controlling the scale of the stochastic noise.
-    \end{itemize}
-    
-    The drift and diffusion coefficients \( f(\mathbf{x}, t) \) and \( g(t) \) are carefully chosen so that, after a sufficiently large diffusion time \( T \), the data distribution evolves into a distribution which is very close to a simple, analytically tractable distribution, typically the standard normal distribution \( \mathcal{N}(0, \mathbf{I}) \).
-    
-    Popular choices for the forward SDE include:
-    
-    \begin{itemize}
-        \item \textbf{Variance Preserving (VP) SDE:}
-        \[
-        f(\mathbf{x}, t) = -\frac{1}{2} \beta(t) \mathbf{x}, \quad g(t) = \sqrt{\beta(t)},
-        \]
-        where \( \beta(t) \) is a predefined noise schedule that controls the rate of diffusion. This choice preserves the variance of the data distribution throughout the process. The limiting distribution as \( t \to \infty \) is the standard normal distribution. In practice, after sufficient diffusion time $T$, the perturbed distribution $p_T \approx \mathcal{N}(0, \mathbf{I})$.
-    
-        \item \textbf{Variance Exploding (VE) SDE:}
-        \[
-        f(\mathbf{x}, t) = \mathbf{0}, \quad g(t) = \sqrt{\frac{d[\sigma^2(t)]}{dt}},
-        \]
-        where \( \sigma(t) \) is a monotonically increasing function that scales the noise over time. In this formulation, the variance of the data distribution "explodes". After sufficient diffusion time $T$, the perturbed distribution $p_T \approx \mathcal{N}(0, \sigma(T)^2\mathbf{I}).$
-    \end{itemize}
+    \item \textbf{Variance Exploding (VE) SDE:}
+    \[
+    f(X_t, t) = \mathbf{0}, \quad g(t) = \sqrt{\frac{d[\sigma^2(t)]}{dt}},
+    \]
+    where \( \sigma(t) \) is a monotonically increasing function that scales the noise over time. In this formulation, the variance of the data distribution "explodes." After sufficient diffusion time \( T \), the perturbed distribution \( p_T \approx \mathcal{N}(\mathbf{0}, \sigma(T)^2 \mathbf{I}) \).
+\end{itemize}
 
 \end{itemize}
 
@@ -301,23 +304,24 @@ The reverse process reconstructs the original data distribution by inverting the
 
 \begin{itemize}
     \item \textbf{DDPM (Discrete Time):}
-    The reverse process in DDPMs is a Markov chain that denoises the data at each step. The conditional distribution for each step is given by:
+    The reverse process in DDPMs is a Markov chain that progressively denoises the data at each step. The conditional distribution for each step is expressed as:
     \[
-    p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t) = \mathcal{N}\left(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_t, t), \beta_t^2 \mathbf{I}\right),
+    p_{X_{t-1} \mid X_t, \theta}(\mathbf{x}_{t-1} \mid \mathbf{x}_t) = \mathcal{N}\bigl(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_t, t), \beta_t^2 \mathbf{I}\bigr),
     \]
-    where \( \mu_\theta(\mathbf{x}_t, t) \) is a neural network predicting the mean of the denoised distribution based on the noisy input \( \mathbf{x}_t \) and the timestep \( t \). Sampling proceeds iteratively by drawing samples from \( p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t) \), starting from \( \mathbf{x}_T \sim \pi = \mathcal{N}(0, \mathbf{I}) \).
-
+    where \( \mu_\theta(\mathbf{x}_t, t) \) is a neural network that predicts the mean of the denoised distribution, given the noisy input \( \mathbf{x}_t \) and the timestep \( t \). Sampling is performed iteratively by drawing from \( p_{X_{t-1} \mid X_t, \theta}(\mathbf{x}_{t-1} \mid \mathbf{x}_t) \), starting with \( \mathbf{x}_T \sim \pi = \mathcal{N}(\mathbf{0}, \mathbf{I}) \).
     \item \textbf{SGM (Continuous Time):}
     In SGMs, the reverse process is governed by the reverse-time SDE, derived from Anderson’s theorem \cite{anderson1982reverse_time_sde}:
     \[
-    d\mathbf{x} = \left[f(\mathbf{x}, t) - g(t)^2 \nabla_\mathbf{x} \log p_t(\mathbf{x})\right] dt + g(t) \, d\bar{\mathbf{w}},
+    dX_t = \left[f(X_t, t) - g(t)^2 \nabla_{X_t} \log p_t(X_t)\right] dt + g(t) \, d\bar{W}_t,
     \]
     where:
     \begin{itemize}
-        \item \( \nabla_\mathbf{x} \log p_t(\mathbf{x}) \) is the gradient of the logdensity (score function) of the perturbed distribution at diffusion time t. In practice, the score function is approximated by a neural network \( s_\theta(\mathbf{x}, t) \), which we call the score model,
-        \item \( \bar{\mathbf{w}}(t) \) is a reverse-time Wiener process.
+        \item \( \nabla_{X_t} \log p_t(X_t) \) is the gradient of the log density (score function) of the perturbed distribution at diffusion time \( t \). In practice, the score function is approximated by a neural network \( s_\theta(X_t, t) \), referred to as the score model,
+        \item \( \bar{W}_t \) is a reverse-time Wiener process.
     \end{itemize}
-    Sampling proceeds by solving this reverse-time SDE, starting from \( \mathbf{x}_T \sim \pi \approx p_T(\mathbf{x}) \) (e.g., \( \mathcal{N}(0, \mathbf{I}) \)) and integrating backward from $t=T$ to $t = 0$. This iterative process generates high-quality samples that closely follow the original data distribution.
+
+    Sampling proceeds by solving this reverse-time SDE, starting from \( X_T \sim \pi \approx p_T(X_T) \) (e.g., \( \mathcal{N}(\mathbf{0}, \mathbf{I}) \)) and integrating backward from \( t = T \) to \( t = 0 \). This iterative process generates high-quality samples that closely follow the original data distribution.
+
 \end{itemize}
 
 The reverse process lies at the core of diffusion-based generative modeling, enabling the transformation of simple noise into complex data distributions while preserving high fidelity.
@@ -329,8 +333,8 @@ Training involves learning to approximate the reverse process by minimizing spec
 
 \begin{itemize}
     \item \textbf{DDPM:} In the DDPM framework, the training objective is formulated to minimize an expression that serves as an upper bound on the negative log-likelihood of the data. This objective is defined as:
-    \[
-    \mathcal{L}_{\text{DDPM}}(\theta) = \sum_{t=1}^T \mathbb{E}_{\mathbf{x}_0,\, \mathbf{\epsilon}_t} \left[ \left\| \mathbf{\epsilon}_t - \mathbf{\epsilon}_\theta\left(\sqrt{\bar{\alpha}_t}\, \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\, \mathbf{\epsilon}_t,\, t\right) \right\|^2 \right],
+        \[
+    \mathcal{L}_{\text{DDPM}}(\theta) = \sum_{t=1}^T \mathbb{E}_{x_0 \sim p(X_0),\, \epsilon_t \sim \mathcal{N}(\mathbf{0}, \mathbf{I})} \left[ \left\| \epsilon_t - \epsilon_\theta\left(\sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \epsilon_t,\, t\right) \right\|^2 \right],
     \]
     where:
     \begin{itemize}
@@ -356,22 +360,22 @@ Training involves learning to approximate the reverse process by minimizing spec
 
     \item \textbf{SGM:} In the Score-Based Generative Modeling (SGM) framework, the neural network \( s_{\theta} \) is trained to approximate the score function of the perturbed data distribution \( p_t(\mathbf{x}) \). This is achieved by minimizing the weighted \textbf{Denoising Score Matching} objective:
         \[
-        \mathcal{L}_{\text{DSM}}(\theta) = \frac{1}{2} \int_0^T \lambda(t) \, \mathbb{E}_{\mathbf{x}_0,\, \mathbf{x}_t} \left[ \left\| s_\theta(\mathbf{x}_t, t) - \nabla_{\mathbf{x}_t} \log p_{0t}(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] dt,
+        \mathcal{L}_{\text{DSM}}(\theta) = \frac{1}{2} \int_0^T \lambda(t) \, \mathbb{E}_{\mathbf{x}_0,\, \mathbf{x}_t \sim P(X_0,X_t)} \left[ \left\| s_\theta(\mathbf{x}_t, t) - \nabla_{\mathbf{x}_t} \log p_{X_t|X_0}(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] dt,
         \]
         where:
         \begin{itemize}
-            \item \( p_{0t}(\mathbf{x}_t \mid \mathbf{x}_0) \) is the perturbation kernel of the forward Stochastic Differential Equation (SDE),
+            \item \( p_{X_t|X_0}(\mathbf{x}_t \mid \mathbf{x}_0) \) is the perturbation kernel of the forward Stochastic Differential Equation (SDE),
             \item \( \lambda(t) \) is a weighting function,
-            \item \( \mathbf{x}_t \) is the diffused data at time \( t \).
+            \item \( \mathbf{x}_t \) is the diffused data point at time \( t \).
         \end{itemize}
 
-        \cite{song2021maximum} showed that for the particular choice \( \lambda(t) = g(t)^2 \), where \( g(t) \) is the diffusion coefficient of the forward SDE, the \( \mathcal{L}_{\text{DSM}} \) objective serves as an upper bound on the negative log-likelihood.
+        \citet{song2021maximum} showed that for the particular choice \( \lambda(t) = g(t)^2 \), where \( g(t) \) is the diffusion coefficient of the forward SDE, the \( \mathcal{L}_{\text{DSM}} \) objective serves as an upper bound on the negative log-likelihood.
 
         In practice, a different weighting function—often referred to as the \emph{simple weighting}—is commonly used:
         \[
         \lambda(t) = \sigma(t)^2,
         \]
-        where \( \sigma(t)^2 \) denotes the variance of the forward perturbation kernel \( p_{0t}(\mathbf{x}_t \mid \mathbf{x}_0) \). This weighting function has been found to yield superior generative performance, particularly in the image domain where it was initially tested. As a result, it has become the \emph{de facto} standard choice for the weighting function in practical implementations.
+        where \( \sigma(t)^2 \) denotes the variance of the forward perturbation kernel \( p_{X_t|X_0}(\mathbf{x}_t \mid \mathbf{x}_0) \). This weighting function has been found to yield superior generative performance, particularly in the image domain where it was initially tested. Consequently, it has become the \emph{de facto} standard for practical implementations.
 
 \end{itemize}
 
@@ -380,57 +384,57 @@ Training involves learning to approximate the reverse process by minimizing spec
 Denoising Diffusion Probabilistic Models (DDPMs) and Score-Based Generative Models (SGMs) are equivalent in the limit as the number of timesteps \( N \to \infty \). Specifically, the forward process in a DDPM converges to the Variance Preserving Stochastic Differential Equation (VP-SDE) used in SGMs:
 
 \[
-d\mathbf{x} = -\tfrac{1}{2} \beta(t) \mathbf{x} \, dt + \sqrt{\beta(t)} \, d\mathbf{w},
+dX_t = -\tfrac{1}{2} \beta(t) X_t \, dt + \sqrt{\beta(t)} \, dW_t,
 \]
 
-where \( \beta(t) \) is the continuous noise schedule and \( \mathbf{w} \) is a standard Wiener process. This result is detailed in Song et al.'s paper \textit{Score-Based Generative Modeling through Stochastic Differential Equations} (2020).
+where \( \beta(t) \) is the continuous noise schedule and \( W_t \) is a standard Wiener process. This result is detailed in Song et al.'s paper \textit{Score-Based Generative Modeling through Stochastic Differential Equations} (2020).
 
 \subsubsection{Probability Flow ODE}
 
 An alternative to the stochastic reverse-time SDE is the \textbf{probability flow ODE}, which provides a deterministic mapping between the data distribution and the prior. The probability flow ODE is defined as:
 \[
-\frac{d\mathbf{x}}{dt} = f(\mathbf{x}, t) - \frac{1}{2} g(t)^2 s_\theta(\mathbf{x}, t),
+\frac{d\mathbf{x}_t}{dt} = f(\mathbf{x}_t, t) - \frac{1}{2} g(t)^2 s_\theta(\mathbf{x}_t, t),
 \]
 where:
 \begin{itemize}
-    \item \( f(\mathbf{x}, t) \) and \( g(t) \) are the drift and diffusion coefficients of the forward SDE,
-    \item \( s_\theta(\mathbf{x}, t) \) is the approximation of the score function at time $t$.
+    \item \( f(\mathbf{x}_t, t) \) and \( g(t) \) are the drift and diffusion coefficients of the forward SDE,
+    \item \( s_\theta(\mathbf{x}_t, t) \) is the approximation of the score function at time \(t\).
 \end{itemize}
 
 Under the assumption of a perfectly approximated score function, the probability flow ODE shares the same marginal probability distributions as the reverse-time SDE for all diffusion times. This equivalence arises from considering the Fokker-Planck equations corresponding to both processes, which govern the time evolution of probability densities.
 
 \textit{Computational Efficiency}. In practice, integrating the probability flow ODE has been observed to be computationally more efficient than simulating the reverse-time SDE. Fewer integration steps are typically required to achieve similar sample quality, making it a preferred choice for sampling in diffusion models. This efficiency stems from the deterministic nature of the ODE, which allows for larger step sizes, unlike the stochastic SDE that often requires smaller step sizes to maintain sample fidelity.
 
-\textit{Likelihood Computation with the Probability Flow ODE}. The probability flow ODE enables likelihood computation via the instantaneous change of variables formula. Given the score function \( s_\theta(\mathbf{x}, t) \), the log-likelihood of a data point \( \mathbf{x}_0 \) can be expressed as:
+\textit{Likelihood Computation with the Probability Flow ODE}. The probability flow ODE enables likelihood computation via the instantaneous change of variables formula. Given the score function \( s_\theta(\mathbf{x}_t, t) \), the log-likelihood of a data point \( \mathbf{x}_0 \) can be expressed as:
 
 \[
-\log p_0(\mathbf{x}_0) = \log p_T(\mathbf{x}_T) + \int_0^T \nabla_{\mathbf{x}} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \, dt,
+\log p_{X_0}(\mathbf{x}_0) = \log p_{X_T}(\mathbf{x}_T) + \int_0^T \nabla_{\mathbf{x}_t} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \, dt,
 \]
 
-where \( \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \) is the drift term of the probability flow ODE. Direct computation of the divergence term \( \nabla_{\mathbf{x}} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \) is often computationally expensive. To address this, the Skilling-Hutchinson trace estimator is used:
+\noindent where \( \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \) is the drift term of the probability flow ODE. Direct computation of the divergence term \( \nabla_{\mathbf{x}_t} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \) is often computationally expensive. To address this, the Skilling-Hutchinson trace estimator is used:
 
 \[
-\nabla_{\mathbf{x}} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \approx \mathbb{E}_{\mathbf{\epsilon} \sim \mathcal{N}(0, \mathbf{I})} \big[ \mathbf{\epsilon}^\top \nabla_{\mathbf{x}} \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \mathbf{\epsilon} \big],
+\nabla_{\mathbf{x}_t} \cdot \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \approx \mathbb{E}_{\mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})} \big[ \mathbf{\epsilon}^\top \nabla_{\mathbf{x}_t} \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \mathbf{\epsilon} \big],
 \]
 
-where \( \nabla_{\mathbf{x}} \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}, t) \) is the Jacobian of \( \mathbf{f}_\theta^{\text{ODE}} \). The term inside the expectation can be efficiently computed using Jacobian-vector product calculations, making this approach both practical and scalable for accurate likelihood computation.
+\noindent where \( \nabla_{\mathbf{x}_t} \mathbf{f}_\theta^{\text{ODE}}(\mathbf{x}_t, t) \) is the Jacobian of \( \mathbf{f}_\theta^{\text{ODE}} \). The term inside the expectation can be efficiently computed using Jacobian-vector product calculations, making this approach both practical and scalable for accurate likelihood computation.
 
 
 \subsubsection{Conditional Generation}
 
-Diffusion models can be naturally extended to conditional generation tasks, where the objective is to model the conditional distribution \( p(\mathbf{x} \mid \mathbf{c}) \), with \( \mathbf{c} \) representing the conditioning variable (e.g., class labels, textual descriptions, or other modalities). This extension enables generating data conditioned on specific information, with applications such as super-resolution, inpainting, and text-guided generation.
+Diffusion models can be naturally extended to conditional generation tasks, where the objective is to model the conditional distribution \( p_{X_0 \mid C}(\mathbf{x}_0 \mid \mathbf{c}) \), with \( \mathbf{c} \) representing the conditioning variable (e.g., class labels, textual descriptions, or other modalities). This extension enables generating data conditioned on specific information, with applications such as super-resolution, inpainting, and text-guided generation.
 
-A widely-used approach for conditional generation in diffusion models is the weighted \textbf{Conditional Denoising Score-Matching} (CDSM) objective. The core idea is to train a neural network \( s_\theta(\mathbf{x}_t, \mathbf{c}, t) \) that takes as input the noisy data \( \mathbf{x}_t \), the condition \( \mathbf{c} \), and the time \( t \), and outputs an estimate of the conditional score \( \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{c}) \). The training objective is defined as:
+A widely used approach for conditional generation in diffusion models is the weighted \textbf{Conditional Denoising Score-Matching} (CDSM) objective. The core idea is to train a neural network \( s_\theta(\mathbf{x}_t, \mathbf{c}, t) \) that takes as input the noisy data \( \mathbf{x}_t \), the condition \( \mathbf{c} \), and the time \( t \), and outputs an estimate of the conditional score \( \nabla_{\mathbf{x}_t} \log p_{X_t \mid C}(\mathbf{x}_t \mid \mathbf{c}) \). The training objective is defined as:
 
 \begin{align}
     \mathcal{L}_{\text{CDSM}}(\theta) = 
-    \frac{1}{2} \int_0^T \mathbb{E}_{\mathbf{x}_0, \mathbf{c} \sim p(\mathbf{x}_0, \mathbf{c}), \, \mathbf{x}_t \sim p(\mathbf{x}_t \mid \mathbf{x}_0)} 
-    \left[ \lambda(t) \left\| s_\theta(\mathbf{x}_t, \mathbf{c}, t) - \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] \, dt.
+    \frac{1}{2} \int_0^T \mathbb{E}_{\mathbf{x}_0, \mathbf{x}_t, \mathbf{c} \sim p(X_0, X_t, C)} 
+    \left[ \lambda(t) \left\| s_\theta(\mathbf{x}_t, \mathbf{c}, t) - \nabla_{\mathbf{x}_t} \log p_{X_t \mid X_0}(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right] \, dt.
 \end{align}
 
-The only difference between the DSM objective used for unconditional generation and the CDSM objective used for conditional generation lies in the incorporation of the conditioning variable \( \mathbf{c} \) into the score model. Note that the regression target—the score function of the perturbation kernel—remains the same. While early empirical results were promising, it was unclear why the minimizer of the CDSM objective approximates the true conditional score function. 
+The only difference between the DSM objective used for unconditional generation and the CDSM objective used for conditional generation lies in the incorporation of the conditioning variable \( \mathbf{c} \) into the score model. Note that the regression target—the score function of the perturbation kernel—remains the same. While early empirical results were promising, it was unclear why the minimizer of the CDSM objective approximates the true conditional score function.
 
-In Chapter 2, we provide the first formal proof of consistency for the CDSM estimator, establishing its theoretical validity and confirming its utility in modeling conditional distributions. 
+In Chapter 2, we provide the first formal proof of consistency for the CDSM estimator, establishing its theoretical validity and confirming its utility in modeling conditional distributions.
 
 
 \paragraph{Strengths and Weaknesses of the Unified Framework}
@@ -493,7 +497,7 @@ Self-supervised learning methods can be broadly categorized into two paradigms: 
 These methods aim to extract meaningful latent representations by modeling the underlying data distribution. These approaches can be broadly categorized into two types based on the scope of the distribution being modeled:
 \begin{enumerate}
     \item \textbf{Full data distribution $p(\textbf{x})$}
-    \item \textbf{Maked data distribution $p(\mathbf{x}_{\text{masked}}|\textbf{x}_{\text{context}})$}
+    \item \textbf{Masked data distribution $p(\mathbf{x}_{\text{masked}}|\textbf{x}_{\text{context}})$}
 \end{enumerate}
 
 \paragraph{Learning Latent Representations by Modeling the Full Distribution $p(\textbf{x})$}

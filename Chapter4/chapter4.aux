@@ -9,7 +9,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{105}{section.6.1}\protected@file@percent }
 \citation{diffusion_models,ddpm}
 \citation{dhariwal2021diffusion_beats_gans}
-\citation{kong2020diffWave}
+\citation{kong2020diffwave}
 \citation{batzolis2022non_uniform,saharia2021sr3}
 \citation{preechakul2022diffusion_decoder,yang2023ldiffusion_decoder_compression}
 \citation{cifar}
@@ -46,7 +46,7 @@
 \newlabel{ch4:CDE}{{6.10}{110}{Score-based diffusion models}{equation.6.2.10}{}}
 \citation{zaho2017understanding_vaes}
 \citation{zhang2018lpips}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Graphical overview of our method. The time-dependent encoder network $e_\phi $ induces the encoder distribution $q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx p_t( \textbf  {z} | \textbf  {x}_t)$. The data $\textbf  {x}_0$ is encoded with the encoder into a latent vector $\textbf  {z}$ by sampling $q_\phi ( \textbf  {z} | \textbf  {x}_0, 0)$. Then the reconstruction $\hat  {\textbf  {x}}_0$ is obtained by running the conditional reverse diffusion process using the approximate conditional data score $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t | \textbf  {z})}$. The model $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t)$ is obtained by adding the score of unconditional diffusion model $s_\theta (\textbf  {x}_t,t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t)} $ and the score of the encoder distribution $ \nabla _{\textbf  {x}_t} \ln q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )} $. The latter can be computed via automatic differentiation with respect to the input $\textbf  {x}_t$.}}{111}{figure.caption.103}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Graphical overview of our method. The time-dependent encoder network $e_\phi $ induces the encoder distribution $q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx p_t( \textbf  {z} | \textbf  {x}_t)$. The data $\textbf  {x}_0$ is encoded with the encoder into a latent vector $\textbf  {z}$ by sampling $q_\phi ( \textbf  {z} | \textbf  {x}_0, 0)$. Then the reconstruction $\hat  {\textbf  {x}}_0$ is obtained by running the conditional reverse diffusion process using the approximate conditional data score $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t | \textbf  {z})}$. The model $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t)$ is obtained by adding the score of unconditional diffusion model $s_\theta (\textbf  {x}_t,t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t)} $ and the score of the encoder distribution $ \nabla _{\textbf  {x}_t} \ln q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )} $. The latter can be computed via automatic differentiation with respect to the input $\textbf  {x}_t$.}}{111}{figure.caption.108}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Method}{111}{section.6.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Problems with conventional VAEs}{111}{subsection.6.3.1}\protected@file@percent }
 \citation{preechakul2022diffusion_decoder,yang2023ldiffusion_decoder_compression}
@@ -61,15 +61,15 @@
 \citation{preechakul2022diffusion_decoder,yang2023ldiffusion_decoder_compression}
 \@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments}{115}{section.6.4}\protected@file@percent }
 \newlabel{ch4:Experiments}{{6.4}{115}{Experiments}{section.6.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Cifar10}}{115}{table.caption.104}\protected@file@percent }
-\newlabel{ch4:tbl:Cifar10}{{6.1}{115}{Cifar10}{table.caption.104}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces CelebA $64\times 64$}}{115}{table.caption.104}\protected@file@percent }
-\newlabel{ch4:tbl:CelebA}{{6.2}{115}{CelebA $64\times 64$}{table.caption.104}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Cifar10}}{115}{table.caption.109}\protected@file@percent }
+\newlabel{ch4:tbl:Cifar10}{{6.1}{115}{Cifar10}{table.caption.109}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces CelebA $64\times 64$}}{115}{table.caption.109}\protected@file@percent }
+\newlabel{ch4:tbl:CelebA}{{6.2}{115}{CelebA $64\times 64$}{table.caption.109}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.5}Conclusions}{115}{section.6.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Cifar10}}{116}{table.caption.105}\protected@file@percent }
-\newlabel{ch4:fig:cifar10_qualitative_comparison}{{6.3}{116}{Cifar10}{table.caption.105}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces CelebA $64\times 64$}}{116}{table.caption.106}\protected@file@percent }
-\newlabel{ch4:fig:celebA_qualitative_comparison}{{6.4}{116}{CelebA $64\times 64$}{table.caption.106}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Cifar10}}{116}{table.caption.110}\protected@file@percent }
+\newlabel{ch4:fig:cifar10_qualitative_comparison}{{6.3}{116}{Cifar10}{table.caption.110}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces CelebA $64\times 64$}}{116}{table.caption.111}\protected@file@percent }
+\newlabel{ch4:fig:celebA_qualitative_comparison}{{6.4}{116}{CelebA $64\times 64$}{table.caption.111}{}}
 \@setckpt{Chapter4/chapter4}{
 \setcounter{page}{117}
 \setcounter{equation}{12}
