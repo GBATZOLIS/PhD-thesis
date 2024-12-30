@@ -110,6 +110,11 @@ Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019b).
 \newblock Bert: Pre-training of deep bidirectional transformers for language understanding.
 \newblock {\em arXiv preprint arXiv:1810.04805}.
 
+\bibitem[Diepeveen et~al., 2024]{diepeveen2024score}
+Diepeveen, W., Batzolis, G., Shumaylov, Z., and Sch{\"o}nlieb, C.-B. (2024).
+\newblock Score-based pullback riemannian geometry.
+\newblock {\em arXiv preprint arXiv:2410.01950}.
+
 \bibitem[Ding et~al., 2021]{ding2021vqvae}
 Ding, Y., Hu, H., Ge, Z., Wu, J., Zhang, H., and Ding, C. (2021).
 \newblock Vq-vae for multimodal image synthesis.

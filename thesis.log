@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  30 DEC 2024 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  30 DEC 2024 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,6 +1052,9 @@ Package pdftex.def Info: Outline/figures/caflow/high_level_design_conditional_mo
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `Chapter:CAFLOW' on page 37 undefined on input line 39.
+
 [37
 
 
@@ -1119,6 +1122,9 @@ Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_2.png 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `Chapter:non-uniform-diffusion-models' on page 39 undefined on input line 87.
+
 [39 <./Outline/figures/non-uniform-diffusion-models/drawing.png>] [40 <./Outline/figures/non-uniform-diffusion-models/797_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_1.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/DV.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_2.png (PNG copy)>]
 <Outline/figures/id-diff/score_field.png, id=718, 529.2573pt x 515.0442pt>
 File: Outline/figures/id-diff/score_field.png Graphic file (type png)
@@ -1132,13 +1138,20 @@ File: Outline/figures/id-diff/drawing.png Graphic file (type png)
 <use Outline/figures/id-diff/drawing.png>
 Package pdftex.def Info: Outline/figures/id-diff/drawing.png  used on input line 125.
 (pdftex.def)             Requested size: 196.85616pt x 125.55055pt.
- [41 <./Outline/figures/id-diff/score_field.png> <./Outline/figures/id-diff/drawing.png>]
+
+
+LaTeX Warning: Reference `Chapter:intrinsic-dimension' on page 41 undefined on input line 135.
+
+[41 <./Outline/figures/id-diff/score_field.png> <./Outline/figures/id-diff/drawing.png>]
 <Outline/figures/scoreVAE/ffhq.png, id=727, 3675.7325pt x 2054.67625pt>
 File: Outline/figures/scoreVAE/ffhq.png Graphic file (type png)
 <use Outline/figures/scoreVAE/ffhq.png>
 Package pdftex.def Info: Outline/figures/scoreVAE/ffhq.png  used on input line 173.
 (pdftex.def)             Requested size: 349.97023pt x 195.60385pt.
  [42]
+
+LaTeX Warning: Reference `Chapter:ScoreVAE' on page 43 undefined on input line 179.
+
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 26.98592pt, for example:
@@ -1166,6 +1179,9 @@ Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/sinusoi
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `Chapter:Pullback-riemannian-geometry' on page 44 undefined on input line 227.
+
 [44] [45 <./Outline/figures/score-based-riemannian-geometry/hemisphere.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg>]) [46] (./thesis.bbl [47
 
 
@@ -1184,18 +1200,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: FBB9E6FC8F705F9A7B5D9C49D8AB2F11;6338.
  ) 
 Here is how much of TeX's memory you used:
- 24479 strings out of 474116
- 467170 string characters out of 5743682
+ 24487 strings out of 474116
+ 467311 string characters out of 5743682
  1940187 words of memory out of 5000000
- 45541 multiletter control sequences out of 15000+600000
- 681015 words of font info for 527 fonts, out of 8000000 for 9000
+ 45545 multiletter control sequences out of 15000+600000
+ 681142 words of font info for 529 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,1352b,1290s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (72 pages, 18087863 bytes).
+Output written on thesis.pdf (72 pages, 18088292 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 763 compressed objects within 8 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
+ 243 named destinations out of 1000 (max. 500000)
  110399 words of extra memory for PDF output out of 128383 (max. 10000000)
 
