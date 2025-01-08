@@ -1,2 +1,11 @@
+*.aux
+*.log
+*.lof
+*.lot
+*.out
+*.synctex
+*.toc
+*.fls
+*.fdb_latexmk
 thesis.pdf
 
