@@ -11,7 +11,7 @@
     \graphicspath{{Chapter1/Figs/Vector/}{Chapter1/Figs/}}
 \fi
 
-In this work, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of autoregressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the autoregressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive autoregressive structure.
+In this chapter, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of autoregressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the autoregressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive autoregressive structure.
 
 %********************************** %First Section  **************************************
 \section{Introduction}
@@ -24,14 +24,14 @@ Conditional likelihood estimators are also used for domain transfer and image-to
 
 \medskip
 
-\textbf{Outline of the main contributions}. In this work, we introduce CAFLOW, \emph{conditional autoregressive flow}, which combines the idea of conditional flows with the expressiveness of autoregressive models using hierarchical multi-scale flows for domain transfer. Our goal is to improve the performance of conditional flows on %general inverse problem solving 
+\textbf{Outline of the main contributions}. In this chapter, we introduce CAFLOW, \emph{conditional autoregressive flow}, which combines the idea of conditional flows with the expressiveness of autoregressive models using hierarchical multi-scale flows for domain transfer. Our goal is to improve the performance of conditional flows on %general inverse problem solving 
 general inverse problems in vision.\color{black}
 
-As a first step, we encode the condition and the target images using invertible networks into a hierarchical sequence of $n$ latent spaces. Then, using the chain rule of probability, we decompose the conditional distribution of the latent encodings into $n$ autoregressive component distributions with the aim of modeling each distribution using a conditional normalizing flow. Modeling the theoretical autoregressive components can be computationally very expensive. For this reason, we used a small set of assumptions that allowed us to design a computationally efficient multiscale normalizing flow at a small modeling flexibility cost. By carefully designing such a flow based on weak assumptions on the mutual dependencies of the latent encodings, our model allows for exchange of information between latent spaces of different dimension. In particular, our designed architecture is able to capture correlations between different scales, improving on the expressivity of other conditional flow-based models used for domain transfer tasks. The training of the $n$ conditional flows can be parallelized, however, the sampling process is sequential and could become computationally expensive if the number of scales is large. However, in practice, the choice of the invertible networks that map the images to latent encodings does not allow the number of scales $n$ to be large, which makes the sampling time of CAFLOW much smaller than that of pure autoregressive models and slightly greater than that of standard conditional flows.
+As a first step, we encode the condition and the target images using invertible netchapters into a hierarchical sequence of $n$ latent spaces. Then, using the chain rule of probability, we decompose the conditional distribution of the latent encodings into $n$ autoregressive component distributions with the aim of modeling each distribution using a conditional normalizing flow. Modeling the theoretical autoregressive components can be computationally very expensive. For this reason, we used a small set of assumptions that allowed us to design a computationally efficient multiscale normalizing flow at a small modeling flexibility cost. By carefully designing such a flow based on weak assumptions on the mutual dependencies of the latent encodings, our model allows for exchange of information between latent spaces of different dimension. In particular, our designed architecture is able to capture correlations between different scales, improving on the expressivity of other conditional flow-based models used for domain transfer tasks. The training of the $n$ conditional flows can be parallelized, however, the sampling process is sequential and could become computationally expensive if the number of scales is large. However, in practice, the choice of the invertible netchapters that map the images to latent encodings does not allow the number of scales $n$ to be large, which makes the sampling time of CAFLOW much smaller than that of pure autoregressive models and slightly greater than that of standard conditional flows.
 
 Our modeling choices are corroborated by strong experimental evidence. Using an ablation study, we confirmed experimentally that the autoregressive model outperforms the non-autoregressive model. Furthermore, we demonstrate that our model outperforms standard designs of conditional flows on classical image-to-image translation tasks such as image super-resolution, image colorization and image inpainting. In particular, we show that on these tasks CAFLOW outperforms former designs of conditional flows and GAN-based models thanks to its expressive autoregressive structure.
 
-Concurrently to our work, Liang et al. \cite{HCFLOW} introduced autoregressive conditioning in the latent space, which yielded improved results compared to their earlier work \cite{SRFLOW}. 
+Concurrently to our chapter, Liang et al. \cite{HCFLOW} introduced autoregressive conditioning in the latent space, which yielded improved results compared to their earlier chapter \cite{SRFLOW}. 
 However, they make the following restrictive modelling assumption: the low resolution image is part of the target latent space.  This makes their method not applicable to general inverse problems in vision. 
 
 As far as inverse problems on other modalities are considered, our method can be suitably modified to address inverse problems on structured data where there is an underlying hierarchical decomposition of the signal. It is true that our method would not be easily applied in unstructured data such as categorical or tabular data. However, the same applies to all other conditional normalizing flow methods that use a multiscale structure.
@@ -39,19 +39,19 @@ As far as inverse problems on other modalities are considered, our method can be
 
 \medskip
 
-\textbf{Organization of the paper.} The paper is organized as follows.
-In Section \ref{ch1:sec:background}, we provide the necessary theoretical background on unconditional and conditional normalizing flows. In Section \ref{ch1:sec:Caflow}, we describe our CAFLOW method discussing the modeling assumptions and deriving a formula for estimating the log-likelihood of the unknown conditional probability. In Section \ref{ch1:sec:numerics}, we present the quantitative and qualitative results of our experiments. Finally, in Sections \ref{ch1:sec:conclusions} we discuss the limitations of our work and we draw our conclusions. 
+\textbf{Organization of the chapter.} The chapter is organized as follows.
+In Section \ref{ch1:sec:background}, we provide the necessary theoretical background on unconditional and conditional normalizing flows. In Section \ref{ch1:sec:Caflow}, we describe our CAFLOW method discussing the modeling assumptions and deriving a formula for estimating the log-likelihood of the unknown conditional probability. In Section \ref{ch1:sec:numerics}, we present the quantitative and qualitative results of our experiments. Finally, in Sections \ref{ch1:sec:conclusions} we discuss the limitations of our chapter and we draw our conclusions. 
 
 \section{Background}\label{ch1:sec:background}
 
 \subsection{Notations}
 
 Random variables will be denoted by capital letters, e.g. $X$, $Y$, while their associated probability will be indicated by $P(X)$, $P(Y)$ and their distributions by $p_X$ and $p_Y$. 
-We use calligraphic capital letters, e.g. $\mathcal{X}, \mathcal{Y}$, to denote the sample space of the random variables $X$, $Y$ and small bold letters $\x$, $\y$ for the samples. Finally, given two random variables $X$ and $Y$ we will consider the conditional probability of $Y$ given $X$ and we denote it by $P(Y|X)$. Its density will be indicated by $p_{Y|X}$. We remark that throughout the paper we will always implicitly assume that the considered probabilities admit a density.
+We use calligraphic capital letters, e.g. $\mathcal{X}, \mathcal{Y}$, to denote the sample space of the random variables $X$, $Y$ and small bold letters $\x$, $\y$ for the samples. Finally, given two random variables $X$ and $Y$ we will consider the conditional probability of $Y$ given $X$ and we denote it by $P(Y|X)$. Its density will be indicated by $p_{Y|X}$. We remark that throughout the chapter we will always implicitly assume that the considered probabilities admit a density.
 
 \subsection{Normalizing flows}\label{ch1:subsec:normalizing}
 
-Given a random variable $Y$ defined on $\mathcal{Y}$ with an unknown distribution $p_Y$, the main idea of flow-based generative modeling is to approximate $p_Y$ with a learned function $p^\theta_Y$, which is parametrized by an invertible neural network $G^\theta$ mapping from a latent space $\mathcal{Z}$ to $\mathcal{Y}$. 
+Given a random variable $Y$ defined on $\mathcal{Y}$ with an unknown distribution $p_Y$, the main idea of flow-based generative modeling is to approximate $p_Y$ with a learned function $p^\theta_Y$, which is parametrized by an invertible neural netchapter $G^\theta$ mapping from a latent space $\mathcal{Z}$ to $\mathcal{Y}$. 
 Choosing $P(Z)$ to be a probability associated to the random variable $Z$ and $p_Z$ its distribution on $\mathcal{Z}$, we define the function $p^\theta_Y$ as the distribution of the push-forward measure of $P_Z$ by the map $G^\theta$.
 By the change-of-variables formula for probability distributions, $p^\theta_Y$ is easily computed as
 \begin{align*}
@@ -87,7 +87,7 @@ We next present typical choices for the transformations $G_i$. We describe each 
 
 \textit{\underline{Forward Function}}:
 
-A given a tensor \(\z\) is partitioned into two parts: \(\z_1\) and \(\z_2\). The tensor \(\z_2\) remains unchanged and is used in the transformation of \(\z_1\). A nonlinear mapping, represented by NN (typically a shallow convolutional neural network), processes \(\z_2\) producing two outputs of the same dimension as \(\z_1\): \(\boldsymbol{u}\) and \(\boldsymbol{t}\). The exponential of \(\boldsymbol{u}\) is used as the scale and $\boldsymbol{t}$ as the bias of the affine transformation of \(\z_1\). The steps are the following:
+A given a tensor \(\z\) is partitioned into two parts: \(\z_1\) and \(\z_2\). The tensor \(\z_2\) remains unchanged and is used in the transformation of \(\z_1\). A nonlinear mapping, represented by NN (typically a shallow convolutional neural netchapter), processes \(\z_2\) producing two outputs of the same dimension as \(\z_1\): \(\boldsymbol{u}\) and \(\boldsymbol{t}\). The exponential of \(\boldsymbol{u}\) is used as the scale and $\boldsymbol{t}$ as the bias of the affine transformation of \(\z_1\). The steps are the following:
 \begin{align*}
 \z_1, \z_2 &= \text{split}(\z) \\
 (\boldsymbol{u},\boldsymbol{t}) &= NN(\z_2) \\
@@ -185,7 +185,7 @@ The normalizing flow approach can be adapted to model conditional densities of c
 \log(p^\theta_{Y|X}(\y|\x)) = \log(p_{Z}(F^\theta(\y,\x)))   +  \log\left| \det \left(\frac{\partial F^{\theta}(\y,\x)}{dy} \right)\right|,
 \end{align}
 where $F^\theta(\cdot, \x)$ is the inverse of $G^\theta(\cdot, \x)$ for every condition $\x$.
-Consequently, a generative model for $p_{Y|X}$ can be trained by minimizing the negative log-likelihood of the parameters $\theta$ using the formula in \eqref{ch1:eq:cond}. The sampling procedure works similarly to standard normalizing flows. We generate a sample $\y \sim p^\theta_{Y|X}(\cdot, \x)$ by sampling a latent $\z\sim p_Z$ and passing it through $G^\theta(\cdot, \x)$, yielding $\y=G^\theta(\z, \x)$. Similarly to traditional normalizing flows the map $G^\theta$ is modeled through a composition of learnable invertible conditional transformations. We describe next the specific layers used in conditional normalizing flow architectures.
+Consequently, a generative model for $p_{Y|X}$ can be trained by minimizing the negative log-likelihood of the parameters $\theta$ using the formula in \eqref{ch1:eq:cond}. The sampling procedure chapters similarly to standard normalizing flows. We generate a sample $\y \sim p^\theta_{Y|X}(\cdot, \x)$ by sampling a latent $\z\sim p_Z$ and passing it through $G^\theta(\cdot, \x)$, yielding $\y=G^\theta(\z, \x)$. Similarly to traditional normalizing flows the map $G^\theta$ is modeled through a composition of learnable invertible conditional transformations. We describe next the specific layers used in conditional normalizing flow architectures.
 
 \medskip
 
@@ -340,7 +340,7 @@ We model each $f_{j}^{i}$ by adopting the conditional flow design of \cite{SRFLO
 
 \smallskip
 
-\textbf{A discussion on sharing weights strategies.} It is worth noting that the multi-scale transformations, denoted as \(g_j^i\), for all transformations \(G_i^{\theta}\) where \(i \geq j+1\), share the same architecture and function – integrating information from conditions \(D_j\) and \(L_j\). This hints at the potential of utilizing a singular subflow, \(g_j^{j+1}\), for every \(G_i^{\theta}\) with \(i \geq j+1\). Such a strategy could decrease the computational burden and introduce an inductive bias. Yet, it is crucial to recognize that this approach assumes the only distinctive subflow in each \(G_i^{\theta}\) flow is \(g_i^i\). All the deeper subflows, represented by \(g_k^i\) where \(k<i\), are shared between \(G_i^{\theta}\) and other \(G_j^{\theta}\) flows. This results in a modeling constraint, narrowing the space of functions the architecture can represent. Our preliminary tests confirmed this limitation; the performance using this approach significantly lags behind the more generalized model presented in this paper.
+\textbf{A discussion on sharing weights strategies.} It is worth noting that the multi-scale transformations, denoted as \(g_j^i\), for all transformations \(G_i^{\theta}\) where \(i \geq j+1\), share the same architecture and function – integrating information from conditions \(D_j\) and \(L_j\). This hints at the potential of utilizing a singular subflow, \(g_j^{j+1}\), for every \(G_i^{\theta}\) with \(i \geq j+1\). Such a strategy could decrease the computational burden and introduce an inductive bias. Yet, it is crucial to recognize that this approach assumes the only distinctive subflow in each \(G_i^{\theta}\) flow is \(g_i^i\). All the deeper subflows, represented by \(g_k^i\) where \(k<i\), are shared between \(G_i^{\theta}\) and other \(G_j^{\theta}\) flows. This results in a modeling constraint, narrowing the space of functions the architecture can represent. Our preliminary tests confirmed this limitation; the performance using this approach significantly lags behind the more generalized model presented in this chapter.
 
 \begin{figure}[t]
     \centering
@@ -462,7 +462,7 @@ Finally, we mention that alternative methods based either on the regularization 
 
 \smallskip
 
-\textbf{Optimized sample selection using conditional likelihood estimation}. \color{black}Our framework can act both as conditional generator and as a conditional likelihood estimator. Figure \ref{ch1:fig:decreasingloglikelihood} shows ten super-resolved versions of the low resolution image in decreasing order of conditional log-likelihood. We leverage the conditional likelihood estimation to automatically select the best generated samples and disregard bad samples. 
+\textbf{Optimized sample selection using conditional likelihood estimation}. \color{black}Our framechapter can act both as conditional generator and as a conditional likelihood estimator. Figure \ref{ch1:fig:decreasingloglikelihood} shows ten super-resolved versions of the low resolution image in decreasing order of conditional log-likelihood. We leverage the conditional likelihood estimation to automatically select the best generated samples and disregard bad samples. 
 
 \begin{figure}[h!]
     \centering
@@ -471,7 +471,7 @@ Finally, we mention that alternative methods based either on the regularization 
     \label{ch1:fig:decreasingloglikelihood}
 \end{figure}
 
-We have observed that CAFLOW typically assigns to the ground-truth image higher conditional log-likelihood than any generated sample. Such observation suggests that CAFLOW is a powerful conditional likelihood estimator, and that better samples can be obtained by the use of an optimisation algorithm, which searches for samples with high conditional likelihood. However, we used a simpler inference method in this work: keep the best $N$ out of $M$ generated samples based on the conditional log-likelihood. We empirically found that $M$ should be larger for higher sampling temperatures.
+We have observed that CAFLOW typically assigns to the ground-truth image higher conditional log-likelihood than any generated sample. Such observation suggests that CAFLOW is a powerful conditional likelihood estimator, and that better samples can be obtained by the use of an optimisation algorithm, which searches for samples with high conditional likelihood. However, we used a simpler inference method in this chapter: keep the best $N$ out of $M$ generated samples based on the conditional log-likelihood. We empirically found that $M$ should be larger for higher sampling temperatures.
 
 \section{Experiments}\label{ch1:sec:numerics}
 In this section we evaluate CAFLOW on three image-to-image translation tasks: image super-resolution, image colorization and image inpainting. Moreover, as ablation for the autoregressive structure in a image super-resolution task, we compare CAFLOW to a model that is conditioned in the normalizing flow latent space, assuming that information is exchanged only between latent spaces having the same dimension, c.f. Section \ref{ch1:subsec:modass} and Figure \ref{ch1:fig:dependencies}. 
@@ -617,18 +617,10 @@ Our model outperforms \cite{cGLOW} based on the PSNR metric and on qualititative
     %\vspace{0.1in}
     \end{table}
 
-\section{Conclusion and Limitations}\label{ch1:sec:conclusions}
+\section{Conclusions}\label{ch1:sec:conclusions}
 
 We have introduced a conditional autoregressive flow, coined CAFLOW, which combines autoregressive modeling with conditional normalizing flows for image-to-image translation. CAFLOW is an efficient conditional image generator and conditional likelihood estimator able to cross-correlate information at different scales, improving on the expressivity of former conditional flow architectures. 
 We demonstrate its efficiency as conditional generator on standard image-to-image translation tasks such as image super-resolution, image colorization and image inpainting. We find that, in the above-mentioned tasks, CAFLOW achieves better performance than standard conditional flows and conditional GANs. In particular, we observe that the autoregressive modeling that allows information exchange at different scales, improves on Dual-Glow performances \cite{Dual-Glow}, where correlation is allowed only between latent spaces of the same dimension.
 
 The main modeling limitation of the framework is attributed to limited expressivity of normalizing flows. Each transformation of a normalizing flow has to be invertible with a tractable calculation of the determinant of the Jacobian. This limits the representational power of normalizing flows. However, Wu et al. \cite{wu2020stochastic} claim to overcome expressivity limitations of normalizing flows by combining deterministic invertible functions with stochastic sampling blocks. Therefore, incorporating their proposed stochastic blocks in our conditional autoregressive flows could potentially lead to significant performance improvement. 
-
-\section*{Acknowledgements}
-We thank Lynton Ardizzone for informing us about efficient ways to train normalizing flows. We also thank Razvan Marinescu and You Lu for providing help with practical details of the evaluation procedure.
-
-GB acknowledges support from GSK. 
-MC acknowledges support from the Royal Society (Newton International Fellowship NIF\textbackslash R1\textbackslash 192048 Minimal partitions as a robustness boost for neural network classifiers).
-CE acknowledges support from the Wellcome Innovator Award RG98755. ZK acknowledges funding from the Royal Society (Industry Fellowship), Wellcome Trust (205067/Z/16/Z), Alan Turing Institute and the Alzheimer’s Drug Discovery Foundation.
-CBS acknowledges support from the Philip Leverhulme Prize, the Royal Society Wolfson Fellowship, the EPSRC grants EP/S026045/1 and EP/T003553/1, EP/N014588/1, EP/T017961/1, the Wellcome Innovator Award RG98755, the Leverhulme Trust project Unveiling the invisible, the European Union Horizon 2020 research and innovation programme under the Marie Skodowska-Curie grant agreement No. 777826 NoMADS, the Cantab Capital Institute for the Mathematics of Information and the Alan Turing Institute.
 

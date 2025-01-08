@@ -59,7 +59,7 @@ In this work, we explore non-uniform diffusion models. In non-uniform diffusion 
 Moreover, we find that non-uniform diffusion can be used for conditional generation, because it leads to a novel estimator of the conditional score. We conduct a review and classification of existing approaches and perform a systematic comparison to find the best way of estimating the conditional score. We provide a proof of validity for the \textit{conditional denoising estimator} (which has been used in \cite{saharia2021sr3,tashiro2021csdi} without justification), and we thereby provide a firm theoretical foundation for using it in future research.
 
 \noindent
-\textbf{The contributions of this paper are as follows:}
+\textbf{The contributions of this work are as follows:}
 \begin{enumerate}
     \item We introduce a principled objective for training non-uniform diffusion models.
     \item We show that non-uniform diffusion leads to the multi-scale diffusion models which are more efficient than uniform diffusion models. In less training time, the multi-scale models reach improved FID scores with significantly faster sampling speed. The speed up factor is expected to increase as we increase the number of scales.
@@ -103,7 +103,7 @@ In this work we will use the following notation:
 \end{itemize} 
 
 \section{Methods}
-In the following, we will provide details about the framework and estimators discussed in this paper.
+In the following, we will provide details about the framework and estimators discussed in this work.
 \subsection{Background: Score matching through Stochastic Differential Equations}
 \subsubsection{Score-Based Diffusion}
 
@@ -254,7 +254,7 @@ This method proposes learning $\nabla_{x_t} \ln p(x_t)$ with an unconditional sc
     \begin{equation*}
         \nabla_{x_t}\ln p(x_t |y) = \nabla_{x_t} \ln p(x_t) + \nabla_{x_t} \ln p(y | x_t)
     \end{equation*}
-to obtain $\nabla_{x_t} \ln p(x_t | y)$. Unlike other approaches, this requires training a separate model for $p(y|x_t)$. Appropriate choices of such models for tasks discussed in this paper have not been explored yet. Therefore we exclude this approach from our study. 
+to obtain $\nabla_{x_t} \ln p(x_t | y)$. Unlike other approaches, this requires training a separate model for $p(y|x_t)$. Appropriate choices of such models for tasks discussed in this work have not been explored yet. Therefore we exclude this approach from our study. 
 
 \subsubsection{Conditional denoising estimator (CDE)}
 The conditional denoising estimator (CDE) is a way of estimating $p(x_t|y)$ using the denoising score matching approach \cite{vincent2011connection, song2020generative_score}. In order to approximate $p(x_t|y)$, the conditional denoising estimator minimizes
@@ -682,16 +682,8 @@ The FID scores suggest that CMDE was the most successful approach to approximati
 
 
 
-\section{Conclusions and future work}
+\section{Conclusions}
 
 In this article, we explored non-uniform diffusion models which rely on the idea of diffusing different parts of the tensor with different speeds or more generally according to different SDEs. We show that non-uniform diffusion leads to multiscale diffusion models which are more efficient and effective than standard uniform diffusion models for unconditional generation. More specifically, multiscale diffusion models achieve improved FID score with significantly faster sampling speed and for less training time.
 
 We further discovered that non-uniform diffusion leads to CMDE, a novel estimator of the conditional score which can interpolate between conditional denoising estimator (CDE) and conditional diffusive estimator (CDiffE). We conducted a systematic comparison of different estimators of the conditional score and concluded that CMDE and CDE perform on par, while significantly outperforming CDiffE. This is particularly apparent in edge to image translation, where CDiffE fails to produce samples consistent with the condition image. Furthermore, CMDE outperformed CDE in terms of FID scores in inpainting and super-resolution tasks, which indicates that diffusing the condition at the appropriate speed can have beneficial effect on the optimization landscape, and yield better approximation of the posterior distribution. Furthermore, we provided theoretical analysis of the estimators of conditional score. More importantly, we proved the consistency of the conditional denoising estimator, thus providing a firm theoretical justification for using it in future research. 
-
-
-
-\section{Acknowledgements} 
-GB acknowledges the support from GSK and the Cantab Capital Institute for the Mathematics of Information. 
-JS acknowledges the support from Aviva and the Cantab Capital Institute for the Mathematics of Information. 
-CBS acknowledges support from the Philip Leverhulme Prize, the Royal Society Wolfson Fellowship, the EPSRC advanced career fellowship EP/V029428/1, EPSRC grants EP/S026045/1 and EP/T003553/1, EP/N014588/1, EP/T017961/1, the Wellcome Innovator Award RG98755, the Leverhulme Trust project Unveiling the invisible, the European Union Horizon 2020 research and innovation programme under the Marie Skodowska-Curie grant agreement No. 777826 NoMADS, the Cantab Capital Institute for the Mathematics of Information and the Alan Turing Institute. CE acknowledges support from
-the Wellcome Innovator Award RG98755 for part of the work that was done at Cambridge.

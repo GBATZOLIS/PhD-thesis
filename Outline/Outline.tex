@@ -1,6 +1,6 @@
 %!TEX root = ../thesis.tex
 %*******************************************************************************
-%****************************** Introduction *********************************
+%****************************** Outline *********************************
 %*******************************************************************************
 
 \chapter{Thesis Outline and Contributions}
@@ -36,7 +36,7 @@
            \label{fig:high_level_design_conditional}
     \end{figure}
 
-In Chapter \ref{Chapter:CAFLOW}, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of auto-regressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the auto-regressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive auto-regressive structure.
+In chapter \ref{Chapter:CAFLOW}, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of auto-regressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the auto-regressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive auto-regressive structure.
 
 
 \subsection*{Originality and Author’s Contributions}
@@ -84,7 +84,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb, 
     \label{fig: teaser}
 \end{figure}
 
-In Chapter \ref{Chapter:non-uniform-diffusion-models}, we introduce \emph{non-uniform diffusion models}. Unlike standard diffusion approaches that apply the same noise injection schedule to every pixel, non-uniform diffusion models allow different pixels (or groups of pixels) to evolve at varying speeds. This flexibility mirrors the hierarchical approach of multi-scale normalizing flows, where transformations occur at multiple scales, enabling the model to capture image structure more efficiently and produce higher-quality samples in less time. By carefully choosing which parts of the image diffuse faster, non-uniform diffusion opens the door to significantly improved performance, both in terms of image fidelity and computational speed.
+In chapter \ref{Chapter:non-uniform-diffusion-models}, we introduce \emph{non-uniform diffusion models}. Unlike standard diffusion approaches that apply the same noise injection schedule to every pixel, non-uniform diffusion models allow different pixels (or groups of pixels) to evolve at varying speeds. This flexibility mirrors the hierarchical approach of multi-scale normalizing flows, where transformations occur at multiple scales, enabling the model to capture image structure more efficiently and produce higher-quality samples in less time. By carefully choosing which parts of the image diffuse faster, non-uniform diffusion opens the door to significantly improved performance, both in terms of image fidelity and computational speed.
 
 We demonstrate that non-uniform diffusion models outperform standard uniform diffusion models by achieving superior FID scores in less training time. Furthermore, these models exhibit remarkable efficiency, sampling up to 4.4 times faster at a resolution of $128 \times 128$, with even greater speed-ups anticipated at higher resolutions. Leveraging the adaptability of non-uniform diffusion, we introduce the Conditional Multi-Speed Diffusive Estimator (CMDE), a novel approach derived from a specific choice of non-uniform diffusion. CMDE unifies existing methods for conditional score estimation and delivers performance on par with the widely adopted conditional denoising estimator.
 
@@ -132,7 +132,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb a
 
 
 
-In Chapter \ref{Chapter:intrinsic-dimension}, we provide a mathematical proof
+In chapter \ref{Chapter:intrinsic-dimension}, we provide a mathematical proof
 that diffusion models encode data manifolds by
 approximating their normal bundles. Based on
 this observation we propose a novel method for
@@ -166,7 +166,7 @@ This chapter is adapted from our published work presented at ICML 2024 on intrin
 
 This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb.
 
-\section{Variational Diffusion Auto-encoder: Latent Space Extraction from Pre-Trained Diffusion Models}
+\section{ScoreVAE: Variational Diffusion Auto-encoder}
 
 \begin{figure}[htbp]
     \centering
@@ -176,7 +176,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb.
 \end{figure}
 
 
-In Chapter \ref{Chapter:ScoreVAE}, we introduce \textbf{ScoreVAE}, a novel approach that advances the Variational Autoencoder (VAE) framework by addressing fundamental limitations of conventional VAEs. Traditional VAEs model the reconstruction distribution $p(\mathbf{x}|\mathbf{z})$ as a Gaussian, which often leads to overly smoothed and blurry reconstructions. This limitation arises because the Gaussian assumption fails to capture the complexity and multimodality of real-world data distributions, making it difficult for the model to accurately represent intricate details and sharp features. ScoreVAE addresses this issue by combining a diffusion-time-dependent encoder and an unconditional diffusion model. By employing Bayes' rule for score functions, we analytically derive a robust and flexible model for reconstruction distribution $p(\mathbf{x}|\mathbf{z})$. Our approach bypasses the unrealistic Gaussian assumption, resulting in significantly improved image reconstruction quality.
+In chapter \ref{Chapter:ScoreVAE}, we introduce \textbf{ScoreVAE}, a novel approach that advances the Variational Autoencoder (VAE) framework by addressing fundamental limitations of conventional VAEs. Traditional VAEs model the reconstruction distribution $p(\mathbf{x}|\mathbf{z})$ as a Gaussian, which often leads to overly smoothed and blurry reconstructions. This limitation arises because the Gaussian assumption fails to capture the complexity and multimodality of real-world data distributions, making it difficult for the model to accurately represent intricate details and sharp features. ScoreVAE addresses this issue by combining a diffusion-time-dependent encoder and an unconditional diffusion model. By employing Bayes' rule for score functions, we analytically derive a robust and flexible model for reconstruction distribution $p(\mathbf{x}|\mathbf{z})$. Our approach bypasses the unrealistic Gaussian assumption, resulting in significantly improved image reconstruction quality.
 
 The ScoreVAE framework also simplifies the training dynamics by decoupling the training of the diffusion model and the encoder. This decoupling enables the use of powerful pre-trained diffusion models that can be readily updated or swapped without retraining the entire system. By separating the prior (diffusion model) from the encoder, ScoreVAE achieves higher fidelity reconstructions compared to traditional VAEs and diffusion decoders. Our experiments on the CIFAR10 and CelebA datasets demonstrate ScoreVAE’s superiority in producing sharper images and reducing reconstruction error. These results underscore the practical advantages of ScoreVAE in handling complex, high-dimensional data, and highlight its potential for improved representation learning and controllable generative modeling.
 
@@ -224,7 +224,7 @@ This project was supervised by Carola-Bibiane Sch\"onlieb.
     \label{fig:learned_charts}
 \end{figure}
 
-In Chapter \ref{Chapter:Pullback-riemannian-geometry}, we introduce a score-based pullback Riemannian metric that encodes the intrinsic dimensionality and geometry of data under certain distributional assumptions. We show that this data-driven metric can be constructed in practice by modifying normalizing flows with anisotropic base distribution and isometry regularization. This approach yields a scalable framework for computing manifold maps—such as geodesics, exponential maps, distances, and curvature—in closed form. Building on this metric, we additionally construct a Riemannian Auto-encoder (RAE) that recovers the true manifold dimension, offers a global chart of the manifold, and yields an interpretable latent representation thanks to isometry regularization.
+In chapter \ref{Chapter:Pullback-riemannian-geometry}, we introduce a score-based pullback Riemannian metric that encodes the intrinsic dimensionality and geometry of data under certain distributional assumptions. We show that this data-driven metric can be constructed in practice by modifying normalizing flows with anisotropic base distribution and isometry regularization. This approach yields a scalable framework for computing manifold maps—such as geodesics, exponential maps, distances, and curvature—in closed form. Building on this metric, we additionally construct a Riemannian Auto-encoder (RAE) that recovers the true manifold dimension, offers a global chart of the manifold, and yields an interpretable latent representation thanks to isometry regularization.
 
 \subsection*{Originality and Author’s Contributions}
 
@@ -239,7 +239,7 @@ Including the hessian vector product term in the regularisation allowed us to us
 \item \textbf{Experimental Design}: I led the experimental design, incorporating suggestions from Willem Diepeveen and Zakhar Shumaylov.
 \item \textbf{Code and Experimental Implementation}: I implemented the training code and conducted all hyperparameter tuning and experiments. Willem implemented the functionality for constructing the data-driven manifold maps and the Riemannian autoencoder from a trained model.
 \item \textbf{Theory}: Willem developed the theoretical results. I contributed by explaining the necessity of Hessian-vector product regularization.
-\item \textbf{Presentation}: Zakhar and Willem wrote all sections of the paper except for the experimental section, which I authored.
+\item \textbf{Presentation}: Zakhar and Willem wrote all sections except for the experimental section, which I authored.
 \end{itemize}
 
 This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb.

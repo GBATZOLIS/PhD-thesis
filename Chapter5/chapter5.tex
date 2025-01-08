@@ -83,7 +83,7 @@ Motivated by the above, this work aims to address the following question: How to
 
 \subsection{Contributions}
 
-In this paper, we take first steps towards striking such a balance and propose a score-based pullback Riemannian metric assuming a relatively simple but generally applicable family of probability densities, which we show to result in both scalable manifold mappings and scalable learning algorithms. We emphasize that we do not directly aim to find the perfect balance between the two types of scalability. Instead we start from a setting which has many nice properties, but will allow for generalization to multimodal densities, which we reserve for future work.
+In this chapter, we take first steps towards striking such a balance and propose a score-based pullback Riemannian metric assuming a relatively simple but generally applicable family of probability densities, which we show to result in both scalable manifold mappings and scalable learning algorithms. We emphasize that we do not directly aim to find the perfect balance between the two types of scalability. Instead we start from a setting which has many nice properties, but will allow for generalization to multimodal densities, which we reserve for future work.
 
 Specifically, we consider a family of unimodal probability densities whose negative log-likelihoods are compositions of strongly convex functions and diffeomorphisms. As this work is an attempt to bridge between the geometric data analysis community and the generative modeling community, we break down the contributions in two ways.
 Theoretically,
@@ -124,7 +124,7 @@ where $D_{\mPoint}\diffeoB: \tangent_\mPoint \manifoldB \to \tangent_{\diffeoB(\
 
 defines a Riemannian structure on $\manifoldB$, which we denote by $(\manifoldB, (\cdot,\cdot)^\diffeoB)$. 
 Pullback metrics literally pull back all geometric information from the Riemannian structure on $\manifold$. In particular, closed-form manifold mappings on $(\manifold, (\cdot,\cdot))$ yield under mild assumptions closed-form manifold mappings on $(\manifoldB, (\cdot,\cdot)^\diffeoB)$.
-Throughout the rest of the paper pullback mappings will be denoted similarly to \ref{eq:pull-back-metric} with the diffeomorphism $\diffeoB$ as a superscript, i.e., we write $\distance^\diffeoB_{\manifoldB}(\mPoint, \mPointB)$, $\geodesic^\diffeoB_{\mPoint, \mPointB}$, $\exp^\diffeoB_\mPoint (\tangentVector_\mPoint)$ and $\log^\diffeoB_{\mPoint} \mPointB$ 
+Throughout the rest of the chapter pullback mappings will be denoted similarly to \ref{eq:pull-back-metric} with the diffeomorphism $\diffeoB$ as a superscript, i.e., we write $\distance^\diffeoB_{\manifoldB}(\mPoint, \mPointB)$, $\geodesic^\diffeoB_{\mPoint, \mPointB}$, $\exp^\diffeoB_\mPoint (\tangentVector_\mPoint)$ and $\log^\diffeoB_{\mPoint} \mPointB$ 
 for $\mPoint,\mPointB \in \manifoldB$ and $\tangentVector_\mPoint \in \tangent_\mPoint \manifoldB$. 
 
 \section{Riemannian geometry from unimodal probability densities}

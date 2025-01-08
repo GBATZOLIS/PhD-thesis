@@ -213,10 +213,15 @@ Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tu
 \newblock Highly accurate protein structure prediction with alphafold.
 \newblock {\em Nature}, 596(7873):583--589.
 
-\bibitem[Karras et~al., 2019]{karras2019style}
-Karras, T., Laine, S., and Aila, T. (2019).
+\bibitem[Karras et~al., 2019a]{karras2019style}
+Karras, T., Laine, S., and Aila, T. (2019a).
 \newblock A style-based generator architecture for generative adversarial networks.
 \newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 4401--4410.
+
+\bibitem[Karras et~al., 2019b]{karras2019stylegan}
+Karras, T., Laine, S., and Aila, T. (2019b).
+\newblock A style-based generator architecture for generative adversarial networks.
+\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 4401--4410.
 
 \bibitem[Karras et~al., 2020]{karras2020analyzing}
 Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., and Aila, T. (2020).
@@ -271,6 +276,11 @@ Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Z
 Lugmayr, A., Danelljan, M., Romero, A., Sabater, N., Timofte, R., and Van~Gool, L. (2022).
 \newblock Repaint: Inpainting using denoising diffusion probabilistic models.
 \newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 11461--11471.
+
+\bibitem[Mescheder et~al., 2018]{mescheder2018which}
+Mescheder, L., Geiger, A., and Nowozin, S. (2018).
+\newblock Which training methods for gans do actually converge?
+\newblock In {\em Proceedings of the 35th International Conference on Machine Learning (ICML)}, pages 3481--3490.
 
 \bibitem[Mikolov et~al., 2013]{mikolov2013efficient}
 Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013).
@@ -381,11 +391,6 @@ Saharia, C., Ho, J., Chan, W., Salimans, T., Fleet, D.~J., and Norouzi, M. (2022
 Sakai, T. (1996).
 \newblock {\em Riemannian geometry}, volume 149.
 \newblock American Mathematical Soc.
-
-\bibitem[Salimans et~al., 2016]{salimans2016improved}
-Salimans, T., Goodfellow, I., Zaremba, W., Cheung, V., Radford, A., and Chen, X. (2016).
-\newblock Improved techniques for training gans.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~29.
 
 \bibitem[Salimans and Ho, 2022]{salimans2022progressive}
 Salimans, T. and Ho, J. (2022).
