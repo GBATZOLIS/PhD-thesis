@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  8 JAN 2025 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  8 JAN 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -14,9 +14,6 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna Kumar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
-
-Class PhDThesisPSnPDF Warning: You have chosen an option that generates only selected chapters with references, if this was intentional, ignore this warning. If not, please remove the option `chapter' from the document class and recompile. Good luck with your writing! on input line 238.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/bk12.clo
@@ -1160,27 +1157,8 @@ Package caption Info: End \AtBeginDocument code.
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 110.
- [10
-
-
-
-
-
-
-
-]
-No file thesis.nls.
-\openout2 = `introduction/introductionA.aux'.
-
-(./introduction/introductionA.tex
-Chapter 1.
-[1
-
-
-
-
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 24.
+\PHD@Title=\box108
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -1188,115 +1166,213 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 24.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 24.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 24.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 24.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 114.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [2] [3] [4]
-<introduction/figures/stylegan_example_1.jpeg, id=201, 1027.84pt x 1027.84pt>
+)
+\PHD@crest=\box109
+<Figs/University_Crest.pdf, id=75, 59.22125pt x 69.25874pt>
+File: Figs/University_Crest.pdf Graphic file (type pdf)
+<use Figs/University_Crest.pdf>
+Package pdftex.def Info: Figs/University_Crest.pdf  used on input line 114.
+(pdftex.def)             Requested size: 87.49088pt x 102.32376pt.
+\PHD@collegecrest=\box110
+\PHD@author=\box111
+\PHD@supervisor=\box112
+\PHD@advisor=\box113
+\PHD@dept=\box114
+\PHD@submission=\box115
+\PHD@collegedate=\box116
+\PHD@titlepagespacing=\skip148
+ [1
+
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Figs/University_Crest.pdf>]
+\openout2 = `Dedication/dedication.aux'.
+
+ (./Dedication/dedication.tex [2
+
+
+]) [3]
+\openout2 = `Declaration/declaration.aux'.
+
+ (./Declaration/declaration.tex [4
+
+
+
+
+]) [5
+
+]
+\openout2 = `Acknowledgement/acknowledgement.aux'.
+
+ (./Acknowledgement/acknowledgement.tex [6
+
+
+
+
+]) [7
+
+]
+\openout2 = `Abstract/abstract.aux'.
+
+ (./Abstract/abstract.tex [8
+
+
+
+
+]) [9
+
+] [10
+
+
+
+]
+\openout2 = `notation/notation.aux'.
+
+ (./notation/notation.tex [11
+
+]) [12]
+No file thesis.toc.
+\tf@toc=\write8
+\openout8 = `thesis.toc'.
+
+[13
+
+
+
+
+] [14
+
+]
+No file thesis.lof.
+\tf@lof=\write9
+\openout9 = `thesis.lof'.
+
+[15] [16
+
+]
+No file thesis.lot.
+\tf@lot=\write10
+\openout10 = `thesis.lot'.
+
+No file thesis.nls.
+[17] [18
+
+]
+\openout2 = `introduction/introductionA.aux'.
+
+ (./introduction/introductionA.tex
+Chapter 1.
+[1
+
+
+] [2] [3] [4]
+<introduction/figures/stylegan_example_1.jpeg, id=297, 1027.84pt x 1027.84pt>
 File: introduction/figures/stylegan_example_1.jpeg Graphic file (type jpg)
 <use introduction/figures/stylegan_example_1.jpeg>
 Package pdftex.def Info: introduction/figures/stylegan_example_1.jpeg  used on input line 81.
 (pdftex.def)             Requested size: 139.99075pt x 139.99141pt.
-<introduction/figures/stylegan_example_2.jpeg, id=202, 1027.84pt x 1027.84pt>
+<introduction/figures/stylegan_example_2.jpeg, id=298, 1027.84pt x 1027.84pt>
 File: introduction/figures/stylegan_example_2.jpeg Graphic file (type jpg)
 <use introduction/figures/stylegan_example_2.jpeg>
 Package pdftex.def Info: introduction/figures/stylegan_example_2.jpeg  used on input line 82.
 (pdftex.def)             Requested size: 139.99075pt x 139.99141pt.
-<introduction/figures/stylegan_example_3.jpeg, id=203, 1027.84pt x 1027.84pt>
+<introduction/figures/stylegan_example_3.jpeg, id=299, 1027.84pt x 1027.84pt>
 File: introduction/figures/stylegan_example_3.jpeg Graphic file (type jpg)
 <use introduction/figures/stylegan_example_3.jpeg>
 Package pdftex.def Info: introduction/figures/stylegan_example_3.jpeg  used on input line 83.
 (pdftex.def)             Requested size: 139.99075pt x 139.99141pt.
  [5 <./introduction/figures/stylegan_example_1.jpeg> <./introduction/figures/stylegan_example_2.jpeg> <./introduction/figures/stylegan_example_3.jpeg>]
-<introduction/figures/mode_collapse.png, id=220, 831.105pt x 233.87375pt>
+<introduction/figures/mode_collapse.png, id=317, 831.105pt x 233.87375pt>
 File: introduction/figures/mode_collapse.png Graphic file (type png)
 <use introduction/figures/mode_collapse.png>
 Package pdftex.def Info: introduction/figures/mode_collapse.png  used on input line 99.
 (pdftex.def)             Requested size: 349.97023pt x 98.47966pt.
  [6 <./introduction/figures/mode_collapse.png>] [7] [8] [9] [10]
-<introduction/figures/vae/original/2.png, id=260, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/2.png, id=359, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/2.png Graphic file (type png)
 <use introduction/figures/vae/original/2.png>
 Package pdftex.def Info: introduction/figures/vae/original/2.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/original/3.png, id=261, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/3.png, id=360, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/3.png Graphic file (type png)
 <use introduction/figures/vae/original/3.png>
 Package pdftex.def Info: introduction/figures/vae/original/3.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/original/4.png, id=262, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/4.png, id=361, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/4.png Graphic file (type png)
 <use introduction/figures/vae/original/4.png>
 Package pdftex.def Info: introduction/figures/vae/original/4.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/original/5.png, id=263, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/5.png, id=362, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/5.png Graphic file (type png)
 <use introduction/figures/vae/original/5.png>
 Package pdftex.def Info: introduction/figures/vae/original/5.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/original/6.png, id=264, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/6.png, id=363, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/6.png Graphic file (type png)
 <use introduction/figures/vae/original/6.png>
 Package pdftex.def Info: introduction/figures/vae/original/6.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/original/7.png, id=265, 64.24pt x 64.24pt>
+<introduction/figures/vae/original/7.png, id=364, 64.24pt x 64.24pt>
 File: introduction/figures/vae/original/7.png Graphic file (type png)
 <use introduction/figures/vae/original/7.png>
 Package pdftex.def Info: introduction/figures/vae/original/7.png  used on input line 290.
 (pdftex.def)             Requested size: 61.24428pt x 61.24525pt.
-<introduction/figures/vae/reconstruction/2.png, id=266, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/2.png, id=365, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/2.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/2.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/2.png  used on input line 300.
 (pdftex.def)             Requested size: 61.24428pt x 61.24474pt.
-<introduction/figures/vae/reconstruction/3.png, id=267, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/3.png, id=366, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/3.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/3.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/3.png  used on input line 300.
 (pdftex.def)             Requested size: 61.24428pt x 61.24474pt.
-<introduction/figures/vae/reconstruction/4.png, id=268, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/4.png, id=367, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/4.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/4.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/4.png  used on input line 300.
 (pdftex.def)             Requested size: 61.24428pt x 61.24474pt.
-<introduction/figures/vae/reconstruction/5.png, id=269, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/5.png, id=368, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/5.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/5.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/5.png  used on input line 300.
 (pdftex.def)             Requested size: 61.24428pt x 61.24474pt.
-<introduction/figures/vae/reconstruction/6.png, id=270, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/6.png, id=369, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/6.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/6.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/6.png  used on input line 300.
 (pdftex.def)             Requested size: 61.24428pt x 61.24474pt.
-<introduction/figures/vae/reconstruction/7.png, id=271, 266.6763pt x 266.6763pt>
+<introduction/figures/vae/reconstruction/7.png, id=370, 266.6763pt x 266.6763pt>
 File: introduction/figures/vae/reconstruction/7.png Graphic file (type png)
 <use introduction/figures/vae/reconstruction/7.png>
 Package pdftex.def Info: introduction/figures/vae/reconstruction/7.png  used on input line 300.
@@ -1340,37 +1416,3230 @@ LaTeX Warning: Reference `Chapter:ScoreVAE' on page 40 undefined on input line 1
 
 LaTeX Warning: Reference `Chapter:Pullback-riemannian-geometry' on page 40 undefined on input line 1013.
 
-) [40] (./thesis.bbl [51
+) [40]
+\openout2 = `Outline/Outline.aux'.
+
+ (./Outline/Outline.tex
+Chapter 2.
+<Outline/figures/caflow/fulldependencies.png, id=644, 542.025pt x 238.8925pt>
+File: Outline/figures/caflow/fulldependencies.png Graphic file (type png)
+<use Outline/figures/caflow/fulldependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/fulldependencies.png  used on input line 13.
+(pdftex.def)             Requested size: 135.61188pt x 59.77036pt.
+<Outline/figures/caflow/Dual-Glowdependencies.png, id=645, 542.025pt x 239.89626pt>
+File: Outline/figures/caflow/Dual-Glowdependencies.png Graphic file (type png)
+<use Outline/figures/caflow/Dual-Glowdependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/Dual-Glowdependencies.png  used on input line 17.
+(pdftex.def)             Requested size: 135.61188pt x 60.0215pt.
+<Outline/figures/caflow/oursdependencies.png, id=646, 541.02126pt x 237.88875pt>
+File: Outline/figures/caflow/oursdependencies.png Graphic file (type png)
+<use Outline/figures/caflow/oursdependencies.png>
+Package pdftex.def Info: Outline/figures/caflow/oursdependencies.png  used on input line 21.
+(pdftex.def)             Requested size: 135.61188pt x 59.62811pt.
+<Outline/figures/caflow/dual_glow.pdf, id=649, 341.35529pt x 204.765pt>
+File: Outline/figures/caflow/dual_glow.pdf Graphic file (type pdf)
+<use Outline/figures/caflow/dual_glow.pdf>
+Package pdftex.def Info: Outline/figures/caflow/dual_glow.pdf  used on input line 29.
+(pdftex.def)             Requested size: 196.85616pt x 118.08888pt.
+
+
+pdfTeX warning: pdflatex (file ./Outline/figures/caflow/high_level_design_conditional_modified.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Outline/figures/caflow/high_level_design_conditional_modified.pdf, id=650, 442.53331pt x 319.1925pt>
+File: Outline/figures/caflow/high_level_design_conditional_modified.pdf Graphic file (type pdf)
+<use Outline/figures/caflow/high_level_design_conditional_modified.pdf>
+Package pdftex.def Info: Outline/figures/caflow/high_level_design_conditional_modified.pdf  used on input line 33.
+(pdftex.def)             Requested size: 205.60725pt x 148.30121pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `Chapter:CAFLOW' on page 41 undefined on input line 39.
+
+[41
 
 
 
 
+ <./Outline/figures/caflow/fulldependencies.png> <./Outline/figures/caflow/Dual-Glowdependencies.png> <./Outline/figures/caflow/oursdependencies.png>]
+<Outline/figures/non-uniform-diffusion-models/drawing.png, id=663, 3514.12875pt x 1078.0275pt>
+File: Outline/figures/non-uniform-diffusion-models/drawing.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/drawing.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/drawing.png  used on input line 60.
+(pdftex.def)             Requested size: 393.71233pt x 120.77115pt.
+ [42 <./Outline/figures/caflow/dual_glow.pdf> <./Outline/figures/caflow/high_level_design_conditional_modified.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+<Outline/figures/non-uniform-diffusion-models/797_x.png, id=692, 128.48pt x 128.48pt>
+File: Outline/figures/non-uniform-diffusion-models/797_x.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/797_x.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_x.png  used on input line 70.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/797_y.png, id=693, 128.48pt x 128.48pt>
+File: Outline/figures/non-uniform-diffusion-models/797_y.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/797_y.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_y.png  used on input line 71.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/797_1.png, id=694, 128.48pt x 128.48pt>
+File: Outline/figures/non-uniform-diffusion-models/797_1.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/797_1.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/797_1.png  used on input line 72.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/x.png, id=695, 160.6pt x 160.6pt>
+File: Outline/figures/non-uniform-diffusion-models/x.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/x.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/x.png  used on input line 74.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/y.png, id=696, 160.6pt x 160.6pt>
+File: Outline/figures/non-uniform-diffusion-models/y.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/y.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/y.png  used on input line 75.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/DV.png, id=697, 160.6pt x 160.6pt>
+File: Outline/figures/non-uniform-diffusion-models/DV.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/DV.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/DV.png  used on input line 76.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/189_x.png, id=698, 64.24pt x 64.24pt>
+File: Outline/figures/non-uniform-diffusion-models/189_x.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/189_x.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_x.png  used on input line 78.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/189_y.png, id=699, 64.24pt x 64.24pt>
+File: Outline/figures/non-uniform-diffusion-models/189_y.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/189_y.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_y.png  used on input line 79.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Outline/figures/non-uniform-diffusion-models/189_2.png, id=700, 64.24pt x 64.24pt>
+File: Outline/figures/non-uniform-diffusion-models/189_2.png Graphic file (type png)
+<use Outline/figures/non-uniform-diffusion-models/189_2.png>
+Package pdftex.def Info: Outline/figures/non-uniform-diffusion-models/189_2.png  used on input line 80.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
 
-] [52] [53] [54] [55] [56] [57]) [58] (./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux) (./Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux) (./notation/notation.aux) (./introduction/introductionA.aux) (./Outline/Outline.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Reference `Chapter:non-uniform-diffusion-models' on page 43 undefined on input line 87.
 
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 48C03A384D442985781B94D9897520C3;3942.
- ) 
-Here is how much of TeX's memory you used:
- 46576 strings out of 474116
- 1014175 string characters out of 5743682
- 1943187 words of memory out of 5000000
- 67490 multiletter control sequences out of 15000+600000
- 655852 words of font info for 462 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 137i,12n,129p,1638b,2057s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (49 pages, 2229169 bytes).
-PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
- 580 compressed objects within 6 object streams
- 195 named destinations out of 1000 (max. 500000)
- 89317 words of extra memory for PDF output out of 106986 (max. 10000000)
+[43 <./Outline/figures/non-uniform-diffusion-models/drawing.png>] [44 <./Outline/figures/non-uniform-diffusion-models/797_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/797_1.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/DV.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_x.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_y.png (PNG copy)> <./Outline/figures/non-uniform-diffusion-models/189_2.png (PNG copy)>]
+<Outline/figures/id-diff/score_field.png, id=717, 529.2573pt x 515.0442pt>
+File: Outline/figures/id-diff/score_field.png Graphic file (type png)
+<use Outline/figures/id-diff/score_field.png>
+Package pdftex.def Info: Outline/figures/id-diff/score_field.png  used on input line 116.
+(pdftex.def)             Requested size: 196.85616pt x 191.56932pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
+<Outline/figures/id-diff/drawing.png, id=718, 764.8575pt x 487.8225pt>
+File: Outline/figures/id-diff/drawing.png Graphic file (type png)
+<use Outline/figures/id-diff/drawing.png>
+Package pdftex.def Info: Outline/figures/id-diff/drawing.png  used on input line 125.
+(pdftex.def)             Requested size: 196.85616pt x 125.55055pt.
 
+
+LaTeX Warning: Reference `Chapter:intrinsic-dimension' on page 45 undefined on input line 135.
+
+[45 <./Outline/figures/id-diff/score_field.png> <./Outline/figures/id-diff/drawing.png>]
+<Outline/figures/scoreVAE/ffhq.png, id=728, 3675.7325pt x 2054.67625pt>
+File: Outline/figures/scoreVAE/ffhq.png Graphic file (type png)
+<use Outline/figures/scoreVAE/ffhq.png>
+Package pdftex.def Info: Outline/figures/scoreVAE/ffhq.png  used on input line 173.
+(pdftex.def)             Requested size: 349.97023pt x 195.60385pt.
+ [46]
+
+LaTeX Warning: Reference `Chapter:ScoreVAE' on page 47 undefined on input line 179.
+
+[47 <./Outline/figures/scoreVAE/ffhq.png>]
+<Outline/figures/score-based-riemannian-geometry/hemisphere.jpg, id=744, 3677.74pt x 3328.435pt>
+File: Outline/figures/score-based-riemannian-geometry/hemisphere.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/hemisphere.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/hemisphere.jpg  used on input line 205.
+(pdftex.def)             Requested size: 97.99309pt x 88.67543pt.
+<Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg, id=745, 3093.5575pt x 3261.18375pt>
+File: Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg  used on input line 211.
+(pdftex.def)             Requested size: 97.99309pt x 103.2553pt.
+<Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg, id=746, 3387.65625pt x 3658.66875pt>
+File: Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg Graphic file (type jpg)
+<use Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg>
+Package pdftex.def Info: Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg  used on input line 217.
+(pdftex.def)             Requested size: 97.99309pt x 105.79163pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `Chapter:Pullback-riemannian-geometry' on page 48 undefined on input line 227.
+
+[48] [49 <./Outline/figures/score-based-riemannian-geometry/hemisphere.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_1_3.jpg> <./Outline/figures/score-based-riemannian-geometry/sinusoid_2_3.jpg>]) [50]
+\openout2 = `Chapter1/chapter1.aux'.
+
+ (./Chapter1/chapter1.tex
+Chapter 3.
+
+Package natbib Warning: Citation `GANs' on page 51 undefined on input line 19.
+
+
+Package natbib Warning: Citation `viazovetskyi2020stylegan2' on page 51 undefined on input line 19.
+
+
+Package natbib Warning: Citation `neuralODEs' on page 51 undefined on input line 19.
+
+[51
+
+
+
+
+]
+
+Package natbib Warning: Citation `autoregressive_flows' on page 52 undefined on input line 21.
+
+
+Package natbib Warning: Citation `WAVELET-FLOW' on page 52 undefined on input line 21.
+
+
+Package natbib Warning: Citation `SRFLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `ardizzone2019guided' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `cGLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `SRFLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `HCFLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `cGLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `Pumarola2020' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `grover2020alignflow' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `SRFLOW' on page 52 undefined on input line 23.
+
+
+Package natbib Warning: Citation `HCFLOW' on page 52 undefined on input line 23.
+
+[52]
+
+Package natbib Warning: Citation `HCFLOW' on page 53 undefined on input line 34.
+
+
+Package natbib Warning: Citation `SRFLOW' on page 53 undefined on input line 34.
+
+
+LaTeX Warning: Reference `ch1:sec:background' on page 53 undefined on input line 43.
+
+
+LaTeX Warning: Reference `ch1:sec:Caflow' on page 53 undefined on input line 43.
+
+
+LaTeX Warning: Reference `ch1:sec:numerics' on page 53 undefined on input line 43.
+
+
+LaTeX Warning: Reference `ch1:sec:conclusions' on page 53 undefined on input line 43.
+
+[53] [54]
+
+LaTeX Warning: Reference `ch1:ch1:eq:loglike' on page 55 undefined on input line 79.
+
+
+Package natbib Warning: Citation `Nice2014' on page 55 undefined on input line 84.
+
+[55]
+
+Package natbib Warning: Citation `GLOW' on page 56 undefined on input line 121.
+
+[56]
+
+LaTeX Warning: Reference `ch1:unconditional-architecture' on page 57 undefined on input line 179.
+
+[57]
+
+LaTeX Warning: Reference `ch1:eq:cond' on page 58 undefined on input line 188.
+
+[58]
+
+Package natbib Warning: Citation `SRFLOW' on page 59 undefined on input line 231.
+
+[59]
+
+Package natbib Warning: Citation `SRFLOW' on page 60 undefined on input line 260.
+
+
+LaTeX Warning: Reference `ch1:fig:dependencies' on page 60 undefined on input line 264.
+
+[60]
+<Chapter1/figures/fulldependencies.png, id=826, 542.025pt x 238.8925pt>
+File: Chapter1/figures/fulldependencies.png Graphic file (type png)
+<use Chapter1/figures/fulldependencies.png>
+Package pdftex.def Info: Chapter1/figures/fulldependencies.png  used on input line 285.
+(pdftex.def)             Requested size: 135.61188pt x 59.77036pt.
+<Chapter1/figures/Dual-Glowdependencies.png, id=827, 542.025pt x 239.89626pt>
+File: Chapter1/figures/Dual-Glowdependencies.png Graphic file (type png)
+<use Chapter1/figures/Dual-Glowdependencies.png>
+Package pdftex.def Info: Chapter1/figures/Dual-Glowdependencies.png  used on input line 289.
+(pdftex.def)             Requested size: 135.61188pt x 60.0215pt.
+<Chapter1/figures/oursdependencies.png, id=828, 541.02126pt x 237.88875pt>
+File: Chapter1/figures/oursdependencies.png Graphic file (type png)
+<use Chapter1/figures/oursdependencies.png>
+Package pdftex.def Info: Chapter1/figures/oursdependencies.png  used on input line 293.
+(pdftex.def)             Requested size: 135.61188pt x 59.62811pt.
+
+
+LaTeX Warning: Reference `ch1:conditional-distribution-autoregressive-factorization' on page 61 undefined on input line 298.
+
+
+LaTeX Warning: Reference `ch1:fig:dependencies' on page 61 undefined on input line 302.
+
+[61]
+
+LaTeX Warning: Reference `ch1:Hierarchical-Representation-in-Multi-Scale-Normalizing-Flows' on page 62 undefined on input line 306.
+
+
+LaTeX Warning: Reference `ch1:eq:Dual-Glowdep' on page 62 undefined on input line 307.
+
+
+LaTeX Warning: Reference `ch1:fig:dependencies' on page 62 undefined on input line 307.
+
+
+LaTeX Warning: Reference `ch1:fig:dependencies' on page 62 undefined on input line 308.
+
+
+LaTeX Warning: Reference `ch1:eq:factorization' on page 62 undefined on input line 310.
+
+[62 <./Chapter1/figures/fulldependencies.png> <./Chapter1/figures/Dual-Glowdependencies.png> <./Chapter1/figures/oursdependencies.png>]
+
+LaTeX Warning: Reference `ch1:fig:high_level_design_conditional' on page 63 undefined on input line 330.
+
+
+Package natbib Warning: Citation `SRFLOW' on page 63 undefined on input line 339.
+
+[63]
+<Chapter1/figures/dual_glow.pdf, id=857, 341.35529pt x 204.765pt>
+File: Chapter1/figures/dual_glow.pdf Graphic file (type pdf)
+<use Chapter1/figures/dual_glow.pdf>
+Package pdftex.def Info: Chapter1/figures/dual_glow.pdf  used on input line 348.
+(pdftex.def)             Requested size: 196.85616pt x 118.08888pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapter1/figures/high_level_design_conditional_modified.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapter1/figures/high_level_design_conditional_modified.pdf, id=858, 442.53331pt x 319.1925pt>
+File: Chapter1/figures/high_level_design_conditional_modified.pdf Graphic file (type pdf)
+<use Chapter1/figures/high_level_design_conditional_modified.pdf>
+Package pdftex.def Info: Chapter1/figures/high_level_design_conditional_modified.pdf  used on input line 352.
+(pdftex.def)             Requested size: 205.60725pt x 148.30121pt.
+
+LaTeX Warning: Reference `ch1:conditional-distribution-autoregressive-factorization' on page 64 undefined on input line 359.
+
+[64 <./Chapter1/figures/dual_glow.pdf> <./Chapter1/figures/high_level_design_conditional_modified.pdf>]
+
+LaTeX Warning: Reference `ch1:conditional-distribution-autoregressive-factorization' on page 65 undefined on input line 364.
+
+
+LaTeX Warning: Reference `ch1:fig:high_level_design_conditional' on page 65 undefined on input line 381.
+
+
+LaTeX Warning: Reference `ch1:eq:G' on page 65 undefined on input line 386.
+
+[65]
+
+LaTeX Warning: Reference `ch1:eq:equationtwo' on page 66 undefined on input line 408.
+
+
+LaTeX Warning: Reference `ch1:Autoregressive-conditional-flow-components' on page 66 undefined on input line 408.
+
+
+LaTeX Warning: Reference `ch1:eq:equationone' on page 66 undefined on input line 408.
+
+
+LaTeX Warning: Reference `ch1:eq:equationtwo' on page 66 undefined on input line 408.
+
+[66]
+
+LaTeX Warning: Reference `ch1:subsec:normalizing' on page 67 undefined on input line 422.
+
+[67]
+
+Package natbib Warning: Citation `verine2023expressivity' on page 68 undefined on input line 451.
+
+
+Package natbib Warning: Citation `onken2021ot' on page 68 undefined on input line 461.
+
+
+Package natbib Warning: Citation `verine2023expressivity' on page 68 undefined on input line 461.
+
+[68]
+
+LaTeX Warning: Reference `ch1:fig:decreasingloglikelihood' on page 69 undefined on input line 465.
+
+<Chapter1/paper_graphs/10samples_decreasing_conditional_loglikelihood.png, id=920, 730.73pt x 68.255pt>
+File: Chapter1/paper_graphs/10samples_decreasing_conditional_loglikelihood.png Graphic file (type png)
+<use Chapter1/paper_graphs/10samples_decreasing_conditional_loglikelihood.png>
+Package pdftex.def Info: Chapter1/paper_graphs/10samples_decreasing_conditional_loglikelihood.png  used on input line 469.
+(pdftex.def)             Requested size: 437.46112pt x 40.86165pt.
+
+LaTeX Warning: Reference `ch1:subsec:modass' on page 69 undefined on input line 477.
+
+
+LaTeX Warning: Reference `ch1:fig:dependencies' on page 69 undefined on input line 477.
+
+
+LaTeX Warning: Reference `ch1:sec:details-of-experiments' on page 69 undefined on input line 479.
+
+
+LaTeX Warning: Reference `ch1:sec:extended-visual-results' on page 69 undefined on input line 479.
+
+[69 <./Chapter1/paper_graphs/10samples_decreasing_conditional_loglikelihood.png>]
+<Chapter1/paper_graphs/super_resolution/LR.jpg, id=930, 16.06pt x 16.06pt>
+File: Chapter1/paper_graphs/super_resolution/LR.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/LR.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/LR.jpg  used on input line 493.
+(pdftex.def)             Requested size: 78.73979pt x 78.76546pt.
+<Chapter1/paper_graphs/super_resolution/BICUBIC.jpg, id=931, 64.24pt x 64.24pt>
+File: Chapter1/paper_graphs/super_resolution/BICUBIC.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/BICUBIC.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/BICUBIC.jpg  used on input line 494.
+(pdftex.def)             Requested size: 78.73979pt x 78.74614pt.
+<Chapter1/paper_graphs/super_resolution/Dual-Glow.png, id=932, 64.24pt x 64.24pt>
+File: Chapter1/paper_graphs/super_resolution/Dual-Glow.png Graphic file (type png)
+<use Chapter1/paper_graphs/super_resolution/Dual-Glow.png>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/Dual-Glow.png  used on input line 495.
+(pdftex.def)             Requested size: 78.73979pt x 78.74614pt.
+<Chapter1/paper_graphs/super_resolution/CAFLOW.png, id=933, 64.24pt x 64.24pt>
+File: Chapter1/paper_graphs/super_resolution/CAFLOW.png Graphic file (type png)
+<use Chapter1/paper_graphs/super_resolution/CAFLOW.png>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/CAFLOW.png  used on input line 496.
+(pdftex.def)             Requested size: 78.73979pt x 78.74614pt.
+<Chapter1/paper_graphs/super_resolution/TRUE.jpg, id=934, 513.92pt x 513.92pt>
+File: Chapter1/paper_graphs/super_resolution/TRUE.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/TRUE.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/TRUE.jpg  used on input line 497.
+(pdftex.def)             Requested size: 78.73979pt x 78.73927pt.
+
+
+LaTeX Warning: Reference `ch1:fig:ablation' on page 70 undefined on input line 505.
+
+
+LaTeX Warning: Reference `ch1:comparisonBRGM' on page 70 undefined on input line 505.
+
+
+LaTeX Warning: Reference `ch1:comparisonBRGM' on page 70 undefined on input line 508.
+
+
+LaTeX Warning: Reference `ch1:SR-visuals-paper' on page 70 undefined on input line 508.
+
+[70 <./Chapter1/paper_graphs/super_resolution/LR.jpg> <./Chapter1/paper_graphs/super_resolution/BICUBIC.jpg> <./Chapter1/paper_graphs/super_resolution/Dual-Glow.png (PNG copy)> <./Chapter1/paper_graphs/super_resolution/CAFLOW.png (PNG copy)> <./Chapter1/paper_graphs/super_resolution/TRUE.jpg>]
+
+Package natbib Warning: Citation `BRGM' on page 71 undefined on input line 519.
+
+
+Package natbib Warning: Citation `ESRGAN' on page 71 undefined on input line 519.
+
+
+Package natbib Warning: Citation `li2019feedback' on page 71 undefined on input line 519.
+
+
+Overfull \hbox (6.56024pt too wide) in paragraph at lines 518--527
+ [][] 
+ []
+
+File: Chapter1/paper_graphs/super_resolution/LR.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/LR.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/LR.jpg  used on input line 536.
+(pdftex.def)             Requested size: 52.4932pt x 52.49748pt.
+File: Chapter1/paper_graphs/super_resolution/BICUBIC.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/BICUBIC.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/BICUBIC.jpg  used on input line 537.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter1/paper_graphs/super_resolution/ESRGAN.jpg, id=944, 64.24pt x 64.24pt>
+File: Chapter1/paper_graphs/super_resolution/ESRGAN.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/ESRGAN.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/ESRGAN.jpg  used on input line 538.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter1/paper_graphs/super_resolution/SRFBN.jpg, id=945, 128.48pt x 128.48pt>
+File: Chapter1/paper_graphs/super_resolution/SRFBN.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/SRFBN.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/SRFBN.jpg  used on input line 539.
+(pdftex.def)             Requested size: 52.4932pt x 52.49284pt.
+<Chapter1/paper_graphs/super_resolution/BRGM.jpg, id=946, 64.24pt x 64.24pt>
+File: Chapter1/paper_graphs/super_resolution/BRGM.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/BRGM.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/BRGM.jpg  used on input line 540.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+File: Chapter1/paper_graphs/super_resolution/Dual-Glow.png Graphic file (type png)
+<use Chapter1/paper_graphs/super_resolution/Dual-Glow.png>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/Dual-Glow.png  used on input line 541.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+File: Chapter1/paper_graphs/super_resolution/CAFLOW.png Graphic file (type png)
+<use Chapter1/paper_graphs/super_resolution/CAFLOW.png>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/CAFLOW.png  used on input line 542.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+File: Chapter1/paper_graphs/super_resolution/TRUE.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/super_resolution/TRUE.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/super_resolution/TRUE.jpg  used on input line 543.
+(pdftex.def)             Requested size: 52.4932pt x 52.49284pt.
+
+LaTeX Warning: Reference `ch1:comparisonBRGM' on page 71 undefined on input line 549.
+
+
+Package natbib Warning: Citation `BRGM' on page 71 undefined on input line 549.
+
+
+Package natbib Warning: Citation `ardizzone2019guided' on page 71 undefined on input line 553.
+
+
+Package natbib Warning: Citation `colorGAN' on page 71 undefined on input line 553.
+
+
+Package natbib Warning: Citation `scorebased' on page 71 undefined on input line 553.
+
+
+Package natbib Warning: Citation `yu2015lsun' on page 71 undefined on input line 554.
+
+
+LaTeX Warning: Reference `ch1:colorisation-comparison' on page 71 undefined on input line 554.
+
+
+LaTeX Warning: Reference `ch1:fig:colorisation-paper-visuals-results' on page 71 undefined on input line 554.
+
+
+Package natbib Warning: Citation `scorebased' on page 71 undefined on input line 555.
+
+
+Package natbib Warning: Citation `ardizzone2019guided' on page 71 undefined on input line 562.
+
+
+Package natbib Warning: Citation `colorGAN' on page 71 undefined on input line 562.
+
+<Chapter1/paper_graphs/colourisation/CAFLOW_borders.png, id=947, 264.99pt x 198.7425pt>
+File: Chapter1/paper_graphs/colourisation/CAFLOW_borders.png Graphic file (type png)
+<use Chapter1/paper_graphs/colourisation/CAFLOW_borders.png>
+Package pdftex.def Info: Chapter1/paper_graphs/colourisation/CAFLOW_borders.png  used on input line 563.
+(pdftex.def)             Requested size: 110.01732pt x 82.51282pt.
+<Chapter1/paper_graphs/colourisation/CINN.png, id=948, 264.99pt x 192.72pt>
+File: Chapter1/paper_graphs/colourisation/CINN.png Graphic file (type png)
+<use Chapter1/paper_graphs/colourisation/CINN.png>
+Package pdftex.def Info: Chapter1/paper_graphs/colourisation/CINN.png  used on input line 564.
+(pdftex.def)             Requested size: 113.45422pt x 82.51282pt.
+<Chapter1/paper_graphs/colourisation/colorGAN.png, id=949, 264.99pt x 192.72pt>
+File: Chapter1/paper_graphs/colourisation/colorGAN.png Graphic file (type png)
+<use Chapter1/paper_graphs/colourisation/colorGAN.png>
+Package pdftex.def Info: Chapter1/paper_graphs/colourisation/colorGAN.png  used on input line 565.
+(pdftex.def)             Requested size: 113.45422pt x 82.51282pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `ardizzone2019guided' on page 71 undefined on input line 580.
+
+
+Package natbib Warning: Citation `colorGAN' on page 71 undefined on input line 580.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[71 <./Chapter1/paper_graphs/super_resolution/ESRGAN.jpg> <./Chapter1/paper_graphs/super_resolution/SRFBN.jpg> <./Chapter1/paper_graphs/super_resolution/BRGM.jpg>]
+
+Package natbib Warning: Citation `liu2015deep' on page 72 undefined on input line 594.
+
+
+Package natbib Warning: Citation `cGLOW' on page 72 undefined on input line 594.
+
+
+LaTeX Warning: Reference `ch1:quantitative-evaluation-inpainting' on page 72 undefined on input line 594.
+
+
+LaTeX Warning: Reference `ch1:qualitative-performance-inpainting' on page 72 undefined on input line 594.
+
+<Chapter1/paper_graphs/inpainting/even_smaller_merged.jpg, id=957, 578.16pt x 256.96pt>
+File: Chapter1/paper_graphs/inpainting/even_smaller_merged.jpg Graphic file (type jpg)
+<use Chapter1/paper_graphs/inpainting/even_smaller_merged.jpg>
+Package pdftex.def Info: Chapter1/paper_graphs/inpainting/even_smaller_merged.jpg  used on input line 598.
+(pdftex.def)             Requested size: 349.97023pt x 155.54166pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `cGLOW' on page 72 undefined on input line 603.
+
+
+Package natbib Warning: Citation `cGLOW' on page 72 undefined on input line 603.
+
+
+Package natbib Warning: Citation `cGLOW' on page 72 undefined on input line 614.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[72 <./Chapter1/paper_graphs/colourisation/CAFLOW_borders.png> <./Chapter1/paper_graphs/colourisation/CINN.png> <./Chapter1/paper_graphs/colourisation/colorGAN.png>]
+
+Package natbib Warning: Citation `wu2020stochastic' on page 73 undefined on input line 625.
+
+) [73 <./Chapter1/paper_graphs/inpainting/even_smaller_merged.jpg>] [74]
+\openout2 = `Chapter2/chapter2.aux'.
+
+ (./Chapter2/chapter2.tex
+Chapter 4.
+<Chapter2/samples/teaser/797_x.png, id=982, 128.48pt x 128.48pt>
+File: Chapter2/samples/teaser/797_x.png Graphic file (type png)
+<use Chapter2/samples/teaser/797_x.png>
+Package pdftex.def Info: Chapter2/samples/teaser/797_x.png  used on input line 25.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/797_y.png, id=983, 128.48pt x 128.48pt>
+File: Chapter2/samples/teaser/797_y.png Graphic file (type png)
+<use Chapter2/samples/teaser/797_y.png>
+Package pdftex.def Info: Chapter2/samples/teaser/797_y.png  used on input line 26.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/797_1.png, id=984, 128.48pt x 128.48pt>
+File: Chapter2/samples/teaser/797_1.png Graphic file (type png)
+<use Chapter2/samples/teaser/797_1.png>
+Package pdftex.def Info: Chapter2/samples/teaser/797_1.png  used on input line 27.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/x.png, id=985, 160.6pt x 160.6pt>
+File: Chapter2/samples/teaser/x.png Graphic file (type png)
+<use Chapter2/samples/teaser/x.png>
+Package pdftex.def Info: Chapter2/samples/teaser/x.png  used on input line 29.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/y.png, id=986, 160.6pt x 160.6pt>
+File: Chapter2/samples/teaser/y.png Graphic file (type png)
+<use Chapter2/samples/teaser/y.png>
+Package pdftex.def Info: Chapter2/samples/teaser/y.png  used on input line 30.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/DV.png, id=987, 160.6pt x 160.6pt>
+File: Chapter2/samples/teaser/DV.png Graphic file (type png)
+<use Chapter2/samples/teaser/DV.png>
+Package pdftex.def Info: Chapter2/samples/teaser/DV.png  used on input line 31.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/189_x.png, id=988, 64.24pt x 64.24pt>
+File: Chapter2/samples/teaser/189_x.png Graphic file (type png)
+<use Chapter2/samples/teaser/189_x.png>
+Package pdftex.def Info: Chapter2/samples/teaser/189_x.png  used on input line 33.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/189_y.png, id=989, 64.24pt x 64.24pt>
+File: Chapter2/samples/teaser/189_y.png Graphic file (type png)
+<use Chapter2/samples/teaser/189_y.png>
+Package pdftex.def Info: Chapter2/samples/teaser/189_y.png  used on input line 34.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+<Chapter2/samples/teaser/189_3.png, id=990, 64.24pt x 64.24pt>
+File: Chapter2/samples/teaser/189_3.png Graphic file (type png)
+<use Chapter2/samples/teaser/189_3.png>
+Package pdftex.def Info: Chapter2/samples/teaser/189_3.png  used on input line 35.
+(pdftex.def)             Requested size: 56.87207pt x 56.87248pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `bengio2005autoregressive' on page 75 undefined on input line 46.
+
+
+Package natbib Warning: Citation `kingma2014autoencoding' on page 75 undefined on input line 46.
+
+
+Package natbib Warning: Citation `papamakarios2021normalizing' on page 75 undefined on input line 46.
+
+[75
+
+
+
+
+]
+
+Package natbib Warning: Citation `hyvarinen2005score_original' on page 76 undefined on input line 50.
+
+
+Package natbib Warning: Citation `sohldickstein2015diffusion_original' on page 76 undefined on input line 50.
+
+
+Package natbib Warning: Citation `song2020generative_score' on page 76 undefined on input line 50.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 76 undefined on input line 51.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 76 undefined on input line 53.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 76 undefined on input line 55.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 76 undefined on input line 55.
+
+[76 <./Chapter2/samples/teaser/797_x.png (PNG copy)> <./Chapter2/samples/teaser/797_y.png (PNG copy)> <./Chapter2/samples/teaser/797_1.png (PNG copy)> <./Chapter2/samples/teaser/x.png (PNG copy)> <./Chapter2/samples/teaser/y.png (PNG copy)> <./Chapter2/samples/teaser/DV.png (PNG copy)> <./Chapter2/samples/teaser/189_x.png (PNG copy)> <./Chapter2/samples/teaser/189_y.png (PNG copy)> <./Chapter2/samples/teaser/189_3.png (PNG copy)>]
+
+Package natbib Warning: Citation `saharia2021sr3' on page 77 undefined on input line 59.
+
+
+Package natbib Warning: Citation `tashiro2021csdi' on page 77 undefined on input line 59.
+
+[77]
+
+LaTeX Warning: Reference `ch2:sec:CDiffE' on page 78 undefined on input line 88.
+
+
+Package natbib Warning: Citation `hyvarinen2005score_original' on page 78 undefined on input line 111.
+
+
+Package natbib Warning: Citation `song2020generative_score' on page 78 undefined on input line 111.
+
+
+Package natbib Warning: Citation `sohldickstein2015diffusion_original' on page 78 undefined on input line 111.
+
+[78]
+
+LaTeX Warning: Reference `ch2:eq:approximated_reverse_sde' on page 79 undefined on input line 126.
+
+[79]
+
+Package natbib Warning: Citation `song2020generative_score' on page 80 undefined on input line 136.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 80 undefined on input line 136.
+
+
+LaTeX Warning: Reference `ch2:eq:uniform_sde' on page 80 undefined on input line 136.
+
+
+Package natbib Warning: Citation `hyvarinen2005score_original' on page 80 undefined on input line 148.
+
+
+Package natbib Warning: Citation `song2020generative_score' on page 80 undefined on input line 148.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 80 undefined on input line 157.
+
+
+LaTeX Warning: Reference `ch2:Likelihood Weighting for Uniform Diffusion_Models' on page 80 undefined on input line 159.
+
+[80]
+
+LaTeX Warning: Reference `ch2:non-uniform pixel_diffusion' on page 81 undefined on input line 175.
+
+
+LaTeX Warning: Reference `ch2:eq:forward_sde' on page 81 undefined on input line 175.
+
+
+LaTeX Warning: Reference `ch2:DSM for uniform diffusion_models' on page 81 undefined on input line 183.
+
+
+LaTeX Warning: Reference `ch2:Likelihood Weighting for Non-uniform_diffusion' on page 81 undefined on input line 194.
+
+
+LaTeX Warning: Reference `ch2:appendix:weighting' on page 81 undefined on input line 194.
+
+[81]
+
+Package natbib Warning: Citation `saharia2021sr3' on page 82 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch2:fig:Multiscale_model' on page 82 undefined on input line 209.
+
+<Chapter2/samples/multiscale/drawing.png, id=1063, 5690.5398pt x 1422.63495pt>
+File: Chapter2/samples/multiscale/drawing.png Graphic file (type png)
+<use Chapter2/samples/multiscale/drawing.png>
+Package pdftex.def Info: Chapter2/samples/multiscale/drawing.png  used on input line 213.
+(pdftex.def)             Requested size: 393.71233pt x 98.42241pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `ch2:Non-Uniform Diffusion_Models' on page 82 undefined on input line 219.
+
+[82]
+
+LaTeX Warning: Reference `ch2:Multiscale diffusion_experiments' on page 83 undefined on input line 231.
+
+
+LaTeX Warning: Reference `ch2:eq:forward_sde' on page 83 undefined on input line 237.
+
+[83 <./Chapter2/samples/multiscale/drawing.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 84 undefined on input line 260.
+
+
+Package natbib Warning: Citation `song2020generative_score' on page 84 undefined on input line 260.
+
+
+Package natbib Warning: Citation `saharia2021sr3' on page 84 undefined on input line 268.
+
+
+Package natbib Warning: Citation `tashiro2021csdi' on page 84 undefined on input line 268.
+
+
+LaTeX Warning: Reference `ch2:sec:experiments' on page 84 undefined on input line 268.
+
+[84]
+
+Package natbib Warning: Citation `vincent2011connection' on page 85 undefined on input line 272.
+
+
+LaTeX Warning: Reference `ch2:appendix:minimizers' on page 85 undefined on input line 290.
+
+
+LaTeX Warning: Reference `ch2:CDN' on page 85 undefined on input line 293.
+
+
+LaTeX Warning: Reference `ch2:appendix:consistency' on page 85 undefined on input line 293.
+
+
+LaTeX Warning: Reference `ch2:appendix:consistency' on page 85 undefined on input line 300.
+
+
+Package natbib Warning: Citation `song2020generative_score' on page 85 undefined on input line 304.
+
+[85]
+Package mdframed Info: mdframed works in twoside mode on input line 343.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 343.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 361.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 361.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 86 undefined on input line 361.
+
+
+LaTeX Warning: Reference `ch2:fig:box' on page 86 undefined on input line 367.
+
+
+LaTeX Warning: Reference `ch2:sec:experiments' on page 86 undefined on input line 367.
+
+[86] [87]
+
+LaTeX Warning: Reference `ch2:eq:CMDE' on page 88 undefined on input line 392.
+
+
+LaTeX Warning: Reference `ch2:appendix:weighting' on page 88 undefined on input line 409.
+
+
+LaTeX Warning: Reference `ch2:appendix:mse' on page 88 undefined on input line 413.
+
+
+LaTeX Warning: Reference `ch2:appendix:mse' on page 88 undefined on input line 422.
+
+
+LaTeX Warning: Reference `ch2:fig:box' on page 88 undefined on input line 424.
+
+
+LaTeX Warning: Reference `ch2:Conditional Generation_experiments' on page 88 undefined on input line 426.
+
+[88]
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 89 undefined on input line 436.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 89 undefined on input line 436.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 89 undefined on input line 438.
+
+
+Package natbib Warning: Citation `kingmaVDM' on page 89 undefined on input line 438.
+
+
+LaTeX Warning: Reference `ch2:Extended visual_results' on page 89 undefined on input line 440.
+
+
+LaTeX Warning: Reference `ch2:tbl:CelebA' on page 89 undefined on input line 440.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 89 undefined on input line 440.
+
+[89]
+
+Package natbib Warning: Citation `saharia2021sr3' on page 90 undefined on input line 442.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 90 undefined on input line 442.
+
+
+Package natbib Warning: Citation `saharia2021sr3' on page 90 undefined on input line 442.
+
+<Chapter2/samples/diversity/x.png, id=1130, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/x.png Graphic file (type png)
+<use Chapter2/samples/diversity/x.png>
+Package pdftex.def Info: Chapter2/samples/diversity/x.png  used on input line 474.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/y.png, id=1131, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/y.png Graphic file (type png)
+<use Chapter2/samples/diversity/y.png>
+Package pdftex.def Info: Chapter2/samples/diversity/y.png  used on input line 478.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/1.png, id=1132, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/1.png Graphic file (type png)
+<use Chapter2/samples/diversity/1.png>
+Package pdftex.def Info: Chapter2/samples/diversity/1.png  used on input line 482.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/2.png, id=1133, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/2.png Graphic file (type png)
+<use Chapter2/samples/diversity/2.png>
+Package pdftex.def Info: Chapter2/samples/diversity/2.png  used on input line 486.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/3.png, id=1134, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/3.png Graphic file (type png)
+<use Chapter2/samples/diversity/3.png>
+Package pdftex.def Info: Chapter2/samples/diversity/3.png  used on input line 490.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/4.png, id=1135, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/4.png Graphic file (type png)
+<use Chapter2/samples/diversity/4.png>
+Package pdftex.def Info: Chapter2/samples/diversity/4.png  used on input line 494.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+<Chapter2/samples/diversity/5.png, id=1136, 128.48pt x 128.48pt>
+File: Chapter2/samples/diversity/5.png Graphic file (type png)
+<use Chapter2/samples/diversity/5.png>
+Package pdftex.def Info: Chapter2/samples/diversity/5.png  used on input line 498.
+(pdftex.def)             Requested size: 59.05484pt x 59.05446pt.
+[90 <./Chapter2/samples/diversity/x.png (PNG copy)> <./Chapter2/samples/diversity/y.png (PNG copy)> <./Chapter2/samples/diversity/1.png (PNG copy)> <./Chapter2/samples/diversity/2.png (PNG copy)> <./Chapter2/samples/diversity/3.png (PNG copy)> <./Chapter2/samples/diversity/4.png (PNG copy)> <./Chapter2/samples/diversity/5.png (PNG copy)>]
+
+Package natbib Warning: Citation `2015celeba' on page 91 undefined on input line 507.
+
+
+Package natbib Warning: Citation `yu2014sketch2shoe' on page 91 undefined on input line 507.
+
+
+Package natbib Warning: Citation `isola2018pix2pix' on page 91 undefined on input line 507.
+
+
+Package natbib Warning: Citation `liang2021hrflow' on page 91 undefined on input line 507.
+
+
+LaTeX Warning: Reference `ch2:appendix:hyperparams' on page 91 undefined on input line 515.
+
+
+Package natbib Warning: Citation `arridge2019ip' on page 91 undefined on input line 518.
+
+
+Package natbib Warning: Citation `muller2012ip' on page 91 undefined on input line 518.
+
+
+Package natbib Warning: Citation `zhou2004psnr+ssim' on page 91 undefined on input line 521.
+
+
+Package natbib Warning: Citation `zhou2004psnr+ssim' on page 91 undefined on input line 521.
+
+
+Package natbib Warning: Citation `zhang2018lpips' on page 91 undefined on input line 521.
+
+[91]
+
+Package natbib Warning: Citation `heusel2018fid' on page 92 undefined on input line 533.
+
+
+LaTeX Warning: Reference `ch2:tbl:results' on page 92 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:inpainting' on page 92 undefined on input line 567.
+
+<Chapter2/samples/inpainting/table/1/x.png, id=1152, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/1/x.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/1/x.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/1/x.png  used on input line 579.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/1/y.png, id=1153, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/1/y.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/1/y.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/1/y.png  used on input line 580.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/1/sr3.png, id=1154, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/1/sr3.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/1/sr3.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/1/sr3.png  used on input line 581.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/1/Song.png, id=1155, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/1/Song.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/1/Song.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/1/Song.png  used on input line 582.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/1/DV.png, id=1156, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/1/DV.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/1/DV.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/1/DV.png  used on input line 583.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/2/x.png, id=1157, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/2/x.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/2/x.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/2/x.png  used on input line 585.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/2/y.png, id=1158, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/2/y.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/2/y.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/2/y.png  used on input line 586.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/2/sr3.png, id=1159, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/2/sr3.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/2/sr3.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/2/sr3.png  used on input line 587.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/2/Song.png, id=1160, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/2/Song.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/2/Song.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/2/Song.png  used on input line 588.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/2/DV.png, id=1161, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/2/DV.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/2/DV.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/2/DV.png  used on input line 589.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/3/x.png, id=1162, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/3/x.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/3/x.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/3/x.png  used on input line 591.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/3/y.png, id=1163, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/3/y.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/3/y.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/3/y.png  used on input line 592.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/3/sr3.png, id=1164, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/3/sr3.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/3/sr3.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/3/sr3.png  used on input line 593.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/3/Song.png, id=1165, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/3/Song.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/3/Song.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/3/Song.png  used on input line 594.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+<Chapter2/samples/inpainting/table/3/DV.png, id=1166, 128.48pt x 128.48pt>
+File: Chapter2/samples/inpainting/table/3/DV.png Graphic file (type png)
+<use Chapter2/samples/inpainting/table/3/DV.png>
+Package pdftex.def Info: Chapter2/samples/inpainting/table/3/DV.png  used on input line 595.
+(pdftex.def)             Requested size: 65.61649pt x 65.61803pt.
+[92]
+
+Package natbib Warning: Citation `keyes1981bicubic' on page 93 undefined on input line 605.
+
+
+LaTeX Warning: Reference `ch2:tbl:results' on page 93 undefined on input line 605.
+
+
+LaTeX Warning: Reference `ch2:fig:super-resolution' on page 93 undefined on input line 605.
+
+<Chapter2/samples/super-resolution/table/1/x.png, id=1173, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/x.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/x.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/x.png  used on input line 614.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/1/y.png, id=1174, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/y.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/y.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/y.png  used on input line 615.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/1/hcflow.png, id=1175, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/hcflow.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/hcflow.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/hcflow.png  used on input line 616.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/1/sr3.png, id=1176, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/sr3.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/sr3.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/sr3.png  used on input line 617.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/1/Song.png, id=1177, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/Song.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/Song.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/Song.png  used on input line 618.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/1/DV.png, id=1178, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/1/DV.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/1/DV.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/1/DV.png  used on input line 619.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/2/x.png, id=1179, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/2/x.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/x.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/x.png  used on input line 621.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/2/y.png, id=1180, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/2/y.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/y.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/y.png  used on input line 622.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/2/hcflow.png, id=1181, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/2/hcflow.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/hcflow.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/hcflow.png  used on input line 623.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/2/sr3.png, id=1182, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/2/sr3.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/sr3.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/sr3.png  used on input line 624.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/2/Song.png, id=1183, 120.45pt x 120.45pt>
+File: Chapter2/samples/super-resolution/table/2/Song.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/Song.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/Song.png  used on input line 625.
+(pdftex.def)             Requested size: 65.61649pt x 65.61728pt.
+<Chapter2/samples/super-resolution/table/2/DV.png, id=1184, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/2/DV.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/2/DV.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/2/DV.png  used on input line 626.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/x.png, id=1185, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/x.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/x.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/x.png  used on input line 628.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/y.png, id=1186, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/y.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/y.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/y.png  used on input line 629.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/hcflow.png, id=1187, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/hcflow.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/hcflow.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/hcflow.png  used on input line 630.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/sr3.png, id=1188, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/sr3.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/sr3.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/sr3.png  used on input line 631.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/Song.png, id=1189, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/Song.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/Song.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/Song.png  used on input line 632.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+<Chapter2/samples/super-resolution/table/3/DV.png, id=1190, 160.6pt x 160.6pt>
+File: Chapter2/samples/super-resolution/table/3/DV.png Graphic file (type png)
+<use Chapter2/samples/super-resolution/table/3/DV.png>
+Package pdftex.def Info: Chapter2/samples/super-resolution/table/3/DV.png  used on input line 633.
+(pdftex.def)             Requested size: 65.61649pt x 65.61852pt.
+
+Overfull \hbox (12.24808pt too wide) in paragraph at lines 611--636
+ [] 
+ []
+
+<Chapter2/samples/edges-to-shoes/table/1/x.png, id=1191, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/1/x.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/1/x.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/1/x.png  used on input line 649.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/1/y.png, id=1192, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/1/y.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/1/y.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/1/y.png  used on input line 650.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/1/sr3.png, id=1193, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/1/sr3.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/1/sr3.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/1/sr3.png  used on input line 651.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/1/Song.png, id=1194, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/1/Song.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/1/Song.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/1/Song.png  used on input line 652.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/1/DV.png, id=1195, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/1/DV.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/1/DV.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/1/DV.png  used on input line 653.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/2/x.png, id=1196, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/2/x.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/2/x.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/2/x.png  used on input line 655.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/2/y.png, id=1197, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/2/y.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/2/y.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/2/y.png  used on input line 656.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/2/sr3.png, id=1198, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/2/sr3.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/2/sr3.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/2/sr3.png  used on input line 657.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/2/Song.png, id=1199, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/2/Song.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/2/Song.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/2/Song.png  used on input line 658.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/2/DV.png, id=1200, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/2/DV.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/2/DV.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/2/DV.png  used on input line 659.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/3/x.png, id=1201, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/3/x.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/3/x.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/3/x.png  used on input line 661.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/3/y.png, id=1202, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/3/y.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/3/y.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/3/y.png  used on input line 662.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/3/sr3.png, id=1203, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/3/sr3.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/3/sr3.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/3/sr3.png  used on input line 663.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/3/Song.png, id=1204, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/3/Song.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/3/Song.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/3/Song.png  used on input line 664.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+<Chapter2/samples/edges-to-shoes/table/3/DV.png, id=1205, 64.24pt x 64.24pt>
+File: Chapter2/samples/edges-to-shoes/table/3/DV.png Graphic file (type png)
+<use Chapter2/samples/edges-to-shoes/table/3/DV.png>
+Package pdftex.def Info: Chapter2/samples/edges-to-shoes/table/3/DV.png  used on input line 665.
+(pdftex.def)             Requested size: 52.4932pt x 52.49384pt.
+
+Package natbib Warning: Citation `xie2015edges' on page 93 undefined on input line 671.
+
+
+LaTeX Warning: Reference `ch2:tbl:results' on page 93 undefined on input line 671.
+
+
+LaTeX Warning: Reference `ch2:fig:edges-to-shoes' on page 93 undefined on input line 671.
+
+[93 <./Chapter2/samples/inpainting/table/1/x.png (PNG copy)> <./Chapter2/samples/inpainting/table/1/y.png (PNG copy)> <./Chapter2/samples/inpainting/table/1/sr3.png (PNG copy)> <./Chapter2/samples/inpainting/table/1/Song.png (PNG copy)> <./Chapter2/samples/inpainting/table/1/DV.png (PNG copy)> <./Chapter2/samples/inpainting/table/2/x.png (PNG copy)> <./Chapter2/samples/inpainting/table/2/y.png (PNG copy)> <./Chapter2/samples/inpainting/table/2/sr3.png (PNG copy)> <./Chapter2/samples/inpainting/table/2/Song.png (PNG copy)> <./Chapter2/samples/inpainting/table/2/DV.png (PNG copy)> <./Chapter2/samples/inpainting/table/3/x.png (PNG copy)> <./Chapter2/samples/inpainting/table/3/y.png (PNG copy)> <./Chapter2/samples/inpainting/table/3/sr3.png (PNG copy)> <./Chapter2/samples/inpainting/table/3/Song.png (PNG copy)> <./Chapter2/samples/inpainting/table/3/DV.png (PNG copy)>]
+
+Package natbib Warning: Citation `liang2021hrflow' on page 94 undefined on input line 677.
+
+
+Package natbib Warning: Citation `liang2021hrflow' on page 94 undefined on input line 677.
+
+[94 <./Chapter2/samples/super-resolution/table/1/x.png (PNG copy)> <./Chapter2/samples/super-resolution/table/1/y.png (PNG copy)> <./Chapter2/samples/super-resolution/table/1/hcflow.png> <./Chapter2/samples/super-resolution/table/1/sr3.png (PNG copy)> <./Chapter2/samples/super-resolution/table/1/Song.png (PNG copy)> <./Chapter2/samples/super-resolution/table/1/DV.png (PNG copy)> <./Chapter2/samples/super-resolution/table/2/x.png (PNG copy)> <./Chapter2/samples/super-resolution/table/2/y.png (PNG copy)> <./Chapter2/samples/super-resolution/table/2/hcflow.png (PNG copy)> <./Chapter2/samples/super-resolution/table/2/sr3.png (PNG copy)> <./Chapter2/samples/super-resolution/table/2/Song.png> <./Chapter2/samples/super-resolution/table/2/DV.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/x.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/y.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/hcflow.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/sr3.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/Song.png (PNG copy)> <./Chapter2/samples/super-resolution/table/3/DV.png (PNG copy)>]) [95 <./Chapter2/samples/edges-to-shoes/table/1/x.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/1/y.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/1/sr3.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/1/Song.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/1/DV.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/2/x.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/2/y.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/2/sr3.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/2/Song.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/2/DV.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/3/x.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/3/y.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/3/sr3.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/3/Song.png (PNG copy)> <./Chapter2/samples/edges-to-shoes/table/3/DV.png (PNG copy)>]
+\openout2 = `Chapter3/chapter3.aux'.
+
+ (./Chapter3/chapter3.tex [96
+
+
+
+
+]
+Chapter 5.
+
+Package natbib Warning: Citation `manifold_hypothesis' on page 97 undefined on input line 19.
+
+[97]
+
+Package natbib Warning: Citation `vae' on page 98 undefined on input line 22.
+
+
+Package natbib Warning: Citation `gan' on page 98 undefined on input line 22.
+
+
+Package natbib Warning: Citation `brehmer2020flows' on page 98 undefined on input line 22.
+
+
+Package natbib Warning: Citation `campadelli2015intrinsic' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `weed2019sharp' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `campadelli2015intrinsic' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `pope2021intrinsic' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `kim2019kde' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `kpotufe2011knn' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `campadelli2015intrinsic' on page 98 undefined on input line 24.
+
+
+Package natbib Warning: Citation `diffusion_models' on page 98 undefined on input line 27.
+
+
+Package natbib Warning: Citation `ddpm' on page 98 undefined on input line 27.
+
+
+Package natbib Warning: Citation `ddpm' on page 98 undefined on input line 29.
+
+
+Package natbib Warning: Citation `score_matching' on page 98 undefined on input line 29.
+
+
+Package natbib Warning: Citation `mnist' on page 98 undefined on input line 31.
+
+
+Package natbib Warning: Citation `behrmann2021understandin' on page 98 undefined on input line 33.
+
+[98]
+<Chapter3/figures/score_field.png, id=1244, 529.2573pt x 515.0442pt>
+File: Chapter3/figures/score_field.png Graphic file (type png)
+<use Chapter3/figures/score_field.png>
+Package pdftex.def Info: Chapter3/figures/score_field.png  used on input line 46.
+(pdftex.def)             Requested size: 214.35834pt x 208.59962pt.
+<Chapter3/figures/drawing.png, id=1245, 764.8575pt x 487.8225pt>
+File: Chapter3/figures/drawing.png Graphic file (type png)
+<use Chapter3/figures/drawing.png>
+Package pdftex.def Info: Chapter3/figures/drawing.png  used on input line 53.
+(pdftex.def)             Requested size: 214.35834pt x 136.7159pt.
+
+
+Package natbib Warning: Citation `pidstrigach2022manifold_jakiw' on page 99 undefined on input line 62.
+
+
+Package natbib Warning: Citation `oko2023diffusion_mini_max' on page 99 undefined on input line 62.
+
+
+Package natbib Warning: Citation `chen2023manifold_linear' on page 99 undefined on input line 62.
+
+[99 <./Chapter3/figures/score_field.png> <./Chapter3/figures/drawing.png>]
+
+Package natbib Warning: Citation `Karhunen-Loeve' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `auto_ppca' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `ppca' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `fan_local_pca' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `pettis_nn_dim_estimator' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `dim_MLE' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `haro_mle' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `pope2021intrinsic' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `mnist' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `cifar' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `imagenet' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `fractal_dim' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `packing_number' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `campadelli2015intrinsic' on page 100 undefined on input line 65.
+
+
+Package natbib Warning: Citation `goyal2022inductive' on page 100 undefined on input line 67.
+
+
+Package natbib Warning: Citation `campadelli2015intrinsic' on page 100 undefined on input line 67.
+
+
+Package natbib Warning: Citation `horvat2022nfid' on page 100 undefined on input line 67.
+
+
+Package natbib Warning: Citation `tempczyk2022lidl' on page 100 undefined on input line 70.
+
+
+Package natbib Warning: Citation `horvat2022nfid' on page 100 undefined on input line 70.
+
+
+Package natbib Warning: Citation `behrmann2021understandin' on page 100 undefined on input line 70.
+
+
+Package natbib Warning: Citation `jaini2020tails' on page 100 undefined on input line 70.
+
+
+Package natbib Warning: Citation `laszkiewicz2021copula' on page 100 undefined on input line 70.
+
+[100]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 79.
+
+
+Package natbib Warning: Citation `score_matching' on page 101 undefined on input line 97.
+
+
+Package natbib Warning: Citation `diffusion_models' on page 101 undefined on input line 97.
+
+
+Package natbib Warning: Citation `ddpm' on page 101 undefined on input line 97.
+
+
+LaTeX Warning: Reference `ch3:appendix:background' on page 101 undefined on input line 97.
+
+
+LaTeX Warning: Reference `ch3:sec:hparams' on page 101 undefined on input line 101.
+
+[101]
+
+LaTeX Warning: Reference `ch3:appendix:proof' on page 102 undefined on input line 116.
+
+[102]
+
+LaTeX Warning: Reference `ch3:appendix:proof' on page 103 undefined on input line 118.
+
+
+LaTeX Warning: Reference `ch3:appendix:proof' on page 103 undefined on input line 123.
+
+[103]
+
+LaTeX Warning: Reference `ch3:appendix:proof' on page 104 undefined on input line 142.
+
+
+LaTeX Warning: Reference `ch3:cor:score_ratio' on page 104 undefined on input line 151.
+
+
+LaTeX Warning: Reference `ch3:thm:score_orthogonal' on page 104 undefined on input line 151.
+
+[104]
+
+LaTeX Warning: Reference `ch3:sec:theory' on page 105 undefined on input line 167.
+
+
+LaTeX Warning: Reference `ch3:appendix:robust' on page 105 undefined on input line 171.
+
+
+LaTeX Warning: Reference `ch3:thm:score_orthogonal' on page 105 undefined on input line 173.
+
+
+LaTeX Warning: Reference `ch3:appendix:robust' on page 105 undefined on input line 173.
+
+[105]
+
+LaTeX Warning: Reference `ch3:sec:hparams' on page 106 undefined on input line 180.
+
+
+Package natbib Warning: Citation `dim_MLE' on page 106 undefined on input line 182.
+
+
+Package natbib Warning: Citation `haro_mle' on page 106 undefined on input line 182.
+
+
+Package natbib Warning: Citation `fan_local_pca' on page 106 undefined on input line 182.
+
+
+Package natbib Warning: Citation `auto_ppca' on page 106 undefined on input line 182.
+
+
+Package natbib Warning: Citation `ppca' on page 106 undefined on input line 182.
+
+
+Package natbib Warning: Citation `horvat2022nfid' on page 106 undefined on input line 182.
+
+
+LaTeX Warning: Reference `ch3:sec:benchmark' on page 106 undefined on input line 182.
+
+
+LaTeX Warning: Reference `ch3:tbl:results' on page 106 undefined on input line 184.
+
+
+LaTeX Warning: Reference `ch3:fig:ksphere' on page 106 undefined on input line 187.
+
+<Chapter3/figures/10_sphere_spectrum.jpg, id=1310, 4360.29pt x 2854.665pt>
+File: Chapter3/figures/10_sphere_spectrum.jpg Graphic file (type jpg)
+<use Chapter3/figures/10_sphere_spectrum.jpg>
+Package pdftex.def Info: Chapter3/figures/10_sphere_spectrum.jpg  used on input line 193.
+(pdftex.def)             Requested size: 214.35834pt x 140.30232pt.
+<Chapter3/figures/50_sphere_spectrum.jpg, id=1311, 4360.29pt x 2854.665pt>
+File: Chapter3/figures/50_sphere_spectrum.jpg Graphic file (type jpg)
+<use Chapter3/figures/50_sphere_spectrum.jpg>
+Package pdftex.def Info: Chapter3/figures/50_sphere_spectrum.jpg  used on input line 200.
+(pdftex.def)             Requested size: 214.35834pt x 140.30232pt.
+[106]
+
+Package natbib Warning: Citation `auto_ppca' on page 107 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch3:fig:line_samples' on page 107 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch3:appendix:additional_euclidean' on page 107 undefined on input line 209.
+
+
+Package natbib Warning: Citation `auto_ppca' on page 107 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch3:fig:line' on page 107 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch3:appendix:additional_euclidean' on page 107 undefined on input line 209.
+
+
+LaTeX Warning: Reference `ch3:fig:unions_spectrum' on page 107 undefined on input line 212.
+
+
+LaTeX Warning: Reference `ch3:fig:union_dims' on page 107 undefined on input line 212.
+
+
+LaTeX Warning: Reference `ch3:appendix:additional_euclidean' on page 107 undefined on input line 212.
+
+[107 <./Chapter3/figures/10_sphere_spectrum.jpg> <./Chapter3/figures/50_sphere_spectrum.jpg>]
+
+LaTeX Warning: Reference `ch3:Appendix:_design_of_synthetic_image_manifolds' on page 108 undefined on input line 215.
+
+
+LaTeX Warning: Reference `ch3:fig:squares_spectrum' on page 108 undefined on input line 215.
+
+
+LaTeX Warning: Reference `ch3:fig:gaussians_spectrum' on page 108 undefined on input line 215.
+
+
+LaTeX Warning: Reference `ch3:appendix:additional_image' on page 108 undefined on input line 215.
+
+
+LaTeX Warning: Reference `ch3:fig:gaussians_spectrum' on page 108 undefined on input line 220.
+
+<Chapter3/figures/mnist_autoencoder.png, id=1326, 950.1096pt x 626.8218pt>
+File: Chapter3/figures/mnist_autoencoder.png Graphic file (type png)
+<use Chapter3/figures/mnist_autoencoder.png>
+Package pdftex.def Info: Chapter3/figures/mnist_autoencoder.png  used on input line 224.
+(pdftex.def)             Requested size: 328.09584pt x 216.4546pt.
+
+LaTeX Warning: Reference `ch3:fig:score_spectra_mnist' on page 108 undefined on input line 231.
+
+
+LaTeX Warning: Reference `ch3:tab:estimated_mnist_dimensions' on page 108 undefined on input line 231.
+
+
+LaTeX Warning: Reference `ch3:sec:Additional_Experimental_Results_for_MNIST' on page 108 undefined on input line 231.
+
+
+Package natbib Warning: Citation `pope2021intrinsic' on page 108 undefined on input line 233.
+
+[108]
+<Chapter3/figures/image_manifolds/MNIST/mnist_spectrum.jpg, id=1332, 4516.875pt x 1505.625pt>
+File: Chapter3/figures/image_manifolds/MNIST/mnist_spectrum.jpg Graphic file (type jpg)
+<use Chapter3/figures/image_manifolds/MNIST/mnist_spectrum.jpg>
+Package pdftex.def Info: Chapter3/figures/image_manifolds/MNIST/mnist_spectrum.jpg  used on input line 239.
+(pdftex.def)             Requested size: 433.0889pt x 144.34537pt.
+ [109 <./Chapter3/figures/mnist_autoencoder.png> <./Chapter3/figures/image_manifolds/MNIST/mnist_spectrum.jpg>]) [110] [111]
+\openout2 = `Chapter4/chapter4.aux'.
+
+ (./Chapter4/chapter4.tex [112
+
+
+
+
+]
+Chapter 6.
+
+Package natbib Warning: Citation `vae' on page 113 undefined on input line 17.
+
+
+Package natbib Warning: Citation `zaho2017understanding_vaes' on page 113 undefined on input line 17.
+
+[113]
+
+Package natbib Warning: Citation `diffusion_models' on page 114 undefined on input line 19.
+
+
+Package natbib Warning: Citation `ddpm' on page 114 undefined on input line 19.
+
+
+Package natbib Warning: Citation `dhariwal2021diffusion_beats_gans' on page 114 undefined on input line 19.
+
+
+Package natbib Warning: Citation `saharia2021sr3' on page 114 undefined on input line 19.
+
+
+Package natbib Warning: Citation `preechakul2022diffusion_decoder' on page 114 undefined on input line 21.
+
+
+Package natbib Warning: Citation `yang2023ldiffusion_decoder_compression' on page 114 undefined on input line 21.
+
+
+Package natbib Warning: Citation `cifar' on page 114 undefined on input line 31.
+
+
+Package natbib Warning: Citation `liu2015celeba' on page 114 undefined on input line 31.
+
+
+Package natbib Warning: Citation `vae' on page 114 undefined on input line 35.
+
+
+Package natbib Warning: Citation `rezende2014vae2' on page 114 undefined on input line 35.
+
+[114]
+Overfull \hbox (2.49977pt too wide) in paragraph at lines 38--39
+[]\T1/ptm/m/n/12 (-20) The data pos-te-rior dis-tri-bu-tion $\OML/ztmcm/m/it/12 p[]\OT1/ztmcm/m/n/12 ([]\OMS/ztmcm/m/n/12 j[]\OT1/ztmcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) is pa-ram-e-terised as a Gaus-sian $\OMS/ztmcm/m/n/12 N\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^V[]\OT1/ztmcm/m/n/12 ([])\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 ^^F[]([]))$
+ []
+
+
+LaTeX Warning: Reference `ch4:eq:elbo' on page 115 undefined on input line 57.
+
+
+Package natbib Warning: Citation `higgins2016beta_vae' on page 115 undefined on input line 57.
+
+[115]
+
+Package natbib Warning: Citation `rybkin2021sigma_vae' on page 116 undefined on input line 62.
+
+
+Package natbib Warning: Citation `score_matching' on page 116 undefined on input line 67.
+
+
+Package natbib Warning: Citation `diffusion_models' on page 116 undefined on input line 67.
+
+
+Package natbib Warning: Citation `ddpm' on page 116 undefined on input line 67.
+
+
+LaTeX Warning: Reference `ch4:eq:approximated_reverse_sde' on page 116 undefined on input line 81.
+
+[116]
+
+Package natbib Warning: Citation `score_matching' on page 117 undefined on input line 105.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 117 undefined on input line 105.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 117 undefined on input line 114.
+
+
+LaTeX Warning: Reference `ch4:Likelihood_Weighting_for_Uniform_Diffusion_Models' on page 117 undefined on input line 116.
+
+[117]
+
+Package natbib Warning: Citation `kingmaVDM' on page 118 undefined on input line 124.
+
+
+LaTeX Warning: Reference `ch4:eq:forward_sde' on page 118 undefined on input line 127.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 118 undefined on input line 134.
+
+<Chapter4/figures/drawing.png, id=1407, 859.71187pt x 532.23843pt>
+File: Chapter4/figures/drawing.png Graphic file (type png)
+<use Chapter4/figures/drawing.png>
+Package pdftex.def Info: Chapter4/figures/drawing.png  used on input line 153.
+(pdftex.def)             Requested size: 306.22144pt x 189.57536pt.
+[118]
+
+Package natbib Warning: Citation `zaho2017understanding_vaes' on page 119 undefined on input line 161.
+
+
+Package natbib Warning: Citation `zhang2018lpips' on page 119 undefined on input line 162.
+
+
+LaTeX Warning: Reference `ch4:sec:_l2' on page 119 undefined on input line 162.
+
+[119 <./Chapter4/figures/drawing.png>]
+
+Package natbib Warning: Citation `preechakul2022diffusion_decoder' on page 120 undefined on input line 166.
+
+
+Package natbib Warning: Citation `yang2023ldiffusion_decoder_compression' on page 120 undefined on input line 166.
+
+
+LaTeX Warning: Reference `ch4:CDE' on page 120 undefined on input line 166.
+
+
+LaTeX Warning: Reference `ch4:Experiments' on page 120 undefined on input line 166.
+
+[120]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nabla' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ln' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+LaTeX Warning: Reference `ch4:eq:true_posterior' on page 121 undefined on input line 202.
+
+[121]
+
+LaTeX Warning: Reference `ch4:sec:mle_objective' on page 122 undefined on input line 215.
+
+
+LaTeX Warning: Reference `ch4:definition_of_variational_approximation' on page 122 undefined on input line 230.
+
+
+LaTeX Warning: Reference `ch4:Encoder Training Objective' on page 122 undefined on input line 231.
+
+[122]
+
+LaTeX Warning: Reference `ch4:tbl:Cifar10' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:tbl:CelebA' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:fig:cifar10_qualitative_comparison' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:fig:celebA_qualitative_comparison' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:fig:extended_cifar10_qualitative_comparison' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:fig:extended_celebA_qualitative_comparison' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:sec:extended_qualitative_evaluation' on page 123 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch4:Experimental_details' on page 123 undefined on input line 234.
+
+
+Package natbib Warning: Citation `preechakul2022diffusion_decoder' on page 123 undefined on input line 236.
+
+
+Package natbib Warning: Citation `yang2023ldiffusion_decoder_compression' on page 123 undefined on input line 236.
+
+
+LaTeX Warning: Reference `ch4:sec:_l2' on page 123 undefined on input line 237.
+
+<chapter4/figures/images/cifar10/original/4.png, id=1445, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/original/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/original/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/original/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/reconstruction/4.png, id=1446, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/reconstruction/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/corrected_reconstruction/4.png, id=1447, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/corrected_reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/corrected_reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/corrected_reconstruction/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/4.png, id=1448, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0/4.png, id=1449, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/VAE_reconstruction/4.png, id=1450, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/cifar10/VAE_reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/VAE_reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/VAE_reconstruction/4.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43393pt.
+<chapter4/figures/images/cifar10/original/8.png, id=1451, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/original/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/original/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/original/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/reconstruction/8.png, id=1452, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/reconstruction/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/corrected_reconstruction/8.png, id=1453, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/corrected_reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/corrected_reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/corrected_reconstruction/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/8.png, id=1454, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0/8.png, id=1455, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/VAE_reconstruction/8.png, id=1456, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/cifar10/VAE_reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/VAE_reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/VAE_reconstruction/8.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43393pt.
+<chapter4/figures/images/cifar10/original/18.png, id=1457, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/original/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/original/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/original/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/reconstruction/18.png, id=1458, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/reconstruction/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/corrected_reconstruction/18.png, id=1459, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/corrected_reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/corrected_reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/corrected_reconstruction/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/18.png, id=1460, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/diffusion_decoder_beta_0/18.png, id=1461, 32.12pt x 32.12pt>
+File: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/diffusion_decoder_beta_0/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/diffusion_decoder_beta_0/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43896pt.
+<chapter4/figures/images/cifar10/VAE_reconstruction/18.png, id=1462, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/cifar10/VAE_reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/cifar10/VAE_reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/cifar10/VAE_reconstruction/18.png  used on input line 318.
+(pdftex.def)             Requested size: 63.43373pt x 63.43393pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<chapter4/figures/images/celebA/original/4.png, id=1463, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/original/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/original/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/original/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/reconstruction/4.png, id=1464, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/reconstruction/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/corrected_reconstruction/4.png, id=1465, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/corrected_reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/corrected_reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/corrected_reconstruction/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/4.png, id=1466, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0/4.png, id=1467, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/VAE_reconstruction/4.png, id=1468, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/celebA/VAE_reconstruction/4.png Graphic file (type png)
+<use chapter4/figures/images/celebA/VAE_reconstruction/4.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/VAE_reconstruction/4.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.61499pt.
+<chapter4/figures/images/celebA/original/8.png, id=1469, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/original/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/original/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/original/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/reconstruction/8.png, id=1470, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/reconstruction/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/corrected_reconstruction/8.png, id=1471, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/corrected_reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/corrected_reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/corrected_reconstruction/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/8.png, id=1472, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0/8.png, id=1473, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/VAE_reconstruction/8.png, id=1474, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/celebA/VAE_reconstruction/8.png Graphic file (type png)
+<use chapter4/figures/images/celebA/VAE_reconstruction/8.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/VAE_reconstruction/8.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.61499pt.
+<chapter4/figures/images/celebA/original/18.png, id=1475, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/original/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/original/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/original/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/reconstruction/18.png, id=1476, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/reconstruction/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/corrected_reconstruction/18.png, id=1477, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/corrected_reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/corrected_reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/corrected_reconstruction/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/18.png, id=1478, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/diffusion_decoder_beta_0/18.png, id=1479, 64.24pt x 64.24pt>
+File: chapter4/figures/images/celebA/diffusion_decoder_beta_0/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/diffusion_decoder_beta_0/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/diffusion_decoder_beta_0/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.62195pt.
+<chapter4/figures/images/celebA/VAE_reconstruction/18.png, id=1480, 266.6763pt x 266.6763pt>
+File: chapter4/figures/images/celebA/VAE_reconstruction/18.png Graphic file (type png)
+<use chapter4/figures/images/celebA/VAE_reconstruction/18.png>
+Package pdftex.def Info: chapter4/figures/images/celebA/VAE_reconstruction/18.png  used on input line 350.
+(pdftex.def)             Requested size: 65.61649pt x 65.61499pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [123] [124 <./chapter4/figures/images/cifar10/original/4.png (PNG copy)> <./chapter4/figures/images/cifar10/reconstruction/4.png (PNG copy)> <./chapter4/figures/images/cifar10/corrected_reconstruction/4.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/4.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0/4.png (PNG copy)> <./chapter4/figures/images/cifar10/VAE_reconstruction/4.png> <./chapter4/figures/images/cifar10/original/8.png (PNG copy)> <./chapter4/figures/images/cifar10/reconstruction/8.png (PNG copy)> <./chapter4/figures/images/cifar10/corrected_reconstruction/8.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/8.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0/8.png (PNG copy)> <./chapter4/figures/images/cifar10/VAE_reconstruction/8.png> <./chapter4/figures/images/cifar10/original/18.png (PNG copy)> <./chapter4/figures/images/cifar10/reconstruction/18.png (PNG copy)> <./chapter4/figures/images/cifar10/corrected_reconstruction/18.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0.01/18.png (PNG copy)> <./chapter4/figures/images/cifar10/diffusion_decoder_beta_0/18.png (PNG copy)> <./chapter4/figures/images/cifar10/VAE_reconstruction/18.png> <./chapter4/figures/images/celebA/original/4.png (PNG copy)> <./chapter4/figures/images/celebA/reconstruction/4.png (PNG copy)> <./chapter4/figures/images/celebA/corrected_reconstruction/4.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/4.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0/4.png (PNG copy)> <./chapter4/figures/images/celebA/VAE_reconstruction/4.png> <./chapter4/figures/images/celebA/original/8.png (PNG copy)> <./chapter4/figures/images/celebA/reconstruction/8.png (PNG copy)> <./chapter4/figures/images/celebA/corrected_reconstruction/8.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/8.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0/8.png (PNG copy)> <./chapter4/figures/images/celebA/VAE_reconstruction/8.png> <./chapter4/figures/images/celebA/original/18.png (PNG copy)> <./chapter4/figures/images/celebA/reconstruction/18.png (PNG copy)> <./chapter4/figures/images/celebA/corrected_reconstruction/18.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0.01/18.png (PNG copy)> <./chapter4/figures/images/celebA/diffusion_decoder_beta_0/18.png (PNG copy)> <./chapter4/figures/images/celebA/VAE_reconstruction/18.png>]
+\openout2 = `Chapter5/chapter5.aux'.
+
+ (./Chapter5/chapter5.tex
+Chapter 7.
+
+Package natbib Warning: Citation `belkin2001laplacian' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `coifman2006diffusion' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `sammon1969nonlinear' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `demers1992non' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `chow2022predicting' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `gomari2022variational' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `ternes2022multi' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `vahdat2020nvae' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `zhong2021cryodrgn' on page 125 undefined on input line 18.
+
+
+Package natbib Warning: Citation `arvanitidis2016locally' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `hauberg2012geometric' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `peltonen2004improved' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `Scarvelis2023' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `sorrenson2024learningdistancesdatanormalizing' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `sun2024geometryaware' on page 125 undefined on input line 21.
+
+
+Package natbib Warning: Citation `sorrenson2024learningdistancesdatanormalizing' on page 125 undefined on input line 22.
+
+
+Package natbib Warning: Citation `dinh2017density' on page 125 undefined on input line 22.
+
+
+Package natbib Warning: Citation `sakamoto2024the' on page 125 undefined on input line 22.
+
+
+Package natbib Warning: Citation `stanczuk2022your' on page 125 undefined on input line 22.
+
+
+Package natbib Warning: Citation `sorrenson2024learningdistancesdatanormalizing' on page 125 undefined on input line 22.
+
+[125
+
+
+
+
+]
+<Chapter5/results/visualisations/RAE/projections/hemisphere_2_3/riemannian_autoencoder.jpg, id=1514, 3677.74pt x 3328.435pt>
+File: Chapter5/results/visualisations/RAE/projections/hemisphere_2_3/riemannian_autoencoder.jpg Graphic file (type jpg)
+<use Chapter5/results/visualisations/RAE/projections/hemisphere_2_3/riemannian_autoencoder.jpg>
+Package pdftex.def Info: Chapter5/results/visualisations/RAE/projections/hemisphere_2_3/riemannian_autoencoder.jpg  used on input line 28.
+(pdftex.def)             Requested size: 139.99075pt x 126.66467pt.
+<Chapter5/results/visualisations/RAE/projections/sinusoid_1_3/riemannian_autoencoder.jpg, id=1515, 3093.5575pt x 3261.18375pt>
+File: Chapter5/results/visualisations/RAE/projections/sinusoid_1_3/riemannian_autoencoder.jpg Graphic file (type jpg)
+<use Chapter5/results/visualisations/RAE/projections/sinusoid_1_3/riemannian_autoencoder.jpg>
+Package pdftex.def Info: Chapter5/results/visualisations/RAE/projections/sinusoid_1_3/riemannian_autoencoder.jpg  used on input line 34.
+(pdftex.def)             Requested size: 139.99075pt x 147.54312pt.
+<Chapter5/results/visualisations/RAE/projections/sinusoid_2_3/riemannian_autoencoder.jpg, id=1516, 3387.65625pt x 3658.66875pt>
+File: Chapter5/results/visualisations/RAE/projections/sinusoid_2_3/riemannian_autoencoder.jpg Graphic file (type jpg)
+<use Chapter5/results/visualisations/RAE/projections/sinusoid_2_3/riemannian_autoencoder.jpg>
+Package pdftex.def Info: Chapter5/results/visualisations/RAE/projections/sinusoid_2_3/riemannian_autoencoder.jpg  used on input line 40.
+(pdftex.def)             Requested size: 139.99075pt x 151.17874pt.
+
+
+LaTeX Warning: Reference `fig:toy-example' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `diepeveen2023curvature' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `fletcher2004principal' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `chen2023riemannian' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `huang2022riemannian' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 126 undefined on input line 51.
+
+
+Package natbib Warning: Citation `kapusniak2024metricflowmatchingsmooth' on page 126 undefined on input line 51.
+
+[126 <./Chapter5/results/visualisations/RAE/projections/hemisphere_2_3/riemannian_autoencoder.jpg> <./Chapter5/results/visualisations/RAE/projections/sinusoid_1_3/riemannian_autoencoder.jpg> <./Chapter5/results/visualisations/RAE/projections/sinusoid_2_3/riemannian_autoencoder.jpg>]
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 127 undefined on input line 53.
+
+
+Package natbib Warning: Citation `sorrenson2024learningdistancesdatanormalizing' on page 127 undefined on input line 54.
+
+<Chapter5/results/banana-distribution/barycentre.png, id=1523, 462.22687pt x 347.04657pt>
+File: Chapter5/results/banana-distribution/barycentre.png Graphic file (type png)
+<use Chapter5/results/banana-distribution/barycentre.png>
+Package pdftex.def Info: Chapter5/results/banana-distribution/barycentre.png  used on input line 61.
+(pdftex.def)             Requested size: 104.99306pt x 78.82877pt.
+<Chapter5/results/banana-distribution/geodesic.png, id=1524, 462.22687pt x 347.04657pt>
+File: Chapter5/results/banana-distribution/geodesic.png Graphic file (type png)
+<use Chapter5/results/banana-distribution/geodesic.png>
+Package pdftex.def Info: Chapter5/results/banana-distribution/geodesic.png  used on input line 66.
+(pdftex.def)             Requested size: 104.99306pt x 78.82877pt.
+<Chapter5/results/banana-distribution/logarithmic.png, id=1525, 462.22687pt x 347.04657pt>
+File: Chapter5/results/banana-distribution/logarithmic.png Graphic file (type png)
+<use Chapter5/results/banana-distribution/logarithmic.png>
+Package pdftex.def Info: Chapter5/results/banana-distribution/logarithmic.png  used on input line 71.
+(pdftex.def)             Requested size: 104.99306pt x 78.82877pt.
+<Chapter5/results/banana-distribution/exponential.png, id=1526, 462.22687pt x 347.04657pt>
+File: Chapter5/results/banana-distribution/exponential.png Graphic file (type png)
+<use Chapter5/results/banana-distribution/exponential.png>
+Package pdftex.def Info: Chapter5/results/banana-distribution/exponential.png  used on input line 76.
+(pdftex.def)             Requested size: 104.99306pt x 78.82877pt.
+
+LaTeX Warning: Reference `fig:toy-example-barycentre' on page 127 undefined on input line 91.
+
+
+LaTeX Warning: Reference `fig:toy-example-geodesic' on page 127 undefined on input line 91.
+
+
+LaTeX Warning: Reference `fig:toy-example-log' on page 127 undefined on input line 91.
+
+
+LaTeX Warning: Reference `fig:toy-example-exp' on page 127 undefined on input line 91.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 127 undefined on input line 92.
+
+[127 <./Chapter5/results/banana-distribution/barycentre.png> <./Chapter5/results/banana-distribution/geodesic.png> <./Chapter5/results/banana-distribution/logarithmic.png> <./Chapter5/results/banana-distribution/exponential.png>]
+
+Package hyperref Warning: Suppressing empty link on input line 99.
+
+
+LaTeX Warning: Reference `sec:unimodal-riemannian geometry' on page 128 undefined on input line 99.
+
+
+LaTeX Warning: Reference `sec:rae' on page 128 undefined on input line 99.
+
+
+LaTeX Warning: Reference `sec:adapting-normalizing-flows' on page 128 undefined on input line 99.
+
+
+LaTeX Warning: Reference `sec:numerics' on page 128 undefined on input line 99.
+
+
+LaTeX Warning: Reference `sec:conclusions' on page 128 undefined on input line 99.
+
+[128]
+
+LaTeX Warning: Reference `eq:pull-back-metric' on page 129 undefined on input line 127.
+
+
+LaTeX Warning: Reference `fig:toy-example' on page 129 undefined on input line 139.
+
+[129]
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 130 undefined on input line 150.
+
+
+LaTeX Warning: Reference `fig:toy-example-barycentre' on page 130 undefined on input line 152.
+
+
+LaTeX Warning: Reference `fig:toy-example-geodesic' on page 130 undefined on input line 152.
+
+
+LaTeX Warning: Reference `fig:toy-example-log' on page 130 undefined on input line 152.
+
+
+LaTeX Warning: Reference `fig:toy-example-exp' on page 130 undefined on input line 152.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 130 undefined on input line 154.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 130 undefined on input line 154.
+
+
+LaTeX Warning: Reference `fig:toy-example-geodesic' on page 130 undefined on input line 161.
+
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 130 undefined on input line 161.
+
+[130]
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 131 undefined on input line 177.
+
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 131 undefined on input line 187.
+
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 131 undefined on input line 197.
+
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 131 undefined on input line 207.
+
+[131]
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 132 undefined on input line 217.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 132 undefined on input line 237.
+
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 132 undefined on input line 243.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 132 undefined on input line 245.
+
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 132 undefined on input line 247.
+
+[132]
+
+LaTeX Warning: Reference `eq:thm-log-remetrized-special-psi' on page 133 undefined on input line 262.
+
+
+LaTeX Warning: Reference `eq:thm-exp-remetrized-special-psi' on page 133 undefined on input line 267.
+
+
+LaTeX Warning: Reference `app:proof-of-rae-error' on page 133 undefined on input line 272.
+
+
+LaTeX Warning: Reference `eq:quadratic-stroco' on page 133 undefined on input line 275.
+
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 133 undefined on input line 275.
+
+
+LaTeX Warning: Reference `eq:rae-encoder' on page 133 undefined on input line 275.
+
+
+LaTeX Warning: Reference `eq:rae-decoder' on page 133 undefined on input line 275.
+
+
+LaTeX Warning: Reference `eq:dimind-epsilon' on page 133 undefined on input line 275.
+
+[133]
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 134 undefined on input line 307.
+
+
+Package natbib Warning: Citation `dinh2017density' on page 134 undefined on input line 307.
+
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 134 undefined on input line 312.
+
+
+LaTeX Warning: Reference `sec:unimodal-riemannian geometry' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `sec:rae' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `rem:stability-manifold-mappings' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `thm:rae-error' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `rem:interpretability-rae' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eq:nf-density' on page 134 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eq:stroco-diffeo-density' on page 134 undefined on input line 314.
+
+[134]
+
+Package natbib Warning: Citation `durkan2019neural' on page 135 undefined on input line 334.
+
+
+LaTeX Warning: Reference `rem:stability-manifold-mappings' on page 135 undefined on input line 334.
+
+
+LaTeX Warning: Reference `rem:interpretability-rae' on page 135 undefined on input line 334.
+
+
+LaTeX Warning: Reference `thm:rae-error' on page 135 undefined on input line 334.
+
+
+Package natbib Warning: Citation `dinh2017density' on page 135 undefined on input line 334.
+
+
+LaTeX Warning: Reference `sec:adapting-normalizing-flows' on page 135 undefined on input line 340.
+
+
+LaTeX Warning: Reference `app:training_details' on page 135 undefined on input line 342.
+
+
+Package natbib Warning: Citation `diepeveen2024pulling' on page 135 undefined on input line 347.
+
+
+LaTeX Warning: Reference `app:Error metrics for evaluation of Pullback Geometries' on page 135 undefined on input line 347.
+
+[135]
+
+LaTeX Warning: Reference `fig:datasets' on page 136 undefined on input line 365.
+
+
+LaTeX Warning: Reference `app:manifold_mapping' on page 136 undefined on input line 365.
+
+
+LaTeX Warning: Reference `app:manifold_mapping' on page 136 undefined on input line 365.
+
+
+LaTeX Warning: Reference `tab:geodesic-variation-errors' on page 136 undefined on input line 367.
+
+
+LaTeX Warning: Reference `fig:geodesics_comparison' on page 136 undefined on input line 367.
+
+
+Overfull \hbox (5.26529pt too wide) in paragraph at lines 373--393
+ [][] 
+ []
+
+<chapter5/results/visualisations/geodesics/gt.png, id=1637, 1553.805pt x 1172.38pt>
+File: chapter5/results/visualisations/geodesics/gt.png Graphic file (type png)
+<use chapter5/results/visualisations/geodesics/gt.png>
+Package pdftex.def Info: chapter5/results/visualisations/geodesics/gt.png  used on input line 400.
+(pdftex.def)             Requested size: 78.73979pt x 59.40955pt.
+<chapter5/results/visualisations/geodesics/ours.png, id=1638, 1553.805pt x 1172.38pt>
+File: chapter5/results/visualisations/geodesics/ours.png Graphic file (type png)
+<use chapter5/results/visualisations/geodesics/ours.png>
+Package pdftex.def Info: chapter5/results/visualisations/geodesics/ours.png  used on input line 404.
+(pdftex.def)             Requested size: 78.73979pt x 59.40955pt.
+<chapter5/results/visualisations/geodesics/standard_normal.png, id=1639, 1553.805pt x 1172.38pt>
+File: chapter5/results/visualisations/geodesics/standard_normal.png Graphic file (type png)
+<use chapter5/results/visualisations/geodesics/standard_normal.png>
+Package pdftex.def Info: chapter5/results/visualisations/geodesics/standard_normal.png  used on input line 408.
+(pdftex.def)             Requested size: 78.73979pt x 59.40955pt.
+<chapter5/results/visualisations/geodesics/standard_normal_anisotropic.png, id=1640, 1553.805pt x 1172.38pt>
+File: chapter5/results/visualisations/geodesics/standard_normal_anisotropic.png Graphic file (type png)
+<use chapter5/results/visualisations/geodesics/standard_normal_anisotropic.png>
+Package pdftex.def Info: chapter5/results/visualisations/geodesics/standard_normal_anisotropic.png  used on input line 412.
+(pdftex.def)             Requested size: 78.73979pt x 59.40955pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--413
+[]\T1/ptm/m/n/10.95 (+20) (d) |Anisotropic
+ []
+
+<chapter5/results/visualisations/geodesics/isometricNF.png, id=1641, 1553.805pt x 1172.38pt>
+File: chapter5/results/visualisations/geodesics/isometricNF.png Graphic file (type png)
+<use chapter5/results/visualisations/geodesics/isometricNF.png>
+Package pdftex.def Info: chapter5/results/visualisations/geodesics/isometricNF.png  used on input line 416.
+(pdftex.def)             Requested size: 78.73979pt x 59.40955pt.
+
+LaTeX Warning: Reference `tab:geodesic-variation-errors' on page 136 undefined on input line 419.
+
+
+LaTeX Warning: Reference `tab:geodesic-variation-errors' on page 136 undefined on input line 419.
+
+[136 <./chapter5/results/visualisations/geodesics/gt.png> <./chapter5/results/visualisations/geodesics/ours.png> <./chapter5/results/visualisations/geodesics/standard_normal.png> <./chapter5/results/visualisations/geodesics/standard_normal_anisotropic.png> <./chapter5/results/visualisations/geodesics/isometricNF.png>]
+
+LaTeX Warning: Reference `app:rae_datasets' on page 137 undefined on input line 432.
+
+
+LaTeX Warning: Reference `fig:learned_charts_for_Sinusoid_1_100' on page 137 undefined on input line 435.
+
+
+LaTeX Warning: Reference `app:data_manifold_approximation' on page 137 undefined on input line 435.
+
+<chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/5_59_92.jpg, id=1656, 3685.77pt x 3561.305pt>
+File: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/5_59_92.jpg Graphic file (type jpg)
+<use chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/5_59_92.jpg>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/5_59_92.jpg  used on input line 443.
+(pdftex.def)             Requested size: 139.99075pt x 135.25491pt.
+<chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/31_55_66.jpg, id=1657, 3810.235pt x 3866.445pt>
+File: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/31_55_66.jpg Graphic file (type jpg)
+<use chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/31_55_66.jpg>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/31_55_66.jpg  used on input line 449.
+(pdftex.def)             Requested size: 139.99075pt x 142.00607pt.
+<chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/64_72_90.jpg, id=1658, 3669.71pt x 3667.7025pt>
+File: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/64_72_90.jpg Graphic file (type jpg)
+<use chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/64_72_90.jpg>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/64_72_90.jpg  used on input line 455.
+(pdftex.def)             Requested size: 139.99075pt x 139.91139pt.
+[137]
+
+LaTeX Warning: Reference `fig:hemisphere_reconstruction_errors' on page 138 undefined on input line 473.
+
+
+LaTeX Warning: Reference `fig:sinusoid_reconstruction_errors' on page 138 undefined on input line 473.
+
+
+LaTeX Warning: Reference `fig:hemisphere_variances' on page 138 undefined on input line 475.
+
+
+LaTeX Warning: Reference `fig:hemisphere_reconstruction_errors' on page 138 undefined on input line 475.
+
+
+LaTeX Warning: Reference `fig:sinusoid_variances' on page 138 undefined on input line 477.
+
+
+LaTeX Warning: Reference `fig:sinusoid_reconstruction_errors' on page 138 undefined on input line 477.
+
+[138 <./chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/5_59_92.jpg> <./chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/31_55_66.jpg> <./chapter5/results/visualisations/RAE/projections/sinusoid_1_100/more_transparent/64_72_90.jpg>]
+<chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png, id=1673, 520.5849pt x 388.8126pt>
+File: chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png Graphic file (type png)
+<use chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png  used on input line 488.
+(pdftex.def)             Requested size: 193.79228pt x 144.73645pt.
+<chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png, id=1674, 641.5167pt x 388.8126pt>
+File: chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png Graphic file (type png)
+<use chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png  used on input line 495.
+(pdftex.def)             Requested size: 238.85606pt x 144.76611pt.
+<chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png, id=1675, 498.4221pt x 388.8126pt>
+File: chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png Graphic file (type png)
+<use chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png  used on input line 508.
+(pdftex.def)             Requested size: 192.48395pt x 150.15309pt.
+<chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png, id=1676, 623.6901pt x 388.8126pt>
+File: chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png Graphic file (type png)
+<use chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png>
+Package pdftex.def Info: chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png  used on input line 515.
+(pdftex.def)             Requested size: 240.16438pt x 149.72pt.
+) [139] [140 <./chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png> <./chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png> <./chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png> <./chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png>]
+\openout2 = `Conclusions/conclusions.aux'.
+
+ (./Conclusions/conclusions.tex
+Chapter 8.
+[141
+
+
+
+
+]
+
+Package natbib Warning: Citation `tian2024visual' on page 142 undefined on input line 18.
+
+
+Package natbib Warning: Citation `preechakul2022diffusion_decoder' on page 142 undefined on input line 24.
+
+[142]
+
+Package natbib Warning: Citation `achilli2024losing' on page 143 undefined on input line 28.
+
+
+Package natbib Warning: Citation `kamkari2024geometric' on page 143 undefined on input line 28.
+
+
+Package natbib Warning: Citation `kiani2024hardness' on page 143 undefined on input line 28.
+
+[143]
+
+Package natbib Warning: Citation `durkan2019neural' on page 144 undefined on input line 37.
+
+
+Package natbib Warning: Citation `draxler2024free' on page 144 undefined on input line 37.
+
+[144]) [145] [146
+
+
+
+] (./thesis.bbl [147
+
+] [148] [149] [150] [151] [152] [153]) [154]
+\openout2 = `Chapter1/appendix.aux'.
+
+ (./Chapter1/appendix.tex
+Appendix A.
+
+LaTeX Warning: Reference `ch1:fig:high_level_design_conditional' on page 155 undefined on input line 9.
+
+
+Package natbib Warning: Citation `ho2019flow++' on page 155 undefined on input line 15.
+
+[155
+
+
+]
+
+Package natbib Warning: Citation `SRFLOW' on page 156 undefined on input line 18.
+
+[156]
+
+Package natbib Warning: Citation `SRFLOW' on page 157 undefined on input line 31.
+
+[157] [158]
+
+Package natbib Warning: Citation `ardizzone2019guided' on page 159 undefined on input line 74.
+
+[159]
+
+Package natbib Warning: Citation `cGLOW' on page 160 undefined on input line 77.
+
+[160]
+<Chapter1/paper_graphs/SupplementaryMaterial/ffhq_superresolved_2_0.5_cropped.png, id=1802, 751.80875pt x 998.73125pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/ffhq_superresolved_2_0.5_cropped.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/ffhq_superresolved_2_0.5_cropped.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/ffhq_superresolved_2_0.5_cropped.png  used on input line 86.
+(pdftex.def)             Requested size: 349.97023pt x 464.92337pt.
+ [161
+
+ <./Chapter1/paper_graphs/SupplementaryMaterial/ffhq_superresolved_2_0.5_cropped.png>]
+<Chapter1/paper_graphs/SupplementaryMaterial/ffhq_super_0.55_0_cropped.png, id=1811, 720.6925pt x 838.13126pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/ffhq_super_0.55_0_cropped.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/ffhq_super_0.55_0_cropped.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/ffhq_super_0.55_0_cropped.png  used on input line 94.
+(pdftex.def)             Requested size: 437.46112pt x 508.73993pt.
+ [162
+
+ <./Chapter1/paper_graphs/SupplementaryMaterial/ffhq_super_0.55_0_cropped.png>]
+<Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_0.png, id=1818, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_0.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_0.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_0.png  used on input line 103.
+(pdftex.def)             Requested size: 349.97023pt x 466.3273pt.
+<Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_1.png, id=1819, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_1.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_1.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_1.png  used on input line 109.
+(pdftex.def)             Requested size: 437.46112pt x 582.91722pt.
+
+
+LaTeX Warning: Float too large for page by 17.13208pt on input line 111.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[163
+
+ <./Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_0.png (PNG copy)>] [164 <./Chapter1/paper_graphs/SupplementaryMaterial/inpainting_celebA_T_0.5_1.png (PNG copy)>]
+<Chapter1/paper_graphs/SupplementaryMaterial/colorisation_lsun_0.85.png, id=1832, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/colorisation_lsun_0.85.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/colorisation_lsun_0.85.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/colorisation_lsun_0.85.png  used on input line 117.
+(pdftex.def)             Requested size: 349.97023pt x 466.3273pt.
+<Chapter1/paper_graphs/SupplementaryMaterial/colorization_lsun_0.85_2.png, id=1833, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/colorization_lsun_0.85_2.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/colorization_lsun_0.85_2.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/colorization_lsun_0.85_2.png  used on input line 123.
+(pdftex.def)             Requested size: 437.46112pt x 582.91722pt.
+
+
+LaTeX Warning: Float too large for page by 31.63208pt on input line 125.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_T_0.7_0.png, id=1834, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_T_0.7_0.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_T_0.7_0.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_T_0.7_0.png  used on input line 129.
+(pdftex.def)             Requested size: 437.46112pt x 582.91722pt.
+
+LaTeX Warning: Float too large for page by 17.13208pt on input line 131.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_0.7_1.png, id=1835, 796.9775pt x 1061.9675pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_0.7_1.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_0.7_1.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_0.7_1.png  used on input line 135.
+(pdftex.def)             Requested size: 437.46112pt x 582.91722pt.
+
+LaTeX Warning: Float too large for page by 17.13208pt on input line 137.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[165
+
+ <./Chapter1/paper_graphs/SupplementaryMaterial/colorisation_lsun_0.85.png (PNG copy)>] [166 <./Chapter1/paper_graphs/SupplementaryMaterial/colorization_lsun_0.85_2.png (PNG copy)>] [167 <./Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_T_0.7_0.png (PNG copy)>] [168 <./Chapter1/paper_graphs/SupplementaryMaterial/colorization_ffhq_0.7_1.png (PNG copy)>]
+<Chapter1/paper_graphs/SupplementaryMaterial/edges2shoes_T_0.8.png, id=1857, 531.9875pt x 531.9875pt>
+File: Chapter1/paper_graphs/SupplementaryMaterial/edges2shoes_T_0.8.png Graphic file (type png)
+<use Chapter1/paper_graphs/SupplementaryMaterial/edges2shoes_T_0.8.png>
+Package pdftex.def Info: Chapter1/paper_graphs/SupplementaryMaterial/edges2shoes_T_0.8.png  used on input line 143.
+(pdftex.def)             Requested size: 398.98965pt x 398.98965pt.
+
+
+Package natbib Warning: Citation `isola2017image' on page 169 undefined on input line 144.
+
+
+Package natbib Warning: Citation `isola2017image' on page 169 undefined on input line 144.
+
+) [169
+
+ <./Chapter1/paper_graphs/SupplementaryMaterial/edges2shoes_T_0.8.png (PNG copy)>]
+\openout2 = `Chapter2/appendix.aux'.
+
+ (./Chapter2/appendix.tex [170
+
+
+
+
+]
+Appendix B.
+
+Package natbib Warning: Citation `vincent2011connection' on page 171 undefined on input line 30.
+
+[171]
+
+LaTeX Warning: Reference `ch2:Vincent' on page 172 undefined on input line 67.
+
+[172]
+
+LaTeX Warning: Reference `ch2:Vincent' on page 173 undefined on input line 82.
+
+
+Package natbib Warning: Citation `whitney1994estimation' on page 173 undefined on input line 99.
+
+
+Package natbib Warning: Citation `whitney1994estimation' on page 173 undefined on input line 115.
+
+[173]
+
+LaTeX Warning: Reference `ch2:assum:compact_1' on page 174 undefined on input line 134.
+
+
+LaTeX Warning: Reference `ch2:assum:unique' on page 174 undefined on input line 134.
+
+
+LaTeX Warning: Reference `ch2:lemma:ULLN' on page 174 undefined on input line 156.
+
+
+LaTeX Warning: Reference `ch2:CDN' on page 174 undefined on input line 156.
+
+
+LaTeX Warning: Reference `ch2:lemma:consistency' on page 174 undefined on input line 157.
+
+
+LaTeX Warning: Reference `ch2:thm:CDE_consistency' on page 174 undefined on input line 157.
+
+
+LaTeX Warning: Reference `ch2:assum:unique' on page 174 undefined on input line 157.
+
+[174]
+
+LaTeX Warning: Reference `ch2:thm:weightning' on page 175 undefined on input line 162.
+
+
+LaTeX Warning: Reference `ch2:thm:weightning' on page 175 undefined on input line 162.
+
+
+LaTeX Warning: Reference `ch2:eq:true_rtsde' on page 175 undefined on input line 185.
+
+
+LaTeX Warning: Reference `ch2:eq:approx_rtsde' on page 175 undefined on input line 185.
+
+
+Package natbib Warning: Citation `leonard2013properties' on page 175 undefined on input line 197.
+
+[175]
+
+Package natbib Warning: Citation `leonard2013properties' on page 176 undefined on input line 206.
+
+
+Package natbib Warning: Citation `oksendal2003sde' on page 176 undefined on input line 214.
+
+
+LaTeX Warning: Reference `ch2:sec:multi-scale_diffusion' on page 176 undefined on input line 234.
+
+
+LaTeX Warning: Reference `ch2:sec:conditional_generation' on page 176 undefined on input line 234.
+
+[176]
+
+LaTeX Warning: Reference `ch2:thm:multi-dim' on page 177 undefined on input line 253.
+
+
+LaTeX Warning: Reference `ch2:thm:weightning' on page 177 undefined on input line 261.
+
+
+Package natbib Warning: Citation `vincent2011connection' on page 177 undefined on input line 268.
+
+[177]
+
+LaTeX Warning: Reference `ch2:thm:weightning' on page 178 undefined on input line 299.
+
+
+LaTeX Warning: Reference `ch2:assum:_c2' on page 178 undefined on input line 319.
+
+
+LaTeX Warning: Reference `ch2:assum:_compact_2' on page 178 undefined on input line 319.
+
+[178] [179]
+Overfull \hbox (16.23206pt too wide) in paragraph at lines 387--390
+[]\T1/ptm/m/n/12 (-20) We will prove that $\OML/ztmcm/m/it/12 E$ \T1/ptm/m/n/12 (-20) is a mono-ton-i-cally de-creas-ing to zero and upper-bounds $[][]$.
+ []
+
+[180]
+
+LaTeX Warning: Reference `ch2:assum:_c2' on page 181 undefined on input line 418.
+
+
+LaTeX Warning: Reference `ch2:assum:_lower_bound' on page 181 undefined on input line 418.
+
+
+LaTeX Warning: Reference `ch2:assum:_compact_2' on page 181 undefined on input line 418.
+
+[181]
+
+LaTeX Warning: Reference `ch2:assum:_c2' on page 182 undefined on input line 472.
+
+
+LaTeX Warning: Reference `ch2:lemma:_Lpz' on page 182 undefined on input line 473.
+
+[182]
+
+LaTeX Warning: Reference `ch2:assum:_c2' on page 183 undefined on input line 508.
+
+
+LaTeX Warning: Reference `ch2:assum:_compact_2' on page 183 undefined on input line 508.
+
+
+LaTeX Warning: Reference `ch2:assum:_lower_bound' on page 183 undefined on input line 508.
+
+
+LaTeX Warning: Reference `ch2:lemma:_sup_norm' on page 183 undefined on input line 523.
+
+
+LaTeX Warning: Reference `ch2:lemma:_blurring' on page 183 undefined on input line 523.
+
+
+Overfull \hbox (16.32564pt too wide) in paragraph at lines 526--529
+\T1/ptm/m/n/12 (-20) where $\OML/ztmcm/m/it/12 E[]$ \T1/ptm/m/n/12 (-20) and $\OML/ztmcm/m/it/12 E[]$ \T1/ptm/m/n/12 (-20) are mono-ton-i-cally de-creas-ing to zero. The the-o-rem fol-lows with $\OML/ztmcm/m/it/12 E\OT1/ztmcm/m/n/12 (1\OML/ztmcm/m/it/12 =^^[[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 t\OT1/ztmcm/m/n/12 )[]) :=
+ []
+
+
+Package natbib Warning: Citation `saharia2021sr3' on page 183 undefined on input line 535.
+
+[183] Excluding 'comment' comment.
+
+LaTeX Warning: Reference `ch2:fig:Vanilla' on page 184 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:Multiscale' on page 184 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:Multiscale_+' on page 184 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:additional_sr' on page 184 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:additional_inpainting' on page 184 undefined on input line 567.
+
+
+LaTeX Warning: Reference `ch2:fig:additional_shoe' on page 184 undefined on input line 567.
+
+<Chapter2/samples/multiscale/vanilla.png, id=1963, 770.88pt x 770.88pt>
+File: Chapter2/samples/multiscale/vanilla.png Graphic file (type png)
+<use Chapter2/samples/multiscale/vanilla.png>
+Package pdftex.def Info: Chapter2/samples/multiscale/vanilla.png  used on input line 572.
+(pdftex.def)             Requested size: 437.46112pt x 437.45357pt.
+<Chapter2/samples/multiscale/multiscale.png, id=1964, 770.88pt x 770.88pt>
+File: Chapter2/samples/multiscale/multiscale.png Graphic file (type png)
+<use Chapter2/samples/multiscale/multiscale.png>
+Package pdftex.def Info: Chapter2/samples/multiscale/multiscale.png  used on input line 579.
+(pdftex.def)             Requested size: 437.46112pt x 437.45357pt.
+<Chapter2/samples/multiscale/multiscale_deep.png, id=1965, 770.88pt x 770.88pt>
+File: Chapter2/samples/multiscale/multiscale_deep.png Graphic file (type png)
+<use Chapter2/samples/multiscale/multiscale_deep.png>
+Package pdftex.def Info: Chapter2/samples/multiscale/multiscale_deep.png  used on input line 586.
+(pdftex.def)             Requested size: 437.46112pt x 437.45357pt.
+<Chapter2/samples/extended_results/super_resolution/2/x.png, id=1966, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/x.png  used on input line 602.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/y.png, id=1967, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/y.png  used on input line 603.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/HCFLOW.png, id=1968, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/HCFLOW.png  used on input line 604.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/CDE.png, id=1969, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/CDE.png  used on input line 605.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/CDiffE.png, id=1970, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/CDiffE.png  used on input line 606.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/cmde.png, id=1971, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/cmde.png  used on input line 607.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/2/VS-CMDE.png, id=1972, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/2/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/2/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/2/VS-CMDE.png  used on input line 608.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/x.png, id=1973, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/x.png  used on input line 610.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/y.png, id=1974, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/y.png  used on input line 611.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/HCFLOW.png, id=1975, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/HCFLOW.png  used on input line 612.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/CDE.png, id=1976, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/CDE.png  used on input line 613.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/CDiffE.png, id=1977, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/CDiffE.png  used on input line 614.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/cmde.png, id=1978, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/cmde.png  used on input line 615.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/8/VS-CMDE.png, id=1979, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/8/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/8/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/8/VS-CMDE.png  used on input line 616.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/x.png, id=1980, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/x.png  used on input line 618.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/y.png, id=1981, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/y.png  used on input line 619.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/HCFLOW.png, id=1982, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/HCFLOW.png  used on input line 620.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/CDE.png, id=1983, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/CDE.png  used on input line 621.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/CDiffE.png, id=1984, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/CDiffE.png  used on input line 622.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/cmde.png, id=1985, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/cmde.png  used on input line 623.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/16/VS-CMDE.png, id=1986, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/16/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/16/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/16/VS-CMDE.png  used on input line 624.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/x.png, id=1987, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/x.png  used on input line 626.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/y.png, id=1988, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/y.png  used on input line 627.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/HCFLOW.png, id=1989, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/HCFLOW.png  used on input line 628.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/CDE.png, id=1990, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/CDE.png  used on input line 629.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/CDiffE.png, id=1991, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/CDiffE.png  used on input line 630.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/cmde.png, id=1992, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/cmde.png  used on input line 631.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/59/VS-CMDE.png, id=1993, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/59/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/59/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/59/VS-CMDE.png  used on input line 632.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/x.png, id=1994, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/x.png  used on input line 634.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/y.png, id=1995, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/y.png  used on input line 635.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/HCFLOW.png, id=1996, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/HCFLOW.png  used on input line 636.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/CDE.png, id=1997, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/CDE.png  used on input line 637.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/CDiffE.png, id=1998, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/CDiffE.png  used on input line 638.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/cmde.png, id=1999, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/cmde.png  used on input line 639.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/111/VS-CMDE.png, id=2000, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/111/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/111/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/111/VS-CMDE.png  used on input line 640.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/x.png, id=2001, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/x.png  used on input line 642.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/y.png, id=2002, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/y.png  used on input line 643.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/HCFLOW.png, id=2003, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/HCFLOW.png  used on input line 644.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/CDE.png, id=2004, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/CDE.png  used on input line 645.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/CDiffE.png, id=2005, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/CDiffE.png  used on input line 646.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/cmde.png, id=2006, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/cmde.png  used on input line 647.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/136/VS-CMDE.png, id=2007, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/136/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/136/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/136/VS-CMDE.png  used on input line 648.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/x.png, id=2008, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/x.png  used on input line 650.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/y.png, id=2009, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/y.png  used on input line 651.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/HCFLOW.png, id=2010, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/HCFLOW.png  used on input line 652.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/CDE.png, id=2011, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/CDE.png  used on input line 653.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/CDiffE.png, id=2012, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/CDiffE.png  used on input line 654.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/cmde.png, id=2013, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/cmde.png  used on input line 655.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/164/VS-CMDE.png, id=2014, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/164/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/164/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/164/VS-CMDE.png  used on input line 656.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/x.png, id=2015, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/x.png  used on input line 658.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/y.png, id=2016, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/y.png  used on input line 659.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/HCFLOW.png, id=2017, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/HCFLOW.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/HCFLOW.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/HCFLOW.png  used on input line 660.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/CDE.png, id=2018, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/CDE.png  used on input line 661.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/CDiffE.png, id=2019, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/CDiffE.png  used on input line 662.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/cmde.png, id=2020, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/cmde.png  used on input line 663.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+<Chapter2/samples/extended_results/super_resolution/805/VS-CMDE.png, id=2021, 160.6pt x 160.6pt>
+File: Chapter2/samples/extended_results/super_resolution/805/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/super_resolution/805/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/super_resolution/805/VS-CMDE.png  used on input line 664.
+(pdftex.def)             Requested size: 61.24428pt x 61.24428pt.
+
+Overfull \hbox (16.13057pt too wide) in paragraph at lines 599--668
+ [] 
+ []
+
+<Chapter2/samples/extended_results/inpainting/7/x.png, id=2022, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/x.png  used on input line 682.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/7/y.png, id=2023, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/y.png  used on input line 683.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/7/CDE.png, id=2024, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/CDE.png  used on input line 684.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/7/CDiffE.png, id=2025, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/CDiffE.png  used on input line 685.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/7/cmde.png, id=2026, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/cmde.png  used on input line 686.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/7/VS-CMDE.png, id=2027, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/7/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/7/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/7/VS-CMDE.png  used on input line 687.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/x.png, id=2028, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/x.png  used on input line 689.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/y.png, id=2029, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/y.png  used on input line 690.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/CDE.png, id=2030, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/CDE.png  used on input line 691.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/CDiffE.png, id=2031, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/CDiffE.png  used on input line 692.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/cmde.png, id=2032, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/cmde.png  used on input line 693.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/17/VS-CMDE.png, id=2033, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/17/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/17/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/17/VS-CMDE.png  used on input line 694.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/x.png, id=2034, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/x.png  used on input line 696.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/y.png, id=2035, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/y.png  used on input line 697.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/CDE.png, id=2036, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/CDE.png  used on input line 698.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/CDiffE.png, id=2037, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/CDiffE.png  used on input line 699.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/cmde.png, id=2038, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/cmde.png  used on input line 700.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/20/VS-CMDE.png, id=2039, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/20/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/20/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/20/VS-CMDE.png  used on input line 701.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/x.png, id=2040, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/x.png  used on input line 703.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/y.png, id=2041, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/y.png  used on input line 704.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/CDE.png, id=2042, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/CDE.png  used on input line 705.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/CDiffE.png, id=2043, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/CDiffE.png  used on input line 706.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/cmde.png, id=2044, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/cmde.png  used on input line 707.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/21/VS-CMDE.png, id=2045, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/21/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/21/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/21/VS-CMDE.png  used on input line 708.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/x.png, id=2046, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/x.png  used on input line 710.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/y.png, id=2047, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/y.png  used on input line 711.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/CDE.png, id=2048, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/CDE.png  used on input line 712.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/CDiffE.png, id=2049, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/CDiffE.png  used on input line 713.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/cmde.png, id=2050, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/cmde.png  used on input line 714.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/47/VS-CMDE.png, id=2051, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/47/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/47/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/47/VS-CMDE.png  used on input line 715.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/x.png, id=2052, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/x.png  used on input line 717.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/y.png, id=2053, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/y.png  used on input line 718.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/CDE.png, id=2054, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/CDE.png  used on input line 719.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/CDiffE.png, id=2055, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/CDiffE.png  used on input line 720.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/cmde.png, id=2056, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/cmde.png  used on input line 721.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/68/VS-CMDE.png, id=2057, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/68/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/68/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/68/VS-CMDE.png  used on input line 722.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/x.png, id=2058, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/x.png  used on input line 724.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/y.png, id=2059, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/y.png  used on input line 725.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/CDE.png, id=2060, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/CDE.png  used on input line 726.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/CDiffE.png, id=2061, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/CDiffE.png  used on input line 727.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/cmde.png, id=2062, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/cmde.png  used on input line 728.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/111/VS-CMDE.png, id=2063, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/111/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/111/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/111/VS-CMDE.png  used on input line 729.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/x.png, id=2064, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/x.png  used on input line 731.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/y.png, id=2065, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/y.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/y.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/y.png  used on input line 732.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/CDE.png, id=2066, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/CDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/CDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/CDE.png  used on input line 733.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/CDiffE.png, id=2067, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/CDiffE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/CDiffE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/CDiffE.png  used on input line 734.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/cmde.png, id=2068, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/cmde.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/cmde.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/cmde.png  used on input line 735.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/inpainting/146/VS-CMDE.png, id=2069, 128.48pt x 128.48pt>
+File: Chapter2/samples/extended_results/inpainting/146/VS-CMDE.png Graphic file (type png)
+<use Chapter2/samples/extended_results/inpainting/146/VS-CMDE.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/inpainting/146/VS-CMDE.png  used on input line 736.
+(pdftex.def)             Requested size: 63.43373pt x 63.43408pt.
+<Chapter2/samples/extended_results/edges-to-shoes/1/x.png, id=2070, 64.24pt x 64.24pt>
+File: Chapter2/samples/extended_results/edges-to-shoes/1/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/edges-to-shoes/1/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/edges-to-shoes/1/x.png  used on input line 755.
+(pdftex.def)             Requested size: 34.99768pt x 34.99785pt.
+<Chapter2/samples/extended_results/edges-to-shoes/6/x.png, id=2071, 64.24pt x 64.24pt>
+File: Chapter2/samples/extended_results/edges-to-shoes/6/x.png Graphic file (type png)
+<use Chapter2/samples/extended_results/edges-to-shoes/6/x.png>
+Package pdftex.def Info: Chapter2/samples/extended_results/edges-to-shoes/6/x.png  used on input line 755.
+(pdftex.def)             Requested size: 34.99768pt x 34.99785pt.
+<Chapter2/samples/extended_results/edges-to-shoes/8/x.png, id=2072, 64.24pt x 64.24pt>
+File: Chapter2/samples/extended_results/edges-to-shoes/8/x.png Graphic file (type png)
+<use Chapter2/samples/extended

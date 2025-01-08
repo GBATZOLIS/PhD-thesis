@@ -3,11 +3,11 @@
 \providecommand\hyper@newdestlabel[2]{}
 \citation{vae}
 \citation{zaho2017understanding_vaes}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}ScoreVAE: Variational Diffusion Auto-encoder}{111}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}ScoreVAE: Variational Diffusion Auto-encoder}{113}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Chapter:ScoreVAE}{{6}{111}{ScoreVAE: Variational Diffusion Auto-encoder}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{111}{section.6.1}\protected@file@percent }
+\newlabel{Chapter:ScoreVAE}{{6}{113}{ScoreVAE: Variational Diffusion Auto-encoder}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{113}{section.6.1}\protected@file@percent }
 \citation{diffusion_models,ddpm}
 \citation{dhariwal2021diffusion_beats_gans}
 \citation{kong2020diffwave}
@@ -17,62 +17,62 @@
 \citation{liu2015celeba}
 \citation{vae,rezende2014vae2}
 \citation{higgins2016beta_vae}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Background}{113}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Variational Autoencoders}{113}{subsection.6.2.1}\protected@file@percent }
-\newlabel{ch4:eq:elbo}{{6.1}{113}{Variational Autoencoders}{equation.6.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Background}{115}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Variational Autoencoders}{115}{subsection.6.2.1}\protected@file@percent }
+\newlabel{ch4:eq:elbo}{{6.1}{115}{Variational Autoencoders}{equation.6.2.1}{}}
 \citation{rybkin2021sigma_vae}
 \citation{song2020score}
 \citation{score_matching}
 \citation{diffusion_models,ddpm}
 \citation{anderson1982reverse_time_sde}
-\newlabel{ch4:eq:elbo}{{6.2}{114}{Variational Autoencoders}{equation.6.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Score-based diffusion models}{114}{subsection.6.2.2}\protected@file@percent }
-\newlabel{ch4:sec:background_score}{{6.2.2}{114}{Score-based diffusion models}{subsection.6.2.2}{}}
-\newlabel{ch4:eq:forward_sde}{{6.3}{114}{Score-based diffusion models}{equation.6.2.3}{}}
-\newlabel{ch4:eq:reverse_sde}{{6.4}{114}{Score-based diffusion models}{equation.6.2.4}{}}
+\newlabel{ch4:eq:elbo}{{6.2}{116}{Variational Autoencoders}{equation.6.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Score-based diffusion models}{116}{subsection.6.2.2}\protected@file@percent }
+\newlabel{ch4:sec:background_score}{{6.2.2}{116}{Score-based diffusion models}{subsection.6.2.2}{}}
+\newlabel{ch4:eq:forward_sde}{{6.3}{116}{Score-based diffusion models}{equation.6.2.3}{}}
+\newlabel{ch4:eq:reverse_sde}{{6.4}{116}{Score-based diffusion models}{equation.6.2.4}{}}
 \citation{song2021maximum}
 \citation{score_matching,vincent2011connection,song2020score}
 \citation{song2020score}
 \citation{vincent2011connection}
 \citation{song2021maximum}
 \citation{song2021maximum}
-\newlabel{ch4:eq:approximated_reverse_sde}{{6.5}{115}{Score-based diffusion models}{equation.6.2.5}{}}
-\newlabel{ch4:DSM_for_uniform_diffusion_models}{{6.7}{115}{Score-based diffusion models}{equation.6.2.7}{}}
+\newlabel{ch4:eq:approximated_reverse_sde}{{6.5}{117}{Score-based diffusion models}{equation.6.2.5}{}}
+\newlabel{ch4:DSM_for_uniform_diffusion_models}{{6.7}{117}{Score-based diffusion models}{equation.6.2.7}{}}
 \citation{kingmaVDM}
 \citation{song2020score}
 \citation{vincent2011connection,song2020score}
 \citation{batzolis2022non_uniform}
-\newlabel{ch4:Likelihood_Weighting_for_Uniform_Diffusion_Models}{{6.8}{116}{Score-based diffusion models}{equation.6.2.8}{}}
-\newlabel{ch4:eq:conditional_reverse_sde}{{6.9}{116}{Score-based diffusion models}{equation.6.2.9}{}}
-\newlabel{ch4:CDE}{{6.10}{116}{Score-based diffusion models}{equation.6.2.10}{}}
+\newlabel{ch4:Likelihood_Weighting_for_Uniform_Diffusion_Models}{{6.8}{118}{Score-based diffusion models}{equation.6.2.8}{}}
+\newlabel{ch4:eq:conditional_reverse_sde}{{6.9}{118}{Score-based diffusion models}{equation.6.2.9}{}}
+\newlabel{ch4:CDE}{{6.10}{118}{Score-based diffusion models}{equation.6.2.10}{}}
 \citation{zaho2017understanding_vaes}
 \citation{zhang2018lpips}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Graphical overview of our method. The time-dependent encoder network $e_\phi $ induces the encoder distribution $q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx p_t( \textbf  {z} | \textbf  {x}_t)$. The data $\textbf  {x}_0$ is encoded with the encoder into a latent vector $\textbf  {z}$ by sampling $q_\phi ( \textbf  {z} | \textbf  {x}_0, 0)$. Then the reconstruction $\hat  {\textbf  {x}}_0$ is obtained by running the conditional reverse diffusion process using the approximate conditional data score $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t | \textbf  {z})}$. The model $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t)$ is obtained by adding the score of unconditional diffusion model $s_\theta (\textbf  {x}_t,t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t)} $ and the score of the encoder distribution $ \nabla _{\textbf  {x}_t} \ln q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )} $. The latter can be computed via automatic differentiation with respect to the input $\textbf  {x}_t$.}}{117}{figure.caption.73}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Method}{117}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Problems with conventional VAEs}{117}{subsection.6.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Graphical overview of our method. The time-dependent encoder network $e_\phi $ induces the encoder distribution $q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx p_t( \textbf  {z} | \textbf  {x}_t)$. The data $\textbf  {x}_0$ is encoded with the encoder into a latent vector $\textbf  {z}$ by sampling $q_\phi ( \textbf  {z} | \textbf  {x}_0, 0)$. Then the reconstruction $\hat  {\textbf  {x}}_0$ is obtained by running the conditional reverse diffusion process using the approximate conditional data score $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t | \textbf  {z})}$. The model $s_{\theta , \phi }(\textbf  {x}_t, \textbf  {z},t)$ is obtained by adding the score of unconditional diffusion model $s_\theta (\textbf  {x}_t,t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {x}_t)} $ and the score of the encoder distribution $ \nabla _{\textbf  {x}_t} \ln q_\phi ( \textbf  {z} | \textbf  {x}_t, t) \approx \nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )} $. The latter can be computed via automatic differentiation with respect to the input $\textbf  {x}_t$.}}{119}{figure.caption.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Method}{119}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Problems with conventional VAEs}{119}{subsection.6.3.1}\protected@file@percent }
 \citation{preechakul2022diffusion_decoder,yang2023ldiffusion_decoder_compression}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Conditional Diffusion Models as decoders}{118}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Score VAE: Encoder with unconditional diffusion model as prior}{118}{subsection.6.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Modeling the latent posterior score $\nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )}$}{119}{subsection.6.3.4}\protected@file@percent }
-\newlabel{ch4:eq:true_posterior}{{6.11}{119}{Modeling the latent posterior score $\nabla _{\textbf {x}_t} \ln {p(\textbf {z} | \textbf {x}_t )}$}{equation.6.3.11}{}}
-\newlabel{ch4:definition_of_variational_approximation}{{6.12}{119}{Modeling the latent posterior score $\nabla _{\textbf {x}_t} \ln {p(\textbf {z} | \textbf {x}_t )}$}{equation.6.3.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Encoder Training Objective}{120}{subsection.6.3.5}\protected@file@percent }
-\newlabel{ch4:Encoder_Training_Objective}{{6.3.5}{120}{Encoder Training Objective}{subsection.6.3.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Correction of the variational error}{120}{subsection.6.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Conditional Diffusion Models as decoders}{120}{subsection.6.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Score VAE: Encoder with unconditional diffusion model as prior}{120}{subsection.6.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Modeling the latent posterior score $\nabla _{\textbf  {x}_t} \ln {p(\textbf  {z} | \textbf  {x}_t )}$}{121}{subsection.6.3.4}\protected@file@percent }
+\newlabel{ch4:eq:true_posterior}{{6.11}{121}{Modeling the latent posterior score $\nabla _{\textbf {x}_t} \ln {p(\textbf {z} | \textbf {x}_t )}$}{equation.6.3.11}{}}
+\newlabel{ch4:definition_of_variational_approximation}{{6.12}{121}{Modeling the latent posterior score $\nabla _{\textbf {x}_t} \ln {p(\textbf {z} | \textbf {x}_t )}$}{equation.6.3.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Encoder Training Objective}{122}{subsection.6.3.5}\protected@file@percent }
+\newlabel{ch4:Encoder_Training_Objective}{{6.3.5}{122}{Encoder Training Objective}{subsection.6.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Correction of the variational error}{122}{subsection.6.3.6}\protected@file@percent }
 \citation{preechakul2022diffusion_decoder,yang2023ldiffusion_decoder_compression}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments}{121}{section.6.4}\protected@file@percent }
-\newlabel{ch4:Experiments}{{6.4}{121}{Experiments}{section.6.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Cifar10}}{121}{table.caption.74}\protected@file@percent }
-\newlabel{ch4:tbl:Cifar10}{{6.1}{121}{Cifar10}{table.caption.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces CelebA $64\times 64$}}{121}{table.caption.74}\protected@file@percent }
-\newlabel{ch4:tbl:CelebA}{{6.2}{121}{CelebA $64\times 64$}{table.caption.74}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Conclusions}{121}{section.6.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Cifar10}}{122}{table.caption.75}\protected@file@percent }
-\newlabel{ch4:fig:cifar10_qualitative_comparison}{{6.3}{122}{Cifar10}{table.caption.75}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces CelebA $64\times 64$}}{122}{table.caption.76}\protected@file@percent }
-\newlabel{ch4:fig:celebA_qualitative_comparison}{{6.4}{122}{CelebA $64\times 64$}{table.caption.76}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments}{123}{section.6.4}\protected@file@percent }
+\newlabel{ch4:Experiments}{{6.4}{123}{Experiments}{section.6.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Cifar10}}{123}{table.caption.77}\protected@file@percent }
+\newlabel{ch4:tbl:Cifar10}{{6.1}{123}{Cifar10}{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces CelebA $64\times 64$}}{123}{table.caption.77}\protected@file@percent }
+\newlabel{ch4:tbl:CelebA}{{6.2}{123}{CelebA $64\times 64$}{table.caption.77}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Conclusions}{123}{section.6.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Cifar10}}{124}{table.caption.78}\protected@file@percent }
+\newlabel{ch4:fig:cifar10_qualitative_comparison}{{6.3}{124}{Cifar10}{table.caption.78}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces CelebA $64\times 64$}}{124}{table.caption.79}\protected@file@percent }
+\newlabel{ch4:fig:celebA_qualitative_comparison}{{6.4}{124}{CelebA $64\times 64$}{table.caption.79}{}}
 \@setckpt{Chapter4/chapter4}{
-\setcounter{page}{123}
+\setcounter{page}{125}
 \setcounter{equation}{12}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}
