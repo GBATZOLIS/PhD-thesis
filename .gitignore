@@ -1,11 +1,15 @@
+# LaTeX build artifacts
 *.aux
 *.log
 *.lof
 *.lot
-*.out
-*.synctex
-*.toc
 *.fls
 *.fdb_latexmk
-thesis.pdf
+*.synctex(busy)
+*.synctex.gz
+*.toc
+*.pdf
+
+# Ignore macOS system files
+.DS_Store
 
