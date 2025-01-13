@@ -1,59 +1,9 @@
 \begin{thebibliography}{}
 
-\bibitem[Achilli et~al., 2024]{achilli2024losing}
-Achilli, B., Ventura, E., Silvestri, G., Pham, B., Raya, G., Krotov, D., Lucibello, C., and Ambrogioni, L. (2024).
-\newblock Losing dimensions: Geometric memorization in generative diffusion.
-\newblock {\em arXiv preprint arXiv:2410.08727}.
-
-\bibitem[Anderson, 1982]{anderson1982reverse_time_sde}
-Anderson, B.~D. (1982).
-\newblock Reverse-time diffusion equation models.
-\newblock {\em Stochastic Processes and their Applications}, 12(3):313--326.
-
-\bibitem[Arandjelovic and Zisserman, 2017]{arandjelovic2017look}
-Arandjelovic, R. and Zisserman, A. (2017).
-\newblock Look, listen and learn.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer Vision}, pages 609--617.
-
-\bibitem[Ardizzone et~al., 2019]{ardizzone2019guided}
-Ardizzone, L., Kruse, J., Rother, C., and K{\"o}the, U. (2019).
-\newblock Guided image generation with conditional invertible neural networks.
-\newblock In {\em Proceedings of the 31st International Conference on Neural Information Processing Systems}, pages 2395--2406.
-
-\bibitem[Arjovsky et~al., 2017]{arjovsky2017wasserstein}
-Arjovsky, M., Chintala, S., and Bottou, L. (2017).
-\newblock Wasserstein {GAN}.
-\newblock In {\em Proceedings of the 34th International Conference on Machine Learning (ICML)}, volume~70, pages 214--223. PMLR.
-
-\bibitem[Arridge et~al., 2019]{arridge2019ip}
-Arridge, S., Maass, P., Öktem, O., and Schönlieb, C.-B. (2019).
-\newblock Solving inverse problems using data-driven models.
-\newblock {\em Acta Numerica}, 28:1–174.
-
 \bibitem[Arvanitidis et~al., 2016]{arvanitidis2016locally}
 Arvanitidis, G., Hansen, L.~K., and Hauberg, S. (2016).
 \newblock A locally adaptive normal distribution.
 \newblock {\em Advances in Neural Information Processing Systems}, 29.
-
-\bibitem[Baek et~al., 2021]{baek2021accurate}
-Baek, M., DiMaio, F., Anishchenko, I., Dauparas, J., Ovchinnikov, S., Lee, G.~R., Wang, J., Cong, Q., Kinch, L.~N., Schaeffer, R.~D., et~al. (2021).
-\newblock Accurate prediction of protein structures and interactions using a three-track neural network.
-\newblock {\em Science}, 373(6557):871--876.
-
-\bibitem[Baevski et~al., 2020]{baevski2020wav2vec}
-Baevski, A., Zhou, Y., Mohamed, A., and Auli, M. (2020).
-\newblock wav2vec 2.0: A framework for self-supervised learning of speech representations.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 12449--12460.
-
-\bibitem[Bao et~al., 2021]{bao2021beit}
-Bao, H., Dong, L., and Wei, F. (2021).
-\newblock Beit: Bert pre-training of image transformers.
-\newblock In {\em International Conference on Learning Representations}.
-
-\bibitem[Bardes et~al., 2022]{bardes2021vicreg}
-Bardes, A., Ponce, J., and LeCun, Y. (2022).
-\newblock Vicreg: Variance-invariance-covariance regularization for self-supervised learning.
-\newblock In {\em International Conference on Learning Representations (ICLR)}.
 
 \bibitem[Batzolis et~al., 2024]{batzolis2024caflow}
 Batzolis, G., Carioni, M., Etmann, C., Afyouni, S., Kourtzi, Z., and Sch{\"o}nlieb, C.-B. (2024).
@@ -70,104 +20,25 @@ Batzolis, G., Stanczuk, J., and Sch{\"o}nlieb, C.-B. (2023).
 Batzolis, G., Stanczuk, J., Schönlieb, C.-B., and Etmann, C. (2022).
 \newblock Non-uniform diffusion models.
 
-\bibitem[Behrmann et~al., 2021a]{behrmann2021understanding}
-Behrmann, J., Vicol, P., Wang, K.-C., Grosse, R., and Jacobsen, J.-H. (2021a).
-\newblock Understanding and mitigating exploding inverses in invertible neural networks.
-\newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 1792--1800. PMLR.
-
-\bibitem[Behrmann et~al., 2021b]{behrmann2021understandin}
-Behrmann, J., Vicol, P., Wang, K.-C., Grosse, R., and Jacobsen, J.-H. (2021b).
-\newblock Understanding and mitigating exploding inverses in invertible neural networks.
-\newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 1792--1800. PMLR.
-
 \bibitem[Belkin and Niyogi, 2001]{belkin2001laplacian}
 Belkin, M. and Niyogi, P. (2001).
 \newblock Laplacian eigenmaps and spectral techniques for embedding and clustering.
 \newblock {\em Advances in neural information processing systems}, 14.
-
-\bibitem[Bengio et~al., 2003]{bengio2005autoregressive}
-Bengio, Y., Ducharme, R., Vincent, P., and Janvin, C. (2003).
-\newblock A neural probabilistic language model.
-\newblock {\em J. Mach. Learn. Res.}, 3(null):1137–1155.
-
-\bibitem[Bishop and Tipping, 2001]{ppca}
-Bishop, C.~M. and Tipping, M.~E. (2001).
-\newblock Probabilistic principal component analysis.
-\newblock PPCA.
-
-\bibitem[Blanch et~al., 2019]{colorGAN}
-Blanch, M.~G., Mrak, M., Smeaton, A.~F., and O'Connor, N.~E. (2019).
-\newblock End-to-end conditional gan-based architectures for image colourisation.
-\newblock In {\em 2019 IEEE 21st International Workshop on Multimedia Signal Processing (MMSP)}, pages 1--6.
 
 \bibitem[Boothby, 2003]{boothby2003introduction}
 Boothby, W.~M. (2003).
 \newblock {\em An introduction to differentiable manifolds and Riemannian geometry, Revised}, volume 120.
 \newblock Gulf Professional Publishing.
 
-\bibitem[Brehmer and Cranmer, 2020]{brehmer2020flows}
-Brehmer, J. and Cranmer, K. (2020).
-\newblock Flows for simultaneous manifold learning and density estimation.
-\newblock {\em Advances in Neural Information Processing Systems}, 33:442--453.
-
-\bibitem[Brown et~al., 2020]{brown2020language}
-Brown, T.~B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.~D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et~al. (2020).
-\newblock Language models are few-shot learners.
-\newblock {\em Advances in Neural Information Processing Systems}, 33:1877--1901.
-
-\bibitem[Butler et~al., 2018]{butler2018machine}
-Butler, K.~T., Davies, D.~W., Cartwright, H., Isayev, O., and Walsh, A. (2018).
-\newblock Machine learning for molecular and materials science.
-\newblock {\em Nature}, 559(7715):547--555.
-
-\bibitem[Camastra and Vinciarelli, 2002]{fractal_dim}
-Camastra, F. and Vinciarelli, A. (2002).
-\newblock Estimating the intrinsic dimension of data with a fractal-based method.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 24(10):1404--1407.
-
-\bibitem[Campadelli et~al., 2015]{campadelli2015intrinsic}
-Campadelli, P., Casiraghi, E., Ceruti, C., and Rozza, A. (2015).
-\newblock Intrinsic dimension estimation: Relevant techniques and a benchmark framework.
-\newblock {\em Mathematical Problems in Engineering}, 2015:1--21.
-
 \bibitem[Carmo, 1992]{carmo1992riemannian}
 Carmo, M. P.~d. (1992).
 \newblock {\em Riemannian geometry}.
 \newblock Birkh{\"a}user.
 
-\bibitem[Caron et~al., 2018]{caron2018deep}
-Caron, M., Bojanowski, P., Joulin, A., and Douze, M. (2018).
-\newblock Deep clustering for unsupervised learning of visual features.
-\newblock In {\em European Conference on Computer Vision (ECCV)}, pages 132--149.
-
-\bibitem[Caron et~al., 2020]{caron2020unsupervised}
-Caron, M., Misra, I., Mairal, J., et~al. (2020).
-\newblock Unsupervised learning of visual features by contrasting cluster assignments.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 9912--9924.
-
-\bibitem[Chen et~al., 2023]{chen2023manifold_linear}
-Chen, M., Huang, K., Zhao, T., and Wang, M. (2023).
-\newblock Score approximation, estimation and distribution recovery of diffusion models on low-dimensional data.
-
 \bibitem[Chen and Lipman, 2023]{chen2023riemannian}
 Chen, R.~T. and Lipman, Y. (2023).
 \newblock Riemannian flow matching on general geometries.
 \newblock {\em arXiv preprint arXiv:2302.03660}.
-
-\bibitem[Chen et~al., 2018]{neuralODEs}
-Chen, R. T.~Q., Rubanova, Y., Bettencourt, J., and Duvenaud, D.~K. (2018).
-\newblock Neural ordinary differential equations.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~31.
-
-\bibitem[Chen et~al., 2020]{chen2020simple}
-Chen, T., Kornblith, S., Norouzi, M., and Hinton, G. (2020).
-\newblock A simple framework for contrastive learning of visual representations.
-\newblock In {\em International Conference on Machine Learning (ICML)}, pages 1597--1607.
-
-\bibitem[Chen and He, 2021]{chen2021exploring}
-Chen, X. and He, K. (2021).
-\newblock Exploring simple siamese representation learning.
-\newblock {\em arXiv preprint arXiv:2011.10566}.
 
 \bibitem[Chow et~al., 2022]{chow2022predicting}
 Chow, Y.~L., Singh, S., Carpenter, A.~E., and Way, G.~P. (2022).
@@ -179,34 +50,10 @@ Coifman, R.~R. and Lafon, S. (2006).
 \newblock Diffusion maps.
 \newblock {\em Applied and computational harmonic analysis}, 21(1):5--30.
 
-\bibitem[Cornish et~al., 2020]{cornish2020relaxing}
-Cornish, R., Caterini, A., Deligiannidis, G., and Doucet, A. (2020).
-\newblock Relaxing bijectivity constraints with continuously indexed normalising flows.
-\newblock In {\em International conference on machine learning}, pages 2133--2143. PMLR.
-
 \bibitem[DeMers and Cottrell, 1992]{demers1992non}
 DeMers, D. and Cottrell, G. (1992).
 \newblock Non-linear dimensionality reduction.
 \newblock {\em Advances in neural information processing systems}, 5.
-
-\bibitem[Deng et~al., 2009]{imagenet}
-Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., and Fei-Fei, L. (2009).
-\newblock Imagenet: A large-scale hierarchical image database.
-\newblock In {\em 2009 IEEE Conference on Computer Vision and Pattern Recognition}, pages 248--255.
-
-\bibitem[Devlin et~al., 2019a]{devlin2018bert}
-Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019a).
-\newblock Bert: Pre-training of deep bidirectional transformers for language understanding.
-\newblock In {\em Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)}, pages 4171--4186.
-
-\bibitem[Devlin et~al., 2019b]{devlin2019bert}
-Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019b).
-\newblock Bert: Pre-training of deep bidirectional transformers for language understanding.
-\newblock {\em arXiv preprint arXiv:1810.04805}.
-
-\bibitem[Dhariwal and Nichol, 2021]{dhariwal2021diffusion_beats_gans}
-Dhariwal, P. and Nichol, A. (2021).
-\newblock Diffusion models beat gans on image synthesis.
 
 \bibitem[Diepeveen, 2024]{diepeveen2024pulling}
 Diepeveen, W. (2024).
@@ -223,48 +70,15 @@ Diepeveen, W., Chew, J., and Needell, D. (2023).
 \newblock Curvature corrected tangent space-based approximation of manifold-valued data.
 \newblock {\em arXiv preprint arXiv:2306.00507}.
 
-\bibitem[Ding et~al., 2021]{ding2021vqvae}
-Ding, Y., Hu, H., Ge, Z., Wu, J., Zhang, H., and Ding, C. (2021).
-\newblock Vq-vae for multimodal image synthesis.
-\newblock {\em arXiv preprint arXiv:2103.02398}.
-
-\bibitem[Dinh et~al., 2015]{Nice2014}
-Dinh, L., Krueger, D., and Bengio, Y. (2015).
-\newblock {NICE:} non-linear independent components estimation.
-\newblock In Bengio, Y. and LeCun, Y., editors, {\em 3rd International Conference on Learning Representations, {ICLR} 2015}.
-
 \bibitem[Dinh et~al., 2017]{dinh2017density}
 Dinh, L., Sohl-Dickstein, J., and Bengio, S. (2017).
 \newblock Density estimation using real {NVP}.
 \newblock In {\em International Conference on Learning Representations}.
 
-\bibitem[Draxler et~al., 2024]{draxler2024free}
-Draxler, F., Sorrenson, P., Zimmermann, L., Rousselot, A., and K{\"o}the, U. (2024).
-\newblock Free-form flows: Make any architecture a normalizing flow.
-\newblock In {\em International Conference on Artificial Intelligence and Statistics}, pages 2197--2205. PMLR.
-
-\bibitem[Du and Mordatch, 2019]{du2019implicit}
-Du, Y. and Mordatch, I. (2019).
-\newblock Implicit generation and modeling with energy-based models.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~32.
-
 \bibitem[Durkan et~al., 2019]{durkan2019neural}
 Durkan, C., Bekasov, A., Murray, I., and Papamakarios, G. (2019).
 \newblock Neural spline flows.
 \newblock {\em Advances in neural information processing systems}, 32.
-
-\bibitem[Esser et~al., 2021]{esser2021taming}
-Esser, P., Rombach, R., and Ommer, B. (2021).
-\newblock Taming transformers for high-resolution image synthesis.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 12873--12883.
-
-\bibitem[Fan et~al., 2010]{fan_local_pca}
-Fan, M., Gu, N., Qiao, H., and Zhang, B. (2010).
-\newblock Intrinsic dimension estimation of data by principal component analysis.
-
-\bibitem[Fefferman et~al., 2013]{manifold_hypothesis}
-Fefferman, C., Mitter, S., and Narayanan, H. (2013).
-\newblock Testing the manifold hypothesis.
 
 \bibitem[Fefferman et~al., 2016]{fefferman2016testing}
 Fefferman, C., Mitter, S., and Narayanan, H. (2016).
@@ -276,570 +90,49 @@ Fletcher, P.~T., Lu, C., Pizer, S.~M., and Joshi, S. (2004).
 \newblock Principal geodesic analysis for the study of nonlinear statistics of shape.
 \newblock {\em IEEE transactions on medical imaging}, 23(8):995--1005.
 
-\bibitem[Fukunaga and Olsen, 1971]{Karhunen-Loeve}
-Fukunaga, K. and Olsen, D. (1971).
-\newblock An algorithm for finding intrinsic dimensionality of data.
-\newblock {\em IEEE Transactions on Computers}, C-20(2):176--183.
-
-\bibitem[Gentile et~al., 2020]{gentile2020deep}
-Gentile, F., Agrawal, V., Hsing, M.-F., Ton, A.-T., Ban, F., Norinder, U., Gleave, M.~E., and Cherkasov, A. (2020).
-\newblock Deep docking: A deep learning platform for ultra-large virtual screening.
-\newblock {\em Journal of Chemical Information and Modeling}, 60(9):4291--4305.
-
-\bibitem[Gidaris et~al., 2018]{gidaris2018unsupervised}
-Gidaris, S., Singh, P., and Komodakis, N. (2018).
-\newblock Unsupervised representation learning by predicting image rotations.
-\newblock In {\em International Conference on Learning Representations (ICLR)}.
-
 \bibitem[Gomari et~al., 2022]{gomari2022variational}
 Gomari, D.~P., Schweickart, A., Cerchietti, L., Paietta, E., Fernandez, H., Al-Amin, H., Suhre, K., and Krumsiek, J. (2022).
 \newblock Variational autoencoders learn transferrable representations of metabolomics data.
 \newblock {\em Communications Biology}, 5(1):645.
-
-\bibitem[Goodfellow et~al., 2016]{goodfellow2016deep}
-Goodfellow, I., Bengio, Y., and Courville, A. (2016).
-\newblock {\em Deep learning}.
-\newblock MIT Press.
-
-\bibitem[Goodfellow et~al., 2014a]{GANs}
-Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., and Bengio, Y. (2014a).
-\newblock Generative adversarial nets.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~27.
-
-\bibitem[Goodfellow et~al., 2014b]{goodfellow2014generative}
-Goodfellow, I.~J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., and Bengio, Y. (2014b).
-\newblock Generative adversarial networks.
-
-\bibitem[Goodfellow et~al., 2014c]{gan}
-Goodfellow, I.~J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., and Bengio, Y. (2014c).
-\newblock Generative adversarial networks.
-
-\bibitem[Goyal and Bengio, 2022]{goyal2022inductive}
-Goyal, A. and Bengio, Y. (2022).
-\newblock Inductive biases for deep learning of higher-level cognition.
-\newblock {\em Proceedings of the Royal Society A}, 478(2266):20210068.
-
-\bibitem[Goyal et~al., 2021]{goyal2021self}
-Goyal, P., Mahajan, D., Gupta, A., and Misra, I. (2021).
-\newblock Self-supervised pretraining of visual features in the wild.
-\newblock {\em arXiv preprint arXiv:2103.01988}.
-
-\bibitem[Grathwohl et~al., 2020]{grathwohl2020your}
-Grathwohl, W., Wang, K.~C., Jacobsen, J.-H., Duvenaud, D., Swersky, K., and Norouzi, M. (2020).
-\newblock Your classifier is secretly an energy-based model and you should treat it like one.
-\newblock In {\em International Conference on Learning Representations (ICLR)}.
-
-\bibitem[Grill et~al., 2020]{grill2020bootstrap}
-Grill, J.-B., Strub, F., Altch{\'e}, F., et~al. (2020).
-\newblock Bootstrap your own latent: A new approach to self-supervised learning.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 21271--21284.
-
-\bibitem[Grover et~al., 2020]{grover2020alignflow}
-Grover, A., Chute, C., Shu, R., Cao, Z., and Ermon, S. (2020).
-\newblock Alignflow: Cycle consistent learning from multiple domains via normalizing flows.
-\newblock In {\em Proceedings of the AAAI Conference on Artificial Intelligence}, volume~34, pages 4028--4035.
-
-\bibitem[Haro et~al., 2008]{haro_mle}
-Haro, G., Randall, G., and Sapiro, G. (2008).
-\newblock Translated poisson mixture model for stratification learning.
-\newblock {\em Int. J. Comput. Vis.}, 80(3):358--374.
 
 \bibitem[Hauberg et~al., 2012]{hauberg2012geometric}
 Hauberg, S., Freifeld, O., and Black, M. (2012).
 \newblock A geometric take on metric learning.
 \newblock {\em Advances in Neural Information Processing Systems}, 25.
 
-\bibitem[He et~al., 2022]{he2022masked}
-He, K., Chen, X., Xie, S., Li, Y., Doll{\'a}r, P., and Girshick, R. (2022).
-\newblock Masked autoencoders are scalable vision learners.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 16000--16009.
-
-\bibitem[He et~al., 2020]{he2020momentum}
-He, K., Fan, H., Wu, Y., Xie, S., and Girshick, R. (2020).
-\newblock Momentum contrast for unsupervised visual representation learning.
-\newblock In {\em IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 9729--9738.
-
-\bibitem[Heusel et~al., 2018]{heusel2018fid}
-Heusel, M., Ramsauer, H., Unterthiner, T., Nessler, B., and Hochreiter, S. (2018).
-\newblock Gans trained by a two time-scale update rule converge to a local nash equilibrium.
-
-\bibitem[Higgins et~al., 2017]{higgins2017beta}
-Higgins, I., Matthey, L., Pal, A., Burgess, C., Glorot, X., Botvinick, M., Mohamed, S., and Lerchner, A. (2017).
-\newblock Beta-vae: Learning basic visual concepts with a constrained variational framework.
-\newblock In {\em 5th International Conference on Learning Representations (ICLR)}.
-
-\bibitem[Higgins et~al., 2016]{higgins2016beta_vae}
-Higgins, I., Matthey, L., Pal, A., Burgess, C.~P., Glorot, X., Botvinick, M.~M., Mohamed, S., and Lerchner, A. (2016).
-\newblock beta-vae: Learning basic visual concepts with a constrained variational framework.
-\newblock In {\em International Conference on Learning Representations}.
-
-\bibitem[Hinton, 2002]{hinton2002training}
-Hinton, G.~E. (2002).
-\newblock Training products of experts by minimizing contrastive divergence.
-\newblock {\em Neural Computation}, 14(8):1771--1800.
-
-\bibitem[Ho et~al., 2019]{ho2019flow++}
-Ho, J., Chen, X., Srinivas, A., Duan, Y., and Abbeel, P. (2019).
-\newblock Flow++: Improving flow-based generative models with variational dequantization and architecture design.
-\newblock In {\em International Conference on Machine Learning}, pages 2722--2730. PMLR.
-
-\bibitem[Ho et~al., 2020a]{ho2020denoising}
-Ho, J., Jain, A., and Abbeel, P. (2020a).
-\newblock Denoising diffusion probabilistic models.
-
-\bibitem[Ho et~al., 2020b]{ddpm}
-Ho, J., Jain, A., and Abbeel, P. (2020b).
-\newblock Denoising diffusion probabilistic models.
-
-\bibitem[Hochreiter and Schmidhuber, 1997]{hochreiter1997long}
-Hochreiter, S. and Schmidhuber, J. (1997).
-\newblock Long short-term memory.
-\newblock {\em Neural Computation}, 9(8):1735--1780.
-
-\bibitem[Horvat and Pfister, 2022]{horvat2022nfid}
-Horvat, C. and Pfister, J.-P. (2022).
-\newblock Intrinsic dimensionality estimation using normalizing flows.
-\newblock In Koyejo, S., Mohamed, S., Agarwal, A., Belgrave, D., Cho, K., and Oh, A., editors, {\em Advances in Neural Information Processing Systems}, volume~35, pages 12225--12236. Curran Associates, Inc.
-
-\bibitem[Hossain et~al., 2020]{hossain2019comprehensive}
-Hossain, M., Sohel, F., Shiratuddin, M.~F., and Laga, H. (2020).
-\newblock A comprehensive survey of image caption generation techniques.
-\newblock {\em Journal of Visual Communication and Image Representation}, 71:102844.
-
 \bibitem[Huang et~al., 2022]{huang2022riemannian}
 Huang, C.-W., Aghajohari, M., Bose, J., Panangaden, P., and Courville, A.~C. (2022).
 \newblock Riemannian diffusion models.
 \newblock {\em Advances in Neural Information Processing Systems}, 35:2750--2761.
 
-\bibitem[Huang et~al., 2018]{autoregressive_flows}
-Huang, C.-W., Krueger, D., Lacoste, A., and Courville, A. (2018).
-\newblock Neural autoregressive flows.
-\newblock In {\em Proceedings of the 35th International Conference on Machine Learning}, volume~80, pages 2078--2087.
-
-\bibitem[Hyv{{\"a}}rinen, 2005a]{hyvarinen2005score_original}
-Hyv{{\"a}}rinen, A. (2005a).
-\newblock Estimation of non-normalized statistical models by score matching.
-\newblock {\em Journal of Machine Learning Research}, 6(24):695--709.
-
-\bibitem[Hyv{{\"a}}rinen, 2005b]{score_matching}
-Hyv{{\"a}}rinen, A. (2005b).
-\newblock Estimation of non-normalized statistical models by score matching.
-\newblock {\em Journal of Machine Learning Research}, 6(24):695--709.
-
-\bibitem[Isola et~al., 2017]{isola2017image}
-Isola, P., Zhu, J.-Y., Zhou, T., and Efros, A.~A. (2017).
-\newblock Image-to-image translation with conditional adversarial networks.
-\newblock In {\em Proceedings of the IEEE conference on computer vision and pattern recognition}, pages 1125--1134.
-
-\bibitem[Isola et~al., 2018]{isola2018pix2pix}
-Isola, P., Zhu, J.-Y., Zhou, T., and Efros, A.~A. (2018).
-\newblock Image-to-image translation with conditional adversarial networks.
-
-\bibitem[Izmailov et~al., 2021]{izmailov2021flowgmm}
-Izmailov, P., Kirichenko, P., Finzi, M., and Wilson, A.~G. (2021).
-\newblock Semi-supervised learning with normalizing flows.
-\newblock In {\em International Conference on Learning Representations}.
-
-\bibitem[Jaini et~al., 2020]{jaini2020tails}
-Jaini, P., Kobyzev, I., Yu, Y., and Brubaker, M. (2020).
-\newblock Tails of lipschitz triangular flows.
-\newblock In {\em International Conference on Machine Learning}, pages 4673--4681. PMLR.
-
-\bibitem[Johnsson, 2016]{R_intrinsic_dim}
-Johnsson, K. (2016).
-\newblock intrinsicdimension: Intrinsic dimension estimation.
-
-\bibitem[Jumper et~al., 2021]{jumper2021highly}
-Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., {\v{Z}}{\'\i}dek, A., Potapenko, A., et~al. (2021).
-\newblock Highly accurate protein structure prediction with alphafold.
-\newblock {\em Nature}, 596(7873):583--589.
-
-\bibitem[Kamkari et~al., 2024]{kamkari2024geometric}
-Kamkari, H., Ross, B.~L., Cresswell, J.~C., Caterini, A.~L., Krishnan, R.~G., and Loaiza-Ganem, G. (2024).
-\newblock A geometric explanation of the likelihood ood detection paradox.
-\newblock In {\em Proceedings of the 41st International Conference on Machine Learning}, volume 235 of {\em Proceedings of Machine Learning Research}, Vienna, Austria. PMLR.
-\newblock Copyright 2024 by the author(s).
+\bibitem[Kadkhodaie et~al., 2024]{kadkhodaie2024generalization}
+Kadkhodaie, Z., Guth, F., Simoncelli, E.~P., and Mallat, S. (2024).
+\newblock Generalization in diffusion models arises from geometry-adaptive harmonic representation.
+\newblock In {\em Proceedings of the 12th International Conference on Learning Representations (ICLR)}.
 
 \bibitem[Kapusniak et~al., 2024]{kapusniak2024metricflowmatchingsmooth}
 Kapusniak, K., Potaptchik, P., Reu, T., Zhang, L., Tong, A., Bronstein, M., Bose, A.~J., and Giovanni, F.~D. (2024).
 \newblock Metric flow matching for smooth interpolations on the data manifold.
-
-\bibitem[Karras et~al., 2019a]{karras2019stylegan}
-Karras, T., Laine, S., and Aila, T. (2019a).
-\newblock A style-based generator architecture for generative adversarial networks.
-\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 4401--4410.
-
-\bibitem[Karras et~al., 2019b]{karras2019style}
-Karras, T., Laine, S., and Aila, T. (2019b).
-\newblock A style-based generator architecture for generative adversarial networks.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 4401--4410.
-
-\bibitem[Karras et~al., 2020]{karras2020analyzing}
-Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., and Aila, T. (2020).
-\newblock Analyzing and improving the image quality of stylegan.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 8110--8119.
-
-\bibitem[K\'{e}gl, 2002]{packing_number}
-K\'{e}gl, B. (2002).
-\newblock Intrinsic dimension estimation using packing numbers.
-\newblock In Becker, S., Thrun, S., and Obermayer, K., editors, {\em Advances in Neural Information Processing Systems}, volume~15. MIT Press.
-
-\bibitem[Keys, 1981]{keyes1981bicubic}
-Keys, R. (1981).
-\newblock Cubic convolution interpolation for digital image processing.
-\newblock {\em IEEE Transactions on Acoustics, Speech, and Signal Processing}, 29(6):1153--1160.
-
-\bibitem[Kiani et~al., 2024]{kiani2024hardness}
-Kiani, B.~T., Wang, J., and Weber, M. (2024).
-\newblock Hardness of learning neural networks under the manifold hypothesis.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}.
-\newblock Spotlight Presentation.
-
-\bibitem[Kim et~al., 2019]{kim2019kde}
-Kim, J., Shin, J., Rinaldo, A., and Wasserman, L. (2019).
-\newblock Uniform convergence rate of the kernel density estimator adaptive to intrinsic volume dimension.
-\newblock In {\em International Conference on Machine Learning}, pages 3398--3407. PMLR.
-
-\bibitem[Kingma and Dhariwal, 2018]{GLOW}
-Kingma, D.~P. and Dhariwal, P. (2018).
-\newblock Glow: Generative flow with invertible 1x1 convolutions.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~31, pages 10215--10224.
-
-\bibitem[Kingma et~al., 2021]{kingmaVDM}
-Kingma, D.~P., Salimans, T., Poole, B., and Ho, J. (2021).
-\newblock Variational diffusion models.
 
 \bibitem[Kingma and Welling, 2013]{kingma2013auto}
 Kingma, D.~P. and Welling, M. (2013).
 \newblock Auto-encoding variational bayes.
 \newblock {\em arXiv preprint arXiv:1312.6114}.
 
-\bibitem[Kingma and Welling, 2014a]{kingma2014autoencoding}
-Kingma, D.~P. and Welling, M. (2014a).
-\newblock Auto-encoding variational bayes.
-
-\bibitem[Kingma and Welling, 2014b]{vae}
-Kingma, D.~P. and Welling, M. (2014b).
-\newblock Auto-encoding variational bayes.
-\newblock In Bengio, Y. and LeCun, Y., editors, {\em 2nd International Conference on Learning Representations, {ICLR} 2014}.
-
-\bibitem[Kong et~al., 2020]{kong2020diffwave}
-Kong, Z., Ping, W., Huang, J., Zhao, K., and Catanzaro, B. (2020).
-\newblock Diffwave: A versatile diffusion model for audio synthesis.
-
-\bibitem[Kpotufe, 2011]{kpotufe2011knn}
-Kpotufe, S. (2011).
-\newblock k-nn regression adapts to local intrinsic dimension.
-\newblock {\em Advances in neural information processing systems}, 24.
-
-\bibitem[Krizhevsky, 2012]{cifar}
-Krizhevsky, A. (2012).
-\newblock Learning multiple layers of features from tiny images.
-\newblock {\em University of Toronto}.
-
-\bibitem[Langevin, 1908]{langevin1908theorie}
-Langevin, P. (1908).
-\newblock Sur la théorie du mouvement brownien.
-\newblock {\em Comptes Rendus de l'Académie des Sciences (Paris)}, 146:530--533.
-
-\bibitem[Laszkiewicz et~al., 2021]{laszkiewicz2021copula}
-Laszkiewicz, M., Lederer, J., and Fischer, A. (2021).
-\newblock Copula-based normalizing flows.
-\newblock {\em arXiv preprint arXiv:2107.07352}.
-
-\bibitem[LeCun, 2021]{lecun2021self}
-LeCun, Y. (2021).
-\newblock Self-supervised learning: The dark matter of intelligence.
-\newblock {\em Facebook Research}.
-
-\bibitem[LeCun et~al., 2015]{lecun2015deep}
-LeCun, Y., Bengio, Y., and Hinton, G. (2015).
-\newblock Deep learning.
-\newblock {\em Nature}, 521(7553):436--444.
-
-\bibitem[LeCun et~al., 1998]{lecun1998gradient}
-LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998).
-\newblock Gradient-based learning applied to document recognition.
-\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324.
-
-\bibitem[LeCun et~al., 2006]{lecun2006tutorial}
-LeCun, Y., Chopra, S., and Hadsell, R. (2006).
-\newblock A tutorial on energy-based learning.
-\newblock {\em Predicting Structured Data}.
-
-\bibitem[LeCun and Cortes, 2010]{mnist}
-LeCun, Y. and Cortes, C. (2010).
-\newblock {MNIST} handwritten digit database.
-
-\bibitem[Lee, 2019]{lee2019_riemman}
-Lee, J. (2019).
-\newblock {\em Introduction to Riemannian Manifolds}.
-\newblock Graduate Texts in Mathematics. Springer International Publishing.
-
 \bibitem[Lee, 2013]{lee2013smooth}
 Lee, J.~M. (2013).
 \newblock Smooth manifolds.
 \newblock In {\em Introduction to Smooth Manifolds}, pages 1--31. Springer.
-
-\bibitem[Levina and Bickel, 2004]{dim_MLE}
-Levina, E. and Bickel, P. (2004).
-\newblock Maximum likelihood estimation of intrinsic dimension.
-\newblock In Saul, L., Weiss, Y., and Bottou, L., editors, {\em Advances in Neural Information Processing Systems}, volume~17. MIT Press.
-
-\bibitem[Li et~al., 2019]{li2019feedback}
-Li, Z., Yang, J., Liu, Z., Yang, X., Jeon, G., and Wu, W. (2019).
-\newblock Feedback network for image super-resolution.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 3867--3876.
-
-\bibitem[Liang et~al., 2021a]{liang2021hrflow}
-Liang, J., Lugmayr, A., Zhang, K., Danelljan, M., Gool, L.~V., and Timofte, R. (2021a).
-\newblock Hierarchical conditional flow: A unified framework for image super-resolution and image rescaling.
-
-\bibitem[Liang et~al., 2021b]{HCFLOW}
-Liang, J., Lugmayr, A., Zhang, K., Danelljan, M., Van~Gool, L., and Timofte, R. (2021b).
-\newblock Hierarchical conditional flow: A unified framework for image super-resolution and image rescaling.
-\newblock In {\em Proceedings of the IEEE/CVF International Conference on Computer Vision}, pages 4076--4085.
-
-\bibitem[Liu et~al., 2019]{liu2019roberta}
-Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., and Stoyanov, V. (2019).
-\newblock Roberta: A robustly optimized bert pretraining approach.
-\newblock {\em arXiv preprint arXiv:1907.11692}.
-
-\bibitem[Liu et~al., 2015a]{liu2015deep}
-Liu, Z., Luo, P., Wang, X., and Tang, X. (2015a).
-\newblock Deep learning face attributes in the wild.
-\newblock In {\em Proceedings of the IEEE international conference on computer vision}, pages 3730--3738.
-
-\bibitem[Liu et~al., 2015b]{2015celeba}
-Liu, Z., Luo, P., Wang, X., and Tang, X. (2015b).
-\newblock Deep learning face attributes in the wild.
-\newblock In {\em Proceedings of International Conference on Computer Vision (ICCV)}.
-
-\bibitem[Liu et~al., 2015c]{liu2015celeba}
-Liu, Z., Luo, P., Wang, X., and Tang, X. (2015c).
-\newblock Deep learning face attributes in the wild.
-\newblock In {\em Proceedings of International Conference on Computer Vision (ICCV)}.
-
-\bibitem[Lu and Huang, 2020]{cGLOW}
-Lu, Y. and Huang, B. (2020).
-\newblock Structured output learning with conditional generative flows.
-\newblock {\em AAAI}.
-
-\bibitem[Lugmayr et~al., 2022]{lugmayr2022repaint}
-Lugmayr, A., Danelljan, M., Romero, A., Sabater, N., Timofte, R., and Van~Gool, L. (2022).
-\newblock Repaint: Inpainting using denoising diffusion probabilistic models.
-\newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 11461--11471.
-
-\bibitem[Lugmayr et~al., 2020]{SRFLOW}
-Lugmayr, A., Danelljan, M., Van~Gool, L., and Timofte, R. (2020).
-\newblock Srflow: Learning the super-resolution space with normalizing flow.
-\newblock In {\em Computer Vision -- ECCV 2020}.
-
-\bibitem[Léonard, 2013]{leonard2013properties}
-Léonard, C. (2013).
-\newblock Some properties of path measures.
-
-\bibitem[Marinescu et~al., 2021]{BRGM}
-Marinescu, R.~V., Moyer, D., and Golland, P. (2021).
-\newblock Bayesian image reconstruction using deep generative models.
-
-\bibitem[Mescheder et~al., 2018]{mescheder2018which}
-Mescheder, L., Geiger, A., and Nowozin, S. (2018).
-\newblock Which training methods for gans do actually converge?
-\newblock In {\em Proceedings of the 35th International Conference on Machine Learning (ICML)}, pages 3481--3490.
-
-\bibitem[Mikolov et~al., 2013]{mikolov2013efficient}
-Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013).
-\newblock Efficient estimation of word representations in vector space.
-\newblock In {\em International Conference on Learning Representations (ICLR)}.
-
-\bibitem[Minka, 2000]{auto_ppca}
-Minka, T. (2000).
-\newblock Automatic choice of dimensionality for pca.
-\newblock In Leen, T., Dietterich, T., and Tresp, V., editors, {\em Advances in Neural Information Processing Systems}, volume~13. MIT Press.
-
-\bibitem[Misra et~al., 2016]{misra2016shuffle}
-Misra, I., Zitnick, C.~L., and Hebert, M. (2016).
-\newblock Shuffle and learn: unsupervised learning using temporal order verification.
-\newblock In {\em European Conference on Computer Vision (ECCV)}, pages 527--544. Springer.
-
-\bibitem[Mueller and Siltanen, 2012]{muller2012ip}
-Mueller, J.~L. and Siltanen, S. (2012).
-\newblock Linear and nonlinear inverse problems with practical applications.
-\newblock In {\em Computational science and engineering}.
-
-\bibitem[Neal, 2011]{neal2011mcmc}
-Neal, R.~M. (2011).
-\newblock {MCMC Using Hamiltonian Dynamics}.
-\newblock In Brooks, S., Gelman, A., Jones, G.~L., and Meng, X.-L., editors, {\em {Handbook of Markov Chain Monte Carlo}}, pages 113--162. Chapman and Hall/CRC, Boca Raton, FL.
-
-\bibitem[Newey and McFadden, 1994]{whitney1994estimation}
-Newey, W.~K. and McFadden, D. (1994).
-\newblock Chapter 36 large sample estimation and hypothesis testing.
-\newblock volume~4 of {\em Handbook of Econometrics}, pages 2111--2245. Elsevier.
-
-\bibitem[Nicolaescu, 2011]{nicolaescu2011morse_theory}
-Nicolaescu, L. (2011).
-\newblock {\em An Invitation to Morse Theory}.
-\newblock Universitext. Springer New York.
-
-\bibitem[Noroozi and Favaro, 2016]{noroozi2016unsupervised}
-Noroozi, M. and Favaro, P. (2016).
-\newblock Unsupervised learning of visual representations by solving jigsaw puzzles.
-\newblock In {\em European Conference on Computer Vision (ECCV)}, pages 69--84. Springer.
-
-\bibitem[Oko et~al., 2023]{oko2023diffusion_mini_max}
-Oko, K., Akiyama, S., and Suzuki, T. (2023).
-\newblock Diffusion models are minimax optimal distribution estimators.
-
-\bibitem[Oksendal, 2003]{oksendal2003sde}
-Oksendal, B. (2003).
-\newblock {\em Stochastic Differential Equations (5th Ed.): An Introduction with Applications}.
-\newblock Springer-Verlag, Heidelberg.
-
-\bibitem[Onken et~al., 2021]{onken2021ot}
-Onken, D., Fung, S.~W., Li, X., and Ruthotto, L. (2021).
-\newblock Ot-flow: Fast and accurate continuous normalizing flows via optimal transport.
-\newblock In {\em Proceedings of the AAAI Conference on Artificial Intelligence}, volume~35, pages 9223--9232.
-
-\bibitem[Oord et~al., 2016a]{vanwavenet2016}
-Oord, A. v.~d., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., Kalchbrenner, N., Senior, A., and Kavukcuoglu, K. (2016a).
-\newblock Wavenet: A generative model for raw audio.
-\newblock {\em arXiv preprint arXiv:1609.03499}.
-
-\bibitem[Oord et~al., 2016b]{oord2016pixel}
-Oord, A. v.~d., Kalchbrenner, N., and Kavukcuoglu, K. (2016b).
-\newblock Pixel recurrent neural networks.
-\newblock In {\em International Conference on Machine Learning (ICML)}, pages 1747--1756.
-
-\bibitem[Oord et~al., 2018]{oord2018representation}
-Oord, A. v.~d., Li, Y., and Vinyals, O. (2018).
-\newblock Representation learning with contrastive predictive coding.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 10256--10265.
-
-\bibitem[Oord et~al., 2017]{oord2017neural}
-Oord, A. v.~d., Vinyals, O., and Kavukcuoglu, K. (2017).
-\newblock Neural discrete representation learning.
-\newblock {\em Advances in Neural Information Processing Systems (NeurIPS)}, pages 6306--6315.
-
-\bibitem[Palais and Terng, 1988]{palais1988critical}
-Palais, R.~S. and Terng, C. (1988).
-\newblock {\em Critical Point Theory and Submanifold Geometry}.
-\newblock Critical Point Theory and Submanifold Geometry. Springer.
-
-\bibitem[Papamakarios et~al., 2021a]{papamakarios2019normalizing}
-Papamakarios, G., Nalisnick, E., Rezende, D.~J., Mohamed, S., and Lakshminarayanan, B. (2021a).
-\newblock Normalizing flows for probabilistic modeling and inference.
-\newblock {\em Journal of Machine Learning Research}, 22(57):1--64.
-
-\bibitem[Papamakarios et~al., 2021b]{papamakarios2021normalizing}
-Papamakarios, G., Nalisnick, E., Rezende, D.~J., Mohamed, S., and Lakshminarayanan, B. (2021b).
-\newblock Normalizing flows for probabilistic modeling and inference.
-
-\bibitem[Pedregosa et~al., 2011]{sklearn}
-Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., et~al. (2011).
-\newblock Scikit-learn: Machine learning in python.
-\newblock {\em Journal of machine learning research}, 12(Oct):2825--2830.
 
 \bibitem[Peltonen et~al., 2004]{peltonen2004improved}
 Peltonen, J., Klami, A., and Kaski, S. (2004).
 \newblock Improved learning of riemannian metrics for exploratory analysis.
 \newblock {\em Neural Networks}, 17(8-9):1087--1100.
 
-\bibitem[Pennington et~al., 2014]{pennington2014glove}
-Pennington, J., Socher, R., and Manning, C.~D. (2014).
-\newblock Glove: Global vectors for word representation.
-\newblock In {\em Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pages 1532--1543.
-
-\bibitem[Pettis et~al., 1979]{pettis_nn_dim_estimator}
-Pettis, K.~W., Bailey, T.~A., Jain, A.~K., and Dubes, R.~C. (1979).
-\newblock An intrinsic dimensionality estimator from near-neighbor information.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, PAMI-1(1):25--37.
-
-\bibitem[Pidstrigach, 2022]{pidstrigach2022manifold_jakiw}
-Pidstrigach, J. (2022).
-\newblock Score-based generative models detect manifolds.
-
-\bibitem[Poggio et~al., 2017]{poggio2017theory}
-Poggio, T., Mhaskar, H., Rosasco, L., Miranda, B., and Liao, Q. (2017).
-\newblock Why and when can deep--but not shallow--networks avoid the curse of dimensionality: A review.
-\newblock {\em International Journal of Automation and Computing}, 14(5):503--519.
-
-\bibitem[Pope et~al., 2021]{pope2021intrinsic}
-Pope, P., Zhu, C., Abdelkader, A., Goldblum, M., and Goldstein, T. (2021).
-\newblock The intrinsic dimension of images and its impact on learning.
-\newblock {\em arXiv preprint arXiv:2104.08894}.
-
-\bibitem[Preechakul et~al., 2022]{preechakul2022diffusion_decoder}
-Preechakul, K., Chatthee, N., Wizadwongsa, S., and Suwajanakorn, S. (2022).
-\newblock Diffusion autoencoders: Toward a meaningful and decodable representation.
-
-\bibitem[Pumarola et~al., 2020]{Pumarola2020}
-Pumarola, A., Popov, S., Moreno-Noguer, F., and Ferrari, V. (2020).
-\newblock C-flow: Conditional generative flow models for images and 3d point clouds.
-\newblock In {\em 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 7946--7955.
-
-\bibitem[Radford et~al., 2021]{radford2021learning}
-Radford, A., Kim, J.~W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., et~al. (2021).
-\newblock Learning transferable visual models from natural language supervision.
-\newblock In {\em International Conference on Machine Learning}, pages 8748--8763. PMLR.
-
-\bibitem[Radford et~al., 2019]{radford2019language}
-Radford, A., Wu, J., Amodei, D., et~al. (2019).
-\newblock Language models are unsupervised multitask learners.
-\newblock {\em OpenAI Blog}, 1(8):9.
-
-\bibitem[Ramesh et~al., 2021]{ramesh2021zero}
-Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., and Sutskever, I. (2021).
-\newblock Zero-shot text-to-image generation.
-\newblock In {\em International conference on machine learning}, pages 8821--8831. Pmlr.
-
-\bibitem[Razavi et~al., 2019]{razavi2019generating}
-Razavi, A., van~den Oord, A., and Vinyals, O. (2019).
-\newblock Generating diverse high-fidelity images with vq-vae-2.
-\newblock In {\em Advances in Neural Information Processing Systems}, pages 14866--14876.
-
-\bibitem[Rezende and Mohamed, 2015]{rezende2015variational}
-Rezende, D. and Mohamed, S. (2015).
-\newblock Variational inference with normalizing flows.
-\newblock In {\em International Conference on Machine Learning}, pages 1530--1538. PMLR.
-
-\bibitem[Rezende et~al., 2014a]{rezende2014stochastic}
-Rezende, D.~J., Mohamed, S., and Wierstra, D. (2014a).
-\newblock Stochastic backpropagation and approximate inference in deep generative models.
-\newblock In {\em Proceedings of the 31st International Conference on Machine Learning (ICML)}, volume~32, pages 1278--1286. PMLR.
-
-\bibitem[Rezende et~al., 2014b]{rezende2014vae2}
-Rezende, D.~J., Mohamed, S., and Wierstra, D. (2014b).
-\newblock Stochastic backpropagation and approximate inference in deep generative models.
-
-\bibitem[Rives et~al., 2021]{rives2021biological}
-Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., Liu, J., Guo, D., Ott, M., Zitnick, C.~L., Ma, J., and Fergus, R. (2021).
-\newblock Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences.
-\newblock {\em Proceedings of the National Academy of Sciences}, 118(15).
-
-\bibitem[Rombach et~al., 2022]{rombach2022high}
-Rombach, R., Blattmann, A., Lorenz, D., Esser, P., and Ommer, B. (2022).
-\newblock High-resolution image synthesis with latent diffusion models.
-\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 10684--10695.
-
 \bibitem[Roweis and Saul, 2000]{roweis2000nonlinear}
 Roweis, S.~T. and Saul, L.~K. (2000).
 \newblock Nonlinear dimensionality reduction by locally linear embedding.
 \newblock {\em science}, 290(5500):2323--2326.
-
-\bibitem[Rybkin et~al., 2021]{rybkin2021sigma_vae}
-Rybkin, O., Daniilidis, K., and Levine, S. (2021).
-\newblock Simple and effective vae training with calibrated decoders.
-
-\bibitem[Saharia et~al., 2021]{saharia2021sr3}
-Saharia, C., Ho, J., Chan, W., Salimans, T., Fleet, D.~J., and Norouzi, M. (2021).
-\newblock Image super-resolution via iterative refinement.
-
-\bibitem[Saharia et~al., 2022]{saharia2022image}
-Saharia, C., Ho, J., Chan, W., Salimans, T., Fleet, D.~J., and Norouzi, M. (2022).
-\newblock Image super-resolution via iterative refinement.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}.
 
 \bibitem[Sakai, 1996]{sakai1996riemannian}
 Sakai, T. (1996).
@@ -851,11 +144,6 @@ Sakamoto, K., Tanabe, M., Akagawa, M., Hayashi, Y., Sakamoto, R., Yaguchi, M., S
 \newblock The geometry of diffusion models: Tubular neighbourhoods and singularities.
 \newblock In {\em ICML 2024 Workshop on Geometry-grounded Representation Learning and Generative Modeling}.
 
-\bibitem[Salimans and Ho, 2022]{salimans2022progressive}
-Salimans, T. and Ho, J. (2022).
-\newblock Progressive distillation for fast sampling of diffusion models.
-\newblock {\em arXiv preprint arXiv:2202.00512}.
-
 \bibitem[Sammon, 1969]{sammon1969nonlinear}
 Sammon, J.~W. (1969).
 \newblock A nonlinear mapping for data structure analysis.
@@ -866,65 +154,10 @@ Scarvelis, C. and Solomon, J. (2023).
 \newblock Riemannian metric learning via optimal transport.
 \newblock In {\em The Eleventh International Conference on Learning Representations}.
 
-\bibitem[Schneider et~al., 2019]{schneider2019wav2vec}
-Schneider, S., Baevski, A., Collobert, R., Auli, M., and Mohamed, A. (2019).
-\newblock wav2vec: Unsupervised pre-training for speech recognition.
-\newblock In {\em IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pages 6415--6419.
-
-\bibitem[Scott, 2015]{scott2015multivariate}
-Scott, D.~W. (2015).
-\newblock {\em Multivariate Density Estimation: Theory, Practice, and Visualization}.
-\newblock John Wiley \& Sons.
-
-\bibitem[Silverman, 1986]{silverman1986density}
-Silverman, B.~W. (1986).
-\newblock {\em Density Estimation for Statistics and Data Analysis}.
-\newblock Chapman and Hall.
-
-\bibitem[Sohl-Dickstein et~al., 2015a]{sohldickstein2015diffusion_original}
-Sohl-Dickstein, J., Weiss, E.~A., Maheswaranathan, N., and Ganguli, S. (2015a).
-\newblock Deep unsupervised learning using nonequilibrium thermodynamics.
-
-\bibitem[Sohl-Dickstein et~al., 2015b]{diffusion_models}
-Sohl-Dickstein, J., Weiss, E.~A., Maheswaranathan, N., and Ganguli, S. (2015b).
-\newblock Deep unsupervised learning using nonequilibrium thermodynamics.
-
-\bibitem[Song et~al., 2020a]{song2020denoising}
-Song, J., Meng, C., and Ermon, S. (2020a).
-\newblock Denoising diffusion implicit models.
-\newblock {\em arXiv preprint arXiv:2010.02502}.
-
-\bibitem[Song et~al., 2023]{song2023consistency}
-Song, Y., Dhariwal, P., Chen, M., and Sutskever, I. (2023).
-\newblock Consistency models.
-\newblock {\em arXiv preprint arXiv:2303.01469}.
-
-\bibitem[Song et~al., 2021a]{song2021maximum}
-Song, Y., Durkan, C., Murray, I., and Ermon, S. (2021a).
-\newblock Maximum likelihood training of score-based diffusion models.
-
-\bibitem[Song and Ermon, 2020]{song2020generative_score}
-Song, Y. and Ermon, S. (2020).
-\newblock Generative modeling by estimating gradients of the data distribution.
-
-\bibitem[Song et~al., 2020b]{song2020score}
-Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2020b).
+\bibitem[Song et~al., 2020]{song2020score}
+Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2020).
 \newblock Score-based generative modeling through stochastic differential equations.
 \newblock {\em arXiv preprint arXiv:2011.13456}.
-
-\bibitem[Song et~al., 2020c]{scorebased}
-Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2020c).
-\newblock Score-based generative modeling through stochastic differential equations.
-\newblock {\em arXiv preprint arXiv:2011.13456}.
-
-\bibitem[Song et~al., 2021b]{song2021score}
-Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2021b).
-\newblock Score-based generative modeling through stochastic differential equations.
-\newblock In {\em International Conference on Learning Representations}.
-
-\bibitem[Song et~al., 2021c]{song2021sde}
-Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B. (2021c).
-\newblock Score-based generative modeling through stochastic differential equations.
 
 \bibitem[Sorrenson et~al., 2024]{sorrenson2024learningdistancesdatanormalizing}
 Sorrenson, P., Behrend-Uriarte, D., Schnörr, C., and Köthe, U. (2024).
@@ -935,47 +168,15 @@ Stanczuk, J., Batzolis, G., Deveney, T., and Sch{\"o}nlieb, C.-B. (2022).
 \newblock Your diffusion model secretly knows the dimension of the data manifold.
 \newblock {\em arXiv preprint arXiv:2212.12611}.
 
-\bibitem[Stanczuk et~al., 2021]{stanczuk2021wasserstein}
-Stanczuk, J., Etmann, C., Kreusser, L.~M., and Schönlieb, C.-B. (2021).
-\newblock Wasserstein gans work because they fail (to approximate the wasserstein distance).
-
 \bibitem[Stanczuk et~al., 2024]{pmlr-v235-stanczuk24a}
 Stanczuk, J.~P., Batzolis, G., Deveney, T., and Sch\"{o}nlieb, C.-B. (2024).
 \newblock Diffusion models encode the intrinsic dimension of data manifolds.
 \newblock In Salakhutdinov, R., Kolter, Z., Heller, K., Weller, A., Oliver, N., Scarlett, J., and Berkenkamp, F., editors, {\em Proceedings of the 41st International Conference on Machine Learning}, volume 235 of {\em Proceedings of Machine Learning Research}, pages 46412--46440. PMLR.
 
-\bibitem[Stokes et~al., 2020]{stokes2020deep}
-Stokes, J.~M., Yang, K., Swanson, K., Jin, W., Cubillos-Ruiz, J.~R., Donghia, N.~M., MacNair, C.~R., French, S., Carfrae, L.~A., Bloom-Ackermann, Z., et~al. (2020).
-\newblock A deep learning approach to antibiotic discovery.
-\newblock {\em Cell}, 180(4):688--702.
-
-\bibitem[Sun et~al., 2019a]{sun2019videobert}
-Sun, C., Myers, A., Vondrick, C., Murphy, K., and Schmid, C. (2019a).
-\newblock Videobert: A joint model for video and language representation learning.
-\newblock In {\em Proceedings of the IEEE/CVF International Conference on Computer Vision}, pages 7464--7473.
-
-\bibitem[Sun et~al., 2019b]{Dual-Glow}
-Sun, H., Mehta, R., Zhou, H.~H., Huang, Z., Johnson, S.~C., Prabhakaran, V., and Singh, V. (2019b).
-\newblock Dual-glow: Conditional flow-based generative model for modality transfer.
-\newblock In {\em Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}.
-
 \bibitem[Sun et~al., 2024]{sun2024geometryaware}
 Sun, X., Liao, D., MacDonald, K., Zhang, Y., Huguet, G., Wolf, G., Adelstein, I., Rudner, T. G.~J., and Krishnaswamy, S. (2024).
 \newblock Geometry-aware autoencoders for metric learning and generative modeling on data manifolds.
 \newblock In {\em ICML 2024 Workshop on Geometry-grounded Representation Learning and Generative Modeling}.
-
-\bibitem[Suvorov et~al., 2022]{suvorov2022resolution}
-Suvorov, R., Logacheva, E., Mashikhin, A., Remizova, A., Ashukha, A., Korzhenkov, D., Galyautdinov, I., Kong, N., Goka, H., and Lempitsky, V. (2022).
-\newblock Resolution-robust large mask inpainting with fourier convolutions.
-\newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 8564--8573.
-
-\bibitem[Tashiro et~al., 2021]{tashiro2021csdi}
-Tashiro, Y., Song, J., Song, Y., and Ermon, S. (2021).
-\newblock Csdi: Conditional score-based diffusion models for probabilistic time series imputation.
-
-\bibitem[Tempczyk et~al., 2022]{tempczyk2022lidl}
-Tempczyk, P., Michaluk, R., Łukasz Garncarek, Spurek, P., Tabor, J., and Goliński, A. (2022).
-\newblock Lidl: Local intrinsic dimension estimation using approximate likelihood.
 
 \bibitem[Tenenbaum et~al., 2000]{tenenbaum2000global}
 Tenenbaum, J.~B., Silva, V.~d., and Langford, J.~C. (2000).
@@ -987,130 +188,19 @@ Ternes, L., Dane, M., Gross, S., Labrie, M., Mills, G., Gray, J., Heiser, L., an
 \newblock A multi-encoder variational autoencoder controls multiple transformational features in single-cell image analysis.
 \newblock {\em Communications biology}, 5(1):255.
 
-\bibitem[Tian et~al., 2024]{tian2024visual}
-Tian, K., Jiang, Y., Yuan, Z., Peng, B., and Wang, L. (2024).
-\newblock Visual autoregressive modeling: Scalable image generation via next-scale prediction.
-\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}.
-
-\bibitem[Tian et~al., 2022]{tian2022}
-Tian, Y. et~al. (2022).
-\newblock Understanding self-supervised contrastive learning with generalized contrastive losses.
-\newblock {\em arXiv preprint arXiv:2202.09671}.
-
 \bibitem[Vahdat and Kautz, 2020]{vahdat2020nvae}
 Vahdat, A. and Kautz, J. (2020).
 \newblock Nvae: A deep hierarchical variational autoencoder.
 \newblock {\em Advances in neural information processing systems}, 33:19667--19679.
 
-\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N., Kaiser, L., and Polosukhin, I. (2017).
-\newblock Attention is all you need.
-\newblock In {\em Advances in Neural Information Processing Systems}, pages 5998--6008.
-
-\bibitem[Verine et~al., 2023]{verine2023expressivity}
-Verine, A., Negrevergne, B., Chevaleyre, Y., and Rossi, F. (2023).
-\newblock On the expressivity of bi-lipschitz normalizing flows.
-\newblock In {\em Asian Conference on Machine Learning}, pages 1054--1069. PMLR.
-
-\bibitem[Viazovetskyi et~al., 2020]{viazovetskyi2020stylegan2}
-Viazovetskyi, Y., Ivashkin, V., and Kashin, E. (2020).
-\newblock Stylegan2 distillation for feed-forward image manipulation.
-\newblock In {\em European Conference on Computer Vision}, pages 170--186. Springer.
-
-\bibitem[Vincent, 2011]{vincent2011connection}
-Vincent, P. (2011).
-\newblock A connection between score matching and denoising autoencoders.
-\newblock {\em Neural Computation}, 23(7):1661--1674.
-
-\bibitem[Wang et~al., 2023]{wang2022image}
-Wang, R., Wei, F., Sun, C., Murphy, K., and Schmid, C. (2023).
-\newblock Imagebind: Learning joint representations of vision, audio, and language without supervision.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 2256--2266.
-
-\bibitem[Wang et~al., 2019]{ESRGAN}
-Wang, X., Yu, K., Wu, S., Gu, J., Liu, Y., Dong, C., Qiao, Y., and Loy, C.~C. (2019).
-\newblock Esrgan: Enhanced super-resolution generative adversarial networks.
-\newblock In Leal-Taix{\'e}, L. and Roth, S., editors, {\em Computer Vision -- ECCV 2018 Workshops}, pages 63--79.
-
-\bibitem[Wang et~al., 2024]{wang2024sinsr}
-Wang, Y., Yang, W., Chen, X., Wang, Y., Guo, L., Chau, L.-P., Liu, Z., Qiao, Y., Kot, A.~C., and Wen, B. (2024).
-\newblock Sinsr: Diffusion-based image super-resolution in a single step.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 25796--25805.
-
-\bibitem[Wang et~al., 2004]{zhou2004psnr+ssim}
-Wang, Z., Bovik, A., Sheikh, H., and Simoncelli, E. (2004).
-\newblock Image quality assessment: from error visibility to structural similarity.
-\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612.
-
-\bibitem[Wasserman, 2006]{wasserman2006all}
-Wasserman, L. (2006).
-\newblock {\em All of Nonparametric Statistics}.
-\newblock Springer Science \& Business Media.
-
-\bibitem[Weed and Bach, 2019]{weed2019sharp}
-Weed, J. and Bach, F. (2019).
-\newblock Sharp asymptotic and finite-sample rates of convergence of empirical measures in wasserstein distance.
-
-\bibitem[Wu et~al., 2020]{wu2020stochastic}
-Wu, H., K{\"o}hler, J., and No{\'e}, F. (2020).
-\newblock Stochastic normalizing flows.
-\newblock {\em arXiv preprint arXiv:2002.06707}.
-
-\bibitem[Xie and Tu, 2015]{xie2015edges}
-Xie, S. and Tu, Z. (2015).
-\newblock Holistically-nested edge detection.
-
-\bibitem[Xu et~al., 2021]{xu2021videoclip}
-Xu, H., Ghosh, G., Song, Y., Zhang, X., Li, C.-Y., Sigal, L., and Wang, Y. (2021).
-\newblock Videoclip: Contrastive pre-training for zero-shot video-text understanding.
-\newblock In {\em Advances in Neural Information Processing Systems}, volume~34, pages 12471--12484.
-
-\bibitem[Yang and Mandt, 2023]{yang2023ldiffusion_decoder_compression}
-Yang, R. and Mandt, S. (2023).
-\newblock Lossy image compression with conditional diffusion models.
-
-\bibitem[Yu and Grauman, 2014]{yu2014sketch2shoe}
-Yu, A. and Grauman, K. (2014).
-\newblock Fine-grained visual comparisons with local learning.
-\newblock In {\em Computer Vision and Pattern Recognition (CVPR)}.
-
-\bibitem[Yu et~al., 2015]{yu2015lsun}
-Yu, F., Seff, A., Zhang, Y., Song, S., Funkhouser, T., and Xiao, J. (2015).
-\newblock Lsun: Construction of a large-scale image dataset using deep learning with humans in the loop.
-\newblock {\em arXiv preprint arXiv:1506.03365}.
-
-\bibitem[Yu et~al., 2020]{WAVELET-FLOW}
-Yu, J.~J., Derpanis, K., and Brubaker, M.~A. (2020).
-\newblock {Wavelet Flow: Fast Training of High Resolution Normalizing Flows}.
-\newblock In {\em NeurIPS}.
-
-\bibitem[Zbontar et~al., 2021]{zbontar2021barlow}
-Zbontar, J., Jing, L., Misra, I., LeCun, Y., and Deny, S. (2021).
-\newblock Barlow twins: Self-supervised learning via redundancy reduction.
-\newblock In {\em International Conference on Machine Learning (ICML)}. PMLR.
-
-\bibitem[Zhang et~al., 2018]{zhang2018lpips}
-Zhang, R., Isola, P., Efros, A.~A., Shechtman, E., and Wang, O. (2018).
-\newblock The unreasonable effectiveness of deep features as a perceptual metric.
-\newblock In {\em CVPR}.
-
-\bibitem[Zhang et~al., 2021]{zhang2021unified}
-Zhang, X., Zhao, P., Zhang, J., Weng, Y., Yuan, H., Li, Y., and Wang, H. (2021).
-\newblock A unified framework for molecule generation and reaction prediction.
-\newblock {\em Nature Communications}, 12(1):3117.
-
-\bibitem[Zhao et~al., 2017]{zaho2017understanding_vaes}
-Zhao, S., Song, J., and Ermon, S. (2017).
-\newblock Towards deeper understanding of variational autoencoding models.
+\bibitem[Wenliang and Moran, 2022]{wenliang2022score}
+Wenliang, L.~K. and Moran, B. (2022).
+\newblock Score-based generative models learn manifold-like structures with constrained mixing.
+\newblock In {\em NeurIPS 2022 Workshop on Score-Based Methods}.
 
 \bibitem[Zhong et~al., 2021]{zhong2021cryodrgn}
 Zhong, E.~D., Bepler, T., Berger, B., and Davis, J.~H. (2021).
 \newblock Cryodrgn: reconstruction of heterogeneous cryo-em structures using neural networks.
 \newblock {\em Nature methods}, 18(2):176--185.
-
-\bibitem[Zhou et~al., 2022]{zhou2022ibot}
-Zhou, D., Wang, Z., Wang, L., Han, J., Dai, X., Shen, Y., and Feng, J. (2022).
-\newblock ibot: Image bert pre-training with online tokenizer.
-\newblock In {\em International Conference on Learning Representations}.
 
 \end{thebibliography}

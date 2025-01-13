@@ -433,7 +433,8 @@ This approach ensures that the generated negative samples \(\mathbf{x}^-\) align
 
 \textsc{Strengths.} EBMs offer several notable strengths. One of their primary advantages is their \textbf{flexibility} in representing complex distributions without requiring explicit normalization, as they define an unnormalized probability distribution directly using an energy function \cite{lecun2006tutorial}. This flexibility allows EBMs to focus on modeling the energy landscape of the data, making them highly adaptable to diverse data types and problem settings. Unlike other generative models, such as GANs or normalizing flows, which often require specific assumptions about the form of the probability distribution or rely on explicit normalization, EBMs can represent distributions of arbitrary complexity by appropriately designing the energy function.
 
-Furthermore, EBMs exhibit strong \textbf{compositionality}, allowing seamless integration with other models and the incorporation of domain-specific knowledge such as constraints or priors \cite{du2019implicit, grathwohl2020your}. This property enables EBMs to handle applications requiring hybrid generative processes or strict adherence to domain rules. By encoding physical laws or chemical properties directly into the energy function, EBMs can generate outcomes that comply with these constraints, making them particularly effective in scientific modeling tasks like physical simulations and molecular design \cite{du2019implicit}. In structured prediction tasks, EBMs can impose priors to ensure outputs follow specific patterns or relationships, such as spatial coherence in semantic segmentation or hierarchical structures in knowledge graph synthesis \cite{grathwohl2020your, lecun2006tutorial}. This compositional and flexible nature allows EBMs to excel in applications requiring constrained generative modeling or the integration of domain knowledge, where conventional generative models may struggle.
+Energy-Based Models (EBMs) are known for their \textbf{compositionality}, where complex concepts or structures can be assembled from simpler parts. This capability is highlighted by \citet{du2020compositional}, where the authors demonstrate how multiple probability distributions (e.g., ``smiling faces'' and ``male faces'') can be combined to generate samples that satisfy multiple concepts simultaneously (e.g., ``smiling male faces''), including conjunctions, disjunctions, and negations. By treating each concept as a factor in the overall energy function, EBMs offer a principled way to fuse or negate various concept distributions without retraining from scratch, aligning well with human-like rapid learning and adaptability. This modular approach enables EBMs to excel in scenarios where capturing layered semantic relationships in data is crucial, underscoring their broader applicability to compositional tasks.
+
 
 \textsc{Weaknesses.} Despite their strengths, EBMs also face significant weaknesses. A major challenge is their \textbf{training difficulty}, primarily due to the reliance on MCMC methods for generating negative samples. MCMC sampling is computationally intensive, can suffer from slow convergence, and often requires careful tuning to ensure effective exploration of the energy landscape. Additionally, EBMs exhibit \textbf{slow sampling speed}, as generating a single sample requires running iterative Langevin Dynamics or similar methods, which involve multiple gradient evaluations. This can hinder the scalability of EBMs for tasks requiring large-scale generation.
 
@@ -444,8 +445,119 @@ Denoising Diffusion Probabilistic Models (DDPMs) \cite{ho2020denoising} and scor
 
 In the literature, discrete-time models such as DDPMs are widely referred to as "diffusion models", a term reflecting their reliance on discrete diffusion processes to corrupt data over a finite number of steps and then reverse this transformation. Continuous-time frameworks like SGMs, on the other hand, are often described as "score-based generative models," as they emphasize the estimation of the score function—the gradient of the log probability density—and use it to define the reverse process via stochastic differential equations (SDEs). These terminologies reflect the historical development of the two frameworks, with DDPMs rooted in discrete Markov chains and SGMs in score-matching and continuous-time diffusion processes.
 
-In this thesis, both frameworks are unified under the term "diffusion models". This unified terminology highlights the fundamental insight that DDPMs and SGMs represent two perspectives of the same underlying framework, differing only in their treatment of time as discrete or continuous. As will be shown and discussed, these frameworks are mathematically equivalent in the limit of infinite time steps. Adopting this perspective highlights their shared theoretical foundation, bridging the discrete and continuous-time paradigms, and provides a cohesive framework for exploring their principles and applications throughout this work.
+In this thesis, both frameworks are unified under the term "diffusion models". This unified terminology highlights the fundamental insight that DDPMs and SGMs represent two perspectives of the same underlying framework, differing only in their treatment of time as discrete or continuous. Figure \ref{fig:unified_ddpm_sgm} illustrates this unified framework, showing the correspondence between the discrete and continuous formulations. As will be shown and discussed, these frameworks are mathematically equivalent in the limit of infinite time steps. Adopting this perspective highlights their shared theoretical foundation, bridging the discrete and continuous-time paradigms, and provides a cohesive framework for exploring their principles and applications throughout this work.
 
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[
+        >=stealth,
+        font=\small,
+        scale=1,
+        every node/.style={scale=1}
+    ]
+    
+    %----------------------------------------------------------------------
+    % DISCRETE PROCESS (TOP)
+    %----------------------------------------------------------------------
+    % Node coordinates
+    \coordinate (discreteY) at (0,8.5);  % Vertical level of discrete row
+    \def\Xspacing{4.25}                  % Horizontal spacing between discrete nodes
+    
+    \node[draw, circle, minimum size=1.4cm] (x0_discrete) 
+        at ($(discreteY) + (0,0)$) {$X_0$};
+    \node[draw, circle, minimum size=1.4cm] (x1_discrete) 
+        at ($(x0_discrete) + (\Xspacing,0)$) {$X_1$};
+    \node[draw, circle, minimum size=1.4cm] (x2_discrete) 
+        at ($(x1_discrete) + (\Xspacing,0)$) {$X_2$};
+    \node (dots_discrete) 
+        at ($(x2_discrete) + (2.4,0)$) {$\cdots$};
+    \node[draw, circle, minimum size=1.4cm] (xN_discrete) 
+        at ($(dots_discrete) + (2.4,0)$) {$X_N$};
+    
+    % Forward process (top arcs)
+    \draw[->] (x0_discrete.east) to[out=30, in=150] 
+    node[pos=0.5, above, yshift=0.5em] {$q(X_1 \mid X_0)$} (x1_discrete.west);
+    \draw[->] (x1_discrete.east) to[out=30, in=150] 
+    node[pos=0.5, above, yshift=0.5em] {$q(X_2 \mid X_1)$} (x2_discrete.west);
+    \draw[->] (x2_discrete.east) to[out=30, in=150] 
+    node[pos=0.5, above, yshift=0.5em] {$\cdots$} (dots_discrete.west);
+    \draw[->] (dots_discrete.east) to[out=30, in=150] 
+    node[pos=0.5, above, yshift=0.5em] {$q(X_N \mid X_{N-1})$} (xN_discrete.west);
+
+    % Reverse process (bottom arcs)
+    \draw[->] (x1_discrete.west) to[out=210, in=-30] 
+    node[pos=0.5, below, yshift=-0.5em] {$p_{\theta}(X_0 \mid X_1)$} (x0_discrete.east);
+    \draw[->] (x2_discrete.west) to[out=210, in=-30] 
+    node[pos=0.5, below, yshift=-0.5em] {$p_{\theta}(X_1 \mid X_2)$} (x1_discrete.east);
+    \draw[->] (dots_discrete.west) to[out=210, in=-30] 
+    node[pos=0.5, below, yshift=-0.5em] {$\cdots$} (x2_discrete.east);
+    \draw[->] (xN_discrete.west) to[out=210, in=-30] 
+    node[pos=0.5, below, yshift=-0.5em] {$p_{\theta}(X_{N-1} \mid X_N)$} (dots_discrete.east);
+
+    
+    % Center the title
+    \node[align=center, font=\bfseries] at ($(x0_discrete)!0.5!(xN_discrete) + (0,3)$)
+    {\textbf{Unified Diffusion Model Framework}};
+
+    % Label the discrete process
+    \node[align=center] (DDPM_label) 
+    at ($(x0_discrete)!0.5!(xN_discrete) + (0,+2)$)
+    {\textbf{Discrete Process (DDPM)}};
+
+    % ----------------------------------------------------------------------
+    % IMAGE SEQUENCE (MIDDLE)
+    % ----------------------------------------------------------------------
+    % Place the image left-aligned with the first discrete node
+    \node[anchor=west] at ($(x0_discrete) + (0,-2.5)$) {
+        \includegraphics[width=0.86\textwidth]{introduction/figures/diffusion_models/perturbation_sequence.png}
+    };
+
+        
+    %----------------------------------------------------------------------
+    % CONTINUOUS PROCESS (BOTTOM)
+    %----------------------------------------------------------------------
+    % Node coordinates
+    \coordinate (continuousY) at (0,3.5);  % Adjusted vertical level
+    \def\XspacingC{17.0}                  % Horizontal spacing for continuous nodes
+    
+    \node[draw, circle, minimum size=1.4cm] (x0_continuous) 
+        at ($(continuousY) + (0,0)$) {$X_0$};
+    
+    \node[draw, circle, minimum size=1.4cm] (xT_continuous) 
+        at ($(xN_discrete) + (0,-5.0)$) {$X_T$};  % Adjusted y-offset
+    
+    % Forward SDE arrow (straight)
+    \draw[->] 
+    ([shift={(30:0.7)}]x0_continuous.center) -- 
+    node[pos=0.5, above, yshift=0.2em]
+    {$\displaystyle dX_t = f(X_t, t)\,dt \;+\; g(t)\,dW_t$}
+    ([shift={(150:0.7)}]xT_continuous.center);
+
+    % Reverse SDE arrow (straight)
+    \draw[->] 
+    ([shift={(210:0.7)}]xT_continuous.center) -- 
+    node[pos=0.5, below, yshift=-0.2em]
+    {$\displaystyle dX_t = \bigl[f(X_t, t) \;-\; g(t)^2\,\nabla \log p_{X_t}(X_t)\bigr]dt \;+\; g(t)\,d\overline{W}_t$}
+    ([shift={(330:0.7)}]x0_continuous.center);
+    
+    % Label the continuous process
+    \node[align=center] (SGM_label) 
+        at ($(x0_continuous)!0.5!(xT_continuous) + (0,-2)$)
+        {\textbf{Continuous Process (SGM)}};
+    
+    \end{tikzpicture}
+    
+    \caption{Illustration of diffusion models in discrete time (DDPM) and continuous time (SGM). DDPM uses a Markov chain to iteratively corrupt data into simple noise and learns a reverse chain to recover it. SGM generalizes this with an SDE that smoothly diffuses data into noise, then reverts it via the reverse SDE. Both methods transform noise into complex data and become equivalent in the limit of infinite steps (\( N \to \infty \)).}
+    \label{fig:unified_ddpm_sgm}
+\end{figure}
+
+
+
+
+    
+
+
+    
 \textit{Forward Process.} The forward process in diffusion and score-based generative models progressively corrupts the original data into noise, providing the foundation for learning the reverse process that generates data from noise. The design of the forward process ensures that over time, the data distribution transitions smoothly into a simple, analytically tractable distribution $\pi$, such as \( \mathcal{N}(0, \mathbf{I}) \).
 
 \begin{itemize}

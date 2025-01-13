@@ -103,7 +103,7 @@
 % To use choose `chapter' option in the document class
 
 \ifdefineChapter
-\includeonly{introduction/introductionA}
+\includeonly{Chapter5/chapter5} 
 \fi
 
 % ******************************** Front Matter ********************************
@@ -117,6 +117,7 @@
 \include{Declaration/declaration}
 \include{Acknowledgement/acknowledgement}
 \include{Abstract/abstract}
+\include{Preface/Preface}
 
 % *********************** Adding TOC and List of Figures ***********************
 
@@ -138,17 +139,17 @@
 % ******************************** Main Matter *********************************
 \mainmatter
 
-\include{introduction/introductionA}
-\include{Outline/Outline}
+%\include{introduction/introductionA}
+%\include{Outline/Outline}
 
 
-\include{Chapter1/chapter1}
-\include{Chapter2/chapter2}
-\include{Chapter3/chapter3}
-\include{Chapter4/chapter4}
+%\include{Chapter1/chapter1}
+%\include{Chapter2/chapter2}
+%\include{Chapter3/chapter3}
+%\include{Chapter4/chapter4}
 \include{Chapter5/chapter5}
 
-\include{Conclusions/conclusions}
+%\include{Conclusions/conclusions}
 
 % ********************************** Back Matter *******************************
 % Backmatter should be commented out, if you are using appendices after References
@@ -182,10 +183,10 @@
 
 \begin{appendices} % Using appendices environment for more functunality
 
-\include{Chapter1/appendix}
-\include{Chapter2/appendix}
-\include{Chapter3/appendix}
-\include{Chapter4/appendix}
+%\include{Chapter1/appendix}
+%\include{Chapter2/appendix}
+%\include{Chapter3/appendix}
+%\include{Chapter4/appendix}
 \include{Chapter5/appendix}
 
 \end{appendices}

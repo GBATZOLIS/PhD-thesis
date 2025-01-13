@@ -105,11 +105,81 @@ Subsequently, notice that
     which yields the claim as $\RAEboundParam$ was arbitrary. 
 \end{proof}
 
-\section{Dataset Construction Details}
-\label{app:dataset_construction}
+\section{Explanation for the Need of Higher Regularity in Non-Affine Flows}
+\label{app:expanded_loss_function}
 
-In this section, we provide a detailed explanation of the construction of the datasets used in our experiments. We organize the datasets into two categories based on the experimental sections in which they are used.
+As described in Section~\ref{sec:mnist_experiments}, introducing a small regularization term involving the Hessian vector product of the flow can substantially improve the RAE’s ability to assign higher variances to the on-manifold (semantically meaningful) directions and suppress variances in off-manifold directions for \textit{non-affine} flows. The core issue arises from the fact that, for \emph{non-affine} normalizing flows, the second-order derivatives of \(\diffeo_{\networkParams_2}\) appear in the Hessian of the modeled log-density in a way that can adversely impact the performance of the RAE if left unregularized, as we shall see below.
 
+\subsection{Hessian of the Log-Density and Intrinsic Dimensionality}
+Recently, \citet{pmlr-v235-stanczuk24a} formally proved—and \citet{pmlr-v235-stanczuk24a,kadkhodaie2024generalization,wenliang2022score} independently demonstrated empirically—that when data concentrate locally around a lower-dimensional manifold of dimension \(k\), the \textit{Jacobian} of the score function or equivalently, the \textit{Hessian} of the log-density has \(k\) vanishing singular values. The eigenvectors corresponding to these vanishing singular values span the local tangent space of the data manifold \cite{pmlr-v235-stanczuk24a,kadkhodaie2024generalization,wenliang2022score}. Consequently, for a trained model, large singular values of \(\nabla_{\mathbf{x}}^2\!\log p_{\theta_1, \theta_2}(\mathbf{x})\) indicate \emph{off-manifold} directions, while near-zero singular values reveal \emph{on-manifold} directions—those spanning the locally flat subspace in which the data reside.
+
+\subsection{Analyzing the Hessian of the Log-Density of Our Model}
+With the background knowledge on the connection between the Hessian of the log-density and the local intrinsic structure in mind, let's investigate the Hessian of the logdensity of our model under the assumption that $\diffeo_{\networkParams_2}$ is local isometry and hence volume preserving as well. The modeled density function is
+\begin{equation}
+\label{eq:app_flow_density}
+    p_{\theta_1, \theta_2}(\mathbf{x})
+    \;=\;
+    p_{\theta_1}\bigl(\diffeo_{\networkParams_2}(\mathbf{x})\bigr)
+    \;\left|\det\!\Bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\Bigr)\right|,
+\end{equation}
+where 
+\(
+    D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})
+\)
+is the \emph{Jacobian} of \(\diffeo_{\networkParams_2}\) at \(\mathbf{x}\) and $p_{\theta_1}\bigl(\diffeo_{\networkParams_2}(\mathbf{x})\bigl)=\mathcal{N}(\mathbf{x};\mathbf{0},\spdMatrix_{\theta_1})$. Since $\diffeo_{\networkParams_2}$ is volume preserving, the absolute value of the Jacobian determinant is $1$, simplifying the density to:
+
+\begin{equation}
+    \label{eq:simplified_app_flow_density}
+        p_{\theta_1, \theta_2}(\mathbf{x})
+        \;=\;
+        p_{\theta_1}\bigl(\diffeo_{\networkParams_2}(\mathbf{x})\bigr),
+    \end{equation}
+
+\noindent Taking logarithms and differentiating yields the expression for the Hessian of the logdensity:
+
+\begin{equation}
+\label{eq:app_hessian_expansion}
+    \nabla_{\mathbf{x}}^2 \!\log p_{\theta_1, \theta_2}(\mathbf{x})
+    \;=\;
+    -\,\nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x}) 
+       \,\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x})
+    \;\;-\;\;
+    \bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr)^\top \,\spdMatrix_{\theta_1}^{-1}\,\bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr),
+\end{equation}
+where \(
+    \nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x})
+\)
+is the \emph{Hessian} of \(\diffeo_{\networkParams_2}\).We see that the Hessian of the log-density consists of the sum of two terms: 
+\begin{itemize}
+    \item A Hessian vector product term: 
+    \[
+    -\,\nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x}) 
+       \,\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x}),
+    \]
+    \item A term that depends on the Jacobian and the learned covariance matrix \(\spdMatrix_{\theta_1}\):
+    \[
+    -\,\bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr)^\top \,\spdMatrix_{\theta_1}^{-1}\,\bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr).
+    \]
+\end{itemize}
+
+When \(\diffeo_{\networkParams_2}\) is \emph{affine} (e.g., composed of affine coupling layers only), the Hessian vector product term in \eqref{eq:app_hessian_expansion} vanishes. Hence, the Hessian of the logdensity simplifies to:
+
+\begin{equation}
+    \label{eq:affine_app_hessian_expansion}
+        \nabla_{\mathbf{x}}^2 \!\log p_{\theta_1, \theta_2}(\mathbf{x})
+        \;= \; -\bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr)^\top \,\spdMatrix_{\theta_1}^{-1}\,\bigl(D_{\mathbf{x}}\diffeo_{\networkParams_2}(\mathbf{x})\bigr),
+\end{equation}
+
+Noting that the Jacobian of \(\diffeo_{\networkParams_2}\), denoted as \( D_{\mathbf{x}} \diffeo_{\networkParams_2}(\mathbf{x}) \), is an orthogonal matrix due to \(\diffeo_{\networkParams_2}\) being a local isometry, and considering that \(\spdMatrix_{\theta_1}\) is a diagonal matrix with strictly positive entries, it becomes clear that the right-hand side of Equation~\eqref{eq:affine_app_hessian_expansion} represents the eigendecomposition of the Hessian of the log-density. The magnitude of the eigenvalues of the Hessian directly influences how variance is allocated in the latent space. Large eigenvalues correspond to off-manifolds directions and therefore will be encoded by latent dimensions of small learned variance, while small eigenvalues correspond to on-manifold directions and will be encoded by latent dimensions of high learned variance. This analysis provides a clear and intuitive explanation of why the Riemannian Autoencoder effectively detects and encodes important semantic information in the latent dimensions associated with high learned variances when trained with an affine normalizing flow regularized for local isometry.
+
+However, for \emph{non-affine} flows—such as those incorporating \(1 \times 1\) invertible convolutions after each affine coupling layer or rational quadratic splines—the Hessian vector product term can become significant and may \emph{interfere with} the Jacobian term. This disruption can distort the learned manifold geometry, leading to an incorrect allocation of variances in the latent space. Specifically, the model may assign large variances to an increased number of latent dimensions and thus overestimate the intrinsic dimension. To address this, we add a Hessian vector product penalty to the loss, minimizing its contribution to the Hessian of the log-density and allowing the Riemannian Autoencoder to accurately capture the data manifold’s lower-dimensional structure in \(\spdMatrix_{\theta_1}\).
+
+%Note that \(\diffeo_{\networkParams_2}\) is a function from $\mathbb{R}^d \to \mathbb{R}^d$ and therefore its hessian, \(
+%    \nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x})
+%\), is a tensor of shape $(d,d,d)$, while the Hessian vector dot product term $\nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x}) 
+%\,\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x})$ is a matrix of shape $(d,d)$. Therefore, computing the Hessian vector dot product can become prohibitively expensive in high dimensions even if we use efficient implementations of Hessian vector product and vectorize operations over the batch dimension. For this reason, in our MNIST experiments, we didn't evaluate the full Hessian vector product in each iteration, but randomly chose a dimension from $1$ to $d$, evaluated the Hessian vector dot product for that dimension which corresponds to calculating one random column of the full Hessian vector product matrix and then penalized the Euclidean norm of that randomly selected column. We found that penalizing the magnitude of one column sampled randomly in each training step was enough to keep the Hessian term much smaller compared to the Jacobian term, which allowed the Riemannian Auto-encoder to perform well in our image experiments where we used \textit{non-affine} flows. 
+
+Note that \(\diffeo_{\networkParams_2}\) maps \(\mathbb{R}^d \to \mathbb{R}^d\), making its Hessian \(\nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x})\) a rank-3 tensor of shape \(d \times d \times d\). Multiplying this Hessian by \(\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x})\) results in a \(d \times d\) matrix, whose computation becomes prohibitively expensive in high dimensions, even with optimized methods. To address this in our MNIST experiments, we randomly selected a dimension at each iteration, computed the corresponding column of the Hessian vector product, and penalized its Euclidean norm. This efficient regularization was enough to keep the Hessian term orders of magnitude smaller in Frobenius norm compared to the Jacobian term, allowing the Riemannian Autoencoder to perform effectively with \textit{non-affine} flows.
 \subsection{Datasets for Manifold Mapping Experiments}
 \label{app:manifold_mapping}
 
