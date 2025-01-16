@@ -1,4 +1,4 @@
-\chapter{Score-based pullback Riemannian geometry}
+\chapter{Score-based Pullback Riemannian Geometry}
 \section{Proof of \ref{thm:rae-error}}
 \label{app:proof-of-rae-error}
 
@@ -180,6 +180,7 @@ However, for \emph{non-affine} flows—such as those incorporating \(1 \times 1\
 %\,\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x})$ is a matrix of shape $(d,d)$. Therefore, computing the Hessian vector dot product can become prohibitively expensive in high dimensions even if we use efficient implementations of Hessian vector product and vectorize operations over the batch dimension. For this reason, in our MNIST experiments, we didn't evaluate the full Hessian vector product in each iteration, but randomly chose a dimension from $1$ to $d$, evaluated the Hessian vector dot product for that dimension which corresponds to calculating one random column of the full Hessian vector product matrix and then penalized the Euclidean norm of that randomly selected column. We found that penalizing the magnitude of one column sampled randomly in each training step was enough to keep the Hessian term much smaller compared to the Jacobian term, which allowed the Riemannian Auto-encoder to perform well in our image experiments where we used \textit{non-affine} flows. 
 
 Note that \(\diffeo_{\networkParams_2}\) maps \(\mathbb{R}^d \to \mathbb{R}^d\), making its Hessian \(\nabla_{\mathbf{x}}^2 \diffeo_{\networkParams_2}(\mathbf{x})\) a rank-3 tensor of shape \(d \times d \times d\). Multiplying this Hessian by \(\spdMatrix_{\theta_1}^{-1}\,\diffeo_{\networkParams_2}(\mathbf{x})\) results in a \(d \times d\) matrix, whose computation becomes prohibitively expensive in high dimensions, even with optimized methods. To address this in our MNIST experiments, we randomly selected a dimension at each iteration, computed the corresponding column of the Hessian vector product, and penalized its Euclidean norm. This efficient regularization was enough to keep the Hessian term orders of magnitude smaller in Frobenius norm compared to the Jacobian term, allowing the Riemannian Autoencoder to perform effectively with \textit{non-affine} flows.
+
 \subsection{Datasets for Manifold Mapping Experiments}
 \label{app:manifold_mapping}
 

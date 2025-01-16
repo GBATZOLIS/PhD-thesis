@@ -3,7 +3,7 @@
 %****************************** Second Chapter *********************************
 %*******************************************************************************
 
-\chapter{Score-based pullback Riemannian geometry}\label{Chapter:Pullback-riemannian-geometry}
+\chapter{Score-based Pullback Riemannian Geometry}\label{Chapter:Pullback-riemannian-geometry}
 
 \ifpdf
     \graphicspath{{Chapter5/Figs/Raster/}{Chapter5/Figs/PDF/}{Chapter5/Figs/}}
@@ -470,54 +470,52 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
 \subsubsection{Higher-dimensional manifolds}
 
 
+\begin{figure}[h!]
+    \centering
 
-    \begin{figure}[h!]
-        \vspace{-0.5cm}
-            \centering
-            % Title for Hemisphere
-            \textbf{Hemisphere (5,20)} \par\medskip
-            
-            % First row: Hemisphere plots
-            \begin{subfigure}[b]{0.443\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png}
-                \caption{Learned variances in decreasing order.}
-                \label{fig:hemisphere_variances}
-            \end{subfigure}
-            \hfill
-            \begin{subfigure}[b]{0.546\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png}
-                \caption{Reconstruction error for three latent orders.}
-                \label{fig:hemisphere_reconstruction_errors}
-            \end{subfigure}
-            
-            \vspace{1.5em} % Add some space between the rows
-            
-            % Title for Sinusoid
-            \textbf{Sinusoid (5,20)} \par\medskip
-            
-            % Second row: Sinusoid plots
-            \begin{subfigure}[b]{0.440\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png}
-                \caption{Learned variances in decreasing order.}
-                \label{fig:sinusoid_variances}
-            \end{subfigure}
-            \hfill
-            \begin{subfigure}[b]{0.549\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png}
-                \caption{Reconstruction error for three latent orders.}
-                \label{fig:sinusoid_reconstruction_errors}
-            \end{subfigure}
-        
-            % Main caption for the entire figure
-            \caption{Learned variances and reconstruction errors for the Hemisphere(5,20) and Sinusoid(5,20) datasets. The plots in the left column show the learned variances in decreasing order for each dataset, while the right column illustrates the average $\ell^2$ reconstruction error as a function of the number of latent dimensions used. The reconstruction errors are evaluated for three variance-based orders of the latent dimensions: the \textbf{blue line} (circular markers) represents adding dimensions in decreasing order of variance, the \textbf{green line} (square markers) for increasing variance, and the \textbf{red line} (diamond markers) for a random order.\vspace{-2em}
-        }
-        
-            \label{fig:combined_plot}
-        \end{figure}
+    % Top row: Learned variances for Hemisphere and Sinusoid
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/diagonal_values_normal_scale.png}
+        \caption{Hemisphere(5,20): Learned variances.}
+        \label{fig:hemisphere_variances}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/diagonal_values_normal_scale.png}
+        \caption{Sinusoid(5,20): Learned variances.}
+        \label{fig:sinusoid_variances}
+    \end{subfigure}
+
+    \vspace{0.5em} % Small space between rows
+
+    % Bottom row: Reconstruction errors for Hemisphere and Sinusoid
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/hemisphere_5_20/reconstruction_error_plot_normal_scale.png}
+        \caption{Hemisphere(5,20): Reconstruction error.}
+        \label{fig:hemisphere_reconstruction_errors}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapter5/results/visualisations/RAE/reconstruction/sinusoid_5_20/reconstruction_error_plot_normal_scale.png}
+        \caption{Sinusoid(5,20): Reconstruction error.}
+        \label{fig:sinusoid_reconstruction_errors}
+    \end{subfigure}
+
+    % Detailed and improved caption
+    \caption{Learned variances and reconstruction errors for the Hemisphere(5,20) and Sinusoid(5,20) datasets. 
+    \textbf{Top row}: Learned variances in decreasing order, showing how variance is distributed across latent dimensions. 
+    \textbf{Bottom row}: Average $\ell^2$ reconstruction error as a function of the number of latent dimensions used. 
+    Reconstruction errors are evaluated for three variance-based orders of the latent dimensions: the \textbf{blue line} (decreasing variance), the \textbf{green line} (increasing variance), and the \textbf{red line} (random order).}
+    
+    \label{fig:combined_plot}
+\end{figure}
+
+
+
 
     To evaluate the scalability of our method to higher-dimensional manifolds, we conducted additional experiments on the Hemisphere(5,20) and Sinusoid(5,20) datasets. 
     
