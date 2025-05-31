@@ -36,7 +36,7 @@ and
     (ii) Next, we consider the case $1 \leq \dimInd_\RAErelerror < \dimInd$.
     First, notice that we can rewrite 
     \begin{multline}
-        \| \diffeo(D_\RAErelerror(E_\RAErelerror(\Vector))) - \diffeo(\Vector) \|_2^2 \overset{\text{\ref{eq:rae-encoder,eq:rae-decoder}}}{=} \|\sum_{\sumIndC=1}^{\dimInd_\RAErelerror} (\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2 \mathbf{e}^{\sumIndA_\sumIndC} - \diffeo(\Vector)\|_2^2 = \|\sum_{\sumIndC=\dimInd_\RAErelerror+1}^{\dimInd} (\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2 \mathbf{e}^{\sumIndA_\sumIndC}\|_2^2 \\
+        \| \diffeo(D_\RAErelerror(E_\RAErelerror(\Vector))) - \diffeo(\Vector) \|_2^2 \overset{\text{\ref{eq:rae-encoder},\ref{eq:rae-decoder}}}{=} \|\sum_{\sumIndC=1}^{\dimInd_\RAErelerror} (\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2 \mathbf{e}^{\sumIndA_\sumIndC} - \diffeo(\Vector)\|_2^2 = \|\sum_{\sumIndC=\dimInd_\RAErelerror+1}^{\dimInd} (\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2 \mathbf{e}^{\sumIndA_\sumIndC}\|_2^2 \\
         \overset{\text{orthogonality}}{=} \sum_{\sumIndC=\dimInd_\RAErelerror+1}^{\dimInd} \|(\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2 \mathbf{e}^{\sumIndA_\sumIndC}\|_2^2 = \sum_{\sumIndC=\dimInd_\RAErelerror+1}^{\dimInd}(\diffeo(\Vector), \mathbf{e}^{\sumIndA_\sumIndC})_2^2 = \sum_{\sumIndC=\dimInd_\RAErelerror+1}^{\dimInd}\diffeo(\Vector)_{\sumIndA_\sumIndC}^2.
         \label{eq:rewrite-RAEx-x}
     \end{multline}

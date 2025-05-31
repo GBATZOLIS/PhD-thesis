@@ -20,7 +20,7 @@
     \begin{subfigure}{0.31\textwidth}
         \includegraphics[width=\textwidth]{Outline/figures/caflow/oursdependencies.png}
         \end{subfigure}
-    \caption{From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modeling assumption \cite{Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modeling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension.}	\label{fig:dependencies}
+    \caption{From left to right: ideal dependencies in the $i^{th}$ autoregressive component. Dual-Glow modelling assumption \cite{Dual-Glow}; information is exchanged only between latent spaces having the same dimension. Our modelling assumption; we retain the dependencies between $L_i$ and the latent spaces of lower dimension.}	\label{fig:dependencies}
     \end{figure}
 
 \begin{figure}[h]
@@ -32,11 +32,11 @@
     \begin{subfigure}{0.47\textwidth}
             \includegraphics[width=\textwidth]{Outline/figures/caflow/high_level_design_conditional_modified.pdf}
     \end{subfigure}
-    \caption{Left: unconditional normalizing flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta$ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime}$ for simplicity.}
+    \caption{Left: unconditional normalising flow architecture used to encode conditioning and conditioned images, denoted by $Y_n = Y$ and $W_n = W$ respectively, into a sequence of hierarchical latent variables. Right: design of the conditional transformation $G_{i}^\theta$ that models the $i^{th}$ autoregressive component. The index of the flow $i$ is omitted in both the transformed latent variable $Z_j$ and the intermediate latent variables $Z_j^{\prime}$ for simplicity.}
            \label{fig:high_level_design_conditional}
     \end{figure}
 
-In chapter \ref{Chapter:CAFLOW}, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of auto-regressive modeling and the modeling efficiency of conditional normalizing flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalizing flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modeling the auto-regressive distributions with an efficient multi-scale normalizing flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive auto-regressive structure.
+In chapter \ref{Chapter:CAFLOW}, we introduce CAFLOW, a new diverse image-to-image translation model that simultaneously leverages the power of auto-regressive modelling and the modelling efficiency of conditional normalising flows. We transform the conditioning image into a sequence of latent encodings using a multi-scale normalising flow and repeat the process for the conditioned image. We model the conditional distribution of the latent encodings by modelling the auto-regressive distributions with an efficient multi-scale normalising flow, where each conditioning factor affects image synthesis at its respective resolution scale. Our proposed framework performs well on a range of image-to-image translation tasks. It outperforms former designs of conditional flows because of its expressive auto-regressive structure.
 
 
 \subsection*{Originality and Author’s Contributions}
@@ -46,7 +46,7 @@ This chapter is adapted from our published work \cite{batzolis2024caflow} in the
 \begin{itemize}
 \item \textbf{Formulation of Ideas}: The formulation of the CAFLOW framework was entirely my contribution.
 \item \textbf{Experimental Design}: I independently designed all experiments to validate the performance of the proposed framework.
-\item \textbf{Code and Experimental Implementation}: I implemented the entire codebase for the model and conducted all experiments. Christian Etmann provided critical feedback and domain expertise on the training and inference of Normalizing Flows, significantly enhancing the quality of the work.
+\item \textbf{Code and Experimental Implementation}: I implemented the entire codebase for the model and conducted all experiments. Christian Etmann provided critical feedback and domain expertise on the training and inference of Normalising Flows, significantly enhancing the quality of the work.
 \item \textbf{Theory}: I developed the theoretical foundations underpinning the proposed framework, with valuable contributions from Marcelo Carioni, who helped refine and extend the theoretical arguments.
 \item \textbf{Presentation}: Myself and Marcelo Carioni contributed equally to the write-up of this work.
 \end{itemize}
@@ -58,7 +58,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb, 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Outline/figures/non-uniform-diffusion-models/drawing.png}
-    \caption{Illustration of a multi-scale diffusion model with three scales. Inspired by multi-scale normalizing flows, this approach diffuses different parts of the image tensor (transformed into multi-level Haar coefficients) at varying speeds. High-frequency detail coefficients diffuse progressively faster, with $d_1$ diffusing faster than $d_2$, $d_2$ faster than $d_3$, and so on, ensuring that all coefficients reach the same (very low) signal-to-noise ratio (SNR) at their respective terminal diffusion times: $t = 0.25, 0.5, 0.75$, and $1.0$, respectively. The low-frequency approximation coefficients $a_3$ diffuse the slowest, completing their diffusion at $t = 1.0$. The multi-scale structure reduces the dimensionality of the diffusing tensor at each scale, enabling faster computation. Separate neural networks $S_1, S_2, S_3, S_4$ approximate the score functions at different intervals, leveraging the reduced dimensionality of the intermediate distributions. This hierarchical design mirrors the structure of multi-scale normalizing flows, improving training and sampling efficiency while maintaining high image generation quality.}
+    \caption{Illustration of a multi-scale diffusion model with three scales. Inspired by multi-scale normalising flows, this approach diffuses different parts of the image tensor (transformed into multi-level Haar coefficients) at varying speeds. High-frequency detail coefficients diffuse progressively faster, with $d_1$ diffusing faster than $d_2$, $d_2$ faster than $d_3$, and so on, ensuring that all coefficients reach the same (very low) signal-to-noise ratio (SNR) at their respective terminal diffusion times: $t = 0.25, 0.5, 0.75$, and $1.0$, respectively. The low-frequency approximation coefficients $a_3$ diffuse the slowest, completing their diffusion at $t = 1.0$. The multi-scale structure reduces the dimensionality of the diffusing tensor at each scale, enabling faster computation. Separate neural networks $S_1, S_2, S_3, S_4$ approximate the score functions at different intervals, leveraging the reduced dimensionality of the intermediate distributions. This hierarchical design mirrors the structure of multi-scale normalising flows, improving training and sampling efficiency while maintaining high image generation quality.}
     \label{fig:Multiscale model}
 \end{figure}
 
@@ -84,7 +84,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb, 
     \label{fig: teaser}
 \end{figure}
 
-In chapter \ref{Chapter:non-uniform-diffusion-models}, we introduce \emph{non-uniform diffusion models}. Unlike standard diffusion approaches that apply the same noise injection schedule to every pixel, non-uniform diffusion models allow different pixels (or groups of pixels) to evolve at varying speeds. This flexibility mirrors the hierarchical approach of multi-scale normalizing flows, where transformations occur at multiple scales, enabling the model to capture image structure more efficiently and produce higher-quality samples in less time. By carefully choosing which parts of the image diffuse faster, non-uniform diffusion opens the door to significantly improved performance, both in terms of image fidelity and computational speed.
+In chapter \ref{Chapter:non-uniform-diffusion-models}, we introduce \emph{non-uniform diffusion models}. Unlike standard diffusion approaches that apply the same noise injection schedule to every pixel, non-uniform diffusion models allow different pixels (or groups of pixels) to evolve at varying speeds. This flexibility mirrors the hierarchical approach of multi-scale normalising flows, where transformations occur at multiple scales, enabling the model to capture image structure more efficiently and produce higher-quality samples in less time. By carefully choosing which parts of the image diffuse faster, non-uniform diffusion opens the door to significantly improved performance, both in terms of image fidelity and computational speed.
 
 We demonstrate that non-uniform diffusion models outperform standard uniform diffusion models by achieving superior FID scores in less training time. Furthermore, these models exhibit remarkable efficiency, sampling up to 4.4 times faster at a resolution of $128 \times 128$, with even greater speed-ups anticipated at higher resolutions. Leveraging the adaptability of non-uniform diffusion, we introduce the Conditional Multi-Speed Diffusive Estimator (CMDE), a novel approach derived from a specific choice of non-uniform diffusion. CMDE unifies existing methods for conditional score estimation and delivers performance on par with the widely adopted conditional denoising estimator.
 
@@ -126,7 +126,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb a
         \caption{The red dot shows a point $\textbf{x}_0$ on the data manifold where we wish to estimate the dimension. We sample $K$ blue points $\textbf{x}_t^{(i)}$ in a close neighborhood of the red point and evaluate the score field. The resulting vectors $s_\theta(\textbf{x}_\epsilon^{(i)}, \epsilon)$ point in the normal direction. We put the vectors into a matrix and perform SVD to detect the dimension of the normal space. The dimension of the manifold equals the number of (almost) vanishing singular values.}
         \label{fig:zoom}
     \end{subfigure}
-    \caption{(Left) Visualization of the score field near the data manifold. (Right) Visualisation of the estimation of the manifold dimension using the trained diffusion model.}
+    \caption{(Left) Visualisation of the score field near the data manifold. (Right) Visualisation of the estimation of the manifold dimension using the trained diffusion model.}
     \label{fig:score_estimation}
 \end{figure}
 
@@ -178,7 +178,7 @@ This project was conducted under the supervision of Carola-Bibiane Sch\"onlieb.
 
 In chapter \ref{Chapter:ScoreVAE}, we introduce \textbf{ScoreVAE}, a novel approach that advances the Variational Autoencoder (VAE) framework by addressing fundamental limitations of conventional VAEs. Traditional VAEs model the reconstruction distribution $p(\mathbf{x}|\mathbf{z})$ as a Gaussian, which often leads to overly smoothed and blurry reconstructions. This limitation arises because the Gaussian assumption fails to capture the complexity and multimodality of real-world data distributions, making it difficult for the model to accurately represent intricate details and sharp features. ScoreVAE addresses this issue by combining a diffusion-time-dependent encoder and an unconditional diffusion model. By employing Bayes' rule for score functions, we analytically derive a robust and flexible model for reconstruction distribution $p(\mathbf{x}|\mathbf{z})$. Our approach bypasses the unrealistic Gaussian assumption, resulting in significantly improved image reconstruction quality.
 
-The ScoreVAE framework also simplifies the training dynamics by decoupling the training of the diffusion model and the encoder. This decoupling enables the use of powerful pre-trained diffusion models that can be readily updated or swapped without retraining the entire system. By separating the prior (diffusion model) from the encoder, ScoreVAE achieves higher fidelity reconstructions compared to traditional VAEs and diffusion decoders. Our experiments on the CIFAR10 and CelebA datasets demonstrate ScoreVAE’s superiority in producing sharper images and reducing reconstruction error. These results underscore the practical advantages of ScoreVAE in handling complex, high-dimensional data, and highlight its potential for improved representation learning and controllable generative modeling.
+The ScoreVAE framework also simplifies the training dynamics by decoupling the training of the diffusion model and the encoder. This decoupling enables the use of powerful pre-trained diffusion models that can be readily updated or swapped without retraining the entire system. By separating the prior (diffusion model) from the encoder, ScoreVAE achieves higher fidelity reconstructions compared to traditional VAEs and diffusion decoders. Our experiments on the CIFAR10 and CelebA datasets demonstrate ScoreVAE’s superiority in producing sharper images and reducing reconstruction error. These results underscore the practical advantages of ScoreVAE in handling complex, high-dimensional data, and highlight its potential for improved representation learning and controllable generative modelling.
 
 \subsection*{Originality and Author’s Contributions}
 
@@ -224,21 +224,21 @@ This project was supervised by Carola-Bibiane Sch\"onlieb.
     \label{fig:learned_charts}
 \end{figure}
 
-In chapter \ref{Chapter:Pullback-riemannian-geometry}, we introduce a score-based pullback Riemannian metric that encodes the intrinsic dimensionality and geometry of data under certain distributional assumptions. We show that this data-driven metric can be constructed in practice by modifying normalizing flows with anisotropic base distribution and isometry regularization. This approach yields a scalable framework for computing manifold maps—such as geodesics, exponential maps, distances, and curvature—in closed form. Building on this metric, we additionally construct a Riemannian Auto-encoder (RAE) that recovers the true manifold dimension, offers a global chart of the manifold, and yields an interpretable latent representation thanks to isometry regularization.
+In chapter \ref{Chapter:Pullback-riemannian-geometry}, we introduce a score-based pullback Riemannian metric that encodes the intrinsic dimensionality and geometry of data under certain distributional assumptions. We show that this data-driven metric can be constructed in practice by modifying normalising flows with anisotropic base distribution and isometry regularisation. This approach yields a scalable framework for computing manifold maps—such as geodesics, exponential maps, distances, and curvature—in closed form. Building on this metric, we additionally construct a Riemannian Auto-encoder (RAE) that recovers the true manifold dimension, offers a global chart of the manifold, and yields an interpretable latent representation thanks to isometry regularisation.
 
 \subsection*{Originality and Author’s Contributions}
 
 This chapter is adapted from \cite{diepeveen2024score}. The authors' contributions to this work are as follows:
 
 \begin{itemize}
-\item \textbf{Formulation of Ideas}: Willem Diepeveen proposed the idea of extracting the data manifold's geometry using a score-based pullback metric. He developed the theoretical motivation of using the score-based metric and showed that the constructed metric allows the computation of manifold maps such as geodesics, exponential map, logarithmic map and distance in closed form. Moreover, he showed that the trained normalizing flow used for the construction of the pullback metric is a Riemannian Auto-encoder.
+\item \textbf{Formulation of Ideas}: Willem Diepeveen proposed the idea of extracting the data manifold's geometry using a score-based pullback metric. He developed the theoretical motivation of using the score-based metric and showed that the constructed metric allows the computation of manifold maps such as geodesics, exponential map, logarithmic map and distance in closed form. Moreover, he showed that the trained normalising flow used for the construction of the pullback metric is a Riemannian Auto-encoder.
 
-I figured out that the proposed metric can be constructed in practice by adapting the framework of Normalizing flows with base distribution anisotropy and $l_2$ regularisation. Moreover, I discovered the existence of a hessian vector product term that can negatively impact the performance of the Riemannian Auto-encoder if not taken into consideration. 
+I figured out that the proposed metric can be constructed in practice by adapting the framework of Normalising flows with base distribution anisotropy and $l_2$ regularisation. Moreover, I discovered the existence of a hessian vector product term that can negatively impact the performance of the Riemannian Auto-encoder if not taken into consideration. 
 Including the hessian vector product term in the regularisation allowed us to use non-affine flows reliably which led to the improvement of the scalability and performance of the method.
 
 \item \textbf{Experimental Design}: I led the experimental design, incorporating suggestions from Willem Diepeveen and Zakhar Shumaylov.
 \item \textbf{Code and Experimental Implementation}: I implemented the training code and conducted all hyperparameter tuning and experiments. Willem implemented the functionality for constructing the data-driven manifold maps and the Riemannian autoencoder from a trained model.
-\item \textbf{Theory}: Willem developed the theoretical results. I contributed by explaining the necessity of Hessian-vector product regularization.
+\item \textbf{Theory}: Willem developed the theoretical results. I contributed by explaining the necessity of Hessian-vector product regularisation.
 \item \textbf{Presentation}: Zakhar and Willem wrote all sections except for the experimental section, which I authored.
 \end{itemize}
 

@@ -32,14 +32,14 @@
     
 \end{lemma}
 \begin{customthm}{1}
-    The minimizer of
+    The minimiser of
     \begin{gather*}
     \begin{aligned}
             &\frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_0, y \sim p(x_0, y) \\ &x_t \sim p(x_t | x_0)}} 
             [\lambda(t) \norm{\nabla_{x_t} \ln{p(x_t | x_0)} - s_\theta(x_t, y, t)}_2^2]
     \end{aligned}
     \end{gather*}    
-    in $\theta$ is the same as the minimizer of 
+    in $\theta$ is the same as the minimiser of 
     \begin{gather*}
          \frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_t, y \sim p(x_t, y)}} 
         [\lambda(t) \norm{\nabla_{x_t} \ln{p(x_t | y)} - s_\theta(x_t, y,t)}_2^2].
@@ -116,7 +116,7 @@ First we state some technical, but well-known lemmas, which will be useful in pr
     \label{ch2:lemma:consistency}
     Let $\Theta$ be compact and consider a family of functions $\mathcal{L}^{(n)}: \Theta \to \mathbb{R}$. Moreover, suppose there exists a function $\mathcal{L}: \Theta \to \mathbb{R}$ such that
     \begin{itemize}
-        \item $\mathcal{L}(\theta)$ is uniquely minimized at $\theta^\ast$.
+        \item $\mathcal{L}(\theta)$ is uniquely minimised at $\theta^\ast$.
         \item $\mathcal{L}(\theta)$ is continuous.
         \item $\mathcal{L}^{(n)}(\theta)$ converges uniformly in probability to $\mathcal{L}(\theta)$.
     \end{itemize}
@@ -125,7 +125,7 @@ First we state some technical, but well-known lemmas, which will be useful in pr
 
 
 \begin{customcoll}{1}
-    Let $\theta_n^\ast$ be a minimizer of a $n$-sample Monte Carlo approximation of \begin{gather*}
+    Let $\theta_n^\ast$ be a minimiser of a $n$-sample Monte Carlo approximation of \begin{gather*}
         \begin{aligned}
                 \frac{1}{2} \mathbb{E}_{\subalign{&t \sim U(0,T)\\ &x_0, y \sim p(x_0, y) \\ &x_t \sim p(x_t | x_0)}} 
                 [\lambda(t) \norm{\nabla_{x_t} \ln{p(x_t | x_0)} - s_\theta(x_t, y, t)}_2^2].
@@ -154,12 +154,12 @@ First we state some technical, but well-known lemmas, which will be useful in pr
             [f(z,\theta)]
     \end{align*}
     Therefore by Lemma \ref{ch2:lemma:ULLN}, the Monte Carlo approximation of \ref{ch2:CDN}: $\mathcal{L}^{(n)}(\theta)=\frac{1}{n}\sum_{i=1}^n f(z_i, \theta)$ converges uniformly in probability to $\mathcal{L}(\theta) = \mathbb{E}_{z \sim q(z)} 
-    [f(z,\theta)]$. Let $\theta^\ast$ be the minimizer of $\mathcal{L}(\theta)$, by Lemma \ref{ch2:lemma:consistency} we get that $\theta^\ast_n \overset{P}{\to} \theta^\ast$ . Finally by Theorem \ref{ch2:thm:CDE_consistency}, $\theta^\ast$ is also a minimizer of the Fisher divergence between $s_{\theta^\ast}(x_t,y,t)$ and $\nabla_{x_t} \ln p(x_t | y)$ and by Assumption \ref{ch2:assum:unique} this implies that $s_{\theta^\ast}(x_t,y,t) = \nabla_{x_t} \ln p(x_t | y)$. Hence $s_{\theta_n^\ast}(x,y,t) \overset{P}{\to} \nabla_{x_t} \ln p(x_t | y)$.
+    [f(z,\theta)]$. Let $\theta^\ast$ be the minimiser of $\mathcal{L}(\theta)$, by Lemma \ref{ch2:lemma:consistency} we get that $\theta^\ast_n \overset{P}{\to} \theta^\ast$ . Finally by Theorem \ref{ch2:thm:CDE_consistency}, $\theta^\ast$ is also a minimiser of the Fisher divergence between $s_{\theta^\ast}(x_t,y,t)$ and $\nabla_{x_t} \ln p(x_t | y)$ and by Assumption \ref{ch2:assum:unique} this implies that $s_{\theta^\ast}(x_t,y,t) = \nabla_{x_t} \ln p(x_t | y)$. Hence $s_{\theta_n^\ast}(x,y,t) \overset{P}{\to} \nabla_{x_t} \ln p(x_t | y)$.
 \end{proof}
 
 \subsection{Likelihood weighting for multi-speed and multi-sde models}
 \label{ch2:appendix:weighting}
-In this section we derive the likelihood weighting for multi-sde models (Theorem \ref{ch2:thm:weightning}). First using the framework in \cite[Appendix A]{song2021sde} we present the Anderson's theorem for multi-dimensional SDEs with non-homogeneous covariance matrix (without assuming $\Sigma(t) \not = \sigma(t) I$) and generalize the main result of \cite{song2021maximum} to this setting. Then, we cast the problem of multi-speed and  multi-sde diffusion as a special case of multi-dimensional diffusion with a particular covariance matrix $\Sigma(t)$ and thus obtain the likelihood weighting for multi-sde models (Theorem \ref{ch2:thm:weightning}).
+In this section we derive the likelihood weighting for multi-sde models (Theorem \ref{ch2:thm:weightning}). First using the framework in \cite[Appendix A]{song2021sde} we present the Anderson's theorem for multi-dimensional SDEs with non-homogeneous covariance matrix (without assuming $\Sigma(t) \not = \sigma(t) I$) and generalise the main result of \cite{song2021maximum} to this setting. Then, we cast the problem of multi-speed and  multi-sde diffusion as a special case of multi-dimensional diffusion with a particular covariance matrix $\Sigma(t)$ and thus obtain the likelihood weighting for multi-sde models (Theorem \ref{ch2:thm:weightning}).
 
 Consider an Ito's SDE
 \begin{align*}
@@ -180,7 +180,7 @@ If we train a score-based diffusion model to approximate $\nabla_x \ln p_{X_t}(x
 \end{align} 
 
 
-Now we generalize \cite[Theorem 1]{song2021maximum} to multi-dimensional setting.
+Now we generalise \cite[Theorem 1]{song2021maximum} to multi-dimensional setting.
 \begin{theorem} 
     Let $p(x_t)$ and $p_\theta(x_t)$ denote marginal distributions of \ref{ch2:eq:true_rtsde} and \ref{ch2:eq:approx_rtsde} respectively. Then under regularity assumptions of \cite[Theorem 1]{song2021maximum} we have that 
     \label{ch2:thm:multi-dim}
@@ -194,7 +194,7 @@ Now we generalize \cite[Theorem 1]{song2021maximum} to multi-dimensional setting
 \begin{proof}   
     We proceed in close analogy to the proof of \cite[Theorem 1]{song2021maximum} but we use a more general diffusion matrix $\Sigma(t)$. 
     Let $P$ be the law of the true reverse-time sde and let $P_\theta$ be the law of the approximate reverse-time sde. 
-    Then by  \cite[Theorem 2.4]{leonard2013properties} (generalized chain rule for KL divergence) we have
+    Then by  \cite[Theorem 2.4]{leonard2013properties} (generalised chain rule for KL divergence) we have
     \begin{equation}
         KL(P | P_\theta) = KL(p(x_0) | p_\theta(x_0)) + \mathbb{E}_{z \sim p(x_0)}[KL(P(\cdot | x_0=z) |P_\theta(\cdot | x_0=z))].
     \end{equation}
@@ -534,7 +534,7 @@ We used almost the same neural network architecture across all tasks and all est
 
 We used the basic version of the DDPM architecture with the following hyperparameters: channel dimension $96$, depth multipliers $[1, 1, 2, 2, 3, 3]$, $2$ ResNet Blocks per scale and attention in the final $3$ scales. The total parameter count is 43.5M. Song et al. \cite{song2021sde} report improved performance with the NCSN++ architecture over the baseline DDPM when training with the VE SDE. This claim is also supported by the work of Saharia et al. \cite{saharia2021sr3}. Therefore, adopting this architecture is likely to improve the performance of all estimators and lead to even more competitive performance over state-of-the-art methods. For all estimators, we concatenate the condition image $y$ or $y(t)$ with the diffused target $x(t)$ and pass the concatenated image as input to the score model for score calculation. In the super-resolution experiment, we first interpolate the condition to the same resolution as the target using nearest neighbours interpolation and then concatenate it with the target image. 
 
-We used exponential moving average (EMA) with rate 0.999 and the same optimizer settings as in \cite{song2021sde}. Moreover, we used a batch size of $50$ for the super-resolution and edge to image translation experiments and a batch size of $100$ for the inpainting experiments. 
+We used exponential moving average (EMA) with rate 0.999 and the same optimiser settings as in \cite{song2021sde}. Moreover, we used a batch size of $50$ for the super-resolution and edge to image translation experiments and a batch size of $100$ for the inpainting experiments. 
 
 
 \begin{comment}
@@ -782,85 +782,6 @@ We provide additional samples in Figures \ref{ch2:fig:Vanilla}, \ref{ch2:fig:Mul
             \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/CDE.png} \\
 
         \begin{tabular}{@{}c@{}}
-           CDiffE
-            \\[25pt]
-        \end{tabular} & 
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/CDiffE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/CDiffE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/CDiffE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/CDiffE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/CDiffE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/CDiffE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/CDiffE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/CDiffE.png} \\
-
-        \begin{tabular}{@{}c@{}}
-            CMDE
-            \\[25pt]
-        \end{tabular}  &  
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/CMDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/CMDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/CMDE.png} \\
-            
-        \begin{tabular}{@{}c@{}}
-            VS-CMDE
-            \\[25pt]
-        \end{tabular}  &  
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/VS-CMDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/VS-CMDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/VS-CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/VS-CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/VS-CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/VS-CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/VS-CMDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/VS-CMDE.png} \\
-    \end{tabular}
-    \endgroup
-    \end{center}
-    \caption{Extended edge to shoe synthesis results.}
-    \label{ch2:fig:additional_shoe}
-\end{figure*}
-
-
-
-\begin{figure*}
-    \begin{center}
-    \begingroup
-    \setlength{\tabcolsep}{2.5pt}
-    \begin{tabular}{lcccccccc}
-        \begin{tabular}{@{}l@{}}
-            Original image $x$
-            \\[25pt]
-        \end{tabular}
-         & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/x.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/x.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/x.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/x.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/x.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/x.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/x.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/x.png} \\
-        
-        \begin{tabular}{@{}l@{}}
-            Observation \\ $ y := Ax$
-            \\[25pt]
-        \end{tabular}
-         & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/y.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/y.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/y.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/y.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/y.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/y.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/y.png} &
-         \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/y.png} \\
-        
-         \begin{tabular}{@{}c@{}}
-            CDE
-            \\[25pt]
-        \end{tabular} & 
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/1/CDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/6/CDE.png} & \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/8/CDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/10/CDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/21/CDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/99/CDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/126/CDE.png} &
-            \includegraphics[width=.08\textwidth]{Chapter2/samples/extended_results/edges-to-shoes/134/CDE.png} \\
-
-        \begin{tabular}{@{}c@{}}
             CMDE (Ours)
             \\[25pt]
         \end{tabular}  &  
@@ -878,4 +799,4 @@ We provide additional samples in Figures \ref{ch2:fig:Vanilla}, \ref{ch2:fig:Mul
 \end{figure*}
 
 \section{Potential negative impact}
-The potential of negative impact of this work is the same as that of any work that advances generative modeling. Generative modeling can be used for the creation of deep-fakes which can be used for malicious purposes such as disinformation and blackmailing. However, research on generative modeling can indirectly or directly contribute to the robustification of deep-fake detection algorithms. Moreover, generative models have proven very useful in academic research and in industry. The potential benefits of generative modeling outweigh the potential threats. Therefore, the research community should continue to conduct research on generative modeling.
+The potential of negative impact of this work is the same as that of any work that advances generative modelling. Generative modelling can be used for the creation of deep-fakes which can be used for malicious purposes such as disinformation and blackmailing. However, research on generative modelling can indirectly or directly contribute to the robustification of deep-fake detection algorithms. Moreover, generative models have proven very useful in academic research and in industry. The potential benefits of generative modelling outweigh the potential threats. Therefore, the research community should continue to conduct research on generative modelling.

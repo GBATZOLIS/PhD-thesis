@@ -11,7 +11,7 @@
     \graphicspath{{Chapter5/Figs/Vector/}{Chapter5/Figs/}}
 \fi
 
-Data-driven Riemannian geometry has emerged as a powerful tool for interpretable representation learning, offering improved efficiency in downstream tasks. Moving forward, it is crucial to balance cheap manifold mappings with efficient training algorithms. In this work, we integrate concepts from pullback Riemannian geometry and generative models to propose a framework for data-driven Riemannian geometry that is scalable in both geometry and learning: score-based pullback Riemannian geometry. Focusing on unimodal distributions as a first step, we propose a score-based Riemannian structure with closed-form geodesics that pass through the data probability density. With this structure, we construct a Riemannian autoencoder (RAE) with error bounds for discovering the correct data manifold dimension. This framework can naturally be used with anisotropic normalizing flows by adopting isometry regularization during training. Through numerical experiments on various datasets, we demonstrate that our framework not only produces high-quality geodesics through the data support, but also reliably estimates the intrinsic dimension of the data manifold and provides a global chart of the manifold, even in high-dimensional ambient spaces.
+Data-driven Riemannian geometry has emerged as a powerful tool for interpretable representation learning, offering improved efficiency in downstream tasks. Moving forward, it is crucial to balance cheap manifold mappings with efficient training algorithms. In this work, we integrate concepts from pullback Riemannian geometry and generative models to propose a framework for data-driven Riemannian geometry that is scalable in both geometry and learning: score-based pullback Riemannian geometry. Focusing on unimodal distributions as a first step, we propose a score-based Riemannian structure with closed-form geodesics that pass through the data probability density. With this structure, we construct a Riemannian autoencoder (RAE) with error bounds for discovering the correct data manifold dimension. This framework can naturally be used with anisotropic normalising flows by adopting isometry regularisation during training. Through numerical experiments on various datasets, we demonstrate that our framework not only produces high-quality geodesics through the data support, but also reliably estimates the intrinsic dimension of the data manifold and provides a global chart of the manifold, even in high-dimensional ambient spaces.
 
 \section{Introduction}
 
@@ -83,20 +83,20 @@ Motivated by the above, this work aims to address the following question: How to
 
 \subsection{Contributions}
 
-In this chapter, we take first steps towards striking such a balance and propose a score-based pullback Riemannian metric assuming a relatively simple but generally applicable family of probability densities, which we show to result in both scalable manifold mappings and scalable learning algorithms. We emphasize that we do not directly aim to find the perfect balance between the two types of scalability. Instead we start from a setting which has many nice properties, but will allow for generalization to multimodal densities, which we reserve for future work.
+In this chapter, we take first steps towards striking such a balance and propose a score-based pullback Riemannian metric assuming a relatively simple but generally applicable family of probability densities, which we show to result in both scalable manifold mappings and scalable learning algorithms. We emphasise that we do not directly aim to find the perfect balance between the two types of scalability. Instead we start from a setting which has many nice properties, but will allow for generalisation to multimodal densities, which we reserve for future work.
 
-Specifically, we consider a family of unimodal probability densities whose negative log-likelihoods are compositions of strongly convex functions and diffeomorphisms. As this work is an attempt to bridge between the geometric data analysis community and the generative modeling community, we break down the contributions in two ways.
+Specifically, we consider a family of unimodal probability densities whose negative log-likelihoods are compositions of strongly convex functions and diffeomorphisms. As this work is an attempt to bridge between the geometric data analysis community and the generative modelling community, we break down the contributions in two ways.
 Theoretically,
 \begin{itemize}
     \item We propose a score-based pullback Riemannian metric such that manifold mappings respect the data distribution as illustrated in \ref{fig:toy-example-barycentre},\ref{fig:toy-example-geodesic},\ref{fig:toy-example-log},\ref{fig:toy-example-exp}.
     \item We demonstrate that this density-based Riemannian structure naturally leads to a Riemannian autoencoder\footnote{in the sense of \cite{diepeveen2024pulling}} and provide error bounds on the expected reconstruction error, which allows for approximation of the data manifold as illustrated in \ref{fig:learned_charts}.
-    \item We introduce a learning scheme based on adaptations of normalizing flows to find the density to be integrated into the Riemannian framework, which is tested on several synthetic data sets. 
+    \item We introduce a learning scheme based on adaptations of normalising flows to find the density to be integrated into the Riemannian framework, which is tested on several synthetic data sets. 
 \end{itemize}
-Practically, this work showcases how two simple adaptations to the normalizing flows framework enable data-driven Riemannian geometry. This significantly expands the potential for downstream applications compared to the unadapted framework.
+Practically, this work showcases how two simple adaptations to the normalising flows framework enable data-driven Riemannian geometry. This significantly expands the potential for downstream applications compared to the unadapted framework.
 
 \subsection{Outline}
 
-After introducing notation in \ref{sec:notation}, \ref{sec:unimodal-riemannian geometry} considers a family of probability distributions, from which we obtain suitable geometry, and \ref{sec:rae} showcases how one can subsequently construct Riemannian Autoencoders with theoretical guarantees. From these observations \ref{sec:adapting-normalizing-flows} discusses the natural limitations of standard normalizing flows and how to change the parametrisation and training for downstream application in a Riemannian geometric setting. \ref{sec:numerics} showcases several use cases of data-driven Riemannian structure on several data sets. Finally, we summarize our findings in \ref{sec:conclusions}.
+After introducing notation in \ref{sec:notation}, \ref{sec:unimodal-riemannian geometry} considers a family of probability distributions, from which we obtain suitable geometry, and \ref{sec:rae} showcases how one can subsequently construct Riemannian Autoencoders with theoretical guarantees. From these observations \ref{sec:adapting-normalising-flows} discusses the natural limitations of standard normalising flows and how to change the parametrisation and training for downstream application in a Riemannian geometric setting. \ref{sec:numerics} showcases several use cases of data-driven Riemannian structure on several data sets. Finally, we summarise our findings in \ref{sec:conclusions}.
 
 \section{Notation}
 \label{sec:notation}
@@ -172,42 +172,42 @@ This special case highlights why, in general, we obtain geodesics and manifold m
             \item length-minimising geodesics $\geodesic^{\nabla \stroco \circ \diffeo}_{\Vector, \VectorB}:[0,1] \to \Real^\dimInd$ on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ are given by 
             \begin{equation}
                 \geodesic^{\nabla \stroco \circ \diffeo}_{\Vector, \VectorB}(t)= (\diffeo^{-1} \circ\nabla \stroco^*) ((1 - t)(\nabla \stroco \circ \diffeo)(\Vector) + t (\nabla \stroco \circ \diffeo)(\VectorB)).
-                \label{eq:thm-geodesic-remetrized}
+                \label{eq:thm-geodesic-remetrised}
             \end{equation}
             In addition, if $\stroco$ is of the form \ref{eq:quadratic-stroco}
             \begin{equation}
                 \geodesic^{\nabla \stroco \circ \diffeo}_{\Vector, \VectorB}(t) = \geodesic^\diffeo_{\Vector, \VectorB}(t) = \diffeo^{-1}((1 - t)\diffeo(\Vector) + t \diffeo(\VectorB)).
-                \label{eq:thm-geodesic-remetrized-special-psi}
+                \label{eq:thm-geodesic-remetrised-special-psi}
             \end{equation}
             \item the logarithmic map $\log^{\nabla \stroco \circ \diffeo}_{\Vector} (\cdot):\Real^\dimInd \to \tangent_\Vector \Real^\dimInd$  on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ is given by 
             \begin{equation}
                 \log^{\nabla \stroco \circ \diffeo}_{\Vector} \VectorB =  D_{\diffeo(\Vector)}\diffeo^{-1}[D_{(\nabla \stroco \circ \diffeo)(\Vector)}\nabla \stroco^*[(\nabla \stroco \circ \diffeo)(\VectorB) - (\nabla \stroco \circ \diffeo)(\Vector)]].
-                \label{eq:thm-log-remetrized}
+                \label{eq:thm-log-remetrised}
             \end{equation}
             In addition, if $\stroco$ is of the form \ref{eq:quadratic-stroco}
             \begin{equation}
                 \log^{\nabla \stroco \circ \diffeo}_{\Vector} \VectorB = \log^\diffeo_{\Vector} \VectorB = D_{\diffeo(\Vector)}\diffeo^{-1}[\diffeo(\VectorB) - \diffeo(\Vector)].
-                \label{eq:thm-log-remetrized-special-psi}
+                \label{eq:thm-log-remetrised-special-psi}
             \end{equation}
             \item the exponential map $\exp^{\nabla \stroco \circ \diffeo}_{\Vector} (\cdot):\tangent_\Vector \Real^\dimInd \to \Real^\dimInd$ on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ is given by 
             \begin{equation}
                  \exp^{\nabla \stroco \circ \diffeo}_\Vector (\tangentVector_\Vector) = (\diffeo^{-1} \circ\nabla \stroco^*)((\nabla \stroco \circ \diffeo)(\Vector) + D_{\diffeo(\Vector)} \nabla \stroco [ D_{\Vector} \diffeo[\tangentVector_\Vector] ]).
-                 \label{eq:thm-exp-remetrized}
+                 \label{eq:thm-exp-remetrised}
             \end{equation}
             In addition, if $\stroco$ is of the form \ref{eq:quadratic-stroco}
             \begin{equation}
                  \exp^{\nabla \stroco \circ \diffeo}_\Vector (\tangentVector_\Vector) = \exp^\diffeo_\Vector (\tangentVector_\Vector) = \diffeo^{-1}(\diffeo(\Vector) + D_{\Vector} \diffeo[\tangentVector_\Vector]).
-                 \label{eq:thm-exp-remetrized-special-psi}
+                 \label{eq:thm-exp-remetrised-special-psi}
             \end{equation}
             \item the distance $\distance^{\nabla \stroco \circ \diffeo}_{\Real^\dimInd}:\Real^\dimInd \times\Real^\dimInd \to \Real$ on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ is given by 
             \begin{equation}
                 \distance^{\nabla \stroco \circ \diffeo}_{\Real^\dimInd}(\Vector, \VectorB) = \|(\nabla \stroco \circ \diffeo)(\Vector) - (\nabla \stroco \circ \diffeo)(\VectorB)\|_2.
-                \label{eq:thm-distance-remetrized}
+                \label{eq:thm-distance-remetrised}
             \end{equation}
             In addition, if $\stroco$ is of the form \ref{eq:quadratic-stroco}
             \begin{equation}
                 \distance^{\nabla \stroco \circ \diffeo}_{\Real^\dimInd}(\Vector, \VectorB) = \| \diffeo(\Vector) -  \diffeo(\VectorB)\|_{\spdMatrix^{-2}} := \| \spdMatrix^{-1} (\diffeo(\Vector) -  \diffeo(\VectorB))\|_{2}.
-                \label{eq:thm-distance-remetrized-special-psi}
+                \label{eq:thm-distance-remetrised-special-psi}
             \end{equation}
             \item the Riemannian barycentre $\Vector^* \in \Real^\dimInd$ of the data set $\{\Vector^\sumIndA\}_{\sumIndA=1}^\dataPointNum$ on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ is given by
             \begin{equation}
@@ -222,12 +222,12 @@ This special case highlights why, in general, we obtain geodesics and manifold m
             % \item parallel transport along geodesics $\mathcal{P}^{\nabla \stroco \circ \diffeo}_{\VectorB \leftarrow \Vector} :\tangent_\Vector \Real^\dimInd \to \tangent_\VectorB \Real^\dimInd$ on $(\Real^\dimInd, (\cdot,\cdot)^{\nabla \stroco \circ \diffeo})$ is given by 
             % \begin{equation}
             %     \mathcal{P}^{\nabla \stroco \circ \diffeo}_{\VectorB \leftarrow \Vector} \tangentVector_\Vector = D_{\diffeo(\VectorB)}\diffeo^{-1}[D_{(\nabla \stroco \circ \diffeo)(\VectorB)}\nabla \stroco^*[D_{\diffeo(\Vector)} \nabla \stroco [ D_{\Vector} \diffeo[\tangentVector_\Vector] ] ] ]
-            %     \label{eq:thm-parallel-transport-remetrized}
+            %     \label{eq:thm-parallel-transport-remetrised}
             % \end{equation}
             % In addition, if [psi has form above then]
             % \begin{equation}
             %     \mathcal{P}^{\nabla \stroco \circ \diffeo}_{\VectorB \leftarrow \Vector} \tangentVector_\Vector = \mathcal{P}^\diffeo_{\VectorB \leftarrow \Vector} \tangentVector_\Vector = D_{\diffeo(\VectorB)}\diffeo^{-1} [D_{\Vector} \diffeo[\tangentVector_\Vector] ] 
-            %     \label{eq:thm-parallel-transport-remetrized-special-psi}
+            %     \label{eq:thm-parallel-transport-remetrised-special-psi}
             % \end{equation}
         \end{enumerate}
     \end{proposition}
@@ -242,7 +242,7 @@ This special case highlights why, in general, we obtain geodesics and manifold m
     
     The connection between $(\cdot,\cdot)^{\nabla \stroco \circ \diffeo}$ and $(\cdot,\cdot)^{\diffeo}$ begs the question what $\stroco$ could still be used for if it is of the form \ref{eq:quadratic-stroco}. 
     % As an application of the proposed score-based pullback Riemannian geometry, we will show in \ref{sec:rae-guarantees} that under a specific choice of $\stroco$ there is a natural \emph{Riemannian autoencoder} (RAE) \cite{diepeveen2024pulling} with error bounds, which can be used to retrieve the data manifold like in \ref{fig:toy-example-manifold}.
-    We note that this case comes down to having a data probability density that is a deformed Gaussian distribution. In the case of a regular (non-deformed) Gaussian, one can compress the data generated by it through projecting them onto a low rank approximation of the covariance matrix such that only the directions with highest variance are taken into account. This is the basic idea behind PCA. In the following we will generalize this idea to the Riemannian setting and observe that this amounts to constructing a \emph{Riemannian autoencoder} (RAE) \cite{diepeveen2024pulling}, whose error we can bound by picking the dimension of the autoencoder in a clever way, reminiscent of the classical PCA error bound.
+    We note that this case comes down to having a data probability density that is a deformed Gaussian distribution. In the case of a regular (non-deformed) Gaussian, one can compress the data generated by it through projecting them onto a low rank approximation of the covariance matrix such that only the directions with highest variance are taken into account. This is the basic idea behind PCA. In the following we will generalise this idea to the Riemannian setting and observe that this amounts to constructing a \emph{Riemannian autoencoder} (RAE) \cite{diepeveen2024pulling}, whose error we can bound by picking the dimension of the autoencoder in a clever way, reminiscent of the classical PCA error bound.
 
     Concretely, we assume that we have a unimodal density of the form \ref{eq:stroco-diffeo-density} with a quadratic strongly convex function $\stroco(\Vector):= \frac{1}{2} \Vector^{\top} \spdMatrix^{-1} \Vector$ for some diagonal matrix $\spdMatrix:= \diag(\spdMatrixDiag_1, \ldots \spdMatrixDiag_\dimInd)$ with positive entries\footnote{Note that this is not restrictive as for a general symmetric positive definite matrix $\spdMatrix$ the eigenvalues can be used as diagonal entries and the orthonormal matrices can be concatenated with the diffeomorphism.}. Next, we define an indexing $\coordIndA_\coordIndC \in [\dimInd]:= \{1, \ldots, \dimInd\}$ for $\coordIndC = 1, \ldots, \dimInd$ such that
     \begin{equation}
@@ -259,12 +259,12 @@ This special case highlights why, in general, we obtain geodesics and manifold m
 
     Finally, we define the mapping $\RAEencoder_\RAErelerror:\Real^\dimInd \to \Real^{\dimInd_\RAErelerror}$ coordinate-wise as
 \begin{equation}
-    \RAEencoder_\RAErelerror(\Vector)_\coordIndC := (\log^\diffeo_{\diffeo^{-1}(\mathbf{0})} \Vector, D_{\mathbf{0}}\diffeo^{-1}[\mathbf{e}^{\coordIndA_\coordIndC}])^\diffeo_{\diffeo^{-1}(\mathbf{0})} \overset{\text{\ref{eq:thm-log-remetrized-special-psi}}}{=} (\diffeo(\Vector), \mathbf{e}^{\coordIndA_\coordIndC})_2, \quad \coordIndC = 1, \ldots, \dimInd_\RAErelerror,
+    \RAEencoder_\RAErelerror(\Vector)_\coordIndC := (\log^\diffeo_{\diffeo^{-1}(\mathbf{0})} \Vector, D_{\mathbf{0}}\diffeo^{-1}[\mathbf{e}^{\coordIndA_\coordIndC}])^\diffeo_{\diffeo^{-1}(\mathbf{0})} \overset{\text{\ref{eq:thm-log-remetrised-special-psi}}}{=} (\diffeo(\Vector), \mathbf{e}^{\coordIndA_\coordIndC})_2, \quad \coordIndC = 1, \ldots, \dimInd_\RAErelerror,
     \label{eq:rae-encoder}
 \end{equation}
 and define $\RAEdecoder_\RAErelerror:\Real^{\dimInd_\RAErelerror} \to \Real^\dimInd$ as
 \begin{equation}
-    \RAEdecoder_\RAErelerror(\latentVector):= \exp_{\diffeo^{-1}(\mathbf{0})}^\diffeo \Bigl( \sum_{\coordIndC=1}^{\dimInd_\RAErelerror} \latentVector_\coordIndC D_{\mathbf{0}}\diffeo^{-1}[\mathbf{e}^{\coordIndA_\coordIndC}]\Bigr) \overset{\text{\ref{eq:thm-exp-remetrized-special-psi}}}{=} \diffeo^{-1} \Bigl( \sum_{\coordIndC=1}^{\dimInd_\RAErelerror} \latentVector_\coordIndC \mathbf{e}^{\coordIndA_\coordIndC} \Bigr),
+    \RAEdecoder_\RAErelerror(\latentVector):= \exp_{\diffeo^{-1}(\mathbf{0})}^\diffeo \Bigl( \sum_{\coordIndC=1}^{\dimInd_\RAErelerror} \latentVector_\coordIndC D_{\mathbf{0}}\diffeo^{-1}[\mathbf{e}^{\coordIndA_\coordIndC}]\Bigr) \overset{\text{\ref{eq:thm-exp-remetrised-special-psi}}}{=} \diffeo^{-1} \Bigl( \sum_{\coordIndC=1}^{\dimInd_\RAErelerror} \latentVector_\coordIndC \mathbf{e}^{\coordIndA_\coordIndC} \Bigr),
     \label{eq:rae-decoder}
 \end{equation}
 which generate a Riemannian autoencoder and the set $\RAEdecoder_\RAErelerror(\Real^{\dimInd_\RAErelerror}) \subset \Real^\dimInd$ as an approximate data manifold as in the scenario in \ref{fig:learned_charts}.
@@ -301,19 +301,19 @@ and
 \end{remark}
 
 \section{Learning unimodal probability densities }
-\label{sec:adapting-normalizing-flows}
+\label{sec:adapting-normalising-flows}
 % - Next, we know what type of unimodal distribution is ideal for downstream data processing, we construct a learning problem for it that incorporates the lessons learnt, i.e., we need $\ell^2$-isometry on the data manifold
 
-Naturally, we want to learn probability densities of the form \ref{eq:stroco-diffeo-density}, which can then directly be inserted into the proposed score-based pullback Riemannian geometry framework. In this section we will consider how to adapt normalizing flow (NF) \cite{dinh2017density} training to a setting that is more suitable for our purposes\footnote{We note that the choice for adapting the normalizing flow training scheme rather than using diffusion model training schemes is due to more robust results through the former.}. In particular, we will consider how training a normalizing flow density $\density: \Real^\dimInd\to\Real$ given by 
+Naturally, we want to learn probability densities of the form \ref{eq:stroco-diffeo-density}, which can then directly be inserted into the proposed score-based pullback Riemannian geometry framework. In this section we will consider how to adapt normalising flow (NF) \cite{dinh2017density} training to a setting that is more suitable for our purposes\footnote{We note that the choice for adapting the normalising flow training scheme rather than using diffusion model training schemes is due to more robust results through the former.}. In particular, we will consider how training a normalising flow density $\density: \Real^\dimInd\to\Real$ given by 
 \begin{equation}
     \density(\Vector):= \frac{1}{C_{\stroco}}e^{- \stroco(\diffeo(\Vector))} |\det(D_{\Vector} \diffeo)|,
     \label{eq:nf-density}
 \end{equation}
 where $C_{\stroco}>0$ is a normalisation constant that only depends on the strongly convex function $\stroco$, yields our target distribution \ref{eq:stroco-diffeo-density}.
 
-From \ref{sec:unimodal-riemannian geometry} and \ref{sec:rae} we have seen that ideally the strongly convex function $\stroco: \Real^{\dimInd} \to \Real$ corresponds to a Gaussian with a parameterised diagonal covariance matrix $\spdMatrix \in \Real^{\dimInd\times \dimInd}$, resulting in more parameters than in standard normalizing flows, whereas the diffeomorphism $\diffeo: \Real^{\dimInd} \to \Real^{\dimInd}$ is regularized to be an isometry. In particular, $\spdMatrix$ ideally allows for learnable anisotropy rather than having a fixed isotropic identity matrix. The main reason is that through anisotropy we can construct a Riemannian autoencoder (RAE), since it is known which dimensions are most important. Moreover, the diffeomorphism should be $\ell^2$-isometric, unlike standard normalizing flows which are typically non-volume preserving, enabling stability (\ref{rem:stability-manifold-mappings}) and a practically useful and interpretable RAE  (\ref{thm:rae-error},\ref{rem:interpretability-rae}). In addition, $\ell^2$-isometry (on the data support) implies volume-preservation, which means that $|\det(D_{\Vector} \diffeo)| \approx 1$ so that \ref{eq:nf-density} reduces to the target distribution \ref{eq:stroco-diffeo-density}.
+From \ref{sec:unimodal-riemannian geometry} and \ref{sec:rae} we have seen that ideally the strongly convex function $\stroco: \Real^{\dimInd} \to \Real$ corresponds to a Gaussian with a parameterised diagonal covariance matrix $\spdMatrix \in \Real^{\dimInd\times \dimInd}$, resulting in more parameters than in standard normalising flows, whereas the diffeomorphism $\diffeo: \Real^{\dimInd} \to \Real^{\dimInd}$ is regularised to be an isometry. In particular, $\spdMatrix$ ideally allows for learnable anisotropy rather than having a fixed isotropic identity matrix. The main reason is that through anisotropy we can construct a Riemannian autoencoder (RAE), since it is known which dimensions are most important. Moreover, the diffeomorphism should be $\ell^2$-isometric, unlike standard normalising flows which are typically non-volume preserving, enabling stability (\ref{rem:stability-manifold-mappings}) and a practically useful and interpretable RAE  (\ref{thm:rae-error},\ref{rem:interpretability-rae}). In addition, $\ell^2$-isometry (on the data support) implies volume-preservation, which means that $|\det(D_{\Vector} \diffeo)| \approx 1$ so that \ref{eq:nf-density} reduces to the target distribution \ref{eq:stroco-diffeo-density}.
 
-This leads to learning the density through minimizing the following adapted normalizing flow loss
+This leads to learning the density through minimising the following adapted normalising flow loss
 \begin{multline}\label{eq:basic_training_objective}
     \mathcal{L}(\networkParams_1, \networkParams_2) := \mathbb{E}_{\stoVector \sim \density_{\text{data}}}\left[-\log \density_{\networkParams_1, \networkParams_2}(\stoVector)\right] \\
     + \lambda_{\text{vol}} \mathbb{E}_{\stoVector \sim \density_{\text{data}}}\left[ \log(|\det \bigl( D_{\stoVector} \diffeo_{\networkParams_2} \bigr)|)^2 \right] +
@@ -331,13 +331,13 @@ where $\lambda_{\text{vol}}, \lambda_{\text{iso}} >0$ and the negative log likel
 
 
 
-where $\spdMatrix_{\networkParams_1}$ is a diagonal matrix and $\diffeo_{\networkParams_2}$ is a normalizing flow with affine coupling layers\footnote{We note that the choice for affine coupling layers rather than using more expressive diffeomorphisms such as rational quadratic flows \cite{durkan2019neural} is due to our need for high regularity for stable manifold mappings (\ref{rem:stability-manifold-mappings}) and an interpretable RAE (\ref{rem:interpretability-rae}), which has empirically shown to be more challenging to achieve for more expressive flows as higher-order derivatives of $\diffeo$ will blow up the higher-order error terms in \ref{thm:rae-error}.} \cite{dinh2017density}.
+where $\spdMatrix_{\networkParams_1}$ is a diagonal matrix and $\diffeo_{\networkParams_2}$ is a normalising flow with affine coupling layers\footnote{We note that the choice for affine coupling layers rather than using more expressive diffeomorphisms such as rational quadratic flows \cite{durkan2019neural} is due to our need for high regularity for stable manifold mappings (\ref{rem:stability-manifold-mappings}) and an interpretable RAE (\ref{rem:interpretability-rae}), which has empirically shown to be more challenging to achieve for more expressive flows as higher-order derivatives of $\diffeo$ will blow up the higher-order error terms in \ref{thm:rae-error}.} \cite{dinh2017density}.
 
 
 \section{Experiments}
 \label{sec:numerics}
 
-We conducted two sets of experiments to evaluate the proposed scheme from \ref{sec:adapting-normalizing-flows} to learn suitable pullback Riemannian geometry. The first set investigates whether our adaptation of the standard normalizing flow (NF) training paradigm leads to more accurate and stable manifold mappings, as measured by the geodesic and variation errors. The second set assesses the capability of our method to generate a robust Riemannian autoencoder (RAE).
+We conducted two sets of experiments to evaluate the proposed scheme from \ref{sec:adapting-normalising-flows} to learn suitable pullback Riemannian geometry. The first set investigates whether our adaptation of the standard normalising flow (NF) training paradigm leads to more accurate and stable manifold mappings, as measured by the geodesic and variation errors. The second set assesses the capability of our method to generate a robust Riemannian autoencoder (RAE).
 
 For all experiments in this section, detailed training configurations are provided in \ref{app:training_details}.
 
@@ -346,27 +346,27 @@ For all experiments in this section, detailed training configurations are provid
 
 As discussed in \cite{diepeveen2024pulling}, the quality of learned manifold mappings is determined by two key metrics: the \emph{geodesic error} and the \emph{variation error}. The geodesic error measures the average deviation form the ground truth geodesics implied by the ground truth pullback metric, while the variation error evaluates the stability of geodesics under small perturbations. We define these error metrics for the evaluation of pullback geometries in Appendix \ref{app:Error metrics for evaluation of Pullback Geometries}.
 
-Our approach introduces two key modifications to the normalizing flow (NF) training framework:
+Our approach introduces two key modifications to the normalising flow (NF) training framework:
 
 \begin{enumerate}
-    \item \textbf{Anisotropic Base Distribution}: We parameterize the diagonal elements of the covariance matrix \(\spdMatrix_{\networkParams_1}\), introducing anisotropy into the base distribution.
+    \item \textbf{Anisotropic Base Distribution}: We parameterise the diagonal elements of the covariance matrix \(\spdMatrix_{\networkParams_1}\), introducing anisotropy into the base distribution.
     
-    \item \textbf{\(\ell^2\)-Isometry Regularization}: We regularize the flow \(\diffeo_{\networkParams_2}\) to be approximately \(\ell^2\)-isometric.
+    \item \textbf{\(\ell^2\)-Isometry Regularisation}: We regularise the flow \(\diffeo_{\networkParams_2}\) to be approximately \(\ell^2\)-isometric.
 \end{enumerate}
 
 To assess the effectiveness of these modifications in learning more accurate and robust manifold mappings, we compare our method against three baselines:
 
 \begin{enumerate}[label=(\arabic*)]
-    \item \emph{Normalizing Flow (NF)}: Uses an NF with a standard isotropic Gaussian base distribution $\mathcal{N}(\mathbf{0}, \mathbf{I}_\dimInd)$ and no isometry regularization of the flow.
-    \item \emph{Anisotropic Normalizing Flow}: Uses an NF with the same parameterization of the diagonal covariance matrix in the base distribution as in our method, but without regularization of the flow.
-    \item \emph{Isometric Normalizing Flow}: Uses an NF with an isotropic Gaussian base distribution $\mathcal{N}(\mathbf{0}, \mathbf{I}_\dimInd)$ and regularizes the flow to be approximately $\ell^2$-isometric.
+    \item \emph{Normalising Flow (NF)}: Uses an NF with a standard isotropic Gaussian base distribution $\mathcal{N}(\mathbf{0}, \mathbf{I}_\dimInd)$ and no isometry regularisation of the flow.
+    \item \emph{Anisotropic Normalising Flow}: Uses an NF with the same parameterisation of the diagonal covariance matrix in the base distribution as in our method, but without regularisation of the flow.
+    \item \emph{Isometric Normalising Flow}: Uses an NF with an isotropic Gaussian base distribution $\mathcal{N}(\mathbf{0}, \mathbf{I}_\dimInd)$ and regularises the flow to be approximately $\ell^2$-isometric.
 \end{enumerate}
 
 We conduct experiments on three datasets, illustrated in \ref{fig:datasets} in \ref{app:manifold_mapping}: the \emph{Single Banana Dataset}, the \emph{Squeezed Single Banana Dataset}, and the \emph{River Dataset}. Detailed descriptions of the construction and characteristics of these datasets are provided in \ref{app:manifold_mapping}.
 
 \ref{tab:geodesic-variation-errors} presents the geodesic and variation errors for each method across the three datasets and \ref{fig:geodesics_comparison} visually compares the geodesics computed using each method on the river dataset. Our method consistently achieves significantly lower errors compared to the baselines, indicating more accurate and stable manifold mappings. 
 
-Introducing anisotropy in the base distribution without enforcing isometry in the flow offers no significant improvement over the standard flow. On the other hand, regularizing the flow to be approximately isometric without incorporating anisotropy in the base distribution results in underfitting, leading to noticeably worse performance than the standard flow. Our results demonstrate that the combination of anisotropy in the base distribution with isometry regularization (our method) yields the most accurate and stable manifold mappings, as evidenced by consistently lower geodesic and variation errors.
+Introducing anisotropy in the base distribution without enforcing isometry in the flow offers no significant improvement over the standard flow. On the other hand, regularising the flow to be approximately isometric without incorporating anisotropy in the base distribution results in underfitting, leading to noticeably worse performance than the standard flow. Our results demonstrate that the combination of anisotropy in the base distribution with isometry regularisation (our method) yields the most accurate and stable manifold mappings, as evidenced by consistently lower geodesic and variation errors.
 
 \begin{table}[t!]
     \centering
@@ -461,7 +461,7 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
         \end{subfigure}
     
         \caption{
-            Approximate data manifold learned by the Riemannian autoencoder for the Sinusoid(1, 100) dataset. The orange curves depict the manifold learned by the model, while the blue points show the training data. We visualize three different combinations of the ambient dimensions. %to illustrate how the 1-dimensional manifold is embedded in the higher-dimensional ambient space.
+            Approximate data manifold learned by the Riemannian autoencoder for the Sinusoid(1, 100) dataset. The orange curves depict the manifold learned by the model, while the blue points show the training data. We visualise three different combinations of the ambient dimensions. %to illustrate how the 1-dimensional manifold is embedded in the higher-dimensional ambient space.
         }
         \label{fig:learned_charts_for_Sinusoid_1_100}
     \end{figure}
@@ -523,7 +523,7 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
     
     For the Hemisphere(5,20) dataset, the model identified five non-vanishing variances (see \ref{fig:hemisphere_variances}), perfectly capturing the intrinsic dimension of the manifold. This is reflected in the blue curve in \ref{fig:hemisphere_reconstruction_errors}, where the first five latent dimensions, corresponding to the largest variances, are sufficient to reduce the reconstruction error almost to zero. In contrast, the green curve illustrates that the remaining ambient dimensions do not encode useful information about the manifold. The red curve demonstrates improvement only when an important latent dimension is included.
     
-    For the more challenging Sinusoid(5,20) dataset, our method still performs very well, though not as perfectly as for the Hemisphere dataset. The first six most important latent dimensions explain approximately $97\%$ of the variance, increasing to over $99\%$ with the seventh dimension (see \ref{fig:sinusoid_variances}). This is reflected in the blue curve in \ref{fig:sinusoid_reconstruction_errors}, where the first six latent dimensions reduce the reconstruction error to near zero, and the addition of the seventh dimension brings the error effectively to zero. The slight discrepancy between our results and the ground truth likely arises from increased optimization difficulty, as the normalizing flow must learn a more intricate distribution while maintaining approximate isometry. We believe that with deeper architectures and more careful tuning of the optimization loss, the model will converge to the correct intrinsic dimensionality of five. Currently, it predicts six dimensions at a threshold of $\epsilon = 0.05$ and seven at $\epsilon = 0.01$, slightly overestimating due to the manifold's complexity.
+    For the more challenging Sinusoid(5,20) dataset, our method still performs very well, though not as perfectly as for the Hemisphere dataset. The first six most important latent dimensions explain approximately $97\%$ of the variance, increasing to over $99\%$ with the seventh dimension (see \ref{fig:sinusoid_variances}). This is reflected in the blue curve in \ref{fig:sinusoid_reconstruction_errors}, where the first six latent dimensions reduce the reconstruction error to near zero, and the addition of the seventh dimension brings the error effectively to zero. The slight discrepancy between our results and the ground truth likely arises from increased optimisation difficulty, as the normalising flow must learn a more intricate distribution while maintaining approximate isometry. We believe that with deeper architectures and more careful tuning of the optimisation loss, the model will converge to the correct intrinsic dimensionality of five. Currently, it predicts six dimensions at a threshold of $\epsilon = 0.05$ and seven at $\epsilon = 0.01$, slightly overestimating due to the manifold's complexity.
     
     \subsubsection{MNIST Experiments}
     \label{sec:mnist_experiments}
@@ -542,7 +542,7 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
     \end{figure}
 
     
-    To evaluate the RAE on real-world data, we conducted experiments on the MNIST dataset, considering two settings: (i) using only the digit ``1'' subset and (ii) using the full dataset with all digits. Initially, we used the same loss in \eqref{eq:basic_training_objective} as in previous experiments, regularizing $\diffeo_{\networkParams_2}$ for isometry and volume preservation. While geodesic interpolations worked well, the RAE's intrinsic dimension estimate was poor. For instance, in the digit ``1'' subset, the RAE predicted roughly 400 latent dimensions, far exceeding the ID-DIFF \cite{pmlr-v235-stanczuk24a} estimate of 66.
+    To evaluate the RAE on real-world data, we conducted experiments on the MNIST dataset, considering two settings: (i) using only the digit ``1'' subset and (ii) using the full dataset with all digits. Initially, we used the same loss in \eqref{eq:basic_training_objective} as in previous experiments, regularising $\diffeo_{\networkParams_2}$ for isometry and volume preservation. While geodesic interpolations worked well, the RAE's intrinsic dimension estimate was poor. For instance, in the digit ``1'' subset, the RAE predicted roughly 400 latent dimensions, far exceeding the ID-DIFF \cite{pmlr-v235-stanczuk24a} estimate of 66.
     
     Upon further investigation (Appendix~\ref{app:expanded_loss_function}), we identified a Hessian vector product term in the model’s log-density that can disrupt the assignment of large variances to important latent dimensions. In all other experiments presented above, this term was effectively zero because $\diffeo_{\networkParams_2}$ was purely affine (composition of affine coupling layers only). For MNIST, we included $1 \times 1$ invertible convolutions after each affine coupling layer for channel mixing, making $\diffeo_{\networkParams_2}$ non-affine and potentially introducing significant second-order terms.
     
@@ -569,7 +569,7 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
         \label{fig:mnist_reconstructions}
     \end{figure}
 
-    Including the Hessian vector product term as an additional regularization term in the loss function, 
+    Including the Hessian vector product term as an additional regularisation term in the loss function, 
     \begin{align}
         \label{eq:mnist_training_objective}
         \mathcal{L}(\theta_1, \theta_2) :=\ & \mathbb{E}_{\stoVector \sim p_{\text{data}}}\bigl[-\log p_{\theta_1, \theta_2}(\stoVector)\bigr] \notag \\
@@ -597,11 +597,11 @@ Introducing anisotropy in the base distribution without enforcing isometry in th
         \label{fig:mnist_interpolations}
     \end{figure}
     
-    Overall, these experiments illustrate that our approach scales to real-world data, provided we incorporate the Hessian vector product regularization term when using non-affine flows. We note that the resulting RAE still tends to overestimate the latent dimension slightly, which could stem from (i) the data distribution’s multimodality, thus deviating from our unimodal assumption, and (ii) the difficulty of learning a distribution with a near-isometric, low-curvature flow. Despite this slight overestimation, the method reliably captures the underlying latent structure, yielding meaningful latent representations and smooth geodesic paths. These results mark significant progress toward robust data-driven Riemannian geometry in high-dimensional settings.
+    Overall, these experiments illustrate that our approach scales to real-world data, provided we incorporate the Hessian vector product regularisation term when using non-affine flows. We note that the resulting RAE still tends to overestimate the latent dimension slightly, which could stem from (i) the data distribution’s multimodality, thus deviating from our unimodal assumption, and (ii) the difficulty of learning a distribution with a near-isometric, low-curvature flow. Despite this slight overestimation, the method reliably captures the underlying latent structure, yielding meaningful latent representations and smooth geodesic paths. These results mark significant progress toward robust data-driven Riemannian geometry in high-dimensional settings.
 
     
 \section{Conclusions}
 \label{sec:conclusions}
 
 In this work we have taken a first step towards a practical Riemannian geometry framework for generative modelling, striking a balance between scalability of training a data-driven Riemannian structure and of evaluating its corresponding manifold mappings. We have considered a family of unimodal probability densities whose negative log-likelihoods are compositions of strongly convex functions and diffeomorphisms, and sought to learn them. We have shown that once these unimodal densities have been learned, the proposed score-based pullback geometry gives us closed-form geodesics that pass through the data probability density and a Riemannian autoencoder with error bounds that can be used to estimate the dimension of the %correct (approximate) 
-data manifold. Finally, to learn the distribution we have proposed an adaptation to normalizing flow training. Through numerical experiments, we have shown that these modifications are crucial for extracting geometric information, and that our framework not only generates high-quality geodesics across the data support, but also accurately estimates the intrinsic dimension of the approximate data manifold while constructing a global chart, even in high-dimensional ambient spaces. Current challenges of the method lie in balancing the expressivity of the network architecture, e.g., through additional layers or more expressive architectures, and satisfying approximate $\ell^2$-isometry on the data support. For future work we aim to overcome these challenges, extending the method to multimodal distributions, while making it scalable for higher-dimensional data sets.
+data manifold. Finally, to learn the distribution we have proposed an adaptation to normalising flow training. Through numerical experiments, we have shown that these modifications are crucial for extracting geometric information, and that our framework not only generates high-quality geodesics across the data support, but also accurately estimates the intrinsic dimension of the approximate data manifold while constructing a global chart, even in high-dimensional ambient spaces. Current challenges of the method lie in balancing the expressivity of the network architecture, e.g., through additional layers or more expressive architectures, and satisfying approximate $\ell^2$-isometry on the data support. For future work we aim to overcome these challenges, extending the method to multimodal distributions, while making it scalable for higher-dimensional data sets.

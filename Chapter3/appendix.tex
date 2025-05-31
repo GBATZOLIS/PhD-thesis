@@ -27,7 +27,7 @@ The forward diffusion process transforms the \textit{target distribution} $p_0(\
 
 \begin{gather}\label{ch3:eq:approximated_reverse_sde}
 d\textbf{x}_t=[f(\textbf{x}_t,t)-G(\textbf{x}_t,t)G(\textbf{x}_t,t)^Ts_{\theta}(\textbf{x}_t,t)]dt + G(\textbf{x}_t,t)d\Bar{\textbf{w}_t},
-\end{gather}If the prior distribution is close to the diffused distribution and the approximated score function is close to the ground truth score function, the modeled distribution  $p^{SDE}_{\theta}$ is provably close to the target distribution $p_0(\textbf{x}_0)$. This statement is formalised in the language of distributional distances in the work of \cite{song2021maximum}. 
+\end{gather}If the prior distribution is close to the diffused distribution and the approximated score function is close to the ground truth score function, the modelled distribution  $p^{SDE}_{\theta}$ is provably close to the target distribution $p_0(\textbf{x}_0)$. This statement is formalised in the language of distributional distances in the work of \cite{song2021maximum}. 
 
 %In diffusion models, the sde in equation \ref{ch3:eq:uniform_sde} describes the forward diffusion for all dimensions in an input tensor:
 
@@ -37,7 +37,7 @@ d\textbf{x}_t=[f(\textbf{x}_t,t)-G(\textbf{x}_t,t)G(\textbf{x}_t,t)^Ts_{\theta}(
 
 %We used unbold notation for the random variables to show that this equation describes diffusion in one dimension. 
 
-\textbf{Training:} A neural network $s_\theta(\textbf{x}_t,t)$ can be trained to approximate the score function $\nabla_{\textbf{x}_t}{\ln{p_t(\textbf{x}_t)}}$ by minimizing the weighted score matching objective
+\textbf{Training:} A neural network $s_\theta(\textbf{x}_t,t)$ can be trained to approximate the score function $\nabla_{\textbf{x}_t}{\ln{p_t(\textbf{x}_t)}}$ by minimising the weighted score matching objective
 
 \begin{gather}
 \begin{aligned}
@@ -47,7 +47,7 @@ d\textbf{x}_t=[f(\textbf{x}_t,t)-G(\textbf{x}_t,t)G(\textbf{x}_t,t)^Ts_{\theta}(
 \end{gather}
 where $\lambda: [0,T] \xrightarrow{} \mathbb{R}_+$ is a positive weighting function.
 
-However, the above quantity cannot be optimized directly since we don't have access to the ground truth score $\nabla_{\textbf{x}_t}{\ln{p_t(\textbf{x}_t)}}$. Therefore in practice, a different objective has to be used \cite{score_matching, vincent2011connection, song2020score}. In \cite{song2020score}, the weighted denoising score-matching objective is used, which is defined as 
+However, the above quantity cannot be optimised directly since we don't have access to the ground truth score $\nabla_{\textbf{x}_t}{\ln{p_t(\textbf{x}_t)}}$. Therefore in practice, a different objective has to be used \cite{score_matching, vincent2011connection, song2020score}. In \cite{song2020score}, the weighted denoising score-matching objective is used, which is defined as 
 
 \begin{gather}\label{ch3:DSM_for_uniform_diffusion_models}
 \begin{aligned}
@@ -75,7 +75,7 @@ For the encoder we used the downsampling part of the U-Net and removed the upsam
 
 For the decoder we start by linearly transforming the latent vector and reshaping it into a tensor of appropriate dimension. Then we used the upsampling part of the DDPM U-Net.
 
-We used the Adam optimizer and EMA rate $0.999$. We used learning rate scheduler reducing the loss on plateau starting form $10^{-4}$ and stopping at $10^{-5}$. We trained the auto-encoder for each latent dimension for 36h on NVIDIA A-100 GPU. At the end we used checkpoints which minimized the validation loss to evaluate the reconstruction error.
+We used the Adam optimiser and EMA rate $0.999$. We used learning rate scheduler reducing the loss on plateau starting form $10^{-4}$ and stopping at $10^{-5}$. We trained the auto-encoder for each latent dimension for 36h on NVIDIA A-100 GPU. At the end we used checkpoints which minimised the validation loss to evaluate the reconstruction error.
 
 All other hyperparameters are included in Table \ref{ch3:tab:model_params}.
 
@@ -93,7 +93,7 @@ Dropout & 0.1 & 0.1 \\
 \hline
 EMA rate & 0.999 & 0.999 \\
 \hline
-Normalization & GroupNorm & GroupNorm \\
+Normalisation & GroupNorm & GroupNorm \\
 \hline
 Nonlinearity & Swish & Swish \\
 \hline
@@ -119,7 +119,7 @@ Learning rate & Scheduler($10^{-4}$, $10^{-5}$) & $2 \cdot 10^{-4}$ \\
 \label{ch3:sec:benchmark}
 We compared our method against well established approaches to intrinsic dimensionality estimation: the MLE estimator \cite{dim_MLE}, \cite{haro_mle}, Local PCA \cite{fan_local_pca} and Probabilistic PCA \cite{auto_ppca} \cite{ppca}. For MLE estimator and local PCA we used the implementation provided in the R package  \textsc{intrinsicDimension} \cite{R_intrinsic_dim}. The MLE estimator has an important hyperparameter $m$ - the number of nearest neighbour distances that should be used for the dimension estimation. We used values $m=5$ and $20$ since these are extremal values considered in \cite{pope2021intrinsic}. For PPCA we used the \textsc{scikit-learn} implementation \cite{sklearn}. The code for reproducing the benchmarking experiments is included in our codebase.
 
-For the ID-NF method \cite{horvat2022nfid}, we used the official implementation available at \url{https://github.com/chrvt/ID-NF}. For the Euclidean data, we utilized the "vector data" folder, which employs block neural autoregressive flows to learn the normalizing flows, from which the intrinsic dimension is extracted using the ID-NF method. For the synthetic image data and MNIST, we used the "images" folder, which uses rational quadratic splines to train the normalizing flows.
+For the ID-NF method \cite{horvat2022nfid}, we used the official implementation available at \url{https://github.com/chrvt/ID-NF}. For the Euclidean data, we utilised the "vector data" folder, which employs block neural autoregressive flows to learn the normalising flows, from which the intrinsic dimension is extracted using the ID-NF method. For the synthetic image data and MNIST, we used the "images" folder, which uses rational quadratic splines to train the normalising flows.
 
 \section{Proofs}
 \label{ch3:appendix:proof}
@@ -201,7 +201,7 @@ Therefore the measure $P_t$ has a density on $\mathbb{R}^d$ given by:
 Note the $\mathcal{N}(\textbf{y}|\textbf{x},\sigma^2_t\textbf{I})$ here. Typically one would write this as $\mathcal{N}(\textbf{x}|\textbf{y},\sigma^2_t\textbf{I})$ and think of \eqref{ch3:convolution} as the quantity of probability mass at point $\textbf{x}$ after diffusing for time $t$ with initial distribution $p_0(\textbf{y})$. We instead write it this way as it will be more intuitive to think of \eqref{ch3:convolution} as the average probability mass that intersects the manifold after diffusing from a delta distribution at $\textbf{x}$ (where the average is taken over $p_0(\textbf{y})$). These are of course equivalent as $\mathcal{N}(\textbf{x}|\textbf{y},\sigma^2_t\textbf{I})$ is symmetric is $\textbf{x}$ and $\textbf{y}$.
 
 \subsection*{Tubular Neighbourhoods}
-First we need to ensure that the point $\textbf{x}$ has a unique projection on $\mathcal{M}$. This is always true for an $\textbf{x}$ sufficiently close to $\mathcal{M}$. We can formalize this with the notion of \textit{tubular neighbourhood} - a tube around $\mathcal{M}$ such that every point $\textbf{x}$ inside can be uniquely represented as a sum of the point on the manifold and a vector from the normal bundle i.e. $\textbf{x} = \textbf{y} + \textbf{v}$ where $\textbf{y} \in \mathcal{M}$ and $\textbf{v} \in \mathcal{N}_\textbf{y} \mathcal{M}$. Formally:
+First we need to ensure that the point $\textbf{x}$ has a unique projection on $\mathcal{M}$. This is always true for an $\textbf{x}$ sufficiently close to $\mathcal{M}$. We can formalise this with the notion of \textit{tubular neighbourhood} - a tube around $\mathcal{M}$ such that every point $\textbf{x}$ inside can be uniquely represented as a sum of the point on the manifold and a vector from the normal bundle i.e. $\textbf{x} = \textbf{y} + \textbf{v}$ where $\textbf{y} \in \mathcal{M}$ and $\textbf{v} \in \mathcal{N}_\textbf{y} \mathcal{M}$. Formally:
 
 \begin{definition}
 Endpoint Map\\
@@ -538,7 +538,7 @@ Since $\varepsilon$ can be chosen arbitrarily small, this finishes the proof. \q
 \section{Robustness analysis}
    \label{ch3:appendix:robust}
    \subsection{Robustness to score approximation error}
-   As we discussed in the previous sections, our method is guaranteed to work given a perfect score approximation for sufficiently small $t$. However, in practice there will be an approximation error resulting from finite training data, limited model capacity and imperfect optimization. Therefore, we conduct an empirical analysis of the influence of the error in score approximation on the produced estimate of the dimension. We train a model $s_\theta$ on a uniform distribution on $25$-sphere and then we corrupt the output of the model with a Gaussian perturbation $e \sim \mathcal{N}(0, \sigma^2_e\textbf{I})$. Then, we produce score spectra by applying our method to the resulting corrupted scores. We repeat this experiment for different intensities of noise $\sigma_e$. We pick $\sigma_e$ so that the noise norm to score norm ratio $r = \mathbb{E}[\norm{e}] / \mathbb{E}_{x_{t_0} \sim p_{t_0}(\textbf{x}_{t_0} | \textbf{x}_0)}[\norm{s(\textbf{x}_{t_0} , t_0)}]$ has a prescribed value. We find that as we increase the intensity of noise singular values corresponding to the tangential component start to increase causing the gap in the score spectrum  to diminish. This is expected since the noise added to the score vectors has a tangential component.  However, for values of $r < 0.5$ our method is still producing a visible drop in the spectrum at the correct point. The results are presented in Figure \ref{ch3:fig:robustness_score}.
+   As we discussed in the previous sections, our method is guaranteed to work given a perfect score approximation for sufficiently small $t$. However, in practice there will be an approximation error resulting from finite training data, limited model capacity and imperfect optimisation. Therefore, we conduct an empirical analysis of the influence of the error in score approximation on the produced estimate of the dimension. We train a model $s_\theta$ on a uniform distribution on $25$-sphere and then we corrupt the output of the model with a Gaussian perturbation $e \sim \mathcal{N}(0, \sigma^2_e\textbf{I})$. Then, we produce score spectra by applying our method to the resulting corrupted scores. We repeat this experiment for different intensities of noise $\sigma_e$. We pick $\sigma_e$ so that the noise norm to score norm ratio $r = \mathbb{E}[\norm{e}] / \mathbb{E}_{x_{t_0} \sim p_{t_0}(\textbf{x}_{t_0} | \textbf{x}_0)}[\norm{s(\textbf{x}_{t_0} , t_0)}]$ has a prescribed value. We find that as we increase the intensity of noise singular values corresponding to the tangential component start to increase causing the gap in the score spectrum  to diminish. This is expected since the noise added to the score vectors has a tangential component.  However, for values of $r < 0.5$ our method is still producing a visible drop in the spectrum at the correct point. The results are presented in Figure \ref{ch3:fig:robustness_score}.
    
    \begin{figure}[h!]
        \centering
