@@ -184,6 +184,11 @@ Cornish, R., Caterini, A., Deligiannidis, G., and Doucet, A. (2020).
 \newblock Relaxing bijectivity constraints with continuously indexed normalising flows.
 \newblock In {\em International conference on machine learning}, pages 2133--2143. PMLR.
 
+\bibitem[de~Kruiff et~al., 2024]{de2024pullback}
+de~Kruiff, F., Bekkers, E., {\"O}ktem, O., Sch{\"o}nlieb, C.-B., and Diepeveen, W. (2024).
+\newblock Pullback flow matching on data manifolds.
+\newblock {\em arXiv preprint arXiv:2410.04543}.
+
 \bibitem[DeMers and Cottrell, 1992]{demers1992non}
 DeMers, D. and Cottrell, G. (1992).
 \newblock Non-linear dimensionality reduction.
@@ -391,10 +396,15 @@ Hochreiter, S. and Schmidhuber, J. (1997).
 \newblock Long short-term memory.
 \newblock {\em Neural Computation}, 9(8):1735--1780.
 
-\bibitem[Horvat and Pfister, 2022]{horvat2022nfid}
-Horvat, C. and Pfister, J.-P. (2022).
+\bibitem[Horvat and Pfister, 2022a]{horvat2022nfid}
+Horvat, C. and Pfister, J.-P. (2022a).
 \newblock Intrinsic dimensionality estimation using normalizing flows.
 \newblock In Koyejo, S., Mohamed, S., Agarwal, A., Belgrave, D., Cho, K., and Oh, A., editors, {\em Advances in Neural Information Processing Systems}, volume~35, pages 12225--12236. Curran Associates, Inc.
+
+\bibitem[Horvat and Pfister, 2022b]{NEURIPS2022_4f918fa3}
+Horvat, C. and Pfister, J.-P. (2022b).
+\newblock Intrinsic dimensionality estimation using normalizing flows.
+\newblock In Koyejo, S., Mohamed, S., Agarwal, A., Belgrave, D., Cho, K., and Oh, A., editors, {\em Advances in Neural Information Processing Systems}, volume~35, pages 18887--18899. Curran Associates, Inc.
 
 \bibitem[Hossain et~al., 2020]{hossain2019comprehensive}
 Hossain, M., Sohel, F., Shiratuddin, M.~F., and Laga, H. (2020).
@@ -449,11 +459,6 @@ Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tu
 \newblock Highly accurate protein structure prediction with alphafold.
 \newblock {\em Nature}, 596(7873):583--589.
 
-\bibitem[Kadkhodaie et~al., 2024]{kadkhodaie2024generalization}
-Kadkhodaie, Z., Guth, F., Simoncelli, E.~P., and Mallat, S. (2024).
-\newblock Generalization in diffusion models arises from geometry-adaptive harmonic representation.
-\newblock In {\em Proceedings of the 12th International Conference on Learning Representations (ICLR)}.
-
 \bibitem[Kamkari et~al., 2024]{kamkari2024geometric}
 Kamkari, H., Ross, B.~L., Cresswell, J.~C., Caterini, A.~L., Krishnan, R.~G., and Loaiza-Ganem, G. (2024).
 \newblock A geometric explanation of the likelihood ood detection paradox.
@@ -464,15 +469,15 @@ Kamkari, H., Ross, B.~L., Cresswell, J.~C., Caterini, A.~L., Krishnan, R.~G., an
 Kapusniak, K., Potaptchik, P., Reu, T., Zhang, L., Tong, A., Bronstein, M., Bose, A.~J., and Giovanni, F.~D. (2024).
 \newblock Metric flow matching for smooth interpolations on the data manifold.
 
-\bibitem[Karras et~al., 2019a]{karras2019stylegan}
+\bibitem[Karras et~al., 2019a]{karras2019style}
 Karras, T., Laine, S., and Aila, T. (2019a).
 \newblock A style-based generator architecture for generative adversarial networks.
-\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 4401--4410.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 4401--4410.
 
-\bibitem[Karras et~al., 2019b]{karras2019style}
+\bibitem[Karras et~al., 2019b]{karras2019stylegan}
 Karras, T., Laine, S., and Aila, T. (2019b).
 \newblock A style-based generator architecture for generative adversarial networks.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 4401--4410.
+\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 4401--4410.
 
 \bibitem[Karras et~al., 2020]{karras2020analyzing}
 Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., and Aila, T. (2020).
@@ -929,11 +934,6 @@ Song, Y., Sohl-Dickstein, J., Kingma, D.~P., Kumar, A., Ermon, S., and Poole, B.
 \bibitem[Sorrenson et~al., 2024]{sorrenson2024learningdistancesdatanormalizing}
 Sorrenson, P., Behrend-Uriarte, D., Schnörr, C., and Köthe, U. (2024).
 \newblock Learning distances from data with normalizing flows and score matching.
-
-\bibitem[Stanczuk et~al., 2022]{stanczuk2022your}
-Stanczuk, J., Batzolis, G., Deveney, T., and Sch{\"o}nlieb, C.-B. (2022).
-\newblock Your diffusion model secretly knows the dimension of the data manifold.
-\newblock {\em arXiv preprint arXiv:2212.12611}.
 
 \bibitem[Stanczuk et~al., 2021]{stanczuk2021wasserstein}
 Stanczuk, J., Etmann, C., Kreusser, L.~M., and Schönlieb, C.-B. (2021).

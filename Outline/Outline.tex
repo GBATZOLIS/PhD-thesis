@@ -228,13 +228,12 @@ In chapter \ref{Chapter:Pullback-riemannian-geometry}, we introduce a score-base
 
 \subsection*{Originality and Author’s Contributions}
 
-This chapter is adapted from \cite{diepeveen2024score}. The authors' contributions to this work are as follows:
+This chapter is adapted from our published work in ICML 2025 \cite{diepeveen2024score}. The authors’ contributions to this work are as follows:
 
 \begin{itemize}
 \item \textbf{Formulation of Ideas}: Willem Diepeveen proposed the idea of extracting the data manifold's geometry using a score-based pullback metric. He developed the theoretical motivation of using the score-based metric and showed that the constructed metric allows the computation of manifold maps such as geodesics, exponential map, logarithmic map and distance in closed form. Moreover, he showed that the trained normalising flow used for the construction of the pullback metric is a Riemannian Auto-encoder.
 
-I figured out that the proposed metric can be constructed in practice by adapting the framework of Normalising flows with base distribution anisotropy and $l_2$ regularisation. Moreover, I discovered the existence of a hessian vector product term that can negatively impact the performance of the Riemannian Auto-encoder if not taken into consideration. 
-Including the hessian vector product term in the regularisation allowed us to use non-affine flows reliably which led to the improvement of the scalability and performance of the method.
+Building on these theoretical foundations, I developed a practical implementation of the proposed pullback Riemannian metric through normalizing flows with anisotropic base distribution and isometry regularisation. This approach successfully operationalised the theoretical framework while maintaining both scalability and flexibility. Moreover, I identified a critical issue—Hessian-vector product (HVP) blow-up in non-affine flows—that caused the method's performance to deteriorate significantly in high-dimensional settings. To address this, I introduced a sliced approximation of the HVP term in the regularisation, which proved critical for scaling the method to high-dimensional and complex data.
 
 \item \textbf{Experimental Design}: I led the experimental design, incorporating suggestions from Willem Diepeveen and Zakhar Shumaylov.
 \item \textbf{Code and Experimental Implementation}: I implemented the training code and conducted all hyperparameter tuning and experiments. Willem implemented the functionality for constructing the data-driven manifold maps and the Riemannian autoencoder from a trained model.
